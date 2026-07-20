@@ -1,0 +1,6313 @@
+[
+  {
+    "id": "CP-10001",
+    "applicationId": "CPA-2026-0001",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Social Media",
+    "appliedDate": "2026-06-27",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp1",
+    "personal": {
+      "name": "Ravi Reddy",
+      "gender": "Male",
+      "dob": "1993-08-05",
+      "mobile": "+91 7364369509",
+      "email": "ravi.reddy@email.com",
+      "address": "5 Main Road, Hyderabad",
+      "city": "Hyderabad",
+      "district": "Rangareddy",
+      "state": "Telangana",
+      "pincode": "500032"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 2,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Kondapur",
+        "ORR Corridor"
+      ],
+      "languages": [
+        "Hindi",
+        "Tamil"
+      ],
+      "monthlyLeads": 74,
+      "previousProjects": [
+        "Urban Heights Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp1"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-27"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-27"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-27"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-06-27"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-27",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10002",
+    "applicationId": "CPA-2026-0002",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Partner Portal",
+    "appliedDate": "2026-05-09",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp2",
+    "personal": {
+      "name": "Priya Rao",
+      "gender": "Other",
+      "dob": "1997-03-04",
+      "mobile": "+91 8133966602",
+      "email": "priya.rao@email.com",
+      "address": "20 Main Road, Secunderabad",
+      "city": "Secunderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500003"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 13,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "HITEC City"
+      ],
+      "languages": [
+        "English",
+        "Telugu"
+      ],
+      "monthlyLeads": 45,
+      "previousProjects": [
+        "Urban Heights Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp2"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-09"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-09"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-09"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-09"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "High",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-09",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10003",
+    "applicationId": "CPA-2026-0003",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Social Media",
+    "appliedDate": "2026-03-27",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp3",
+    "personal": {
+      "name": "Suresh Sharma",
+      "gender": "Female",
+      "dob": "1982-07-16",
+      "mobile": "+91 7156954083",
+      "email": "suresh.sharma@email.com",
+      "address": "109 Main Road, Vijayawada",
+      "city": "Vijayawada",
+      "district": "Krishna",
+      "state": "Andhra Pradesh",
+      "pincode": "520010"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 9,
+      "currentBrokerage": "Self-employed",
+      "areasCovered": [
+        "HITEC City"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "monthlyLeads": 25,
+      "previousProjects": [
+        "Urban Heights Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp3"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-27"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-27"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-27"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-27",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10004",
+    "applicationId": "CPA-2026-0004",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Walk-in",
+    "appliedDate": "2026-06-30",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp4",
+    "personal": {
+      "name": "Lakshmi Patel",
+      "gender": "Male",
+      "dob": "1991-08-16",
+      "mobile": "+91 7249290854",
+      "email": "lakshmi.patel@email.com",
+      "address": "47 Main Road, Visakhapatnam",
+      "city": "Visakhapatnam",
+      "district": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "pincode": "530003"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 6,
+      "currentBrokerage": "Local Agency",
+      "areasCovered": [
+        "Banjara Hills"
+      ],
+      "languages": [
+        "English"
+      ],
+      "monthlyLeads": 68,
+      "previousProjects": [
+        "Sunrise Farms Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp4"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-30"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-30"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-30"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-06-30"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-30",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10005",
+    "applicationId": "CPA-2026-0005",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Website",
+    "appliedDate": "2026-04-22",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp5",
+    "personal": {
+      "name": "Anil Kumar",
+      "gender": "Male",
+      "dob": "1985-05-12",
+      "mobile": "+91 9613224610",
+      "email": "anil.kumar@email.com",
+      "address": "32 Main Road, Bangalore",
+      "city": "Bangalore",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 3,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Gachibowli",
+        "Shamshabad"
+      ],
+      "languages": [
+        "Tamil"
+      ],
+      "monthlyLeads": 50,
+      "previousProjects": [
+        "Sunrise Farms Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp5"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-22"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-22"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-22"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-22"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-22",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10006",
+    "applicationId": "CPA-2026-0006",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Website",
+    "appliedDate": "2026-05-28",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp6",
+    "personal": {
+      "name": "Divya Goud",
+      "gender": "Female",
+      "dob": "1996-11-10",
+      "mobile": "+91 8380644494",
+      "email": "divya.goud@email.com",
+      "address": "163 Main Road, Chennai",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 9,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Gachibowli",
+        "Miyapur"
+      ],
+      "languages": [
+        "Telugu",
+        "Kannada"
+      ],
+      "monthlyLeads": 57,
+      "previousProjects": [
+        "Green Valley Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp6"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-28"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-28"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-28"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-28",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10007",
+    "applicationId": "CPA-2026-0007",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Social Media",
+    "appliedDate": "2026-05-21",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp7",
+    "personal": {
+      "name": "Kiran Verma",
+      "gender": "Other",
+      "dob": "1987-01-03",
+      "mobile": "+91 9385555884",
+      "email": "kiran.verma@email.com",
+      "address": "1 Main Road, Pune",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 4,
+      "currentBrokerage": "Self-employed",
+      "areasCovered": [
+        "Miyapur",
+        "Kondapur"
+      ],
+      "languages": [
+        "Telugu"
+      ],
+      "monthlyLeads": 52,
+      "previousProjects": [
+        "Lakeview Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp7"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-21"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-21"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-21"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-21"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-21",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10008",
+    "applicationId": "CPA-2026-0008",
+    "partnerCode": null,
+    "status": "Pending",
+    "partnerStatus": null,
+    "source": "Partner Portal",
+    "appliedDate": "2026-03-11",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp8",
+    "personal": {
+      "name": "Meena Singh",
+      "gender": "Male",
+      "dob": "1981-11-24",
+      "mobile": "+91 9619641799",
+      "email": "meena.singh@email.com",
+      "address": "20 Main Road, Mumbai",
+      "city": "Mumbai",
+      "district": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 5,
+      "currentBrokerage": "Self-employed",
+      "areasCovered": [
+        "Banjara Hills",
+        "Gachibowli"
+      ],
+      "languages": [
+        "Hindi",
+        "Kannada"
+      ],
+      "monthlyLeads": 47,
+      "previousProjects": [
+        "Lakeview Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp8"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-11"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-11"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-11"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-11"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-11",
+        "tone": "accent"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10009",
+    "applicationId": "CPA-2026-0009",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Partner Portal",
+    "appliedDate": "2026-04-16",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp9",
+    "personal": {
+      "name": "Vijay Naidu",
+      "gender": "Female",
+      "dob": "1986-05-28",
+      "mobile": "+91 7255004099",
+      "email": "vijay.naidu@email.com",
+      "address": "63 Main Road, Warangal",
+      "city": "Warangal",
+      "district": "Warangal",
+      "state": "Telangana",
+      "pincode": "506001"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 6,
+      "currentBrokerage": "Local Agency",
+      "areasCovered": [
+        "Kondapur",
+        "Kukatpally"
+      ],
+      "languages": [
+        "Tamil",
+        "English"
+      ],
+      "monthlyLeads": 17,
+      "previousProjects": [
+        "Lakeview Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp9"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-16"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-16"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-16"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-16"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-16",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-16",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-16",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-16"
+      }
+    ]
+  },
+  {
+    "id": "CP-10010",
+    "applicationId": "CPA-2026-0010",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Partner Portal",
+    "appliedDate": "2026-04-10",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp10",
+    "personal": {
+      "name": "Sneha Choudary",
+      "gender": "Other",
+      "dob": "1986-09-11",
+      "mobile": "+91 9110007698",
+      "email": "sneha.choudary@email.com",
+      "address": "199 Main Road, Nizamabad",
+      "city": "Nizamabad",
+      "district": "Nizamabad",
+      "state": "Telangana",
+      "pincode": "503001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 3,
+      "currentBrokerage": "PropTiger",
+      "areasCovered": [
+        "Miyapur",
+        "HITEC City"
+      ],
+      "languages": [
+        "English",
+        "Kannada"
+      ],
+      "monthlyLeads": 72,
+      "previousProjects": [
+        "Urban Heights Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp10"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-10"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-10"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-10"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-10"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-10",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-10",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-10",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-10"
+      }
+    ]
+  },
+  {
+    "id": "CP-10011",
+    "applicationId": "CPA-2026-0011",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Website",
+    "appliedDate": "2026-03-29",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp11",
+    "personal": {
+      "name": "Rajesh Menon",
+      "gender": "Male",
+      "dob": "1976-04-25",
+      "mobile": "+91 8411752167",
+      "email": "rajesh.menon@email.com",
+      "address": "103 Main Road, Hyderabad",
+      "city": "Hyderabad",
+      "district": "Rangareddy",
+      "state": "Telangana",
+      "pincode": "500032"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 10,
+      "currentBrokerage": "PropTiger",
+      "areasCovered": [
+        "HITEC City",
+        "Gachibowli"
+      ],
+      "languages": [
+        "Telugu",
+        "Tamil"
+      ],
+      "monthlyLeads": 12,
+      "previousProjects": [
+        "Lakeview Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp11"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-29"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-29"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-29"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-29"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "High",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-29",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-29",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-29",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-29"
+      }
+    ]
+  },
+  {
+    "id": "CP-10012",
+    "applicationId": "CPA-2026-0012",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Partner Portal",
+    "appliedDate": "2026-05-24",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp12",
+    "personal": {
+      "name": "Pooja Iyer",
+      "gender": "Male",
+      "dob": "1986-11-12",
+      "mobile": "+91 7585575080",
+      "email": "pooja.iyer@email.com",
+      "address": "184 Main Road, Secunderabad",
+      "city": "Secunderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500003"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 7,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Miyapur",
+        "HITEC City"
+      ],
+      "languages": [
+        "Kannada",
+        "Telugu"
+      ],
+      "monthlyLeads": 48,
+      "previousProjects": [
+        "Green Valley Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp12"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-24"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-24"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-24"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-24"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "High",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-24",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-24",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-24",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "id": "CP-10013",
+    "applicationId": "CPA-2026-0013",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Website",
+    "appliedDate": "2026-03-07",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp13",
+    "personal": {
+      "name": "Naveen Gupta",
+      "gender": "Male",
+      "dob": "1985-12-05",
+      "mobile": "+91 9710511561",
+      "email": "naveen.gupta@email.com",
+      "address": "175 Main Road, Vijayawada",
+      "city": "Vijayawada",
+      "district": "Krishna",
+      "state": "Andhra Pradesh",
+      "pincode": "520010"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 6,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Miyapur",
+        "ORR Corridor"
+      ],
+      "languages": [
+        "Hindi",
+        "Kannada"
+      ],
+      "monthlyLeads": 33,
+      "previousProjects": [
+        "Green Valley Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp13"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-07"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-07"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-07"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-07"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-07",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-07",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-07",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-07"
+      }
+    ]
+  },
+  {
+    "id": "CP-10014",
+    "applicationId": "CPA-2026-0014",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Walk-in",
+    "appliedDate": "2026-05-31",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp14",
+    "personal": {
+      "name": "Anitha Das",
+      "gender": "Female",
+      "dob": "1995-09-14",
+      "mobile": "+91 8988682264",
+      "email": "anitha.das@email.com",
+      "address": "35 Main Road, Visakhapatnam",
+      "city": "Visakhapatnam",
+      "district": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "pincode": "530003"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 17,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "HITEC City",
+        "Shamshabad"
+      ],
+      "languages": [
+        "Kannada",
+        "Telugu"
+      ],
+      "monthlyLeads": 62,
+      "previousProjects": [
+        "Sunrise Farms Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp14"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-31"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-31"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-31"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-31"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-31",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-31",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-31",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-05-31"
+      }
+    ]
+  },
+  {
+    "id": "CP-10015",
+    "applicationId": "CPA-2026-0015",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Social Media",
+    "appliedDate": "2026-04-24",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp15",
+    "personal": {
+      "name": "Praveen Murthy",
+      "gender": "Other",
+      "dob": "1977-09-01",
+      "mobile": "+91 8653398930",
+      "email": "praveen.murthy@email.com",
+      "address": "57 Main Road, Bangalore",
+      "city": "Bangalore",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 6,
+      "currentBrokerage": "Local Agency",
+      "areasCovered": [
+        "ORR Corridor",
+        "Kondapur"
+      ],
+      "languages": [
+        "Hindi",
+        "Kannada"
+      ],
+      "monthlyLeads": 15,
+      "previousProjects": [
+        "Urban Heights Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp15"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-24"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-24"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-24"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-24"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-24",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-24",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-24",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-24"
+      }
+    ]
+  },
+  {
+    "id": "CP-10016",
+    "applicationId": "CPA-2026-0016",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Partner Portal",
+    "appliedDate": "2026-03-05",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp16",
+    "personal": {
+      "name": "Swathi Krishna",
+      "gender": "Female",
+      "dob": "1986-07-28",
+      "mobile": "+91 9412850968",
+      "email": "swathi.krishna@email.com",
+      "address": "78 Main Road, Chennai",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 3,
+      "currentBrokerage": "PropTiger",
+      "areasCovered": [
+        "Kondapur",
+        "Shamshabad"
+      ],
+      "languages": [
+        "Kannada",
+        "Hindi"
+      ],
+      "monthlyLeads": 29,
+      "previousProjects": [
+        "Urban Heights Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp16"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-05"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-05"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-05"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-05"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "High",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-05",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-05",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-05",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-05"
+      }
+    ]
+  },
+  {
+    "id": "CP-10017",
+    "applicationId": "CPA-2026-0017",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Referral",
+    "appliedDate": "2026-05-14",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp17",
+    "personal": {
+      "name": "Harish Prasad",
+      "gender": "Male",
+      "dob": "1979-07-21",
+      "mobile": "+91 8794494292",
+      "email": "harish.prasad@email.com",
+      "address": "7 Main Road, Pune",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 3,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Gachibowli",
+        "Banjara Hills"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "monthlyLeads": 80,
+      "previousProjects": [
+        "Urban Heights Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp17"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-14"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-14"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-14"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-14",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-14",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-14",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-05-14"
+      }
+    ]
+  },
+  {
+    "id": "CP-10018",
+    "applicationId": "CPA-2026-0018",
+    "partnerCode": null,
+    "status": "Under Verification",
+    "partnerStatus": null,
+    "source": "Walk-in",
+    "appliedDate": "2026-03-04",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp18",
+    "personal": {
+      "name": "Kavya Devi",
+      "gender": "Male",
+      "dob": "1993-03-09",
+      "mobile": "+91 8507720509",
+      "email": "kavya.devi@email.com",
+      "address": "49 Main Road, Mumbai",
+      "city": "Mumbai",
+      "district": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 12,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "ORR Corridor",
+        "Miyapur"
+      ],
+      "languages": [
+        "Tamil",
+        "English"
+      ],
+      "monthlyLeads": 14,
+      "previousProjects": [
+        "Sunrise Farms Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp18"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-04"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-04"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-04"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-04"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "High",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "In Progress"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-04",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-04",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-04",
+        "tone": "neutral"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-04"
+      }
+    ]
+  },
+  {
+    "id": "CP-10019",
+    "applicationId": "CPA-2026-0019",
+    "partnerCode": "CPR-2026-0019",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Referral",
+    "appliedDate": "2026-03-28",
+    "approvalDate": "2026-04-01",
+    "photo": "https://i.pravatar.cc/150?u=cp19",
+    "personal": {
+      "name": "Ramesh Chandra",
+      "gender": "Male",
+      "dob": "1981-01-05",
+      "mobile": "+91 8135566812",
+      "email": "ramesh.chandra@email.com",
+      "address": "114 Main Road, Warangal",
+      "city": "Warangal",
+      "district": "Warangal",
+      "state": "Telangana",
+      "pincode": "506001"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 1,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Banjara Hills"
+      ],
+      "languages": [
+        "English",
+        "Tamil"
+      ],
+      "monthlyLeads": 33,
+      "previousProjects": [
+        "Sunrise Farms Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp19"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-28"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-28"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-28"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-28",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-28",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-28",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-03-28",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-03-28",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-28"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-01"
+      }
+    ]
+  },
+  {
+    "id": "CP-10020",
+    "applicationId": "CPA-2026-0020",
+    "partnerCode": "CPR-2026-0020",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Social Media",
+    "appliedDate": "2026-03-22",
+    "approvalDate": "2026-04-05",
+    "photo": "https://i.pravatar.cc/150?u=cp20",
+    "personal": {
+      "name": "Deepa Babu",
+      "gender": "Male",
+      "dob": "1995-07-06",
+      "mobile": "+91 8917432654",
+      "email": "deepa.babu@email.com",
+      "address": "178 Main Road, Nizamabad",
+      "city": "Nizamabad",
+      "district": "Nizamabad",
+      "state": "Telangana",
+      "pincode": "503001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 6,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "ORR Corridor",
+        "Kukatpally"
+      ],
+      "languages": [
+        "Tamil",
+        "English"
+      ],
+      "monthlyLeads": 43,
+      "previousProjects": [
+        "Green Valley Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp20"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-22"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-22"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-22"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-22"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": false,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-22",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-22",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-22",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-03-22",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-03-22",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-22"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-05"
+      }
+    ]
+  },
+  {
+    "id": "CP-10021",
+    "applicationId": "CPA-2026-0021",
+    "partnerCode": "CPR-2026-0021",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Partner Portal",
+    "appliedDate": "2026-04-11",
+    "approvalDate": "2026-04-16",
+    "photo": "https://i.pravatar.cc/150?u=cp21",
+    "personal": {
+      "name": "Srinivas Reddy",
+      "gender": "Other",
+      "dob": "1976-05-03",
+      "mobile": "+91 9925579858",
+      "email": "srinivas.reddy@email.com",
+      "address": "153 Main Road, Hyderabad",
+      "city": "Hyderabad",
+      "district": "Rangareddy",
+      "state": "Telangana",
+      "pincode": "500032"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 4,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Banjara Hills",
+        "Miyapur"
+      ],
+      "languages": [
+        "English"
+      ],
+      "monthlyLeads": 52,
+      "previousProjects": [
+        "Green Valley Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp21"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-11"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-11"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-11"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-11",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-11",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-11",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-11",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-11",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-11"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-16"
+      }
+    ]
+  },
+  {
+    "id": "CP-10022",
+    "applicationId": "CPA-2026-0022",
+    "partnerCode": "CPR-2026-0022",
+    "status": "Approved",
+    "partnerStatus": "Inactive",
+    "source": "Social Media",
+    "appliedDate": "2026-04-27",
+    "approvalDate": "2026-05-11",
+    "photo": "https://i.pravatar.cc/150?u=cp22",
+    "personal": {
+      "name": "Madhuri Rao",
+      "gender": "Other",
+      "dob": "1994-03-01",
+      "mobile": "+91 8454596638",
+      "email": "madhuri.rao@email.com",
+      "address": "87 Main Road, Secunderabad",
+      "city": "Secunderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500003"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 15,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Miyapur",
+        "Gachibowli"
+      ],
+      "languages": [
+        "Tamil",
+        "Hindi"
+      ],
+      "monthlyLeads": 20,
+      "previousProjects": [
+        "Lakeview Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp22"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-27"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-27"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-27"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-27",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-27",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-27",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-27",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-27",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-27"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-05-11"
+      }
+    ]
+  },
+  {
+    "id": "CP-10023",
+    "applicationId": "CPA-2026-0023",
+    "partnerCode": "CPR-2026-0023",
+    "status": "Approved",
+    "partnerStatus": "Inactive",
+    "source": "Partner Portal",
+    "appliedDate": "2026-04-23",
+    "approvalDate": "2026-05-04",
+    "photo": "https://i.pravatar.cc/150?u=cp23",
+    "personal": {
+      "name": "Gopal Sharma",
+      "gender": "Female",
+      "dob": "1983-02-13",
+      "mobile": "+91 8800486443",
+      "email": "gopal.sharma@email.com",
+      "address": "80 Main Road, Vijayawada",
+      "city": "Vijayawada",
+      "district": "Krishna",
+      "state": "Andhra Pradesh",
+      "pincode": "520010"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 13,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "Banjara Hills",
+        "Miyapur"
+      ],
+      "languages": [
+        "Hindi"
+      ],
+      "monthlyLeads": 33,
+      "previousProjects": [
+        "Green Valley Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp23"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-23"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-23"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-23"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-23"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-23",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-23",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-23",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-23",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-23",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-23"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-05-04"
+      }
+    ]
+  },
+  {
+    "id": "CP-10024",
+    "applicationId": "CPA-2026-0024",
+    "partnerCode": "CPR-2026-0024",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Social Media",
+    "appliedDate": "2026-04-26",
+    "approvalDate": "2026-04-30",
+    "photo": "https://i.pravatar.cc/150?u=cp24",
+    "personal": {
+      "name": "Revathi Patel",
+      "gender": "Male",
+      "dob": "1978-02-01",
+      "mobile": "+91 9851753494",
+      "email": "revathi.patel@email.com",
+      "address": "67 Main Road, Visakhapatnam",
+      "city": "Visakhapatnam",
+      "district": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "pincode": "530003"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 15,
+      "currentBrokerage": "PropTiger",
+      "areasCovered": [
+        "Kukatpally",
+        "ORR Corridor"
+      ],
+      "languages": [
+        "Tamil",
+        "Telugu"
+      ],
+      "monthlyLeads": 53,
+      "previousProjects": [
+        "Lakeview Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp24"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-26"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-26"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-26"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-26"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Medium",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-26",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-26",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-26",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-26",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-26",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-26"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-30"
+      }
+    ]
+  },
+  {
+    "id": "CP-10025",
+    "applicationId": "CPA-2026-0025",
+    "partnerCode": "CPR-2026-0025",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Referral",
+    "appliedDate": "2026-04-25",
+    "approvalDate": "2026-05-03",
+    "photo": "https://i.pravatar.cc/150?u=cp25",
+    "personal": {
+      "name": "Venkat Kumar",
+      "gender": "Other",
+      "dob": "1993-04-10",
+      "mobile": "+91 8529992495",
+      "email": "venkat.kumar@email.com",
+      "address": "173 Main Road, Bangalore",
+      "city": "Bangalore",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 2,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "ORR Corridor",
+        "Gachibowli"
+      ],
+      "languages": [
+        "Tamil",
+        "English"
+      ],
+      "monthlyLeads": 59,
+      "previousProjects": [
+        "Lakeview Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp25"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-25"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-25"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-25"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-25"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-25",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-25",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-25",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-25",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-25",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-25"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-05-03"
+      }
+    ]
+  },
+  {
+    "id": "CP-10026",
+    "applicationId": "CPA-2026-0026",
+    "partnerCode": "CPR-2026-0026",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Social Media",
+    "appliedDate": "2026-03-13",
+    "approvalDate": "2026-03-18",
+    "photo": "https://i.pravatar.cc/150?u=cp26",
+    "personal": {
+      "name": "Sandhya Goud",
+      "gender": "Male",
+      "dob": "1996-04-26",
+      "mobile": "+91 9433802951",
+      "email": "sandhya.goud@email.com",
+      "address": "20 Main Road, Chennai",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 11,
+      "currentBrokerage": "Self-employed",
+      "areasCovered": [
+        "ORR Corridor",
+        "Kondapur"
+      ],
+      "languages": [
+        "Hindi"
+      ],
+      "monthlyLeads": 52,
+      "previousProjects": [
+        "Green Valley Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp26"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-13"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-13"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-13"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-13"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-13",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-13",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-13",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-03-13",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-03-13",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-13"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-03-18"
+      }
+    ]
+  },
+  {
+    "id": "CP-10027",
+    "applicationId": "CPA-2026-0027",
+    "partnerCode": "CPR-2026-0027",
+    "status": "Approved",
+    "partnerStatus": "Inactive",
+    "source": "Website",
+    "appliedDate": "2026-04-12",
+    "approvalDate": "2026-04-17",
+    "photo": "https://i.pravatar.cc/150?u=cp27",
+    "personal": {
+      "name": "Ashok Verma",
+      "gender": "Female",
+      "dob": "1992-07-15",
+      "mobile": "+91 8365460621",
+      "email": "ashok.verma@email.com",
+      "address": "53 Main Road, Pune",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 14,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Kukatpally",
+        "Banjara Hills"
+      ],
+      "languages": [
+        "Hindi",
+        "Tamil"
+      ],
+      "monthlyLeads": 43,
+      "previousProjects": [
+        "Lakeview Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp27"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-12"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-12"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-12"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-12"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": true,
+      "riskLevel": "Medium",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-12",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-12",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-12",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-12",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-12",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-12"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-17"
+      }
+    ]
+  },
+  {
+    "id": "CP-10028",
+    "applicationId": "CPA-2026-0028",
+    "partnerCode": "CPR-2026-0028",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Website",
+    "appliedDate": "2026-04-08",
+    "approvalDate": "2026-04-10",
+    "photo": "https://i.pravatar.cc/150?u=cp28",
+    "personal": {
+      "name": "Uma Singh",
+      "gender": "Female",
+      "dob": "1976-01-20",
+      "mobile": "+91 9196852745",
+      "email": "uma.singh@email.com",
+      "address": "194 Main Road, Mumbai",
+      "city": "Mumbai",
+      "district": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 15,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "Kukatpally"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "monthlyLeads": 29,
+      "previousProjects": [
+        "Sunrise Farms Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp28"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-08"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-08"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-08"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-08",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-08",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-08",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-08",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-08",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-08"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-10"
+      }
+    ]
+  },
+  {
+    "id": "CP-10029",
+    "applicationId": "CPA-2026-0029",
+    "partnerCode": "CPR-2026-0029",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Referral",
+    "appliedDate": "2026-05-18",
+    "approvalDate": "2026-05-27",
+    "photo": "https://i.pravatar.cc/150?u=cp29",
+    "personal": {
+      "name": "Chandra Naidu",
+      "gender": "Female",
+      "dob": "1995-07-21",
+      "mobile": "+91 7672792928",
+      "email": "chandra.naidu@email.com",
+      "address": "116 Main Road, Warangal",
+      "city": "Warangal",
+      "district": "Warangal",
+      "state": "Telangana",
+      "pincode": "506001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 10,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Kondapur",
+        "Miyapur"
+      ],
+      "languages": [
+        "English",
+        "Kannada"
+      ],
+      "monthlyLeads": 19,
+      "previousProjects": [
+        "Lakeview Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp29"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-18"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-18"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-18"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-18"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-18",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-18",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-18",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-05-18",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-05-18",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-05-18"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-05-27"
+      }
+    ]
+  },
+  {
+    "id": "CP-10030",
+    "applicationId": "CPA-2026-0030",
+    "partnerCode": "CPR-2026-0030",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Referral",
+    "appliedDate": "2026-03-07",
+    "approvalDate": "2026-03-08",
+    "photo": "https://i.pravatar.cc/150?u=cp30",
+    "personal": {
+      "name": "Latha Choudary",
+      "gender": "Male",
+      "dob": "1993-09-24",
+      "mobile": "+91 7787128217",
+      "email": "latha.choudary@email.com",
+      "address": "115 Main Road, Nizamabad",
+      "city": "Nizamabad",
+      "district": "Nizamabad",
+      "state": "Telangana",
+      "pincode": "503001"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 13,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Kukatpally",
+        "ORR Corridor"
+      ],
+      "languages": [
+        "Telugu",
+        "English"
+      ],
+      "monthlyLeads": 55,
+      "previousProjects": [
+        "Lakeview Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp30"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-07"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-07"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-07"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-07"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-07",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-07",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-07",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-03-07",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-03-07",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-07"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-03-08"
+      }
+    ]
+  },
+  {
+    "id": "CP-10031",
+    "applicationId": "CPA-2026-0031",
+    "partnerCode": "CPR-2026-0031",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Website",
+    "appliedDate": "2026-03-08",
+    "approvalDate": "2026-03-13",
+    "photo": "https://i.pravatar.cc/150?u=cp31",
+    "personal": {
+      "name": "Mahesh Menon",
+      "gender": "Other",
+      "dob": "1989-12-09",
+      "mobile": "+91 9900671609",
+      "email": "mahesh.menon@email.com",
+      "address": "14 Main Road, Hyderabad",
+      "city": "Hyderabad",
+      "district": "Rangareddy",
+      "state": "Telangana",
+      "pincode": "500032"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 2,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Kondapur",
+        "Shamshabad"
+      ],
+      "languages": [
+        "Kannada",
+        "Hindi"
+      ],
+      "monthlyLeads": 41,
+      "previousProjects": [
+        "Urban Heights Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp31"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-08"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-08"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-08"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-08",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-08",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-08",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-03-08",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-03-08",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-08"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-03-13"
+      }
+    ]
+  },
+  {
+    "id": "CP-10032",
+    "applicationId": "CPA-2026-0032",
+    "partnerCode": "CPR-2026-0032",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Walk-in",
+    "appliedDate": "2026-04-29",
+    "approvalDate": "2026-05-01",
+    "photo": "https://i.pravatar.cc/150?u=cp32",
+    "personal": {
+      "name": "Geetha Iyer",
+      "gender": "Other",
+      "dob": "1994-01-17",
+      "mobile": "+91 7297905558",
+      "email": "geetha.iyer@email.com",
+      "address": "102 Main Road, Secunderabad",
+      "city": "Secunderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500003"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 6,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Banjara Hills",
+        "Kukatpally"
+      ],
+      "languages": [
+        "Telugu",
+        "English"
+      ],
+      "monthlyLeads": 17,
+      "previousProjects": [
+        "Green Valley Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp32"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-29"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-29"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-29"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-29",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-29",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-29",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-29",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-29",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-29"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-05-01"
+      }
+    ]
+  },
+  {
+    "id": "CP-10033",
+    "applicationId": "CPA-2026-0033",
+    "partnerCode": "CPR-2026-0033",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Partner Portal",
+    "appliedDate": "2026-04-03",
+    "approvalDate": "2026-04-13",
+    "photo": "https://i.pravatar.cc/150?u=cp33",
+    "personal": {
+      "name": "Balaji Gupta",
+      "gender": "Female",
+      "dob": "1994-03-08",
+      "mobile": "+91 9867478203",
+      "email": "balaji.gupta@email.com",
+      "address": "142 Main Road, Vijayawada",
+      "city": "Vijayawada",
+      "district": "Krishna",
+      "state": "Andhra Pradesh",
+      "pincode": "520010"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 5,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "Gachibowli",
+        "Banjara Hills"
+      ],
+      "languages": [
+        "Tamil",
+        "Hindi"
+      ],
+      "monthlyLeads": 43,
+      "previousProjects": [
+        "Urban Heights Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp33"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-03"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-03"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-03"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-03"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Medium",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-03",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-03",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-03",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-03",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-03",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-03"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-13"
+      }
+    ]
+  },
+  {
+    "id": "CP-10034",
+    "applicationId": "CPA-2026-0034",
+    "partnerCode": "CPR-2026-0034",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Referral",
+    "appliedDate": "2026-05-15",
+    "approvalDate": "2026-05-22",
+    "photo": "https://i.pravatar.cc/150?u=cp34",
+    "personal": {
+      "name": "Nirmala Das",
+      "gender": "Male",
+      "dob": "1976-08-05",
+      "mobile": "+91 7259181303",
+      "email": "nirmala.das@email.com",
+      "address": "158 Main Road, Visakhapatnam",
+      "city": "Visakhapatnam",
+      "district": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "pincode": "530003"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 15,
+      "currentBrokerage": "Local Agency",
+      "areasCovered": [
+        "Miyapur"
+      ],
+      "languages": [
+        "Telugu"
+      ],
+      "monthlyLeads": 23,
+      "previousProjects": [
+        "Green Valley Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp34"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-15"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-15"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-15"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-15"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-15",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-15",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-15",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-05-15",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-05-15",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-05-15"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-05-22"
+      }
+    ]
+  },
+  {
+    "id": "CP-10035",
+    "applicationId": "CPA-2026-0035",
+    "partnerCode": "CPR-2026-0035",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Walk-in",
+    "appliedDate": "2026-06-23",
+    "approvalDate": "2026-06-29",
+    "photo": "https://i.pravatar.cc/150?u=cp35",
+    "personal": {
+      "name": "Sekhar Murthy",
+      "gender": "Other",
+      "dob": "1998-05-23",
+      "mobile": "+91 7411971467",
+      "email": "sekhar.murthy@email.com",
+      "address": "15 Main Road, Bangalore",
+      "city": "Bangalore",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 5,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Miyapur",
+        "Kondapur"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "monthlyLeads": 13,
+      "previousProjects": [
+        "Sunrise Farms Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp35"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-23"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-23"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-23"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-23",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-06-23",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-06-23",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-06-23",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-06-23",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-06-23"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-29"
+      }
+    ]
+  },
+  {
+    "id": "CP-10036",
+    "applicationId": "CPA-2026-0036",
+    "partnerCode": "CPR-2026-0036",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Walk-in",
+    "appliedDate": "2026-03-24",
+    "approvalDate": "2026-03-31",
+    "photo": "https://i.pravatar.cc/150?u=cp36",
+    "personal": {
+      "name": "Padma Krishna",
+      "gender": "Male",
+      "dob": "1975-03-11",
+      "mobile": "+91 9944830510",
+      "email": "padma.krishna@email.com",
+      "address": "95 Main Road, Chennai",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 18,
+      "currentBrokerage": "Self-employed",
+      "areasCovered": [
+        "Shamshabad",
+        "Gachibowli"
+      ],
+      "languages": [
+        "Telugu",
+        "Tamil"
+      ],
+      "monthlyLeads": 21,
+      "previousProjects": [
+        "Urban Heights Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp36"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-24"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-24"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-24"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-24",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-24",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-24",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-03-24",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-03-24",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-24"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-03-31"
+      }
+    ]
+  },
+  {
+    "id": "CP-10037",
+    "applicationId": "CPA-2026-0037",
+    "partnerCode": "CPR-2026-0037",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Referral",
+    "appliedDate": "2026-05-30",
+    "approvalDate": "2026-06-13",
+    "photo": "https://i.pravatar.cc/150?u=cp37",
+    "personal": {
+      "name": "Raghav Prasad",
+      "gender": "Male",
+      "dob": "1993-02-16",
+      "mobile": "+91 9114456050",
+      "email": "raghav.prasad@email.com",
+      "address": "62 Main Road, Pune",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 16,
+      "currentBrokerage": "Self-employed",
+      "areasCovered": [
+        "Gachibowli",
+        "Kondapur"
+      ],
+      "languages": [
+        "Kannada",
+        "English"
+      ],
+      "monthlyLeads": 40,
+      "previousProjects": [
+        "Urban Heights Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp37"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-30"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-30"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-30"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-30"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-30",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-30",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-30",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-05-30",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-05-30",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-05-30"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-13"
+      }
+    ]
+  },
+  {
+    "id": "CP-10038",
+    "applicationId": "CPA-2026-0038",
+    "partnerCode": "CPR-2026-0038",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Website",
+    "appliedDate": "2026-05-28",
+    "approvalDate": "2026-05-31",
+    "photo": "https://i.pravatar.cc/150?u=cp38",
+    "personal": {
+      "name": "Sunitha Devi",
+      "gender": "Female",
+      "dob": "1993-11-10",
+      "mobile": "+91 8886097532",
+      "email": "sunitha.devi@email.com",
+      "address": "160 Main Road, Mumbai",
+      "city": "Mumbai",
+      "district": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "professional": {
+      "occupation": "Channel Partner",
+      "yearsExperience": 15,
+      "currentBrokerage": "Self-employed",
+      "areasCovered": [
+        "Miyapur",
+        "ORR Corridor"
+      ],
+      "languages": [
+        "English",
+        "Tamil"
+      ],
+      "monthlyLeads": 33,
+      "previousProjects": [
+        "Urban Heights Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp38"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-28"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-28"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-28"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-28"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Low",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-28",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-28",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-28",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-05-28",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-05-28",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-05-28"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-05-31"
+      }
+    ]
+  },
+  {
+    "id": "CP-10039",
+    "applicationId": "CPA-2026-0039",
+    "partnerCode": "CPR-2026-0039",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Website",
+    "appliedDate": "2026-06-05",
+    "approvalDate": "2026-06-09",
+    "photo": "https://i.pravatar.cc/150?u=cp39",
+    "personal": {
+      "name": "Arun Chandra",
+      "gender": "Other",
+      "dob": "1997-03-23",
+      "mobile": "+91 8738869907",
+      "email": "arun.chandra@email.com",
+      "address": "189 Main Road, Warangal",
+      "city": "Warangal",
+      "district": "Warangal",
+      "state": "Telangana",
+      "pincode": "506001"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 10,
+      "currentBrokerage": "Local Agency",
+      "areasCovered": [
+        "Banjara Hills",
+        "Miyapur"
+      ],
+      "languages": [
+        "Telugu",
+        "Kannada"
+      ],
+      "monthlyLeads": 73,
+      "previousProjects": [
+        "Urban Heights Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp39"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-05"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-05"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-05"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-05",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-06-05",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-06-05",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-06-05",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-06-05",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-06-05"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-09"
+      }
+    ]
+  },
+  {
+    "id": "CP-10040",
+    "applicationId": "CPA-2026-0040",
+    "partnerCode": "CPR-2026-0040",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Social Media",
+    "appliedDate": "2026-06-15",
+    "approvalDate": "2026-06-28",
+    "photo": "https://i.pravatar.cc/150?u=cp40",
+    "personal": {
+      "name": "Vani Babu",
+      "gender": "Other",
+      "dob": "1984-07-26",
+      "mobile": "+91 7845197078",
+      "email": "vani.babu@email.com",
+      "address": "94 Main Road, Nizamabad",
+      "city": "Nizamabad",
+      "district": "Nizamabad",
+      "state": "Telangana",
+      "pincode": "503001"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 3,
+      "currentBrokerage": "Local Agency",
+      "areasCovered": [
+        "Miyapur"
+      ],
+      "languages": [
+        "Kannada",
+        "Hindi"
+      ],
+      "monthlyLeads": 67,
+      "previousProjects": [
+        "Urban Heights Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp40"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-15"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-15"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-15"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-15",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-06-15",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-06-15",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-06-15",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-06-15",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-06-15"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "id": "CP-10041",
+    "applicationId": "CPA-2026-0041",
+    "partnerCode": "CPR-2026-0041",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Walk-in",
+    "appliedDate": "2026-06-19",
+    "approvalDate": "2026-06-28",
+    "photo": "https://i.pravatar.cc/150?u=cp41",
+    "personal": {
+      "name": "Karthik Reddy",
+      "gender": "Male",
+      "dob": "1975-08-10",
+      "mobile": "+91 8961149261",
+      "email": "karthik.reddy@email.com",
+      "address": "23 Main Road, Hyderabad",
+      "city": "Hyderabad",
+      "district": "Rangareddy",
+      "state": "Telangana",
+      "pincode": "500032"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 4,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Shamshabad",
+        "Gachibowli"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "monthlyLeads": 38,
+      "previousProjects": [
+        "Green Valley Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp41"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-19"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-19"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-19"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-06-19"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Medium",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-19",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-06-19",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-06-19",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-06-19",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-06-19",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-06-19"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-28"
+      }
+    ]
+  },
+  {
+    "id": "CP-10042",
+    "applicationId": "CPA-2026-0042",
+    "partnerCode": "CPR-2026-0042",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Website",
+    "appliedDate": "2026-06-21",
+    "approvalDate": "2026-06-30",
+    "photo": "https://i.pravatar.cc/150?u=cp42",
+    "personal": {
+      "name": "Shilpa Rao",
+      "gender": "Female",
+      "dob": "1995-06-28",
+      "mobile": "+91 7145012504",
+      "email": "shilpa.rao@email.com",
+      "address": "8 Main Road, Secunderabad",
+      "city": "Secunderabad",
+      "district": "Hyderabad",
+      "state": "Telangana",
+      "pincode": "500003"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 17,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Kondapur"
+      ],
+      "languages": [
+        "Kannada",
+        "Telugu"
+      ],
+      "monthlyLeads": 62,
+      "previousProjects": [
+        "Lakeview Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp42"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-21"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-21"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-21"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-06-21"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": false,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "Medium",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-21",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-06-21",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-06-21",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-06-21",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-06-21",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-06-21"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-30"
+      }
+    ]
+  },
+  {
+    "id": "CP-10043",
+    "applicationId": "CPA-2026-0043",
+    "partnerCode": "CPR-2026-0043",
+    "status": "Approved",
+    "partnerStatus": "Active",
+    "source": "Website",
+    "appliedDate": "2026-04-18",
+    "approvalDate": "2026-04-28",
+    "photo": "https://i.pravatar.cc/150?u=cp43",
+    "personal": {
+      "name": "Mohan Sharma",
+      "gender": "Female",
+      "dob": "1988-03-16",
+      "mobile": "+91 9147813194",
+      "email": "mohan.sharma@email.com",
+      "address": "59 Main Road, Vijayawada",
+      "city": "Vijayawada",
+      "district": "Krishna",
+      "state": "Andhra Pradesh",
+      "pincode": "520010"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 2,
+      "currentBrokerage": "ANAROCK",
+      "areasCovered": [
+        "Gachibowli",
+        "Banjara Hills"
+      ],
+      "languages": [
+        "Telugu",
+        "Tamil"
+      ],
+      "monthlyLeads": 36,
+      "previousProjects": [
+        "Urban Heights Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp43"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-18"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-18"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-18"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Recommend approval — strong track record",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-18",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-18",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-18",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-18",
+        "tone": "warning"
+      },
+      {
+        "type": "approved",
+        "title": "Application Approved",
+        "description": "Partner onboarded to Merit Real Solutions network",
+        "date": "2026-04-18",
+        "tone": "success"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-18"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-28"
+      }
+    ]
+  },
+  {
+    "id": "CP-10044",
+    "applicationId": "CPA-2026-0044",
+    "partnerCode": null,
+    "status": "Rejected",
+    "partnerStatus": null,
+    "source": "Referral",
+    "appliedDate": "2026-06-24",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp44",
+    "personal": {
+      "name": "Radha Patel",
+      "gender": "Male",
+      "dob": "1988-03-10",
+      "mobile": "+91 8693822897",
+      "email": "radha.patel@email.com",
+      "address": "141 Main Road, Visakhapatnam",
+      "city": "Visakhapatnam",
+      "district": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "pincode": "530003"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 3,
+      "currentBrokerage": "None",
+      "areasCovered": [
+        "Kondapur",
+        "Banjara Hills"
+      ],
+      "languages": [
+        "Kannada",
+        "English"
+      ],
+      "monthlyLeads": 15,
+      "previousProjects": [
+        "Urban Heights Phase 3"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp44"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-24"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-24"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-24"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-06-24"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Does not meet minimum criteria",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-24",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-06-24",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-06-24",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-06-24",
+        "tone": "warning"
+      },
+      {
+        "type": "rejected",
+        "title": "Application Rejected",
+        "description": "Application did not meet verification criteria",
+        "date": "2026-06-24",
+        "tone": "danger"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-06-24"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-24"
+      }
+    ]
+  },
+  {
+    "id": "CP-10045",
+    "applicationId": "CPA-2026-0045",
+    "partnerCode": null,
+    "status": "Rejected",
+    "partnerStatus": null,
+    "source": "Referral",
+    "appliedDate": "2026-04-27",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp45",
+    "personal": {
+      "name": "Ganesh Kumar",
+      "gender": "Female",
+      "dob": "1982-04-09",
+      "mobile": "+91 9270977469",
+      "email": "ganesh.kumar@email.com",
+      "address": "105 Main Road, Bangalore",
+      "city": "Bangalore",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka",
+      "pincode": "560001"
+    },
+    "professional": {
+      "occupation": "Land Dealer",
+      "yearsExperience": 6,
+      "currentBrokerage": "None",
+      "areasCovered": [
+        "HITEC City",
+        "Miyapur"
+      ],
+      "languages": [
+        "Telugu",
+        "Tamil"
+      ],
+      "monthlyLeads": 75,
+      "previousProjects": [
+        "Green Valley Phase 1"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp45"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-27"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-27"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-27"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-04-27"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Does not meet minimum criteria",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-27",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-27",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-27",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-27",
+        "tone": "warning"
+      },
+      {
+        "type": "rejected",
+        "title": "Application Rejected",
+        "description": "Application did not meet verification criteria",
+        "date": "2026-04-27",
+        "tone": "danger"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-27"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-27"
+      }
+    ]
+  },
+  {
+    "id": "CP-10046",
+    "applicationId": "CPA-2026-0046",
+    "partnerCode": null,
+    "status": "Rejected",
+    "partnerStatus": null,
+    "source": "Social Media",
+    "appliedDate": "2026-03-23",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp46",
+    "personal": {
+      "name": "Bhavani Goud",
+      "gender": "Other",
+      "dob": "1994-07-27",
+      "mobile": "+91 9679308077",
+      "email": "bhavani.goud@email.com",
+      "address": "104 Main Road, Chennai",
+      "city": "Chennai",
+      "district": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600001"
+    },
+    "professional": {
+      "occupation": "Independent Agent",
+      "yearsExperience": 10,
+      "currentBrokerage": "PropTiger",
+      "areasCovered": [
+        "Kukatpally",
+        "HITEC City"
+      ],
+      "languages": [
+        "English"
+      ],
+      "monthlyLeads": 49,
+      "previousProjects": [
+        "Green Valley Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp46"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-03-23"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-03-23"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-03-23"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-03-23"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": true,
+      "emailVerified": false,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Does not meet minimum criteria",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-03-23",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-03-23",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-03-23",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-03-23",
+        "tone": "warning"
+      },
+      {
+        "type": "rejected",
+        "title": "Application Rejected",
+        "description": "Application did not meet verification criteria",
+        "date": "2026-03-23",
+        "tone": "danger"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-03-23"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-03-23"
+      }
+    ]
+  },
+  {
+    "id": "CP-10047",
+    "applicationId": "CPA-2026-0047",
+    "partnerCode": null,
+    "status": "Rejected",
+    "partnerStatus": null,
+    "source": "Website",
+    "appliedDate": "2026-06-13",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp47",
+    "personal": {
+      "name": "Santosh Verma",
+      "gender": "Other",
+      "dob": "1994-04-01",
+      "mobile": "+91 8728946273",
+      "email": "santosh.verma@email.com",
+      "address": "92 Main Road, Pune",
+      "city": "Pune",
+      "district": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411001"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 13,
+      "currentBrokerage": "Independent",
+      "areasCovered": [
+        "Gachibowli",
+        "Kondapur"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "monthlyLeads": 12,
+      "previousProjects": [
+        "Lakeview Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp47"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-06-13"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-06-13"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-06-13"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-06-13"
+      }
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": true,
+      "documentsVerified": true,
+      "riskLevel": "High",
+      "recommendation": "Does not meet minimum criteria",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-06-13",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-06-13",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-06-13",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-06-13",
+        "tone": "warning"
+      },
+      {
+        "type": "rejected",
+        "title": "Application Rejected",
+        "description": "Application did not meet verification criteria",
+        "date": "2026-06-13",
+        "tone": "danger"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-06-13"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-06-13"
+      }
+    ]
+  },
+  {
+    "id": "CP-10048",
+    "applicationId": "CPA-2026-0048",
+    "partnerCode": null,
+    "status": "Rejected",
+    "partnerStatus": null,
+    "source": "Website",
+    "appliedDate": "2026-04-05",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp48",
+    "personal": {
+      "name": "Jyothi Singh",
+      "gender": "Male",
+      "dob": "1990-02-24",
+      "mobile": "+91 9226367247",
+      "email": "jyothi.singh@email.com",
+      "address": "183 Main Road, Mumbai",
+      "city": "Mumbai",
+      "district": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400001"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 2,
+      "currentBrokerage": "PropTiger",
+      "areasCovered": [
+        "Kukatpally",
+        "Kondapur"
+      ],
+      "languages": [
+        "Telugu",
+        "Kannada"
+      ],
+      "monthlyLeads": 9,
+      "previousProjects": [
+        "Urban Heights Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp48"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-04-05"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-04-05"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-04-05"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": true,
+      "phoneVerified": true,
+      "emailVerified": true,
+      "addressVerified": true,
+      "experienceVerified": false,
+      "documentsVerified": true,
+      "riskLevel": "Medium",
+      "recommendation": "Does not meet minimum criteria",
+      "adminRemarks": "",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Completed"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-04-05",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-04-05",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-04-05",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-04-05",
+        "tone": "warning"
+      },
+      {
+        "type": "rejected",
+        "title": "Application Rejected",
+        "description": "Application did not meet verification criteria",
+        "date": "2026-04-05",
+        "tone": "danger"
+      }
+    ],
+    "verificationHistory": [
+      {
+        "action": "Verification assigned",
+        "by": "Admin",
+        "date": "2026-04-05"
+      },
+      {
+        "action": "Final review completed",
+        "by": "Compliance Team",
+        "date": "2026-04-05"
+      }
+    ]
+  },
+  {
+    "id": "CP-10049",
+    "applicationId": "CPA-2026-0049",
+    "partnerCode": null,
+    "status": "On Hold",
+    "partnerStatus": null,
+    "source": "Social Media",
+    "appliedDate": "2026-05-11",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp49",
+    "personal": {
+      "name": "Nikhil Naidu",
+      "gender": "Female",
+      "dob": "1998-07-05",
+      "mobile": "+91 7175095645",
+      "email": "nikhil.naidu@email.com",
+      "address": "72 Main Road, Warangal",
+      "city": "Warangal",
+      "district": "Warangal",
+      "state": "Telangana",
+      "pincode": "506001"
+    },
+    "professional": {
+      "occupation": "Real Estate Broker",
+      "yearsExperience": 6,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "Banjara Hills"
+      ],
+      "languages": [
+        "Tamil",
+        "Telugu"
+      ],
+      "monthlyLeads": 32,
+      "previousProjects": [
+        "Lakeview Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp49"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-11"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-11"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-11"
+      },
+      "rera": null
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Low",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "Requested updated RERA certificate",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-11",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-11",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-11",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-05-11",
+        "tone": "warning"
+      },
+      {
+        "type": "hold",
+        "title": "Placed On Hold",
+        "description": "Awaiting additional information from applicant",
+        "date": "2026-05-11",
+        "tone": "warning"
+      }
+    ],
+    "verificationHistory": []
+  },
+  {
+    "id": "CP-10050",
+    "applicationId": "CPA-2026-0050",
+    "partnerCode": null,
+    "status": "On Hold",
+    "partnerStatus": null,
+    "source": "Partner Portal",
+    "appliedDate": "2026-05-21",
+    "approvalDate": null,
+    "photo": "https://i.pravatar.cc/150?u=cp50",
+    "personal": {
+      "name": "Asha Choudary",
+      "gender": "Female",
+      "dob": "1976-07-24",
+      "mobile": "+91 7154862758",
+      "email": "asha.choudary@email.com",
+      "address": "73 Main Road, Nizamabad",
+      "city": "Nizamabad",
+      "district": "Nizamabad",
+      "state": "Telangana",
+      "pincode": "503001"
+    },
+    "professional": {
+      "occupation": "Property Consultant",
+      "yearsExperience": 1,
+      "currentBrokerage": "Square Yards",
+      "areasCovered": [
+        "Shamshabad"
+      ],
+      "languages": [
+        "Telugu"
+      ],
+      "monthlyLeads": 25,
+      "previousProjects": [
+        "Green Valley Phase 2"
+      ]
+    },
+    "documents": {
+      "photo": {
+        "id": "doc-photo",
+        "name": "Profile Photo",
+        "type": "image",
+        "size": "245 KB",
+        "url": "https://i.pravatar.cc/400?u=cp50"
+      },
+      "aadhaar": {
+        "id": "doc-aadhaar",
+        "name": "Aadhaar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2026-05-21"
+      },
+      "pan": {
+        "id": "doc-pan",
+        "name": "PAN Card",
+        "type": "pdf",
+        "size": "890 KB",
+        "date": "2026-05-21"
+      },
+      "drivingLicense": {
+        "id": "doc-dl",
+        "name": "Driving License",
+        "type": "pdf",
+        "size": "1.1 MB",
+        "date": "2026-05-21"
+      },
+      "rera": {
+        "id": "doc-rera",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2026-05-21"
+      }
+    },
+    "verification": {
+      "identityVerified": false,
+      "phoneVerified": false,
+      "emailVerified": false,
+      "addressVerified": false,
+      "experienceVerified": false,
+      "documentsVerified": false,
+      "riskLevel": "Medium",
+      "recommendation": "Pending full document review",
+      "adminRemarks": "Requested updated RERA certificate",
+      "internalNotes": "Background check initiated via standard KYC workflow",
+      "verificationStatus": "Not Started"
+    },
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application Submitted",
+        "description": "Partner application received via website form",
+        "date": "2026-05-21",
+        "tone": "accent"
+      },
+      {
+        "type": "verification",
+        "title": "Verification Started",
+        "description": "Admin began identity and document review",
+        "date": "2026-05-21",
+        "tone": "info"
+      },
+      {
+        "type": "documents",
+        "title": "Documents Uploaded",
+        "description": "Aadhaar, PAN and supporting documents received",
+        "date": "2026-05-21",
+        "tone": "neutral"
+      },
+      {
+        "type": "checked",
+        "title": "Documents Checked",
+        "description": "All mandatory documents reviewed",
+        "date": "2026-05-21",
+        "tone": "warning"
+      },
+      {
+        "type": "hold",
+        "title": "Placed On Hold",
+        "description": "Awaiting additional information from applicant",
+        "date": "2026-05-21",
+        "tone": "warning"
+      }
+    ],
+    "verificationHistory": []
+  }
+]

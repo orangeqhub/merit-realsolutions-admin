@@ -1,0 +1,29 @@
+.erp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: var(--erp-radius-pill);
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.erp-badge--sm { padding: 0.2rem 0.5rem; font-size: 0.6875rem; }
+.erp-badge--md { padding: 0.3rem 0.7rem; font-size: 0.75rem; }
+.erp-badge--lg { padding: 0.4rem 0.85rem; font-size: 0.8125rem; }
+
+.erp-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.erp-badge--success { background: var(--erp-success-soft); color: var(--erp-success-dark); }
+.erp-badge--danger  { background: var(--erp-danger-soft);  color: var(--erp-danger-dark); }
+.erp-badge--warning { background: var(--erp-warning-soft); color: var(--erp-warning-dark); }
+.erp-badge--info    { background: var(--erp-info-soft);    color: var(--erp-info-dark); }
+.erp-badge--accent  { background: var(--erp-accent-soft);  color: var(--erp-accent-dark); }
+.erp-badge--violet  { background: var(--erp-violet-soft);  color: var(--erp-violet); }
+.erp-badge--neutral { background: var(--erp-hover);        color: var(--erp-text-muted); }

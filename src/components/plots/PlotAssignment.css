@@ -1,0 +1,51 @@
+.plot-assignment {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.plot-assignment__intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--erp-violet-soft);
+  border-radius: var(--erp-radius-sm);
+}
+
+.plot-assignment__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-card);
+  color: var(--erp-violet);
+  flex-shrink: 0;
+}
+
+.plot-assignment__intro h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.plot-assignment__intro p {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-assignment__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 540px) {
+  .plot-assignment__grid {
+    grid-template-columns: 1fr;
+  }
+}

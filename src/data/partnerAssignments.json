@@ -1,0 +1,3519 @@
+{
+  "version": 2,
+  "generatedDate": "2026-07-01",
+  "synced": true,
+  "assignments": {
+    "CP-10019": {
+      "ventures": [
+        {
+          "id": "VNT-2001",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3001",
+          "assignedDate": "2026-06-16"
+        },
+        {
+          "id": "LYT-3002",
+          "assignedDate": "2026-06-07"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5025",
+          "assignedDate": "2026-06-07"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100001",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PLT-100003",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PLT-100004",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "PLT-100007",
+          "assignedDate": "2026-06-01"
+        },
+        {
+          "id": "PLT-100009",
+          "assignedDate": "2026-06-16"
+        },
+        {
+          "id": "PLT-100010",
+          "assignedDate": "2026-06-04"
+        },
+        {
+          "id": "PLT-100011",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100015",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "PLT-100016",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100018",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "PLT-100019",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "PLT-100021",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100022",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100030",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100031",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100034",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "PLT-100035",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100039",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100044",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "PLT-100045",
+          "assignedDate": "2026-06-04"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7001",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "LED-7026",
+          "assignedDate": "2026-06-29"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6021",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "CUST-6024",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "CUST-6026",
+          "assignedDate": "2026-06-08"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Warangal",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-03-28",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-01",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 3,
+        "siteVisitsScheduled": 1,
+        "activeDeals": 2,
+        "revenue": 1000000,
+        "totalBookings": 2,
+        "conversionRate": 150,
+        "activeLeads": 2
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2001",
+            "ventureName": "Green Valley Township",
+            "amount": 1000000
+          }
+        ]
+      }
+    },
+    "CP-10020": {
+      "ventures": [
+        {
+          "id": "VNT-2002",
+          "assignedDate": "2026-06-05"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3003",
+          "assignedDate": "2026-06-27"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5004",
+          "assignedDate": "2026-06-19"
+        },
+        {
+          "id": "PRP-5014",
+          "assignedDate": "2026-06-21"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100053",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100056",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100062",
+          "assignedDate": "2026-06-22"
+        },
+        {
+          "id": "PLT-100066",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PLT-100068",
+          "assignedDate": "2026-06-22"
+        },
+        {
+          "id": "PLT-100071",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100073",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100074",
+          "assignedDate": "2026-06-20"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7002",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "LED-7027",
+          "assignedDate": "2026-06-08"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6002",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "CUST-6004",
+          "assignedDate": "2026-06-16"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Nizamabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-03-22",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-05",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 2,
+        "siteVisitsScheduled": 1,
+        "activeDeals": 0,
+        "revenue": 660000,
+        "totalBookings": 1,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2002",
+            "ventureName": "Royal Meadows",
+            "amount": 660000
+          }
+        ]
+      }
+    },
+    "CP-10021": {
+      "ventures": [
+        {
+          "id": "VNT-2003",
+          "assignedDate": "2026-06-29"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3004",
+          "assignedDate": "2026-06-06"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5018",
+          "assignedDate": "2026-06-09"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100079",
+          "assignedDate": "2026-06-19"
+        },
+        {
+          "id": "PLT-100081",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100082",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100083",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100088",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100093",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100096",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "PLT-100097",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100098",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100099",
+          "assignedDate": "2026-06-16"
+        },
+        {
+          "id": "PLT-100100",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7003",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "LED-7028",
+          "assignedDate": "2026-06-02"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6011",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "CUST-6013",
+          "assignedDate": "2026-06-19"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Hyderabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-11",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-16",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 2,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 1,
+        "revenue": 1060000,
+        "totalBookings": 2,
+        "conversionRate": 100,
+        "activeLeads": 2
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2003",
+            "ventureName": "Palm County",
+            "amount": 1060000
+          }
+        ]
+      }
+    },
+    "CP-10022": {
+      "ventures": [
+        {
+          "id": "VNT-2004",
+          "assignedDate": "2026-06-15"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3005",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "LYT-3012",
+          "assignedDate": "2026-06-15"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5017",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PRP-5022",
+          "assignedDate": "2026-06-13"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100101",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100102",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100104",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100109",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100110",
+          "assignedDate": "2026-06-05"
+        },
+        {
+          "id": "PLT-100112",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100113",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PLT-100115",
+          "assignedDate": "2026-06-04"
+        },
+        {
+          "id": "PLT-100118",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "PLT-100120",
+          "assignedDate": "2026-06-21"
+        },
+        {
+          "id": "PLT-100121",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100124",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100125",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100276",
+          "assignedDate": "2026-06-04"
+        },
+        {
+          "id": "PLT-100278",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "PLT-100279",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100284",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "PLT-100285",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "PLT-100286",
+          "assignedDate": "2026-06-05"
+        },
+        {
+          "id": "PLT-100291",
+          "assignedDate": "2026-06-04"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7004",
+          "assignedDate": "2026-06-22"
+        },
+        {
+          "id": "LED-7029",
+          "assignedDate": "2026-06-14"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6003",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "CUST-6009",
+          "assignedDate": "2026-06-05"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Secunderabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-27",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-05-11",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 2,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 3,
+        "revenue": 2600000,
+        "totalBookings": 3,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2004",
+            "ventureName": "Merit Avenue",
+            "amount": 2600000
+          }
+        ]
+      }
+    },
+    "CP-10023": {
+      "ventures": [
+        {
+          "id": "VNT-2005",
+          "assignedDate": "2026-06-11"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3006",
+          "assignedDate": "2026-06-24"
+        }
+      ],
+      "properties": [],
+      "plots": [
+        {
+          "id": "PLT-100127",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100129",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100130",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100131",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100132",
+          "assignedDate": "2026-06-04"
+        },
+        {
+          "id": "PLT-100134",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100136",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100138",
+          "assignedDate": "2026-06-06"
+        },
+        {
+          "id": "PLT-100140",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100141",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100144",
+          "assignedDate": "2026-06-04"
+        },
+        {
+          "id": "PLT-100147",
+          "assignedDate": "2026-06-26"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7005",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "LED-7030",
+          "assignedDate": "2026-06-17"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6005",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "CUST-6030",
+          "assignedDate": "2026-06-04"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Vijayawada",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-23",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-05-04",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 2,
+        "siteVisitsScheduled": 1,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2005",
+            "ventureName": "Sunrise Farms",
+            "amount": 0
+          }
+        ]
+      }
+    },
+    "CP-10024": {
+      "ventures": [
+        {
+          "id": "VNT-2006",
+          "assignedDate": "2026-06-01"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3007",
+          "assignedDate": "2026-06-17"
+        }
+      ],
+      "properties": [],
+      "plots": [
+        {
+          "id": "PLT-100151",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100154",
+          "assignedDate": "2026-06-05"
+        },
+        {
+          "id": "PLT-100155",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100161",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100162",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100164",
+          "assignedDate": "2026-06-19"
+        },
+        {
+          "id": "PLT-100166",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100167",
+          "assignedDate": "2026-06-20"
+        },
+        {
+          "id": "PLT-100168",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100172",
+          "assignedDate": "2026-06-08"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7006",
+          "assignedDate": "2026-06-06"
+        },
+        {
+          "id": "LED-7031",
+          "assignedDate": "2026-06-20"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6006",
+          "assignedDate": "2026-06-27"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Visakhapatnam",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-26",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-30",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 2,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 50,
+        "activeLeads": 0
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2006",
+            "ventureName": "Golden Enclave",
+            "amount": 0
+          }
+        ]
+      }
+    },
+    "CP-10025": {
+      "ventures": [
+        {
+          "id": "VNT-2007",
+          "assignedDate": "2026-06-21"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3008",
+          "assignedDate": "2026-06-05"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5011",
+          "assignedDate": "2026-06-06"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100177",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100178",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100182",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100186",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100187",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100189",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100190",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "PLT-100192",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100193",
+          "assignedDate": "2026-06-04"
+        },
+        {
+          "id": "PLT-100196",
+          "assignedDate": "2026-06-06"
+        },
+        {
+          "id": "PLT-100197",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100198",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "PLT-100200",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7007",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "LED-7032",
+          "assignedDate": "2026-06-18"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6007",
+          "assignedDate": "2026-06-29"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Bangalore",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-25",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-05-03",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 600000,
+        "totalBookings": 1,
+        "conversionRate": 50,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2007",
+            "ventureName": "Urban Heights",
+            "amount": 600000
+          }
+        ]
+      }
+    },
+    "CP-10026": {
+      "ventures": [
+        {
+          "id": "VNT-2001",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "VNT-2008",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3001",
+          "assignedDate": "2026-06-19"
+        },
+        {
+          "id": "LYT-3002",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "LYT-3009",
+          "assignedDate": "2026-06-26"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5016",
+          "assignedDate": "2026-06-28"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100002",
+          "assignedDate": "2026-06-06"
+        },
+        {
+          "id": "PLT-100005",
+          "assignedDate": "2026-06-22"
+        },
+        {
+          "id": "PLT-100006",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100008",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100012",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100013",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100014",
+          "assignedDate": "2026-06-21"
+        },
+        {
+          "id": "PLT-100017",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100020",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100023",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100024",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100025",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100026",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PLT-100027",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100028",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100029",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100032",
+          "assignedDate": "2026-06-01"
+        },
+        {
+          "id": "PLT-100033",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "PLT-100036",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100037",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7008",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "LED-7033",
+          "assignedDate": "2026-06-15"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6001",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "CUST-6008",
+          "assignedDate": "2026-06-17"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Chennai",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-03-13",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-03-18",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 2,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 1,
+        "revenue": 100000,
+        "totalBookings": 1,
+        "conversionRate": 100,
+        "activeLeads": 0
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2001",
+            "ventureName": "Green Valley Township",
+            "amount": 100000
+          },
+          {
+            "ventureId": "VNT-2008",
+            "ventureName": "Hill Crest Villas",
+            "amount": 0
+          }
+        ]
+      }
+    },
+    "CP-10027": {
+      "ventures": [
+        {
+          "id": "VNT-2002",
+          "assignedDate": "2026-06-01"
+        },
+        {
+          "id": "VNT-2009",
+          "assignedDate": "2026-06-26"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3003",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "LYT-3010",
+          "assignedDate": "2026-06-19"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5008",
+          "assignedDate": "2026-06-08"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100051",
+          "assignedDate": "2026-06-21"
+        },
+        {
+          "id": "PLT-100052",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100054",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100055",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100057",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100058",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100059",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "PLT-100060",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100061",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100063",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100064",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PLT-100065",
+          "assignedDate": "2026-06-21"
+        },
+        {
+          "id": "PLT-100067",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100069",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100070",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100072",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100075",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100226",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100227",
+          "assignedDate": "2026-06-06"
+        },
+        {
+          "id": "PLT-100229",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7009",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "LED-7034",
+          "assignedDate": "2026-06-20"
+        }
+      ],
+      "customers": [],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Pune",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-12",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-17",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 0,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 0,
+        "activeLeads": 0
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2002",
+            "ventureName": "Royal Meadows",
+            "amount": 0
+          },
+          {
+            "ventureId": "VNT-2009",
+            "ventureName": "Lakeview Residency",
+            "amount": 0
+          }
+        ]
+      }
+    },
+    "CP-10028": {
+      "ventures": [
+        {
+          "id": "VNT-2003",
+          "assignedDate": "2026-06-19"
+        },
+        {
+          "id": "VNT-2010",
+          "assignedDate": "2026-06-17"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3004",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "LYT-3011",
+          "assignedDate": "2026-06-08"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5005",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PRP-5023",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PRP-5024",
+          "assignedDate": "2026-06-25"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100076",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100077",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100078",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100080",
+          "assignedDate": "2026-06-01"
+        },
+        {
+          "id": "PLT-100084",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PLT-100085",
+          "assignedDate": "2026-06-01"
+        },
+        {
+          "id": "PLT-100086",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100087",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PLT-100089",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100090",
+          "assignedDate": "2026-06-22"
+        },
+        {
+          "id": "PLT-100091",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100092",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100094",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100095",
+          "assignedDate": "2026-06-16"
+        },
+        {
+          "id": "PLT-100252",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100253",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PLT-100254",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100257",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "PLT-100262",
+          "assignedDate": "2026-06-04"
+        },
+        {
+          "id": "PLT-100264",
+          "assignedDate": "2026-06-06"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7010",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "LED-7035",
+          "assignedDate": "2026-06-07"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6027",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "CUST-6029",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Mumbai",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-08",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-10",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 2,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 2,
+        "revenue": 920000,
+        "totalBookings": 2,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2003",
+            "ventureName": "Palm County",
+            "amount": 920000
+          },
+          {
+            "ventureId": "VNT-2010",
+            "ventureName": "Silver Springs",
+            "amount": 0
+          }
+        ]
+      }
+    },
+    "CP-10029": {
+      "ventures": [
+        {
+          "id": "VNT-2004",
+          "assignedDate": "2026-06-13"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3005",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "LYT-3012",
+          "assignedDate": "2026-06-12"
+        }
+      ],
+      "properties": [],
+      "plots": [
+        {
+          "id": "PLT-100103",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100105",
+          "assignedDate": "2026-06-03"
+        },
+        {
+          "id": "PLT-100106",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100107",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100108",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100111",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100114",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100116",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100117",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100119",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100122",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100123",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "PLT-100277",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100280",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "PLT-100281",
+          "assignedDate": "2026-06-22"
+        },
+        {
+          "id": "PLT-100282",
+          "assignedDate": "2026-06-19"
+        },
+        {
+          "id": "PLT-100283",
+          "assignedDate": "2026-06-05"
+        },
+        {
+          "id": "PLT-100287",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "PLT-100288",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "PLT-100289",
+          "assignedDate": "2026-06-13"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7011",
+          "assignedDate": "2026-06-20"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6017",
+          "assignedDate": "2026-06-02"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Warangal",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-05-18",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-05-27",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 500000,
+        "totalBookings": 1,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2004",
+            "ventureName": "Merit Avenue",
+            "amount": 500000
+          }
+        ]
+      }
+    },
+    "CP-10030": {
+      "ventures": [
+        {
+          "id": "VNT-2005",
+          "assignedDate": "2026-06-10"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3006",
+          "assignedDate": "2026-06-03"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5012",
+          "assignedDate": "2026-06-16"
+        },
+        {
+          "id": "PRP-5019",
+          "assignedDate": "2026-06-14"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100126",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100128",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100133",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100135",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100137",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100139",
+          "assignedDate": "2026-06-21"
+        },
+        {
+          "id": "PLT-100142",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100143",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100145",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100146",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100148",
+          "assignedDate": "2026-06-20"
+        },
+        {
+          "id": "PLT-100149",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100150",
+          "assignedDate": "2026-06-06"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7012",
+          "assignedDate": "2026-06-21"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6012",
+          "assignedDate": "2026-06-26"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Nizamabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-03-07",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-03-08",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 1,
+        "revenue": 1760000,
+        "totalBookings": 2,
+        "conversionRate": 100,
+        "activeLeads": 0
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2005",
+            "ventureName": "Sunrise Farms",
+            "amount": 1760000
+          }
+        ]
+      }
+    },
+    "CP-10031": {
+      "ventures": [
+        {
+          "id": "VNT-2006",
+          "assignedDate": "2026-06-26"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3007",
+          "assignedDate": "2026-06-18"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5015",
+          "assignedDate": "2026-06-17"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100152",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100153",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100156",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PLT-100157",
+          "assignedDate": "2026-06-18"
+        },
+        {
+          "id": "PLT-100158",
+          "assignedDate": "2026-06-10"
+        },
+        {
+          "id": "PLT-100159",
+          "assignedDate": "2026-06-16"
+        },
+        {
+          "id": "PLT-100160",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100163",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100165",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100169",
+          "assignedDate": "2026-06-20"
+        },
+        {
+          "id": "PLT-100170",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100171",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100173",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100174",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100175",
+          "assignedDate": "2026-06-14"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7013",
+          "assignedDate": "2026-06-22"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6010",
+          "assignedDate": "2026-06-23"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Hyderabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-03-08",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-03-13",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 860000,
+        "totalBookings": 1,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2006",
+            "ventureName": "Golden Enclave",
+            "amount": 860000
+          }
+        ]
+      }
+    },
+    "CP-10032": {
+      "ventures": [
+        {
+          "id": "VNT-2007",
+          "assignedDate": "2026-06-23"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3008",
+          "assignedDate": "2026-06-03"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5009",
+          "assignedDate": "2026-06-01"
+        },
+        {
+          "id": "PRP-5020",
+          "assignedDate": "2026-06-27"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100176",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100179",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100180",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100181",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100183",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PLT-100184",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100185",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100188",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100191",
+          "assignedDate": "2026-06-29"
+        },
+        {
+          "id": "PLT-100194",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100195",
+          "assignedDate": "2026-06-08"
+        },
+        {
+          "id": "PLT-100199",
+          "assignedDate": "2026-06-05"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7014",
+          "assignedDate": "2026-06-20"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6014",
+          "assignedDate": "2026-06-01"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Secunderabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-29",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-05-01",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 1,
+        "revenue": 1380000,
+        "totalBookings": 2,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2007",
+            "ventureName": "Urban Heights",
+            "amount": 1380000
+          }
+        ]
+      }
+    },
+    "CP-10033": {
+      "ventures": [
+        {
+          "id": "VNT-2008",
+          "assignedDate": "2026-06-02"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3009",
+          "assignedDate": "2026-06-25"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5002",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PRP-5021",
+          "assignedDate": "2026-06-09"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100203",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100204",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100206",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100208",
+          "assignedDate": "2026-06-06"
+        },
+        {
+          "id": "PLT-100211",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100212",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100216",
+          "assignedDate": "2026-06-17"
+        },
+        {
+          "id": "PLT-100217",
+          "assignedDate": "2026-06-11"
+        },
+        {
+          "id": "PLT-100220",
+          "assignedDate": "2026-06-19"
+        },
+        {
+          "id": "PLT-100222",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100223",
+          "assignedDate": "2026-06-05"
+        },
+        {
+          "id": "PLT-100224",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100225",
+          "assignedDate": "2026-06-21"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7015",
+          "assignedDate": "2026-06-11"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6015",
+          "assignedDate": "2026-06-13"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Vijayawada",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-03",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-13",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 1,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2008",
+            "ventureName": "Hill Crest Villas",
+            "amount": 0
+          }
+        ]
+      }
+    },
+    "CP-10034": {
+      "ventures": [
+        {
+          "id": "VNT-2009",
+          "assignedDate": "2026-06-18"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3010",
+          "assignedDate": "2026-06-15"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5001",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PRP-5006",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PRP-5007",
+          "assignedDate": "2026-06-05"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100228",
+          "assignedDate": "2026-06-14"
+        },
+        {
+          "id": "PLT-100230",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100231",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100233",
+          "assignedDate": "2026-06-05"
+        },
+        {
+          "id": "PLT-100235",
+          "assignedDate": "2026-06-20"
+        },
+        {
+          "id": "PLT-100238",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100240",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PLT-100241",
+          "assignedDate": "2026-06-02"
+        },
+        {
+          "id": "PLT-100242",
+          "assignedDate": "2026-06-05"
+        },
+        {
+          "id": "PLT-100245",
+          "assignedDate": "2026-06-23"
+        },
+        {
+          "id": "PLT-100246",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100247",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100248",
+          "assignedDate": "2026-06-27"
+        },
+        {
+          "id": "PLT-100249",
+          "assignedDate": "2026-06-15"
+        },
+        {
+          "id": "PLT-100250",
+          "assignedDate": "2026-06-26"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7016",
+          "assignedDate": "2026-06-09"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6016",
+          "assignedDate": "2026-06-20"
+        },
+        {
+          "id": "CUST-6019",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "CUST-6028",
+          "assignedDate": "2026-06-18"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Visakhapatnam",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-05-15",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-05-22",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 3,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 2,
+        "revenue": 2080000,
+        "totalBookings": 3,
+        "conversionRate": 300,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2009",
+            "ventureName": "Lakeview Residency",
+            "amount": 2080000
+          }
+        ]
+      }
+    },
+    "CP-10035": {
+      "ventures": [
+        {
+          "id": "VNT-2010",
+          "assignedDate": "2026-06-27"
+        }
+      ],
+      "layouts": [
+        {
+          "id": "LYT-3011",
+          "assignedDate": "2026-06-20"
+        }
+      ],
+      "properties": [
+        {
+          "id": "PRP-5003",
+          "assignedDate": "2026-06-12"
+        },
+        {
+          "id": "PRP-5010",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PRP-5013",
+          "assignedDate": "2026-06-17"
+        }
+      ],
+      "plots": [
+        {
+          "id": "PLT-100251",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100255",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100256",
+          "assignedDate": "2026-06-07"
+        },
+        {
+          "id": "PLT-100258",
+          "assignedDate": "2026-06-22"
+        },
+        {
+          "id": "PLT-100259",
+          "assignedDate": "2026-06-30"
+        },
+        {
+          "id": "PLT-100260",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100261",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100263",
+          "assignedDate": "2026-06-13"
+        },
+        {
+          "id": "PLT-100267",
+          "assignedDate": "2026-06-09"
+        },
+        {
+          "id": "PLT-100268",
+          "assignedDate": "2026-06-28"
+        },
+        {
+          "id": "PLT-100269",
+          "assignedDate": "2026-06-26"
+        },
+        {
+          "id": "PLT-100270",
+          "assignedDate": "2026-06-24"
+        },
+        {
+          "id": "PLT-100272",
+          "assignedDate": "2026-06-25"
+        },
+        {
+          "id": "PLT-100273",
+          "assignedDate": "2026-06-27"
+        }
+      ],
+      "leads": [
+        {
+          "id": "LED-7017",
+          "assignedDate": "2026-06-13"
+        }
+      ],
+      "customers": [],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Bangalore",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-06-23",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-06-29",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 0,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 0,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": [
+          {
+            "ventureId": "VNT-2010",
+            "ventureName": "Silver Springs",
+            "amount": 0
+          }
+        ]
+      }
+    },
+    "CP-10036": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7018",
+          "assignedDate": "2026-06-22"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6018",
+          "assignedDate": "2026-06-02"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Chennai",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-03-24",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-03-31",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 100,
+        "activeLeads": 0
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    },
+    "CP-10037": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7019",
+          "assignedDate": "2026-06-24"
+        }
+      ],
+      "customers": [],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Pune",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-05-30",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-06-13",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 0,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 0,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    },
+    "CP-10038": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7020",
+          "assignedDate": "2026-06-05"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6020",
+          "assignedDate": "2026-06-01"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Mumbai",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-05-28",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-05-31",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    },
+    "CP-10039": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7021",
+          "assignedDate": "2026-06-12"
+        }
+      ],
+      "customers": [],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Warangal",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-06-05",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-06-09",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 0,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 0,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    },
+    "CP-10040": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7022",
+          "assignedDate": "2026-06-22"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6022",
+          "assignedDate": "2026-06-09"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Nizamabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-06-15",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-06-28",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    },
+    "CP-10041": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7023",
+          "assignedDate": "2026-06-26"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6023",
+          "assignedDate": "2026-06-01"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Hyderabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-06-19",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-06-28",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 100,
+        "activeLeads": 0
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    },
+    "CP-10042": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7024",
+          "assignedDate": "2026-06-15"
+        }
+      ],
+      "customers": [],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Secunderabad",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-06-21",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-06-30",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 0,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 0,
+        "activeLeads": 0
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    },
+    "CP-10043": {
+      "ventures": [],
+      "layouts": [],
+      "properties": [],
+      "plots": [],
+      "leads": [
+        {
+          "id": "LED-7025",
+          "assignedDate": "2026-06-24"
+        }
+      ],
+      "customers": [
+        {
+          "id": "CUST-6025",
+          "assignedDate": "2026-06-20"
+        }
+      ],
+      "territories": [
+        {
+          "type": "City",
+          "value": "Vijayawada",
+          "assignedDate": "2026-05-02"
+        }
+      ],
+      "timeline": [
+        {
+          "type": "application-submitted",
+          "title": "Application Submitted",
+          "description": "Application received via website form",
+          "date": "2026-04-18",
+          "tone": "accent"
+        },
+        {
+          "type": "approved",
+          "title": "Partner Approved",
+          "description": "Partner activated for assignments",
+          "date": "2026-04-28",
+          "tone": "success"
+        }
+      ],
+      "metrics": {
+        "assignedCustomers": 1,
+        "siteVisitsScheduled": 0,
+        "activeDeals": 0,
+        "revenue": 0,
+        "totalBookings": 0,
+        "conversionRate": 100,
+        "activeLeads": 1
+      },
+      "performance": {
+        "monthlyBookings": [
+          {
+            "label": "Jan",
+            "value": 0
+          },
+          {
+            "label": "Feb",
+            "value": 0
+          },
+          {
+            "label": "Mar",
+            "value": 0
+          },
+          {
+            "label": "Apr",
+            "value": 0
+          },
+          {
+            "label": "May",
+            "value": 0
+          },
+          {
+            "label": "Jun",
+            "value": 0
+          }
+        ],
+        "revenueByVenture": []
+      }
+    }
+  }
+}

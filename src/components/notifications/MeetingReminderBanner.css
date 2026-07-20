@@ -1,0 +1,67 @@
+.meeting-banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(26, 39, 68, 0.12);
+  border-left: 4px solid var(--accent, #c9a227);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.08), rgba(26, 39, 68, 0.03));
+}
+
+.meeting-banner__eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent, #c9a227);
+}
+
+.meeting-banner__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.meeting-banner__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.65rem 1rem;
+}
+
+.meeting-banner__grid span {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(26, 39, 68, 0.55);
+}
+
+.meeting-banner__grid strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #1a2744;
+}
+
+.meeting-banner__grid-wide {
+  grid-column: 1 / -1;
+}
+
+.meeting-banner__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .meeting-banner {
+    flex-direction: column;
+  }
+
+  .meeting-banner__actions {
+    flex-direction: row;
+  }
+}

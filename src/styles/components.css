@@ -1,0 +1,83 @@
+/* ===================================================================
+   Merit Real Solutions ERP — Shared Component Primitives
+   Cross-cutting rules consumed by many components.
+   =================================================================== */
+
+/* Accessible focus ring for interactive elements */
+.erp-focusable:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--erp-focus-ring);
+  border-radius: var(--erp-radius-sm);
+}
+
+/* Shared field shell used by inputs, selects, textareas */
+.erp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.erp-field__label {
+  font-size: var(--erp-text-sm);
+  font-weight: var(--erp-weight-semibold);
+  color: var(--erp-text);
+}
+
+.erp-field__required {
+  color: var(--erp-danger);
+  margin-left: 0.15rem;
+}
+
+.erp-field__hint {
+  font-size: var(--erp-text-xs);
+  color: var(--erp-text-soft);
+}
+
+.erp-control {
+  width: 100%;
+  height: 44px;
+  padding: 0 0.875rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  font-size: var(--erp-text-base);
+  color: var(--erp-text);
+  transition: border-color var(--erp-transition), box-shadow var(--erp-transition);
+}
+
+.erp-control::placeholder {
+  color: var(--erp-text-soft);
+}
+
+.erp-control:hover:not(:disabled) {
+  border-color: var(--erp-border-strong);
+}
+
+.erp-control:focus {
+  outline: none;
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-focus-ring);
+}
+
+.erp-control:disabled {
+  background: var(--erp-disabled-bg);
+  color: var(--erp-disabled-text);
+  cursor: not-allowed;
+}
+
+.erp-control--error {
+  border-color: var(--erp-danger);
+}
+
+.erp-control--error:focus {
+  box-shadow: 0 0 0 3px var(--erp-danger-soft);
+}
+
+.erp-control--success {
+  border-color: var(--erp-success);
+}

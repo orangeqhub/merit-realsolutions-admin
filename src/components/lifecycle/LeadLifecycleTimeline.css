@@ -1,0 +1,101 @@
+.lead-lifecycle-timeline__empty {
+  color: var(--erp-text-muted, #64748b);
+  margin: 0;
+}
+
+.lead-lifecycle-timeline__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lead-lifecycle-timeline__step {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.lead-lifecycle-timeline__icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #cbd5e1;
+  color: #64748b;
+  background: #fff;
+}
+
+.lead-lifecycle-timeline__step--completed .lead-lifecycle-timeline__icon {
+  border-color: #16a34a;
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.lead-lifecycle-timeline__step--current .lead-lifecycle-timeline__icon {
+  border-color: #2563eb;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.lead-lifecycle-timeline__step--upcoming .lead-lifecycle-timeline__icon {
+  opacity: 0.65;
+}
+
+.lead-lifecycle-timeline__content strong {
+  display: block;
+}
+
+.lead-lifecycle-timeline__status-label {
+  display: block;
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+.lead-lifecycle-timeline__step--completed .lead-lifecycle-timeline__status-label {
+  color: #15803d;
+}
+
+.lead-lifecycle-timeline__step--current .lead-lifecycle-timeline__status-label {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.lead-lifecycle-timeline__history {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.lead-lifecycle-timeline__history ul {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lead-lifecycle-timeline__history li {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #f8fafc;
+}
+
+.lead-lifecycle-timeline__history li span {
+  display: block;
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+.lead-lifecycle-timeline__history li p {
+  margin: 0.35rem 0 0;
+}
+
+.lead-lifecycle-timeline__history li small {
+  color: #94a3b8;
+}

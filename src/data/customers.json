@@ -1,0 +1,1925 @@
+[
+  {
+    "id": "CUST-6001",
+    "name": "Deepak Choudary",
+    "email": "deepak.choudary@email.com",
+    "phone": "+91 9545738040",
+    "alternatePhone": "+91 8580433641",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "50 Main Road, Vijayawada",
+    "city": "Vijayawada",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE2428F",
+    "aadhar": "4045 6327 4745",
+    "occupation": "Engineer",
+    "source": "Walk-in",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5020",
+        "name": "Urban Enclave 20",
+        "plotId": "PLT-100185",
+        "bookingId": "BKG-9008",
+        "purchaseDate": "2025-10-17"
+      },
+      {
+        "id": "PRP-5016",
+        "name": "Green Residence 16",
+        "plotId": "PLT-100002",
+        "bookingId": "BKG-9019",
+        "purchaseDate": "2025-11-02"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9008",
+      "BKG-9019"
+    ],
+    "totalPaid": 1200000,
+    "outstanding": 500000,
+    "documents": [
+      {
+        "id": "kyc0",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-04-26"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-04-26",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-08-05",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-01-05",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-04-26",
+    "assignedPartnerId": "CP-10026",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6002",
+    "name": "Divya Patel",
+    "email": "divya.patel@email.com",
+    "phone": "+91 9463431327",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Pending",
+    "address": "39 Main Road, Vijayawada",
+    "city": "Shamshabad",
+    "state": "Telangana",
+    "pan": "ABCDE6789F",
+    "aadhar": "6251 7017 6224",
+    "occupation": "Doctor",
+    "source": "Website",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 6700000,
+    "outstanding": 1900000,
+    "documents": [
+      {
+        "id": "kyc1",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-02-05"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-02-05",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-04-06",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-03-03",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-02-05",
+    "assignedPartnerId": "CP-10020"
+  },
+  {
+    "id": "CUST-6003",
+    "name": "Suresh Choudary",
+    "email": "suresh.choudary@email.com",
+    "phone": "+91 7594429398",
+    "alternatePhone": "+91 7091347222",
+    "status": "Inactive",
+    "kycStatus": "Rejected",
+    "address": "42 Main Road, Hyderabad",
+    "city": "Shamshabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE4927F",
+    "aadhar": "7062 8085 3132",
+    "occupation": "IT Professional",
+    "source": "Website",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5012",
+        "name": "Sunrise Park 12",
+        "plotId": "PLT-100126",
+        "bookingId": "BKG-9014",
+        "purchaseDate": "2025-01-17"
+      },
+      {
+        "id": "PRP-5017",
+        "name": "Merit Residence 17",
+        "plotId": "PLT-100104",
+        "bookingId": "BKG-9025",
+        "purchaseDate": "2025-11-04"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9014",
+      "BKG-9025"
+    ],
+    "totalPaid": 1400000,
+    "outstanding": 4300000,
+    "documents": [
+      {
+        "id": "kyc2",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-01-04"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-01-04",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-11-27",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-06-01",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-01-04",
+    "assignedPartnerId": "CP-10022",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6004",
+    "name": "Sneha Naidu",
+    "email": "sneha.naidu@email.com",
+    "phone": "+91 8776567129",
+    "alternatePhone": "+91 7673693287",
+    "status": "Inactive",
+    "kycStatus": "Pending",
+    "address": "81 Main Road, Warangal",
+    "city": "Vijayawada",
+    "state": "Telangana",
+    "pan": "ABCDE8293F",
+    "aadhar": "8352 1882 9020",
+    "occupation": "Engineer",
+    "source": "Referral",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5014",
+        "name": "Royal Heights 14",
+        "plotId": "PLT-100073",
+        "bookingId": "BKG-9007",
+        "purchaseDate": "2025-01-18"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9007"
+    ],
+    "totalPaid": 7500000,
+    "outstanding": 3300000,
+    "documents": [
+      {
+        "id": "kyc3",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2023-03-14"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2023-03-14",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-12-27",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-08-18",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2023-03-14",
+    "assignedPartnerId": "CP-10020",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6005",
+    "name": "Anil Kumar",
+    "email": "anil.kumar@email.com",
+    "phone": "+91 9968496527",
+    "alternatePhone": "+91 9513331018",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "15 Main Road, Hyderabad",
+    "city": "Gachibowli",
+    "state": "Telangana",
+    "pan": "ABCDE4139F",
+    "aadhar": "6372 2658 2136",
+    "occupation": "Retired",
+    "source": "Walk-in",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 1200000,
+    "outstanding": 800000,
+    "documents": [
+      {
+        "id": "kyc4",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2023-12-16"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2023-12-16",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-01-22",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-03-14",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2023-12-16",
+    "assignedPartnerId": "CP-10023"
+  },
+  {
+    "id": "CUST-6006",
+    "name": "Arjun Reddy",
+    "email": "arjun.reddy@email.com",
+    "phone": "+91 9732717592",
+    "alternatePhone": "+91 8252760416",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "1 Main Road, Hyderabad",
+    "city": "Shamshabad",
+    "state": "Telangana",
+    "pan": "ABCDE6714F",
+    "aadhar": "6370 6663 5732",
+    "occupation": "Retired",
+    "source": "Agent",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 4000000,
+    "outstanding": 1600000,
+    "documents": [
+      {
+        "id": "kyc5",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-10-26"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-10-26",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-10-01",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-11-05",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-10-26",
+    "assignedPartnerId": "CP-10024"
+  },
+  {
+    "id": "CUST-6007",
+    "name": "Deepak Rao",
+    "email": "deepak.rao@email.com",
+    "phone": "+91 9921730324",
+    "alternatePhone": "",
+    "status": "Inactive",
+    "kycStatus": "Pending",
+    "address": "57 Main Road, Vijayawada",
+    "city": "Vijayawada",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE4045F",
+    "aadhar": "6685 3268 4598",
+    "occupation": "Business",
+    "source": "Agent",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 3300000,
+    "outstanding": 1900000,
+    "documents": [
+      {
+        "id": "kyc6",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2023-05-04"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2023-05-04",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-10-07",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-04-13",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2023-05-04",
+    "assignedPartnerId": "CP-10025"
+  },
+  {
+    "id": "CUST-6008",
+    "name": "Suresh Sharma",
+    "email": "suresh.sharma@email.com",
+    "phone": "+91 9361038580",
+    "alternatePhone": "+91 9669970293",
+    "status": "Inactive",
+    "kycStatus": "Verified",
+    "address": "95 Main Road, Warangal",
+    "city": "Gachibowli",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE3731F",
+    "aadhar": "2128 8051 6305",
+    "occupation": "Retired",
+    "source": "Referral",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 3300000,
+    "outstanding": 600000,
+    "documents": [
+      {
+        "id": "kyc7",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-04-07"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-04-07",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-11-17",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-01-11",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-04-07",
+    "assignedPartnerId": "CP-10026"
+  },
+  {
+    "id": "CUST-6009",
+    "name": "Meena Kumar",
+    "email": "meena.kumar@email.com",
+    "phone": "+91 8397829089",
+    "alternatePhone": "+91 7119469135",
+    "status": "Inactive",
+    "kycStatus": "Verified",
+    "address": "1 Main Road, Hyderabad",
+    "city": "Gachibowli",
+    "state": "Telangana",
+    "pan": "ABCDE8396F",
+    "aadhar": "3800 8313 7741",
+    "occupation": "Retired",
+    "source": "Agent",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5022",
+        "name": "Merit Gardens 22",
+        "plotId": "PLT-100110",
+        "bookingId": "BKG-9006",
+        "purchaseDate": "2026-03-23"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9006"
+    ],
+    "totalPaid": 5900000,
+    "outstanding": 4400000,
+    "documents": [
+      {
+        "id": "kyc8",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-01-06"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-01-06",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-09-06",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-01-27",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-01-06",
+    "assignedPartnerId": "CP-10022",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6010",
+    "name": "Arjun Reddy",
+    "email": "arjun.reddy@email.com",
+    "phone": "+91 9281911265",
+    "alternatePhone": "+91 7743759645",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "31 Main Road, Vijayawada",
+    "city": "Shamshabad",
+    "state": "Telangana",
+    "pan": "ABCDE5291F",
+    "aadhar": "7952 9305 5156",
+    "occupation": "Engineer",
+    "source": "Website",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5015",
+        "name": "Golden Heights 15",
+        "plotId": "PLT-100169",
+        "bookingId": "BKG-9028",
+        "purchaseDate": "2025-09-07"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9028"
+    ],
+    "totalPaid": 7800000,
+    "outstanding": 4300000,
+    "documents": [
+      {
+        "id": "kyc9",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-01-05"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-01-05",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-12-16",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-10-20",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-01-05",
+    "assignedPartnerId": "CP-10031",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6011",
+    "name": "Lakshmi Choudary",
+    "email": "lakshmi.choudary@email.com",
+    "phone": "+91 7665785108",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Verified",
+    "address": "26 Main Road, Warangal",
+    "city": "Shamshabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE6265F",
+    "aadhar": "2633 8664 1832",
+    "occupation": "Engineer",
+    "source": "Website",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5005",
+        "name": "Palm Park 5",
+        "plotId": "PLT-100099",
+        "bookingId": "BKG-9016",
+        "purchaseDate": "2024-05-04"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9016"
+    ],
+    "totalPaid": 1800000,
+    "outstanding": 2600000,
+    "documents": [
+      {
+        "id": "kyc10",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-10-20"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-10-20",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-08-17",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-05-23",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-10-20",
+    "assignedPartnerId": "CP-10021",
+    "paymentStatus": "Partial"
+  },
+  {
+    "id": "CUST-6012",
+    "name": "Naveen Sharma",
+    "email": "naveen.sharma@email.com",
+    "phone": "+91 8264306327",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "7 Main Road, Warangal",
+    "city": "Vijayawada",
+    "state": "Telangana",
+    "pan": "ABCDE9877F",
+    "aadhar": "4089 8604 2562",
+    "occupation": "Doctor",
+    "source": "Walk-in",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 4300000,
+    "outstanding": 0,
+    "documents": [
+      {
+        "id": "kyc11",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-06-26"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-06-26",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-03-16",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-05-19",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-06-26",
+    "assignedPartnerId": "CP-10030"
+  },
+  {
+    "id": "CUST-6013",
+    "name": "Suresh Kumar",
+    "email": "suresh.kumar@email.com",
+    "phone": "+91 9087804398",
+    "alternatePhone": "+91 9317222222",
+    "status": "Inactive",
+    "kycStatus": "Rejected",
+    "address": "85 Main Road, Hyderabad",
+    "city": "Gachibowli",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE5764F",
+    "aadhar": "2650 7422 6220",
+    "occupation": "Business",
+    "source": "Agent",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5023",
+        "name": "Palm Enclave 23",
+        "plotId": "PLT-100093",
+        "bookingId": "BKG-9012",
+        "purchaseDate": "2024-06-05"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9012"
+    ],
+    "totalPaid": 6500000,
+    "outstanding": 900000,
+    "documents": [
+      {
+        "id": "kyc12",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-04-22"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-04-22",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-07-02",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-05-11",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-04-22",
+    "assignedPartnerId": "CP-10021",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6014",
+    "name": "Kiran Verma",
+    "email": "kiran.verma@email.com",
+    "phone": "+91 9547442129",
+    "alternatePhone": "+91 9267068287",
+    "status": "Inactive",
+    "kycStatus": "Verified",
+    "address": "98 Main Road, Vijayawada",
+    "city": "Vijayawada",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE6881F",
+    "aadhar": "1690 7969 9857",
+    "occupation": "Business",
+    "source": "Referral",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5009",
+        "name": "Urban Gardens 9",
+        "plotId": "PLT-100176",
+        "bookingId": "BKG-9020",
+        "purchaseDate": "2025-01-02"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9020"
+    ],
+    "totalPaid": 1300000,
+    "outstanding": 3300000,
+    "documents": [
+      {
+        "id": "kyc13",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2022-03-26"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2022-03-26",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-05-23",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-04-21",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2022-03-26",
+    "assignedPartnerId": "CP-10032",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6015",
+    "name": "Naveen Sharma",
+    "email": "naveen.sharma@email.com",
+    "phone": "+91 9916871527",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "55 Main Road, Vijayawada",
+    "city": "Hyderabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE5448F",
+    "aadhar": "6075 9476 6459",
+    "occupation": "Engineer",
+    "source": "Walk-in",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 1300000,
+    "outstanding": 1500000,
+    "documents": [
+      {
+        "id": "kyc14",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-09-21"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-09-21",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-10-17",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-05-06",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-09-21",
+    "assignedPartnerId": "CP-10033"
+  },
+  {
+    "id": "CUST-6016",
+    "name": "Sneha Kumar",
+    "email": "sneha.kumar@email.com",
+    "phone": "+91 9510207561",
+    "alternatePhone": "+91 8258722608",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "11 Main Road, Hyderabad",
+    "city": "Gachibowli",
+    "state": "Telangana",
+    "pan": "ABCDE8676F",
+    "aadhar": "2559 9801 4208",
+    "occupation": "Retired",
+    "source": "Referral",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 7700000,
+    "outstanding": 0,
+    "documents": [
+      {
+        "id": "kyc15",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-09-03"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-09-03",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-11-01",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-05-10",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-09-03",
+    "assignedPartnerId": "CP-10034"
+  },
+  {
+    "id": "CUST-6017",
+    "name": "Ravi Verma",
+    "email": "ravi.verma@email.com",
+    "phone": "+91 9417414737",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "30 Main Road, Warangal",
+    "city": "Hyderabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE4539F",
+    "aadhar": "5795 6383 3773",
+    "occupation": "IT Professional",
+    "source": "Walk-in",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5017",
+        "name": "Merit Residence 17",
+        "plotId": "PLT-100122",
+        "bookingId": "BKG-9027",
+        "purchaseDate": "2026-08-23"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9027"
+    ],
+    "totalPaid": 7200000,
+    "outstanding": 2500000,
+    "documents": [
+      {
+        "id": "kyc16",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2022-08-16"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2022-08-16",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-12-02",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-06-10",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2022-08-16",
+    "assignedPartnerId": "CP-10029",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6018",
+    "name": "Kiran Choudary",
+    "email": "kiran.choudary@email.com",
+    "phone": "+91 9538158179",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Verified",
+    "address": "54 Main Road, Warangal",
+    "city": "Shamshabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE3706F",
+    "aadhar": "6474 8212 5058",
+    "occupation": "IT Professional",
+    "source": "Agent",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 5100000,
+    "outstanding": 500000,
+    "documents": [
+      {
+        "id": "kyc17",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-08-22"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-08-22",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-05-21",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-04-14",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-08-22",
+    "assignedPartnerId": "CP-10036"
+  },
+  {
+    "id": "CUST-6019",
+    "name": "Sneha Verma",
+    "email": "sneha.verma@email.com",
+    "phone": "+91 8710545138",
+    "alternatePhone": "+91 9566629629",
+    "status": "Inactive",
+    "kycStatus": "Rejected",
+    "address": "47 Main Road, Warangal",
+    "city": "Hyderabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE1927F",
+    "aadhar": "8368 5363 5049",
+    "occupation": "Doctor",
+    "source": "Website",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5012",
+        "name": "Sunrise Park 12",
+        "plotId": "PLT-100149",
+        "bookingId": "BKG-9024",
+        "purchaseDate": "2024-11-16"
+      },
+      {
+        "id": "PRP-5001",
+        "name": "Lakeview Park 1",
+        "plotId": "PLT-100249",
+        "bookingId": "BKG-9003",
+        "purchaseDate": "2025-12-22"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9024",
+      "BKG-9003"
+    ],
+    "totalPaid": 500000,
+    "outstanding": 4900000,
+    "documents": [
+      {
+        "id": "kyc18",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-08-06"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-08-06",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-07-23",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-06-03",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-08-06",
+    "assignedPartnerId": "CP-10034",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6020",
+    "name": "Pooja Naidu",
+    "email": "pooja.naidu@email.com",
+    "phone": "+91 8373516203",
+    "alternatePhone": "",
+    "status": "Inactive",
+    "kycStatus": "Pending",
+    "address": "15 Main Road, Vijayawada",
+    "city": "Shamshabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE1835F",
+    "aadhar": "4676 2377 7742",
+    "occupation": "Business",
+    "source": "Referral",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 2500000,
+    "outstanding": 400000,
+    "documents": [
+      {
+        "id": "kyc19",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2023-12-04"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2023-12-04",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-01-25",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-10-10",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2023-12-04",
+    "assignedPartnerId": "CP-10038"
+  },
+  {
+    "id": "CUST-6021",
+    "name": "Lakshmi Reddy",
+    "email": "lakshmi.reddy@email.com",
+    "phone": "+91 8354421682",
+    "alternatePhone": "+91 7559395061",
+    "status": "Inactive",
+    "kycStatus": "Rejected",
+    "address": "71 Main Road, Warangal",
+    "city": "Vijayawada",
+    "state": "Telangana",
+    "pan": "ABCDE1167F",
+    "aadhar": "9015 1306 9844",
+    "occupation": "Business",
+    "source": "Referral",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5009",
+        "name": "Urban Gardens 9",
+        "plotId": "PLT-100198",
+        "bookingId": "BKG-9015",
+        "purchaseDate": "2025-05-22"
+      },
+      {
+        "id": "PRP-5025",
+        "name": "Green Heights 25",
+        "plotId": "PLT-100046",
+        "bookingId": "BKG-9011",
+        "purchaseDate": "2024-07-06"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9015",
+      "BKG-9011"
+    ],
+    "totalPaid": 2700000,
+    "outstanding": 300000,
+    "documents": [
+      {
+        "id": "kyc20",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-04-04"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-04-04",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-09-15",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-04-19",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-04-04",
+    "assignedPartnerId": "CP-10019",
+    "paymentStatus": "Partial"
+  },
+  {
+    "id": "CUST-6022",
+    "name": "Ravi Choudary",
+    "email": "ravi.choudary@email.com",
+    "phone": "+91 9085170524",
+    "alternatePhone": "+91 7010352237",
+    "status": "Inactive",
+    "kycStatus": "Rejected",
+    "address": "86 Main Road, Hyderabad",
+    "city": "Gachibowli",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE4728F",
+    "aadhar": "9833 3964 1926",
+    "occupation": "Business",
+    "source": "Walk-in",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 4700000,
+    "outstanding": 200000,
+    "documents": [
+      {
+        "id": "kyc21",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2023-06-27"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2023-06-27",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-02-10",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-11-15",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2023-06-27",
+    "assignedPartnerId": "CP-10040"
+  },
+  {
+    "id": "CUST-6023",
+    "name": "Rajesh Sharma",
+    "email": "rajesh.sharma@email.com",
+    "phone": "+91 8355711033",
+    "alternatePhone": "",
+    "status": "Inactive",
+    "kycStatus": "Verified",
+    "address": "53 Main Road, Hyderabad",
+    "city": "Hyderabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE3480F",
+    "aadhar": "8625 8768 3380",
+    "occupation": "Engineer",
+    "source": "Agent",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 6900000,
+    "outstanding": 1700000,
+    "documents": [
+      {
+        "id": "kyc22",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-11-19"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-11-19",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-10-07",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-11-08",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-11-19",
+    "assignedPartnerId": "CP-10041"
+  },
+  {
+    "id": "CUST-6024",
+    "name": "Priya Naidu",
+    "email": "priya.naidu@email.com",
+    "phone": "+91 9628676697",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Verified",
+    "address": "10 Main Road, Warangal",
+    "city": "Hyderabad",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE3203F",
+    "aadhar": "1526 2486 1221",
+    "occupation": "Retired",
+    "source": "Website",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5016",
+        "name": "Green Residence 16",
+        "plotId": "PLT-100004",
+        "bookingId": "BKG-9017",
+        "purchaseDate": "2024-09-09"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9017"
+    ],
+    "totalPaid": 3900000,
+    "outstanding": 2000000,
+    "documents": [
+      {
+        "id": "kyc23",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2022-09-04"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2022-09-04",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-12-06",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-04-07",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2022-09-04",
+    "assignedPartnerId": "CP-10019",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6025",
+    "name": "Sneha Patel",
+    "email": "sneha.patel@email.com",
+    "phone": "+91 7929952546",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "18 Main Road, Warangal",
+    "city": "Gachibowli",
+    "state": "Telangana",
+    "pan": "ABCDE4201F",
+    "aadhar": "4508 6757 9754",
+    "occupation": "Retired",
+    "source": "Walk-in",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 4500000,
+    "outstanding": 1200000,
+    "documents": [
+      {
+        "id": "kyc24",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2023-03-28"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2023-03-28",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-10-14",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2024-03-08",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2023-03-28",
+    "assignedPartnerId": "CP-10043"
+  },
+  {
+    "id": "CUST-6026",
+    "name": "Pooja Reddy",
+    "email": "pooja.reddy@email.com",
+    "phone": "+91 7225927469",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Verified",
+    "address": "82 Main Road, Warangal",
+    "city": "Shamshabad",
+    "state": "Telangana",
+    "pan": "ABCDE6446F",
+    "aadhar": "2209 4887 3951",
+    "occupation": "Retired",
+    "source": "Website",
+    "assignedAgent": "Sandeep Reddy",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 3200000,
+    "outstanding": 200000,
+    "documents": [
+      {
+        "id": "kyc25",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2022-05-28"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2022-05-28",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2024-02-28",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-12-12",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2022-05-28",
+    "assignedPartnerId": "CP-10019"
+  },
+  {
+    "id": "CUST-6027",
+    "name": "Divya Sharma",
+    "email": "divya.sharma@email.com",
+    "phone": "+91 9119657021",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Pending",
+    "address": "3 Main Road, Vijayawada",
+    "city": "Vijayawada",
+    "state": "Telangana",
+    "pan": "ABCDE2578F",
+    "aadhar": "9936 9848 2451",
+    "occupation": "Business",
+    "source": "Walk-in",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5022",
+        "name": "Merit Gardens 22",
+        "plotId": "PLT-100102",
+        "bookingId": "BKG-9013",
+        "purchaseDate": "2026-08-27"
+      },
+      {
+        "id": "PRP-5023",
+        "name": "Palm Enclave 23",
+        "plotId": "PLT-100076",
+        "bookingId": "BKG-9023",
+        "purchaseDate": "2025-02-23"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9013",
+      "BKG-9023"
+    ],
+    "totalPaid": 700000,
+    "outstanding": 900000,
+    "documents": [
+      {
+        "id": "kyc26",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2024-12-15"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2024-12-15",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-12-13",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-11-11",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2024-12-15",
+    "assignedPartnerId": "CP-10028",
+    "paymentStatus": "Partial"
+  },
+  {
+    "id": "CUST-6028",
+    "name": "Sneha Choudary",
+    "email": "sneha.choudary@email.com",
+    "phone": "+91 9210863425",
+    "alternatePhone": "",
+    "status": "Active",
+    "kycStatus": "Rejected",
+    "address": "96 Main Road, Vijayawada",
+    "city": "Gachibowli",
+    "state": "Telangana",
+    "pan": "ABCDE3903F",
+    "aadhar": "6661 3278 3560",
+    "occupation": "IT Professional",
+    "source": "Walk-in",
+    "assignedAgent": "Aarti Menon",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5007",
+        "name": "Lakeview Heights 7",
+        "plotId": "PLT-100245",
+        "bookingId": "BKG-9009",
+        "purchaseDate": "2025-07-22"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9009"
+    ],
+    "totalPaid": 5300000,
+    "outstanding": 1500000,
+    "documents": [
+      {
+        "id": "kyc27",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2023-12-14"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2023-12-14",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-01-10",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2026-06-04",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2023-12-14",
+    "assignedPartnerId": "CP-10034",
+    "paymentStatus": "Pending"
+  },
+  {
+    "id": "CUST-6029",
+    "name": "Anil Kumar",
+    "email": "anil.kumar@email.com",
+    "phone": "+91 8315935570",
+    "alternatePhone": "+91 7578408950",
+    "status": "Inactive",
+    "kycStatus": "Rejected",
+    "address": "56 Main Road, Hyderabad",
+    "city": "Vijayawada",
+    "state": "Andhra Pradesh",
+    "pan": "ABCDE6485F",
+    "aadhar": "8250 2457 8913",
+    "occupation": "Retired",
+    "source": "Walk-in",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [
+      {
+        "id": "PRP-5001",
+        "name": "Lakeview Park 1",
+        "plotId": "PLT-100231",
+        "bookingId": "BKG-9021",
+        "purchaseDate": "2026-11-07"
+      },
+      {
+        "id": "PRP-5005",
+        "name": "Palm Park 5",
+        "plotId": "PLT-100077",
+        "bookingId": "BKG-9026",
+        "purchaseDate": "2025-11-07"
+      }
+    ],
+    "bookingIds": [
+      "BKG-9021",
+      "BKG-9026"
+    ],
+    "totalPaid": 700000,
+    "outstanding": 2300000,
+    "documents": [
+      {
+        "id": "kyc28",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-04-02"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-04-02",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2025-10-10",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-12-22",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-04-02",
+    "assignedPartnerId": "CP-10028",
+    "paymentStatus": "Partial"
+  },
+  {
+    "id": "CUST-6030",
+    "name": "Naveen Sharma",
+    "email": "naveen.sharma@email.com",
+    "phone": "+91 8249184413",
+    "alternatePhone": "+91 9131866126",
+    "status": "Inactive",
+    "kycStatus": "Pending",
+    "address": "74 Main Road, Warangal",
+    "city": "Shamshabad",
+    "state": "Telangana",
+    "pan": "ABCDE4296F",
+    "aadhar": "6318 5366 4244",
+    "occupation": "Engineer",
+    "source": "Agent",
+    "assignedAgent": "Vamsi Krishna",
+    "purchasedProperties": [],
+    "bookingIds": [],
+    "totalPaid": 8000000,
+    "outstanding": 0,
+    "documents": [
+      {
+        "id": "kyc29",
+        "name": "Aadhar Card",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2021-03-26"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Customer onboarded",
+        "description": "Profile created",
+        "date": "2021-03-26",
+        "tone": "accent"
+      }
+    ],
+    "communications": [
+      {
+        "type": "call",
+        "title": "Intro call",
+        "date": "2026-03-14",
+        "notes": "Discussed plot options"
+      }
+    ],
+    "activities": [
+      {
+        "type": "visit",
+        "title": "Site visit",
+        "date": "2025-08-28",
+        "description": "Visited Green Valley"
+      }
+    ],
+    "createdDate": "2021-03-26",
+    "assignedPartnerId": "CP-10023"
+  }
+]

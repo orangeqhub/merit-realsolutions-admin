@@ -1,0 +1,2801 @@
+{
+  "reservations": [
+    {
+      "id": "RSV-10001",
+      "reference": "RSV-10001",
+      "status": "Reserved",
+      "customerId": "CUST-6010",
+      "customerName": "Arjun Reddy",
+      "customerPhone": "+91 9281911265",
+      "customerEmail": "arjun.reddy@email.com",
+      "partnerId": "CP-10025",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100001",
+      "plotNumber": "D-001",
+      "inventory": {
+        "facing": "South-East",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3337500,
+        "finalPrice": 3614000,
+        "block": "D"
+      },
+      "reservationAmount": 361400,
+      "minimumReservationAmount": 361400,
+      "totalValue": 3614000,
+      "reservationDate": "2026-06-21",
+      "expiryDate": "2026-07-06",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-21",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-26",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [
+        {
+          "type": "5-days",
+          "label": "5 Days Remaining",
+          "sentAt": "2026-06-29",
+          "channel": "SMS"
+        }
+      ],
+      "activityLog": [
+        {
+          "id": "LOG-10002-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-21T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10002-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-21T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10002",
+      "reference": "RSV-10002",
+      "status": "Reserved",
+      "customerId": "CUST-6029",
+      "customerName": "Anil Kumar",
+      "customerPhone": "+91 8315935570",
+      "customerEmail": "anil.kumar@email.com",
+      "partnerId": "CP-10024",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100009",
+      "plotNumber": "B-009",
+      "inventory": {
+        "facing": "South",
+        "areaSqYards": 133,
+        "dimensions": "30x40",
+        "totalPrice": 1662500,
+        "finalPrice": 1804000,
+        "block": "B"
+      },
+      "reservationAmount": 180400,
+      "minimumReservationAmount": 180400,
+      "totalValue": 1804000,
+      "reservationDate": "2026-06-25",
+      "expiryDate": "2026-07-10",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-25",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-30",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10003-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-25T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10003-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-25T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10003",
+      "reference": "RSV-10003",
+      "status": "Reserved",
+      "customerId": "CUST-6027",
+      "customerName": "Divya Sharma",
+      "customerPhone": "+91 9119657021",
+      "customerEmail": "divya.sharma@email.com",
+      "partnerId": "CP-10030",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100016",
+      "plotNumber": "D-016",
+      "inventory": {
+        "facing": "North-East",
+        "areaSqYards": 133,
+        "dimensions": "30x40",
+        "totalPrice": 1662500,
+        "finalPrice": 1744125,
+        "block": "D"
+      },
+      "reservationAmount": 174413,
+      "minimumReservationAmount": 174413,
+      "totalValue": 1744125,
+      "reservationDate": "2026-06-19",
+      "expiryDate": "2026-07-04",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 1,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-19",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-24",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [
+        {
+          "type": "5-days",
+          "label": "5 Days Remaining",
+          "sentAt": "2026-06-29",
+          "channel": "SMS"
+        }
+      ],
+      "activityLog": [
+        {
+          "id": "LOG-10004-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-19T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10004-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-19T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10004",
+      "reference": "RSV-10004",
+      "status": "Reserved",
+      "customerId": "CUST-6026",
+      "customerName": "Pooja Reddy",
+      "customerPhone": "+91 7225927469",
+      "customerEmail": "pooja.reddy@email.com",
+      "partnerId": "CP-10029",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100027",
+      "plotNumber": "A-002",
+      "inventory": {
+        "facing": "South",
+        "areaSqYards": 333,
+        "dimensions": "50x60",
+        "totalPrice": 4495500,
+        "finalPrice": 4859230,
+        "block": "A"
+      },
+      "reservationAmount": 485923,
+      "minimumReservationAmount": 485923,
+      "totalValue": 4859230,
+      "reservationDate": "2026-06-24",
+      "expiryDate": "2026-07-09",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-24",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-29",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10005-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-24T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10005-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-24T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10005",
+      "reference": "RSV-10005",
+      "status": "Reserved",
+      "customerId": "CUST-6030",
+      "customerName": "Naveen Sharma",
+      "customerPhone": "+91 8249184413",
+      "customerEmail": "naveen.sharma@email.com",
+      "partnerId": "CP-10030",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100042",
+      "plotNumber": "B-017",
+      "inventory": {
+        "facing": "South-East",
+        "areaSqYards": 444,
+        "dimensions": "50x80",
+        "totalPrice": 5994000,
+        "finalPrice": 6380760,
+        "block": "B"
+      },
+      "reservationAmount": 638076,
+      "minimumReservationAmount": 638076,
+      "totalValue": 6380760,
+      "reservationDate": "2026-06-30",
+      "expiryDate": "2026-07-15",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-30",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-07-05",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10006-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-30T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10006-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-30T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10006",
+      "reference": "RSV-10006",
+      "status": "Reserved",
+      "customerId": "CUST-6014",
+      "customerName": "Kiran Verma",
+      "customerPhone": "+91 9547442129",
+      "customerEmail": "kiran.verma@email.com",
+      "partnerId": "CP-10027",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100043",
+      "plotNumber": "F-018",
+      "inventory": {
+        "facing": "North-East",
+        "areaSqYards": 222,
+        "dimensions": "40x50",
+        "totalPrice": 2997000,
+        "finalPrice": 3263820,
+        "block": "F"
+      },
+      "reservationAmount": 326382,
+      "minimumReservationAmount": 326382,
+      "totalValue": 3263820,
+      "reservationDate": "2026-06-27",
+      "expiryDate": "2026-07-12",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-27",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-07-02",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10007-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-27T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10007-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-27T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10007",
+      "reference": "RSV-10007",
+      "status": "Reserved",
+      "customerId": "CUST-6011",
+      "customerName": "Lakshmi Choudary",
+      "customerPhone": "+91 7665785108",
+      "customerEmail": "lakshmi.choudary@email.com",
+      "partnerId": "CP-10042",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2002",
+      "ventureName": "Royal Meadows",
+      "layoutId": "LYT-3003",
+      "layoutName": "Royal Meadows — Block A",
+      "plotId": "PLT-100055",
+      "plotNumber": "A-005",
+      "inventory": {
+        "facing": "East",
+        "areaSqYards": 600,
+        "dimensions": "60x90",
+        "totalPrice": 5880000,
+        "finalPrice": 6249200,
+        "block": "A"
+      },
+      "reservationAmount": 624920,
+      "minimumReservationAmount": 624920,
+      "totalValue": 6249200,
+      "reservationDate": "2026-06-27",
+      "expiryDate": "2026-07-12",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-27",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-07-02",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10008-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-27T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10008-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-27T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10008",
+      "reference": "RSV-10008",
+      "status": "Reserved",
+      "customerId": "CUST-6027",
+      "customerName": "Divya Sharma",
+      "customerPhone": "+91 9119657021",
+      "customerEmail": "divya.sharma@email.com",
+      "partnerId": "CP-10042",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2002",
+      "ventureName": "Royal Meadows",
+      "layoutId": "LYT-3003",
+      "layoutName": "Royal Meadows — Block A",
+      "plotId": "PLT-100060",
+      "plotNumber": "D-010",
+      "inventory": {
+        "facing": "East",
+        "areaSqYards": 222,
+        "dimensions": "40x50",
+        "totalPrice": 2175600,
+        "finalPrice": 2334356,
+        "block": "D"
+      },
+      "reservationAmount": 233436,
+      "minimumReservationAmount": 233436,
+      "totalValue": 2334356,
+      "reservationDate": "2026-06-25",
+      "expiryDate": "2026-07-10",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-25",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-30",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10009-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-25T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10009-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-25T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10009",
+      "reference": "RSV-10009",
+      "status": "Reserved",
+      "customerId": "CUST-6003",
+      "customerName": "Suresh Choudary",
+      "customerPhone": "+91 7594429398",
+      "customerEmail": "suresh.choudary@email.com",
+      "partnerId": "CP-10037",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2002",
+      "ventureName": "Royal Meadows",
+      "layoutId": "LYT-3003",
+      "layoutName": "Royal Meadows — Block A",
+      "plotId": "PLT-100061",
+      "plotNumber": "B-011",
+      "inventory": {
+        "facing": "South-East",
+        "areaSqYards": 444,
+        "dimensions": "50x80",
+        "totalPrice": 4351200,
+        "finalPrice": 4689272,
+        "block": "B"
+      },
+      "reservationAmount": 468927,
+      "minimumReservationAmount": 468927,
+      "totalValue": 4689272,
+      "reservationDate": "2026-06-30",
+      "expiryDate": "2026-07-15",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-30",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-07-05",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10010-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-30T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10010-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-30T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10010",
+      "reference": "RSV-10010",
+      "status": "Reserved",
+      "customerId": "CUST-6007",
+      "customerName": "Deepak Rao",
+      "customerPhone": "+91 9921730324",
+      "customerEmail": "deepak.rao@email.com",
+      "partnerId": "CP-10025",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2003",
+      "ventureName": "Palm County",
+      "layoutId": "LYT-3004",
+      "layoutName": "Palm County — Villa Plots",
+      "plotId": "PLT-100081",
+      "plotNumber": "E-006",
+      "inventory": {
+        "facing": "West",
+        "areaSqYards": 333,
+        "dimensions": "50x60",
+        "totalPrice": 13986000,
+        "finalPrice": 14255860,
+        "block": "E"
+      },
+      "reservationAmount": 1425586,
+      "minimumReservationAmount": 1425586,
+      "totalValue": 14255860,
+      "reservationDate": "2026-06-18",
+      "expiryDate": "2026-07-03",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-18",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-23",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [
+        {
+          "type": "5-days",
+          "label": "5 Days Remaining",
+          "sentAt": "2026-06-29",
+          "channel": "SMS"
+        },
+        {
+          "type": "2-days",
+          "label": "2 Days Remaining",
+          "sentAt": "2026-06-30",
+          "channel": "Email"
+        }
+      ],
+      "activityLog": [
+        {
+          "id": "LOG-10011-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-18T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10011-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-18T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10011",
+      "reference": "RSV-10011",
+      "status": "Confirmed",
+      "customerId": "CUST-6022",
+      "customerName": "Ravi Choudary",
+      "customerPhone": "+91 9085170524",
+      "customerEmail": "ravi.choudary@email.com",
+      "partnerId": "CP-10043",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100006",
+      "plotNumber": "C-006",
+      "inventory": {
+        "facing": "South-West",
+        "areaSqYards": 222,
+        "dimensions": "40x50",
+        "totalPrice": 2775000,
+        "finalPrice": 3000500,
+        "block": "C"
+      },
+      "reservationAmount": 300050,
+      "minimumReservationAmount": 300050,
+      "totalValue": 3000500,
+      "reservationDate": "2026-06-21",
+      "expiryDate": "2026-07-06",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-21",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-24",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Rahul Verma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-26",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10012-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-21T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10012-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-21T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10012-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-24T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10012",
+      "reference": "RSV-10012",
+      "status": "Confirmed",
+      "customerId": "CUST-6004",
+      "customerName": "Sneha Naidu",
+      "customerPhone": "+91 8776567129",
+      "customerEmail": "sneha.naidu@email.com",
+      "partnerId": "CP-10024",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100007",
+      "plotNumber": "A-007",
+      "inventory": {
+        "facing": "East",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3337500,
+        "finalPrice": 3628750,
+        "block": "A"
+      },
+      "reservationAmount": 362875,
+      "minimumReservationAmount": 362875,
+      "totalValue": 3628750,
+      "reservationDate": "2026-06-19",
+      "expiryDate": "2026-07-04",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-19",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-22",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Rahul Verma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-24",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10013-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-19T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10013-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-19T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10013-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-22T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10013",
+      "reference": "RSV-10013",
+      "status": "Confirmed",
+      "customerId": "CUST-6015",
+      "customerName": "Naveen Sharma",
+      "customerPhone": "+91 9916871527",
+      "customerEmail": "naveen.sharma@email.com",
+      "partnerId": "CP-10035",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100008",
+      "plotNumber": "D-008",
+      "inventory": {
+        "facing": "East",
+        "areaSqYards": 133,
+        "dimensions": "30x40",
+        "totalPrice": 1662500,
+        "finalPrice": 1896250,
+        "block": "D"
+      },
+      "reservationAmount": 189625,
+      "minimumReservationAmount": 189625,
+      "totalValue": 1896250,
+      "reservationDate": "2026-06-18",
+      "expiryDate": "2026-07-03",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-18",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-21",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Priya Sharma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-23",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10014-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-18T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10014-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-18T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10014-03",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-21T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10014",
+      "reference": "RSV-10014",
+      "status": "Confirmed",
+      "customerId": "CUST-6005",
+      "customerName": "Anil Kumar",
+      "customerPhone": "+91 9968496527",
+      "customerEmail": "anil.kumar@email.com",
+      "partnerId": "CP-10039",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100011",
+      "plotNumber": "F-011",
+      "inventory": {
+        "facing": "North-West",
+        "areaSqYards": 333,
+        "dimensions": "50x60",
+        "totalPrice": 4162500,
+        "finalPrice": 4140250,
+        "block": "F"
+      },
+      "reservationAmount": 414025,
+      "minimumReservationAmount": 414025,
+      "totalValue": 4140250,
+      "reservationDate": "2026-06-18",
+      "expiryDate": "2026-07-03",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-18",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-21",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Anita Reddy"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-23",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10015-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-18T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10015-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-18T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10015-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-21T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10015",
+      "reference": "RSV-10015",
+      "status": "Confirmed",
+      "customerId": "CUST-6023",
+      "customerName": "Rajesh Sharma",
+      "customerPhone": "+91 8355711033",
+      "customerEmail": "rajesh.sharma@email.com",
+      "partnerId": "CP-10034",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100012",
+      "plotNumber": "E-012",
+      "inventory": {
+        "facing": "North",
+        "areaSqYards": 600,
+        "dimensions": "60x90",
+        "totalPrice": 7500000,
+        "finalPrice": 8091000,
+        "block": "E"
+      },
+      "reservationAmount": 809100,
+      "minimumReservationAmount": 809100,
+      "totalValue": 8091000,
+      "reservationDate": "2026-06-19",
+      "expiryDate": "2026-07-04",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-19",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-22",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Anita Reddy"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-24",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10016-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-19T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10016-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-19T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10016-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-22T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10016",
+      "reference": "RSV-10016",
+      "status": "Confirmed",
+      "customerId": "CUST-6015",
+      "customerName": "Naveen Sharma",
+      "customerPhone": "+91 9916871527",
+      "customerEmail": "naveen.sharma@email.com",
+      "partnerId": "CP-10036",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100019",
+      "plotNumber": "C-019",
+      "inventory": {
+        "facing": "West",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3337500,
+        "finalPrice": 3414750,
+        "block": "C"
+      },
+      "reservationAmount": 341475,
+      "minimumReservationAmount": 341475,
+      "totalValue": 3414750,
+      "reservationDate": "2026-06-29",
+      "expiryDate": "2026-07-14",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-29",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-07-02",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Anita Reddy"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-07-04",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10017-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-29T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10017-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-29T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10017-03",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-07-02T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10017",
+      "reference": "RSV-10017",
+      "status": "Registered",
+      "customerId": "CUST-6005",
+      "customerName": "Anil Kumar",
+      "customerPhone": "+91 9968496527",
+      "customerEmail": "anil.kumar@email.com",
+      "partnerId": "CP-10039",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100020",
+      "plotNumber": "B-020",
+      "inventory": {
+        "facing": "South-East",
+        "areaSqYards": 167,
+        "dimensions": "30x50",
+        "totalPrice": 2087500,
+        "finalPrice": 2329750,
+        "block": "B"
+      },
+      "reservationAmount": 232975,
+      "minimumReservationAmount": 232975,
+      "totalValue": 2329750,
+      "reservationDate": "2026-06-19",
+      "expiryDate": "2026-07-04",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-19",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-22",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Rahul Verma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-24",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "registered",
+          "title": "Legal Registration Completed",
+          "description": "Property registration documents submitted",
+          "date": "2026-07-09",
+          "time": "11:00",
+          "tone": "accent",
+          "actor": "Rahul Verma"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10018-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-19T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10018-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-19T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10018-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-22T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10018",
+      "reference": "RSV-10018",
+      "status": "Registered",
+      "customerId": "CUST-6022",
+      "customerName": "Ravi Choudary",
+      "customerPhone": "+91 9085170524",
+      "customerEmail": "ravi.choudary@email.com",
+      "partnerId": "CP-10022",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100021",
+      "plotNumber": "C-021",
+      "inventory": {
+        "facing": "North",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3337500,
+        "finalPrice": 3415750,
+        "block": "C"
+      },
+      "reservationAmount": 341575,
+      "minimumReservationAmount": 341575,
+      "totalValue": 3415750,
+      "reservationDate": "2026-06-18",
+      "expiryDate": "2026-07-03",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-18",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-21",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Rahul Verma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-23",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "registered",
+          "title": "Legal Registration Completed",
+          "description": "Property registration documents submitted",
+          "date": "2026-07-08",
+          "time": "11:00",
+          "tone": "accent",
+          "actor": "Priya Sharma"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10019-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-18T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10019-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-18T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10019-03",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-21T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10019",
+      "reference": "RSV-10019",
+      "status": "Registered",
+      "customerId": "CUST-6012",
+      "customerName": "Naveen Sharma",
+      "customerPhone": "+91 8264306327",
+      "customerEmail": "naveen.sharma@email.com",
+      "partnerId": "CP-10036",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100023",
+      "plotNumber": "C-023",
+      "inventory": {
+        "facing": "South",
+        "areaSqYards": 222,
+        "dimensions": "40x50",
+        "totalPrice": 2775000,
+        "finalPrice": 2849500,
+        "block": "C"
+      },
+      "reservationAmount": 284950,
+      "minimumReservationAmount": 284950,
+      "totalValue": 2849500,
+      "reservationDate": "2026-06-30",
+      "expiryDate": "2026-07-15",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-30",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-07-03",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Priya Sharma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-07-05",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "registered",
+          "title": "Legal Registration Completed",
+          "description": "Property registration documents submitted",
+          "date": "2026-07-20",
+          "time": "11:00",
+          "tone": "accent",
+          "actor": "Rahul Verma"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10020-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-30T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10020-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-30T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10020-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-07-03T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10020",
+      "reference": "RSV-10020",
+      "status": "Registered",
+      "customerId": "CUST-6002",
+      "customerName": "Divya Patel",
+      "customerPhone": "+91 9463431327",
+      "customerEmail": "divya.patel@email.com",
+      "partnerId": "CP-10040",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100024",
+      "plotNumber": "E-024",
+      "inventory": {
+        "facing": "West",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3337500,
+        "finalPrice": 3646750,
+        "block": "E"
+      },
+      "reservationAmount": 364675,
+      "minimumReservationAmount": 364675,
+      "totalValue": 3646750,
+      "reservationDate": "2026-06-19",
+      "expiryDate": "2026-07-04",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-19",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-22",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Anita Reddy"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-24",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "registered",
+          "title": "Legal Registration Completed",
+          "description": "Property registration documents submitted",
+          "date": "2026-07-09",
+          "time": "11:00",
+          "tone": "accent",
+          "actor": "Anita Reddy"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10021-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-19T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10021-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-19T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10021-03",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-22T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10021",
+      "reference": "RSV-10021",
+      "status": "Completed",
+      "customerId": "CUST-6014",
+      "customerName": "Kiran Verma",
+      "customerPhone": "+91 9547442129",
+      "customerEmail": "kiran.verma@email.com",
+      "partnerId": "CP-10042",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3001",
+      "layoutName": "Green Valley — Phase 1",
+      "plotId": "PLT-100025",
+      "plotNumber": "D-025",
+      "inventory": {
+        "facing": "East",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3337500,
+        "finalPrice": 3378750,
+        "block": "D"
+      },
+      "reservationAmount": 337875,
+      "minimumReservationAmount": 337875,
+      "totalValue": 3378750,
+      "reservationDate": "2026-06-24",
+      "expiryDate": "2026-07-09",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-24",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-27",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Anita Reddy"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-29",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "registered",
+          "title": "Legal Registration Completed",
+          "description": "Property registration documents submitted",
+          "date": "2026-07-14",
+          "time": "11:00",
+          "tone": "accent",
+          "actor": "Anita Reddy"
+        },
+        {
+          "type": "completed",
+          "title": "Property Delivered",
+          "description": "Transaction finished successfully",
+          "date": "2026-08-08",
+          "time": "16:30",
+          "tone": "success",
+          "actor": "Priya Sharma"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10022-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-24T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10022-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-24T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10022-03",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-27T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10022",
+      "reference": "RSV-10022",
+      "status": "Completed",
+      "customerId": "CUST-6026",
+      "customerName": "Pooja Reddy",
+      "customerPhone": "+91 7225927469",
+      "customerEmail": "pooja.reddy@email.com",
+      "partnerId": "CP-10028",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100029",
+      "plotNumber": "D-004",
+      "inventory": {
+        "facing": "South-East",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3604500,
+        "finalPrice": 3968770,
+        "block": "D"
+      },
+      "reservationAmount": 396877,
+      "minimumReservationAmount": 396877,
+      "totalValue": 3968770,
+      "reservationDate": "2026-06-19",
+      "expiryDate": "2026-07-04",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-19",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-22",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Priya Sharma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-24",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "registered",
+          "title": "Legal Registration Completed",
+          "description": "Property registration documents submitted",
+          "date": "2026-07-09",
+          "time": "11:00",
+          "tone": "accent",
+          "actor": "Rahul Verma"
+        },
+        {
+          "type": "completed",
+          "title": "Property Delivered",
+          "description": "Transaction finished successfully",
+          "date": "2026-08-03",
+          "time": "16:30",
+          "tone": "success",
+          "actor": "Rahul Verma"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10023-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-19T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10023-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-19T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10023-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-22T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10023",
+      "reference": "RSV-10023",
+      "status": "Completed",
+      "customerId": "CUST-6014",
+      "customerName": "Kiran Verma",
+      "customerPhone": "+91 9547442129",
+      "customerEmail": "kiran.verma@email.com",
+      "partnerId": "CP-10031",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100034",
+      "plotNumber": "F-009",
+      "inventory": {
+        "facing": "South",
+        "areaSqYards": 600,
+        "dimensions": "60x90",
+        "totalPrice": 8100000,
+        "finalPrice": 8071000,
+        "block": "F"
+      },
+      "reservationAmount": 807100,
+      "minimumReservationAmount": 807100,
+      "totalValue": 8071000,
+      "reservationDate": "2026-06-17",
+      "expiryDate": "2026-07-02",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Anita Reddy",
+      "createdByRole": "CRM Executive",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-17",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "confirmed",
+          "title": "Reservation Confirmed",
+          "description": "Administrator verified payment requirements",
+          "date": "2026-06-20",
+          "time": "14:15",
+          "tone": "success",
+          "actor": "Priya Sharma"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-22",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "registered",
+          "title": "Legal Registration Completed",
+          "description": "Property registration documents submitted",
+          "date": "2026-07-07",
+          "time": "11:00",
+          "tone": "accent",
+          "actor": "Priya Sharma"
+        },
+        {
+          "type": "completed",
+          "title": "Property Delivered",
+          "description": "Transaction finished successfully",
+          "date": "2026-08-01",
+          "time": "16:30",
+          "tone": "success",
+          "actor": "Anita Reddy"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10024-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-17T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10024-02",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-17T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10024-03",
+          "user": "Anita Reddy",
+          "role": "CRM Executive",
+          "action": "RESERVATION_CONFIRMED",
+          "timestamp": "2026-06-20T14:15:00",
+          "remarks": "Payment verification completed"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10024",
+      "reference": "RSV-10024",
+      "status": "Cancelled",
+      "customerId": "CUST-6008",
+      "customerName": "Suresh Sharma",
+      "customerPhone": "+91 9361038580",
+      "customerEmail": "suresh.sharma@email.com",
+      "partnerId": "CP-10038",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100036",
+      "plotNumber": "C-011",
+      "inventory": {
+        "facing": "East",
+        "areaSqYards": 444,
+        "dimensions": "50x80",
+        "totalPrice": 5994000,
+        "finalPrice": 6483640,
+        "block": "C"
+      },
+      "reservationAmount": 648364,
+      "minimumReservationAmount": 648364,
+      "totalValue": 6483640,
+      "reservationDate": "2026-06-24",
+      "expiryDate": "2026-07-09",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-24",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-29",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "cancelled",
+          "title": "Reservation Cancelled",
+          "description": "Cancelled by administrator",
+          "date": "2026-07-01",
+          "time": "12:00",
+          "tone": "danger",
+          "actor": "Priya Sharma"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10025-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-24T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10025-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-24T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10025-04",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "RESERVATION_CANCELLED",
+          "timestamp": "2026-07-01T12:00:00",
+          "remarks": "Customer requested cancellation"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10025",
+      "reference": "RSV-10025",
+      "status": "Cancelled",
+      "customerId": "CUST-6009",
+      "customerName": "Meena Kumar",
+      "customerPhone": "+91 8397829089",
+      "customerEmail": "meena.kumar@email.com",
+      "partnerId": "CP-10036",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100037",
+      "plotNumber": "F-012",
+      "inventory": {
+        "facing": "South",
+        "areaSqYards": 267,
+        "dimensions": "40x60",
+        "totalPrice": 3604500,
+        "finalPrice": 3718545,
+        "block": "F"
+      },
+      "reservationAmount": 371855,
+      "minimumReservationAmount": 371855,
+      "totalValue": 3718545,
+      "reservationDate": "2026-06-24",
+      "expiryDate": "2026-07-09",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "Website",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-24",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-29",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "cancelled",
+          "title": "Reservation Cancelled",
+          "description": "Cancelled by administrator",
+          "date": "2026-07-01",
+          "time": "12:00",
+          "tone": "danger",
+          "actor": "Anita Reddy"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10026-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-24T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10026-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-24T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10026-04",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "RESERVATION_CANCELLED",
+          "timestamp": "2026-07-01T12:00:00",
+          "remarks": "Customer requested cancellation"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10026",
+      "reference": "RSV-10026",
+      "status": "Cancelled",
+      "customerId": "CUST-6012",
+      "customerName": "Naveen Sharma",
+      "customerPhone": "+91 8264306327",
+      "customerEmail": "naveen.sharma@email.com",
+      "partnerId": "CP-10041",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2001",
+      "ventureName": "Green Valley Township",
+      "layoutId": "LYT-3002",
+      "layoutName": "Green Valley — Phase 2",
+      "plotId": "PLT-100044",
+      "plotNumber": "E-019",
+      "inventory": {
+        "facing": "North-West",
+        "areaSqYards": 444,
+        "dimensions": "50x80",
+        "totalPrice": 5994000,
+        "finalPrice": 6306760,
+        "block": "E"
+      },
+      "reservationAmount": 630676,
+      "minimumReservationAmount": 630676,
+      "totalValue": 6306760,
+      "reservationDate": "2026-06-19",
+      "expiryDate": "2026-07-04",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-19",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-24",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "cancelled",
+          "title": "Reservation Cancelled",
+          "description": "Cancelled by administrator",
+          "date": "2026-06-26",
+          "time": "12:00",
+          "tone": "danger",
+          "actor": "Priya Sharma"
+        }
+      ],
+      "reminders": [],
+      "activityLog": [
+        {
+          "id": "LOG-10027-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-19T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10027-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-19T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10027-04",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "RESERVATION_CANCELLED",
+          "timestamp": "2026-06-26T12:00:00",
+          "remarks": "Customer requested cancellation"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10027",
+      "reference": "RSV-10027",
+      "status": "Released",
+      "customerId": "CUST-6026",
+      "customerName": "Pooja Reddy",
+      "customerPhone": "+91 7225927469",
+      "customerEmail": "pooja.reddy@email.com",
+      "partnerId": "CP-10037",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2002",
+      "ventureName": "Royal Meadows",
+      "layoutId": "LYT-3003",
+      "layoutName": "Royal Meadows — Block A",
+      "plotId": "PLT-100051",
+      "plotNumber": "F-001",
+      "inventory": {
+        "facing": "South-East",
+        "areaSqYards": 222,
+        "dimensions": "40x50",
+        "totalPrice": 2175600,
+        "finalPrice": 2195088,
+        "block": "F"
+      },
+      "reservationAmount": 219509,
+      "minimumReservationAmount": 219509,
+      "totalValue": 2195088,
+      "reservationDate": "2026-06-11",
+      "expiryDate": "2026-06-28",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-11",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-16",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "released",
+          "title": "Reservation Released",
+          "description": "Automatically released — reservation expired",
+          "date": "2026-06-28",
+          "time": "00:01",
+          "tone": "muted",
+          "actor": "Auto Release Service"
+        }
+      ],
+      "reminders": [
+        {
+          "type": "expired",
+          "label": "Expired",
+          "sentAt": "2026-06-28",
+          "channel": "SMS + Email"
+        }
+      ],
+      "activityLog": [
+        {
+          "id": "LOG-10028-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-11T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10028-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-11T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10028-04",
+          "user": "Auto Release Service",
+          "role": "System",
+          "action": "AUTO_RELEASE",
+          "timestamp": "2026-06-28T00:01:00",
+          "remarks": "Reservation expired and inventory released"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10028",
+      "reference": "RSV-10028",
+      "status": "Released",
+      "customerId": "CUST-6005",
+      "customerName": "Anil Kumar",
+      "customerPhone": "+91 9968496527",
+      "customerEmail": "anil.kumar@email.com",
+      "partnerId": "CP-10030",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2002",
+      "ventureName": "Royal Meadows",
+      "layoutId": "LYT-3003",
+      "layoutName": "Royal Meadows — Block A",
+      "plotId": "PLT-100059",
+      "plotNumber": "A-009",
+      "inventory": {
+        "facing": "South-East",
+        "areaSqYards": 444,
+        "dimensions": "50x80",
+        "totalPrice": 4351200,
+        "finalPrice": 4357176,
+        "block": "A"
+      },
+      "reservationAmount": 435718,
+      "minimumReservationAmount": 435718,
+      "totalValue": 4357176,
+      "reservationDate": "2026-06-11",
+      "expiryDate": "2026-06-28",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Priya Sharma",
+      "createdByRole": "Administrator",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-11",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-16",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "released",
+          "title": "Reservation Released",
+          "description": "Automatically released — reservation expired",
+          "date": "2026-06-28",
+          "time": "00:01",
+          "tone": "muted",
+          "actor": "Auto Release Service"
+        }
+      ],
+      "reminders": [
+        {
+          "type": "expired",
+          "label": "Expired",
+          "sentAt": "2026-06-28",
+          "channel": "SMS + Email"
+        }
+      ],
+      "activityLog": [
+        {
+          "id": "LOG-10029-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-11T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10029-02",
+          "user": "Priya Sharma",
+          "role": "Administrator",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-11T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10029-04",
+          "user": "Auto Release Service",
+          "role": "System",
+          "action": "AUTO_RELEASE",
+          "timestamp": "2026-06-28T00:01:00",
+          "remarks": "Reservation expired and inventory released"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10029",
+      "reference": "RSV-10029",
+      "status": "Released",
+      "customerId": "CUST-6015",
+      "customerName": "Naveen Sharma",
+      "customerPhone": "+91 9916871527",
+      "customerEmail": "naveen.sharma@email.com",
+      "partnerId": "CP-10036",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2002",
+      "ventureName": "Royal Meadows",
+      "layoutId": "LYT-3003",
+      "layoutName": "Royal Meadows — Block A",
+      "plotId": "PLT-100064",
+      "plotNumber": "F-014",
+      "inventory": {
+        "facing": "North",
+        "areaSqYards": 133,
+        "dimensions": "30x40",
+        "totalPrice": 1303400,
+        "finalPrice": 1370332,
+        "block": "F"
+      },
+      "reservationAmount": 137033,
+      "minimumReservationAmount": 137033,
+      "totalValue": 1370332,
+      "reservationDate": "2026-06-11",
+      "expiryDate": "2026-06-28",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-11",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-16",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "released",
+          "title": "Reservation Released",
+          "description": "Automatically released — reservation expired",
+          "date": "2026-06-28",
+          "time": "00:01",
+          "tone": "muted",
+          "actor": "Auto Release Service"
+        }
+      ],
+      "reminders": [
+        {
+          "type": "expired",
+          "label": "Expired",
+          "sentAt": "2026-06-28",
+          "channel": "SMS + Email"
+        }
+      ],
+      "activityLog": [
+        {
+          "id": "LOG-10030-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-11T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10030-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-11T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10030-04",
+          "user": "Auto Release Service",
+          "role": "System",
+          "action": "AUTO_RELEASE",
+          "timestamp": "2026-06-28T00:01:00",
+          "remarks": "Reservation expired and inventory released"
+        }
+      ],
+      "documents": []
+    },
+    {
+      "id": "RSV-10030",
+      "reference": "RSV-10030",
+      "status": "Released",
+      "customerId": "CUST-6030",
+      "customerName": "Naveen Sharma",
+      "customerPhone": "+91 8249184413",
+      "customerEmail": "naveen.sharma@email.com",
+      "partnerId": "CP-10041",
+      "partnerName": "undefined undefined",
+      "ventureId": "VNT-2002",
+      "ventureName": "Royal Meadows",
+      "layoutId": "LYT-3003",
+      "layoutName": "Royal Meadows — Block A",
+      "plotId": "PLT-100065",
+      "plotNumber": "F-015",
+      "inventory": {
+        "facing": "North",
+        "areaSqYards": 222,
+        "dimensions": "40x50",
+        "totalPrice": 2175600,
+        "finalPrice": 2378136,
+        "block": "F"
+      },
+      "reservationAmount": 237814,
+      "minimumReservationAmount": 237814,
+      "totalValue": 2378136,
+      "reservationDate": "2026-06-11",
+      "expiryDate": "2026-06-28",
+      "validityDays": 15,
+      "autoReleaseEnabled": true,
+      "extensionsCount": 0,
+      "maxExtensions": 3,
+      "source": "ERP",
+      "createdBy": "Rahul Verma",
+      "createdByRole": "Sales Manager",
+      "timeline": [
+        {
+          "type": "created",
+          "title": "Reservation Created",
+          "description": "Customer paid minimum reservation amount. Inventory locked.",
+          "date": "2026-06-11",
+          "time": "10:30",
+          "tone": "accent",
+          "actor": "System"
+        },
+        {
+          "type": "reminder",
+          "title": "Reservation Reminder",
+          "description": "5 days remaining before expiry",
+          "date": "2026-06-16",
+          "time": "09:00",
+          "tone": "warning",
+          "actor": "System"
+        },
+        {
+          "type": "released",
+          "title": "Reservation Released",
+          "description": "Automatically released — reservation expired",
+          "date": "2026-06-28",
+          "time": "00:01",
+          "tone": "muted",
+          "actor": "Auto Release Service"
+        }
+      ],
+      "reminders": [
+        {
+          "type": "expired",
+          "label": "Expired",
+          "sentAt": "2026-06-28",
+          "channel": "SMS + Email"
+        }
+      ],
+      "activityLog": [
+        {
+          "id": "LOG-10031-01",
+          "user": "System",
+          "role": "System",
+          "action": "RESERVATION_CREATED",
+          "timestamp": "2026-06-11T10:30:00",
+          "remarks": "Minimum reservation amount received. Inventory locked."
+        },
+        {
+          "id": "LOG-10031-02",
+          "user": "Rahul Verma",
+          "role": "Sales Manager",
+          "action": "STATUS_LOGGED",
+          "timestamp": "2026-06-11T10:31:00",
+          "remarks": "Reservation initiated with status Reserved"
+        },
+        {
+          "id": "LOG-10031-04",
+          "user": "Auto Release Service",
+          "role": "System",
+          "action": "AUTO_RELEASE",
+          "timestamp": "2026-06-28T00:01:00",
+          "remarks": "Reservation expired and inventory released"
+        }
+      ],
+      "documents": []
+    }
+  ],
+  "lastAutoReleaseRun": "2026-06-30",
+  "autoReleaseSchedule": "0 */6 * * *"
+}

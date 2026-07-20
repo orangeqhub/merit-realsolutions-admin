@@ -1,0 +1,63 @@
+.info-card {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  overflow: hidden;
+}
+
+.info-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--erp-border);
+}
+
+.info-card__title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.info-card__icon {
+  display: inline-flex;
+  color: var(--erp-accent);
+}
+
+.info-card__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.info-card__body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.info-card__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.info-card__row-label {
+  font-size: 0.8125rem;
+  color: var(--erp-text-soft);
+  flex-shrink: 0;
+}
+
+.info-card__row-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--erp-text);
+  text-align: right;
+  word-break: break-word;
+}

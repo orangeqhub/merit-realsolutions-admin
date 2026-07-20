@@ -1,0 +1,1856 @@
+[
+  {
+    "id": "LYT-3001",
+    "name": "Green Valley — Phase 1",
+    "code": "GVT-L1",
+    "ventureId": "VNT-2001",
+    "ventureName": "Green Valley Township",
+    "description": "The flagship phase of Green Valley Township featuring premium east-facing open plots with wide 40ft and 60ft CC roads, avenue plantation and underground utilities.",
+    "status": "Active",
+    "approval": "Both",
+    "approvalNumber": "DTCP/TS/2021/0842",
+    "approvalDate": "2021-08-15",
+    "state": "Telangana",
+    "district": "Rangareddy",
+    "city": "Shamshabad",
+    "village": "Mamidpally",
+    "surveyNumber": "142, 143, 144",
+    "mapUrl": "https://maps.google.com/?q=17.2403,78.4294",
+    "totalArea": 18.5,
+    "plotCount": 142,
+    "plots": {
+      "total": 25,
+      "available": 12,
+      "booked": 5,
+      "reserved": 3,
+      "sold": 5
+    },
+    "basePrice": 8500,
+    "currentPrice": 12500,
+    "registrationCharges": 50000,
+    "developmentCharges": 75000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "green-valley-p1-brochure.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "DTCP Layout Approval",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2021-08-15"
+      },
+      {
+        "id": "d2",
+        "name": "RERA Registration",
+        "type": "pdf",
+        "size": "1.8 MB",
+        "date": "2021-09-01"
+      },
+      {
+        "id": "d3",
+        "name": "Survey Settlement Record",
+        "type": "pdf",
+        "size": "3.1 MB",
+        "date": "2021-07-20"
+      }
+    ],
+    "revenue": 7.6,
+    "progress": 72,
+    "createdDate": "2021-09-01",
+    "lastUpdated": "2026-06-18",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Phase 1 registered in ERP",
+        "date": "2021-09-01",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "DTCP approval added",
+        "description": "Approval DTCP/TS/2021/0842 linked",
+        "date": "2021-09-05",
+        "tone": "success"
+      },
+      {
+        "type": "plan",
+        "title": "Layout plan uploaded",
+        "description": "High-resolution layout plan published",
+        "date": "2021-10-12",
+        "tone": "info"
+      },
+      {
+        "type": "amenities",
+        "title": "Amenities updated",
+        "description": "Club house & security added",
+        "date": "2022-02-08",
+        "tone": "violet"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "150 sq.yd",
+          "value": 48
+        },
+        {
+          "label": "200 sq.yd",
+          "value": 56
+        },
+        {
+          "label": "267 sq.yd",
+          "value": 24
+        },
+        {
+          "label": "400 sq.yd",
+          "value": 14
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 64,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 41,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 18,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 19,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 18
+        },
+        {
+          "label": "Q2",
+          "value": 24
+        },
+        {
+          "label": "Q3",
+          "value": 31
+        },
+        {
+          "label": "Q4",
+          "value": 38
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10019",
+      "CP-10026"
+    ],
+    "bookingStats": {
+      "total": 2,
+      "active": 2,
+      "completed": 0
+    }
+  },
+  {
+    "id": "LYT-3002",
+    "name": "Green Valley — Phase 2",
+    "code": "GVT-L2",
+    "ventureId": "VNT-2001",
+    "ventureName": "Green Valley Township",
+    "description": "Second phase expansion with north-facing plots adjacent to the central park and proposed commercial avenue.",
+    "status": "Active",
+    "approval": "DTCP Approved",
+    "approvalNumber": "DTCP/TS/2022/1190",
+    "approvalDate": "2022-03-22",
+    "state": "Telangana",
+    "district": "Rangareddy",
+    "city": "Shamshabad",
+    "village": "Mamidpally",
+    "surveyNumber": "151, 152",
+    "mapUrl": "https://maps.google.com/?q=17.2415,78.4310",
+    "totalArea": 14.2,
+    "plotCount": 118,
+    "plots": {
+      "total": 25,
+      "available": 10,
+      "booked": 6,
+      "reserved": 3,
+      "sold": 6
+    },
+    "basePrice": 9500,
+    "currentPrice": 13500,
+    "registrationCharges": 55000,
+    "developmentCharges": 80000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": false,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "green-valley-p2-brochure.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80",
+      "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "DTCP Layout Approval",
+        "type": "pdf",
+        "size": "2.2 MB",
+        "date": "2022-03-22"
+      },
+      {
+        "id": "d2",
+        "name": "Layout Master Plan",
+        "type": "pdf",
+        "size": "4.8 MB",
+        "date": "2022-04-10"
+      }
+    ],
+    "revenue": 2.1,
+    "progress": 38,
+    "createdDate": "2022-04-01",
+    "lastUpdated": "2026-06-22",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Phase 2 registered in ERP",
+        "date": "2022-04-01",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "DTCP approval added",
+        "description": "Approval DTCP/TS/2022/1190 linked",
+        "date": "2022-04-05",
+        "tone": "success"
+      },
+      {
+        "type": "plan",
+        "title": "Layout plan uploaded",
+        "description": "Phase 2 plan published",
+        "date": "2022-05-18",
+        "tone": "info"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "150 sq.yd",
+          "value": 40
+        },
+        {
+          "label": "200 sq.yd",
+          "value": 52
+        },
+        {
+          "label": "300 sq.yd",
+          "value": 26
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 78,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 24,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 10,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 6,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 8
+        },
+        {
+          "label": "Q2",
+          "value": 14
+        },
+        {
+          "label": "Q3",
+          "value": 22
+        },
+        {
+          "label": "Q4",
+          "value": 30
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10019",
+      "CP-10026"
+    ],
+    "bookingStats": {
+      "total": 1,
+      "active": 1,
+      "completed": 0
+    }
+  },
+  {
+    "id": "LYT-3003",
+    "name": "Royal Meadows — Block A",
+    "code": "RM-LA",
+    "ventureId": "VNT-2002",
+    "ventureName": "Royal Meadows",
+    "description": "Riverside block with HMDA-style wide layouts, parks on two sides and direct highway frontage near Vijayawada.",
+    "status": "Active",
+    "approval": "DTCP Approved",
+    "approvalNumber": "DTCP/AP/2020/0521",
+    "approvalDate": "2020-11-20",
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "city": "Vijayawada",
+    "village": "Gannavaram",
+    "surveyNumber": "88/2, 89",
+    "mapUrl": "https://maps.google.com/?q=16.5449,80.6520",
+    "totalArea": 22,
+    "plotCount": 176,
+    "plots": {
+      "total": 25,
+      "available": 11,
+      "booked": 3,
+      "reserved": 3,
+      "sold": 8
+    },
+    "basePrice": 6500,
+    "currentPrice": 9800,
+    "registrationCharges": 45000,
+    "developmentCharges": 60000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1524813686514-a57563d77965?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "royal-meadows-blocka.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1500076656116-558758c991c1?w=800&q=80",
+      "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?w=800&q=80",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "DTCP Layout Approval",
+        "type": "pdf",
+        "size": "3.1 MB",
+        "date": "2020-11-20"
+      },
+      {
+        "id": "d2",
+        "name": "Survey Settlement Report",
+        "type": "pdf",
+        "size": "4.5 MB",
+        "date": "2021-02-05"
+      }
+    ],
+    "revenue": 12.4,
+    "progress": 84,
+    "createdDate": "2021-01-15",
+    "lastUpdated": "2026-06-10",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Block A registered in ERP",
+        "date": "2021-01-15",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "DTCP approval added",
+        "description": "Approval DTCP/AP/2020/0521 linked",
+        "date": "2021-01-20",
+        "tone": "success"
+      },
+      {
+        "type": "documents",
+        "title": "Documents uploaded",
+        "description": "Survey settlement report added",
+        "date": "2021-02-05",
+        "tone": "info"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "167 sq.yd",
+          "value": 60
+        },
+        {
+          "label": "200 sq.yd",
+          "value": 64
+        },
+        {
+          "label": "267 sq.yd",
+          "value": 32
+        },
+        {
+          "label": "333 sq.yd",
+          "value": 20
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 52,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 48,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 22,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 54,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 24
+        },
+        {
+          "label": "Q2",
+          "value": 32
+        },
+        {
+          "label": "Q3",
+          "value": 40
+        },
+        {
+          "label": "Q4",
+          "value": 48
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10020",
+      "CP-10027"
+    ],
+    "bookingStats": {
+      "total": 1,
+      "active": 0,
+      "completed": 1
+    }
+  },
+  {
+    "id": "LYT-3004",
+    "name": "Palm County — Villa Plots",
+    "code": "PC-VP",
+    "ventureId": "VNT-2003",
+    "ventureName": "Palm County",
+    "description": "Gated villa plot enclave in Gachibowli IT corridor with clubhouse, swimming pool and 24/7 security.",
+    "status": "Active",
+    "approval": "RERA Approved",
+    "approvalNumber": "P02400005678",
+    "approvalDate": "2022-04-10",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "city": "Gachibowli",
+    "village": "Nallagandla",
+    "surveyNumber": "204, 205/A",
+    "mapUrl": "https://maps.google.com/?q=17.4435,78.3772",
+    "totalArea": 9.8,
+    "plotCount": 64,
+    "plots": {
+      "total": 25,
+      "available": 12,
+      "booked": 6,
+      "reserved": 2,
+      "sold": 5
+    },
+    "basePrice": 28000,
+    "currentPrice": 42000,
+    "registrationCharges": 120000,
+    "developmentCharges": 180000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "palm-county-villaplots.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2022-04-10"
+      },
+      {
+        "id": "d2",
+        "name": "Building Permissions",
+        "type": "pdf",
+        "size": "3.8 MB",
+        "date": "2022-06-15"
+      }
+    ],
+    "revenue": 22.8,
+    "progress": 78,
+    "createdDate": "2022-05-01",
+    "lastUpdated": "2026-06-20",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Villa plots registered",
+        "date": "2022-05-01",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "RERA approval added",
+        "description": "RERA P02400005678 linked",
+        "date": "2022-05-04",
+        "tone": "success"
+      },
+      {
+        "type": "amenities",
+        "title": "Amenities updated",
+        "description": "Clubhouse & pool added",
+        "date": "2022-09-12",
+        "tone": "violet"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "300 sq.yd",
+          "value": 20
+        },
+        {
+          "label": "400 sq.yd",
+          "value": 24
+        },
+        {
+          "label": "500 sq.yd",
+          "value": 14
+        },
+        {
+          "label": "600 sq.yd",
+          "value": 6
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 12,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 18,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 8,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 26,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 40
+        },
+        {
+          "label": "Q2",
+          "value": 55
+        },
+        {
+          "label": "Q3",
+          "value": 68
+        },
+        {
+          "label": "Q4",
+          "value": 80
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10021",
+      "CP-10028"
+    ],
+    "bookingStats": {
+      "total": 4,
+      "active": 3,
+      "completed": 1
+    }
+  },
+  {
+    "id": "LYT-3005",
+    "name": "Merit Avenue — Block C",
+    "code": "MA-LC",
+    "ventureId": "VNT-2004",
+    "ventureName": "Merit Avenue",
+    "description": "Affordable open plots in fast-growing Kompally with metro connectivity and proposed ring road access.",
+    "status": "Active",
+    "approval": "Both",
+    "approvalNumber": "DTCP/TS/2023/0307",
+    "approvalDate": "2023-01-20",
+    "state": "Telangana",
+    "district": "Medchal",
+    "city": "Kompally",
+    "village": "Bahadurpally",
+    "surveyNumber": "67, 68/1",
+    "mapUrl": "https://maps.google.com/?q=17.5421,78.4810",
+    "totalArea": 16.4,
+    "plotCount": 132,
+    "plots": {
+      "total": 25,
+      "available": 8,
+      "booked": 8,
+      "reserved": 2,
+      "sold": 7
+    },
+    "basePrice": 11000,
+    "currentPrice": 15500,
+    "registrationCharges": 60000,
+    "developmentCharges": 85000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": false,
+      "clubHouse": false,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1448630360428-65456885c650?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "merit-avenue-blockc.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "DTCP & RERA Approvals",
+        "type": "pdf",
+        "size": "2.8 MB",
+        "date": "2023-01-20"
+      }
+    ],
+    "revenue": 3.4,
+    "progress": 45,
+    "createdDate": "2023-02-10",
+    "lastUpdated": "2026-06-15",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Block C registered",
+        "date": "2023-02-10",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "Approvals added",
+        "description": "DTCP & RERA linked",
+        "date": "2023-02-12",
+        "tone": "success"
+      },
+      {
+        "type": "plan",
+        "title": "Layout plan uploaded",
+        "description": "Block C plan published",
+        "date": "2023-03-20",
+        "tone": "info"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "150 sq.yd",
+          "value": 56
+        },
+        {
+          "label": "200 sq.yd",
+          "value": 52
+        },
+        {
+          "label": "267 sq.yd",
+          "value": 24
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 88,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 28,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 10,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 6,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 10
+        },
+        {
+          "label": "Q2",
+          "value": 18
+        },
+        {
+          "label": "Q3",
+          "value": 26
+        },
+        {
+          "label": "Q4",
+          "value": 34
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10022",
+      "CP-10029"
+    ],
+    "bookingStats": {
+      "total": 4,
+      "active": 3,
+      "completed": 1
+    }
+  },
+  {
+    "id": "LYT-3006",
+    "name": "Sunrise Farms — Estate I",
+    "code": "SF-E1",
+    "ventureId": "VNT-2005",
+    "ventureName": "Sunrise Farms",
+    "description": "Managed farm-land estate with drip-irrigated mango orchards, farm villas and gated security near Kalwakurthy.",
+    "status": "Active",
+    "approval": "DTCP Approved",
+    "approvalNumber": "DTCP/TS/2022/0915",
+    "approvalDate": "2022-07-05",
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "city": "Kalwakurthy",
+    "village": "Amangal",
+    "surveyNumber": "312, 313, 314",
+    "mapUrl": "https://maps.google.com/?q=16.6510,78.4820",
+    "totalArea": 40,
+    "plotCount": 80,
+    "plots": {
+      "total": 25,
+      "available": 10,
+      "booked": 7,
+      "reserved": 4,
+      "sold": 4
+    },
+    "basePrice": 1800,
+    "currentPrice": 2600,
+    "registrationCharges": 35000,
+    "developmentCharges": 45000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": false,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "sunrise-farms-estate1.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=800&q=80",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
+      "https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "DTCP Layout",
+        "type": "pdf",
+        "size": "2.1 MB",
+        "date": "2022-07-05"
+      }
+    ],
+    "revenue": 5.2,
+    "progress": 60,
+    "createdDate": "2022-08-01",
+    "lastUpdated": "2026-06-05",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Estate I registered",
+        "date": "2022-08-01",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "DTCP approval added",
+        "description": "DTCP/TS/2022/0915 linked",
+        "date": "2022-08-04",
+        "tone": "success"
+      },
+      {
+        "type": "amenities",
+        "title": "Amenities updated",
+        "description": "Drip irrigation & orchards added",
+        "date": "2022-11-10",
+        "tone": "violet"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "1089 sq.yd",
+          "value": 30
+        },
+        {
+          "label": "1452 sq.yd",
+          "value": 28
+        },
+        {
+          "label": "2178 sq.yd",
+          "value": 22
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 34,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 22,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 8,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 16,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 12
+        },
+        {
+          "label": "Q2",
+          "value": 20
+        },
+        {
+          "label": "Q3",
+          "value": 28
+        },
+        {
+          "label": "Q4",
+          "value": 36
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10023",
+      "CP-10030"
+    ],
+    "bookingStats": {
+      "total": 2,
+      "active": 1,
+      "completed": 1
+    }
+  },
+  {
+    "id": "LYT-3007",
+    "name": "Golden Enclave — Final Phase",
+    "code": "GE-LF",
+    "ventureId": "VNT-2006",
+    "ventureName": "Golden Enclave",
+    "description": "Fully sold-out completed layout in Warangal with developed infrastructure and ready-to-register plots.",
+    "status": "Completed",
+    "approval": "Both",
+    "approvalNumber": "DTCP/TS/2020/0118",
+    "approvalDate": "2020-05-12",
+    "state": "Telangana",
+    "district": "Warangal",
+    "city": "Warangal",
+    "village": "Hasanparthy",
+    "surveyNumber": "21, 22",
+    "mapUrl": "https://maps.google.com/?q=18.0220,79.5680",
+    "totalArea": 12,
+    "plotCount": 96,
+    "plots": {
+      "total": 25,
+      "available": 12,
+      "booked": 6,
+      "reserved": 3,
+      "sold": 4
+    },
+    "basePrice": 5500,
+    "currentPrice": 8200,
+    "registrationCharges": 40000,
+    "developmentCharges": 55000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "golden-enclave-final.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486718448742-163732cd1544?w=800&q=80",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "Completion Certificate",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-12-01"
+      }
+    ],
+    "revenue": 14.8,
+    "progress": 100,
+    "createdDate": "2020-06-01",
+    "lastUpdated": "2025-12-01",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Final phase registered",
+        "date": "2020-06-01",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "Approvals added",
+        "description": "DTCP & RERA linked",
+        "date": "2020-06-04",
+        "tone": "success"
+      },
+      {
+        "type": "documents",
+        "title": "Completion certificate",
+        "description": "Layout marked completed",
+        "date": "2025-12-01",
+        "tone": "info"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "150 sq.yd",
+          "value": 44
+        },
+        {
+          "label": "200 sq.yd",
+          "value": 38
+        },
+        {
+          "label": "267 sq.yd",
+          "value": 14
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 0,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 4,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 0,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 92,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 60
+        },
+        {
+          "label": "Q2",
+          "value": 80
+        },
+        {
+          "label": "Q3",
+          "value": 95
+        },
+        {
+          "label": "Q4",
+          "value": 100
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10024",
+      "CP-10031"
+    ],
+    "bookingStats": {
+      "total": 1,
+      "active": 0,
+      "completed": 1
+    }
+  },
+  {
+    "id": "LYT-3008",
+    "name": "Urban Heights — Tower Plots",
+    "code": "UH-TP",
+    "ventureId": "VNT-2007",
+    "ventureName": "Urban Heights",
+    "description": "Premium high-rise compatible plots in Kukatpally suited for G+5 residential development.",
+    "status": "Active",
+    "approval": "RERA Approved",
+    "approvalNumber": "P02400009012",
+    "approvalDate": "2024-03-01",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "city": "Kukatpally",
+    "village": "Moosapet",
+    "surveyNumber": "118/2",
+    "mapUrl": "https://maps.google.com/?q=17.4948,78.3996",
+    "totalArea": 6.5,
+    "plotCount": 40,
+    "plots": {
+      "total": 25,
+      "available": 12,
+      "booked": 5,
+      "reserved": 3,
+      "sold": 5
+    },
+    "basePrice": 35000,
+    "currentPrice": 48000,
+    "registrationCharges": 150000,
+    "developmentCharges": 200000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "urban-heights-towerplots.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "RERA Registration",
+        "type": "pdf",
+        "size": "1.4 MB",
+        "date": "2024-03-01"
+      }
+    ],
+    "revenue": 9.6,
+    "progress": 52,
+    "createdDate": "2024-03-15",
+    "lastUpdated": "2026-06-24",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Tower plots registered",
+        "date": "2024-03-15",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "RERA approval added",
+        "description": "RERA P02400009012 linked",
+        "date": "2024-03-18",
+        "tone": "success"
+      },
+      {
+        "type": "plan",
+        "title": "Layout plan uploaded",
+        "description": "Tower plot plan published",
+        "date": "2024-04-22",
+        "tone": "info"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "267 sq.yd",
+          "value": 16
+        },
+        {
+          "label": "400 sq.yd",
+          "value": 14
+        },
+        {
+          "label": "600 sq.yd",
+          "value": 10
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 22,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 10,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 4,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 4,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 20
+        },
+        {
+          "label": "Q2",
+          "value": 30
+        },
+        {
+          "label": "Q3",
+          "value": 42
+        },
+        {
+          "label": "Q4",
+          "value": 55
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10025",
+      "CP-10032"
+    ],
+    "bookingStats": {
+      "total": 3,
+      "active": 1,
+      "completed": 2
+    }
+  },
+  {
+    "id": "LYT-3009",
+    "name": "Hill Crest — Villa Layout",
+    "code": "HC-VL",
+    "ventureId": "VNT-2008",
+    "ventureName": "Hill Crest Villas",
+    "description": "Ultra-premium villa layout in Jubilee Hills with landscaped contours and panoramic city views.",
+    "status": "Active",
+    "approval": "Both",
+    "approvalNumber": "DTCP/TS/2023/0455",
+    "approvalDate": "2023-06-15",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "city": "Jubilee Hills",
+    "village": "Shaikpet",
+    "surveyNumber": "9/A",
+    "mapUrl": "https://maps.google.com/?q=17.4239,78.4099",
+    "totalArea": 8.2,
+    "plotCount": 32,
+    "plots": {
+      "total": 25,
+      "available": 16,
+      "booked": 7,
+      "reserved": 0,
+      "sold": 2
+    },
+    "basePrice": 55000,
+    "currentPrice": 72000,
+    "registrationCharges": 250000,
+    "developmentCharges": 320000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "hillcrest-villalayout.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "1.6 MB",
+        "date": "2023-06-15"
+      }
+    ],
+    "revenue": 18.2,
+    "progress": 70,
+    "createdDate": "2023-07-01",
+    "lastUpdated": "2026-06-12",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Villa layout registered",
+        "date": "2023-07-01",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "Approvals added",
+        "description": "DTCP & RERA linked",
+        "date": "2023-07-05",
+        "tone": "success"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "500 sq.yd",
+          "value": 12
+        },
+        {
+          "label": "800 sq.yd",
+          "value": 12
+        },
+        {
+          "label": "1000 sq.yd",
+          "value": 8
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 6,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 10,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 6,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 10,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 35
+        },
+        {
+          "label": "Q2",
+          "value": 50
+        },
+        {
+          "label": "Q3",
+          "value": 62
+        },
+        {
+          "label": "Q4",
+          "value": 74
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10026",
+      "CP-10033"
+    ],
+    "bookingStats": {
+      "total": 0,
+      "active": 0,
+      "completed": 0
+    }
+  },
+  {
+    "id": "LYT-3010",
+    "name": "Lakeview — Pre-launch Block",
+    "code": "LV-PL",
+    "ventureId": "VNT-2009",
+    "ventureName": "Lakeview Residency",
+    "description": "Upcoming lakefront layout in Shankarpally currently in pre-launch with early-bird pricing.",
+    "status": "Upcoming",
+    "approval": "Pending",
+    "approvalNumber": "",
+    "approvalDate": "",
+    "state": "Telangana",
+    "district": "Rangareddy",
+    "city": "Shankarpally",
+    "village": "Mokila",
+    "surveyNumber": "55, 56",
+    "mapUrl": "https://maps.google.com/?q=17.4060,78.1980",
+    "totalArea": 20.5,
+    "plotCount": 160,
+    "plots": {
+      "total": 25,
+      "available": 11,
+      "booked": 5,
+      "reserved": 2,
+      "sold": 7
+    },
+    "basePrice": 14000,
+    "currentPrice": 14000,
+    "registrationCharges": 65000,
+    "developmentCharges": 90000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": false,
+      "avenuePlantation": true,
+      "clubHouse": true,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "lakeview-prelaunch.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+      "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "Pre-launch Approvals",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2024-08-10"
+      }
+    ],
+    "revenue": 0.9,
+    "progress": 15,
+    "createdDate": "2024-08-10",
+    "lastUpdated": "2026-06-25",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Pre-launch block registered",
+        "date": "2024-08-10",
+        "tone": "accent"
+      },
+      {
+        "type": "plan",
+        "title": "Concept plan uploaded",
+        "description": "Pre-launch concept plan added",
+        "date": "2024-09-01",
+        "tone": "info"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "200 sq.yd",
+          "value": 70
+        },
+        {
+          "label": "267 sq.yd",
+          "value": 56
+        },
+        {
+          "label": "333 sq.yd",
+          "value": 34
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 150,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 8,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 2,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 0,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 5
+        },
+        {
+          "label": "Q2",
+          "value": 14
+        },
+        {
+          "label": "Q3",
+          "value": 26
+        },
+        {
+          "label": "Q4",
+          "value": 40
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10027",
+      "CP-10034"
+    ],
+    "bookingStats": {
+      "total": 3,
+      "active": 2,
+      "completed": 1
+    }
+  },
+  {
+    "id": "LYT-3011",
+    "name": "Silver Springs — Garden Plots",
+    "code": "SS-GP",
+    "ventureId": "VNT-2010",
+    "ventureName": "Silver Springs",
+    "description": "Eco-friendly garden plot layout with rainwater harvesting, solar street lights and central green spine.",
+    "status": "Active",
+    "approval": "DTCP Approved",
+    "approvalNumber": "DTCP/TS/2023/0628",
+    "approvalDate": "2023-09-18",
+    "state": "Telangana",
+    "district": "Sangareddy",
+    "city": "Patancheru",
+    "village": "Isnapur",
+    "surveyNumber": "101, 102",
+    "mapUrl": "https://maps.google.com/?q=17.5290,78.2640",
+    "totalArea": 15,
+    "plotCount": 120,
+    "plots": {
+      "total": 25,
+      "available": 16,
+      "booked": 3,
+      "reserved": 3,
+      "sold": 3
+    },
+    "basePrice": 9000,
+    "currentPrice": 12800,
+    "registrationCharges": 52000,
+    "developmentCharges": 70000,
+    "amenities": {
+      "roads": true,
+      "parks": true,
+      "water": true,
+      "electricity": true,
+      "drainage": true,
+      "streetLights": true,
+      "compoundWall": true,
+      "avenuePlantation": true,
+      "clubHouse": false,
+      "security": true
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1400&q=80",
+    "layoutPlan": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1600&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+    "brochure": "silver-springs-gardenplots.pdf",
+    "gallery": [
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
+      "https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?w=800&q=80"
+    ],
+    "documents": [
+      {
+        "id": "d1",
+        "name": "DTCP Layout Approval",
+        "type": "pdf",
+        "size": "2.3 MB",
+        "date": "2023-09-18"
+      }
+    ],
+    "revenue": 6.8,
+    "progress": 58,
+    "createdDate": "2023-10-01",
+    "lastUpdated": "2026-06-08",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Layout created",
+        "description": "Garden plots registered",
+        "date": "2023-10-01",
+        "tone": "accent"
+      },
+      {
+        "type": "approval",
+        "title": "DTCP approval added",
+        "description": "DTCP/TS/2023/0628 linked",
+        "date": "2023-10-04",
+        "tone": "success"
+      },
+      {
+        "type": "amenities",
+        "title": "Amenities updated",
+        "description": "Rainwater harvesting added",
+        "date": "2024-01-15",
+        "tone": "violet"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "167 sq.yd",
+          "value": 44
+        },
+        {
+          "label": "200 sq.yd",
+          "value": 48
+        },
+        {
+          "label": "267 sq.yd",
+          "value": 28
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 58,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 34,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 12,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 16,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 16
+        },
+        {
+          "label": "Q2",
+          "value": 26
+        },
+        {
+          "label": "Q3",
+          "value": 36
+        },
+        {
+          "label": "Q4",
+          "value": 46
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10028",
+      "CP-10035"
+    ],
+    "bookingStats": {
+      "total": 0,
+      "active": 0,
+      "completed": 0
+    }
+  },
+  {
+    "id": "LYT-3012",
+    "name": "Merit Avenue — Block D (Draft)",
+    "code": "MA-LD",
+    "ventureId": "VNT-2004",
+    "ventureName": "Merit Avenue",
+    "description": "Draft layout under planning for the eastern extension of Merit Avenue. Awaiting survey finalization.",
+    "status": "Draft",
+    "approval": "Pending",
+    "approvalNumber": "",
+    "approvalDate": "",
+    "state": "Telangana",
+    "district": "Medchal",
+    "city": "Kompally",
+    "village": "Bahadurpally",
+    "surveyNumber": "69",
+    "mapUrl": "",
+    "totalArea": 10,
+    "plotCount": 84,
+    "plots": {
+      "total": 25,
+      "available": 12,
+      "booked": 5,
+      "reserved": 4,
+      "sold": 4
+    },
+    "basePrice": 12000,
+    "currentPrice": 12000,
+    "registrationCharges": 60000,
+    "developmentCharges": 85000,
+    "amenities": {
+      "roads": true,
+      "parks": false,
+      "water": true,
+      "electricity": true,
+      "drainage": false,
+      "streetLights": false,
+      "compoundWall": false,
+      "avenuePlantation": false,
+      "clubHouse": false,
+      "security": false
+    },
+    "thumbnail": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80",
+    "banner": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1400&q=80",
+    "layoutPlan": "",
+    "masterPlan": "",
+    "brochure": "",
+    "gallery": [],
+    "documents": [],
+    "revenue": 0,
+    "progress": 5,
+    "createdDate": "2026-05-20",
+    "lastUpdated": "2026-06-26",
+    "activities": [
+      {
+        "type": "created",
+        "title": "Draft created",
+        "description": "Block D draft started",
+        "date": "2026-05-20",
+        "tone": "accent"
+      }
+    ],
+    "analytics": {
+      "plotDistribution": [
+        {
+          "label": "150 sq.yd",
+          "value": 40
+        },
+        {
+          "label": "200 sq.yd",
+          "value": 44
+        }
+      ],
+      "bookingStatus": [
+        {
+          "label": "Available",
+          "value": 84,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 0,
+          "color": "#d97706"
+        },
+        {
+          "label": "Reserved",
+          "value": 0,
+          "color": "#7c3aed"
+        },
+        {
+          "label": "Sold",
+          "value": 0,
+          "color": "#2563eb"
+        }
+      ],
+      "revenueProjection": [
+        {
+          "label": "Q1",
+          "value": 0
+        },
+        {
+          "label": "Q2",
+          "value": 6
+        },
+        {
+          "label": "Q3",
+          "value": 14
+        },
+        {
+          "label": "Q4",
+          "value": 24
+        }
+      ]
+    },
+    "assignedPartnerIds": [
+      "CP-10022",
+      "CP-10029"
+    ],
+    "bookingStats": {
+      "total": 0,
+      "active": 0,
+      "completed": 0
+    }
+  }
+]

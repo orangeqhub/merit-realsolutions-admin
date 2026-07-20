@@ -1,0 +1,228 @@
+.plot-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  overflow: hidden;
+  transition: box-shadow var(--erp-transition), border-color var(--erp-transition);
+  height: 100%;
+}
+
+.plot-card:hover {
+  box-shadow: var(--erp-shadow-md);
+  border-color: var(--erp-border-strong);
+}
+
+/* Mini layout preview */
+.plot-card__preview {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--erp-border);
+}
+
+.plot-card__diagram {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background:
+    linear-gradient(135deg, var(--erp-card-muted) 0%, #eef2f8 100%);
+  background-image:
+    linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
+  background-size: 100%, 22px 22px, 22px 22px;
+}
+
+.plot-card__plot-no {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--erp-text);
+}
+
+.plot-card__facing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+}
+
+.plot-card__corner {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--erp-text-inverse);
+  background: var(--erp-violet);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--erp-radius-pill);
+}
+
+/* status accent strip on the left of preview */
+.plot-card__preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  z-index: 1;
+}
+.plot-card--available .plot-card__preview::before { background: var(--erp-success); }
+.plot-card--reserved .plot-card__preview::before { background: var(--erp-violet); }
+.plot-card--booked .plot-card__preview::before { background: var(--erp-warning); }
+.plot-card--sold .plot-card__preview::before { background: var(--erp-accent); }
+.plot-card--blocked .plot-card__preview::before { background: var(--erp-danger); }
+.plot-card--cancelled .plot-card__preview::before { background: var(--erp-text-soft); }
+
+/* Hover actions overlay */
+.plot-card__actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  background: rgba(10, 22, 40, 0.72);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity var(--erp-transition);
+}
+
+.plot-card:hover .plot-card__actions,
+.plot-card:focus-within .plot-card__actions {
+  opacity: 1;
+}
+
+.plot-card__actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  border-radius: var(--erp-radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: all var(--erp-transition);
+}
+
+.plot-card__actions button:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.plot-card__actions button.is-primary {
+  background: var(--erp-accent);
+  border-color: var(--erp-accent);
+}
+
+.plot-card__actions button.is-primary:hover {
+  background: var(--erp-accent-dark);
+}
+
+/* Body */
+.plot-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.9rem 1rem 1rem;
+  flex: 1;
+}
+
+.plot-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.plot-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.plot-card__title:hover {
+  color: var(--erp-accent);
+}
+
+.plot-card__layout {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-card__layout svg {
+  color: var(--erp-accent);
+  flex-shrink: 0;
+}
+
+.plot-card__specs {
+  display: flex;
+  gap: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.plot-card__specs span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.plot-card__specs svg {
+  color: var(--erp-text-soft);
+}
+
+.plot-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--erp-border);
+}
+
+.plot-card__price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--erp-text);
+}
+
+.plot-card__customer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--erp-violet);
+}
+
+.plot-card__rate {
+  font-size: 0.72rem;
+  color: var(--erp-text-soft);
+}

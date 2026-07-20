@@ -1,0 +1,1129 @@
+[
+  {
+    "id": "BKG-9001",
+    "bookingNumber": "BK-2025-0001",
+    "customerId": "CUST-6030",
+    "customerName": "Naveen Sharma",
+    "propertyId": "PRP-5019",
+    "propertyName": "Sunrise Gardens 19",
+    "plotId": "PLT-100131",
+    "plotNumber": "B-006",
+    "ventureName": "Sunrise Farms",
+    "layoutName": "Sunrise Farms — Estate I",
+    "bookingAmount": 2400000,
+    "advancePaid": 480000,
+    "agreementStatus": "Pending",
+    "status": "Cancelled",
+    "bookingDate": "2026-04-04",
+    "agreementDate": "2025-02-19",
+    "documents": [
+      {
+        "id": "bd0",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-04-04"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-006 booked",
+        "date": "2026-04-04",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-04-04"
+  },
+  {
+    "id": "BKG-9002",
+    "bookingNumber": "BK-2025-0002",
+    "customerId": "CUST-6003",
+    "customerName": "Suresh Choudary",
+    "propertyId": "PRP-5007",
+    "propertyName": "Lakeview Heights 7",
+    "plotId": "PLT-100245",
+    "plotNumber": "B-020",
+    "ventureName": "Lakeview Residency",
+    "layoutName": "Lakeview — Pre-launch Block",
+    "bookingAmount": 1700000,
+    "advancePaid": 340000,
+    "agreementStatus": "Pending",
+    "status": "Cancelled",
+    "bookingDate": "2025-08-20",
+    "agreementDate": "2026-02-18",
+    "documents": [
+      {
+        "id": "bd1",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-08-20"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-020 booked",
+        "date": "2025-08-20",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-08-20"
+  },
+  {
+    "id": "BKG-9003",
+    "bookingNumber": "BK-2025-0003",
+    "customerId": "CUST-6019",
+    "customerName": "Sneha Verma",
+    "propertyId": "PRP-5001",
+    "propertyName": "Lakeview Park 1",
+    "plotId": "PLT-100249",
+    "plotNumber": "B-024",
+    "ventureName": "Lakeview Residency",
+    "layoutName": "Lakeview — Pre-launch Block",
+    "bookingAmount": 4900000,
+    "advancePaid": 980000,
+    "agreementStatus": "Registered",
+    "status": "Active",
+    "bookingDate": "2025-12-22",
+    "agreementDate": "2025-05-14",
+    "documents": [
+      {
+        "id": "bd2",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-12-22"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-024 booked",
+        "date": "2025-12-22",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-12-22",
+    "ventureId": "VNT-2009",
+    "layoutId": "LYT-3010",
+    "partnerId": "CP-10034"
+  },
+  {
+    "id": "BKG-9004",
+    "bookingNumber": "BK-2025-0004",
+    "customerId": "CUST-6007",
+    "customerName": "Deepak Rao",
+    "propertyId": "PRP-5020",
+    "propertyName": "Urban Enclave 20",
+    "plotId": "PLT-100185",
+    "plotNumber": "E-010",
+    "ventureName": "Urban Heights",
+    "layoutName": "Urban Heights — Tower Plots",
+    "bookingAmount": 1300000,
+    "advancePaid": 260000,
+    "agreementStatus": "Registered",
+    "status": "Cancelled",
+    "bookingDate": "2026-11-02",
+    "agreementDate": "2026-08-24",
+    "documents": [
+      {
+        "id": "bd3",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-11-02"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot E-010 booked",
+        "date": "2026-11-02",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-11-02"
+  },
+  {
+    "id": "BKG-9005",
+    "bookingNumber": "BK-2025-0005",
+    "customerId": "CUST-6017",
+    "customerName": "Ravi Verma",
+    "propertyId": "PRP-5005",
+    "propertyName": "Palm Park 5",
+    "plotId": "PLT-100099",
+    "plotNumber": "E-024",
+    "ventureName": "Palm County",
+    "layoutName": "Palm County — Villa Plots",
+    "bookingAmount": 3200000,
+    "advancePaid": 640000,
+    "agreementStatus": "Pending",
+    "status": "Cancelled",
+    "bookingDate": "2026-01-05",
+    "agreementDate": "2026-06-11",
+    "documents": [
+      {
+        "id": "bd4",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-01-05"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot E-024 booked",
+        "date": "2026-01-05",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-01-05"
+  },
+  {
+    "id": "BKG-9006",
+    "bookingNumber": "BK-2025-0006",
+    "customerId": "CUST-6009",
+    "customerName": "Meena Kumar",
+    "propertyId": "PRP-5022",
+    "propertyName": "Merit Gardens 22",
+    "plotId": "PLT-100110",
+    "plotNumber": "B-010",
+    "ventureName": "Merit Avenue",
+    "layoutName": "Merit Avenue — Block C",
+    "bookingAmount": 4400000,
+    "advancePaid": 880000,
+    "agreementStatus": "Pending",
+    "status": "Active",
+    "bookingDate": "2026-03-23",
+    "agreementDate": "2025-08-22",
+    "documents": [
+      {
+        "id": "bd5",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-03-23"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-010 booked",
+        "date": "2026-03-23",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-03-23",
+    "ventureId": "VNT-2004",
+    "layoutId": "LYT-3005",
+    "partnerId": "CP-10022"
+  },
+  {
+    "id": "BKG-9007",
+    "bookingNumber": "BK-2025-0007",
+    "customerId": "CUST-6004",
+    "customerName": "Sneha Naidu",
+    "propertyId": "PRP-5014",
+    "propertyName": "Royal Heights 14",
+    "plotId": "PLT-100073",
+    "plotNumber": "F-023",
+    "ventureName": "Royal Meadows",
+    "layoutName": "Royal Meadows — Block A",
+    "bookingAmount": 3300000,
+    "advancePaid": 660000,
+    "agreementStatus": "Signed",
+    "status": "Completed",
+    "bookingDate": "2025-01-18",
+    "agreementDate": null,
+    "documents": [
+      {
+        "id": "bd6",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-01-18"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot F-023 booked",
+        "date": "2025-01-18",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-01-18",
+    "ventureId": "VNT-2002",
+    "layoutId": "LYT-3003",
+    "partnerId": "CP-10020"
+  },
+  {
+    "id": "BKG-9008",
+    "bookingNumber": "BK-2025-0008",
+    "customerId": "CUST-6001",
+    "customerName": "Deepak Choudary",
+    "propertyId": "PRP-5020",
+    "propertyName": "Urban Enclave 20",
+    "plotId": "PLT-100185",
+    "plotNumber": "E-010",
+    "ventureName": "Urban Heights",
+    "layoutName": "Urban Heights — Tower Plots",
+    "bookingAmount": 3600000,
+    "advancePaid": 720000,
+    "agreementStatus": "Registered",
+    "status": "Active",
+    "bookingDate": "2025-10-17",
+    "agreementDate": null,
+    "documents": [
+      {
+        "id": "bd7",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-10-17"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot E-010 booked",
+        "date": "2025-10-17",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-10-17",
+    "ventureId": "VNT-2007",
+    "layoutId": "LYT-3008",
+    "partnerId": "CP-10032"
+  },
+  {
+    "id": "BKG-9009",
+    "bookingNumber": "BK-2025-0009",
+    "customerId": "CUST-6028",
+    "customerName": "Sneha Choudary",
+    "propertyId": "PRP-5007",
+    "propertyName": "Lakeview Heights 7",
+    "plotId": "PLT-100245",
+    "plotNumber": "B-020",
+    "ventureName": "Lakeview Residency",
+    "layoutName": "Lakeview — Pre-launch Block",
+    "bookingAmount": 1500000,
+    "advancePaid": 300000,
+    "agreementStatus": "Signed",
+    "status": "Completed",
+    "bookingDate": "2025-07-22",
+    "agreementDate": "2025-03-14",
+    "documents": [
+      {
+        "id": "bd8",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-07-22"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-020 booked",
+        "date": "2025-07-22",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-07-22",
+    "ventureId": "VNT-2009",
+    "layoutId": "LYT-3010",
+    "partnerId": "CP-10034"
+  },
+  {
+    "id": "BKG-9010",
+    "bookingNumber": "BK-2025-0010",
+    "customerId": "CUST-6003",
+    "customerName": "Suresh Choudary",
+    "propertyId": "PRP-5013",
+    "propertyName": "Silver Gardens 13",
+    "plotId": "PLT-100273",
+    "plotNumber": "F-023",
+    "ventureName": "Silver Springs",
+    "layoutName": "Silver Springs — Garden Plots",
+    "bookingAmount": 2600000,
+    "advancePaid": 520000,
+    "agreementStatus": "Registered",
+    "status": "Cancelled",
+    "bookingDate": "2024-07-21",
+    "agreementDate": "2025-11-25",
+    "documents": [
+      {
+        "id": "bd9",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2024-07-21"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot F-023 booked",
+        "date": "2024-07-21",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-07-21"
+  },
+  {
+    "id": "BKG-9011",
+    "bookingNumber": "BK-2025-0011",
+    "customerId": "CUST-6021",
+    "customerName": "Lakshmi Reddy",
+    "propertyId": "PRP-5025",
+    "propertyName": "Green Heights 25",
+    "plotId": "PLT-100046",
+    "plotNumber": "B-021",
+    "ventureName": "Green Valley Township",
+    "layoutName": "Green Valley — Phase 2",
+    "bookingAmount": 3000000,
+    "advancePaid": 600000,
+    "agreementStatus": "Signed",
+    "status": "Active",
+    "bookingDate": "2024-07-06",
+    "agreementDate": null,
+    "documents": [
+      {
+        "id": "bd10",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2024-07-06"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-021 booked",
+        "date": "2024-07-06",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-07-06",
+    "ventureId": "VNT-2001",
+    "layoutId": "LYT-3002",
+    "partnerId": "CP-10019"
+  },
+  {
+    "id": "BKG-9012",
+    "bookingNumber": "BK-2025-0012",
+    "customerId": "CUST-6013",
+    "customerName": "Suresh Kumar",
+    "propertyId": "PRP-5023",
+    "propertyName": "Palm Enclave 23",
+    "plotId": "PLT-100093",
+    "plotNumber": "B-018",
+    "ventureName": "Palm County",
+    "layoutName": "Palm County — Villa Plots",
+    "bookingAmount": 900000,
+    "advancePaid": 180000,
+    "agreementStatus": "Signed",
+    "status": "Active",
+    "bookingDate": "2024-06-05",
+    "agreementDate": "2026-07-18",
+    "documents": [
+      {
+        "id": "bd11",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2024-06-05"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-018 booked",
+        "date": "2024-06-05",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-06-05",
+    "ventureId": "VNT-2003",
+    "layoutId": "LYT-3004",
+    "partnerId": "CP-10021"
+  },
+  {
+    "id": "BKG-9013",
+    "bookingNumber": "BK-2025-0013",
+    "customerId": "CUST-6027",
+    "customerName": "Divya Sharma",
+    "propertyId": "PRP-5022",
+    "propertyName": "Merit Gardens 22",
+    "plotId": "PLT-100102",
+    "plotNumber": "B-002",
+    "ventureName": "Merit Avenue",
+    "layoutName": "Merit Avenue — Block C",
+    "bookingAmount": 4300000,
+    "advancePaid": 860000,
+    "agreementStatus": "Signed",
+    "status": "Active",
+    "bookingDate": "2026-08-27",
+    "agreementDate": "2026-12-15",
+    "documents": [
+      {
+        "id": "bd12",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-08-27"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-010 booked",
+        "date": "2026-08-27",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-08-27",
+    "ventureId": "VNT-2004",
+    "layoutId": "LYT-3005",
+    "partnerId": "CP-10022"
+  },
+  {
+    "id": "BKG-9014",
+    "bookingNumber": "BK-2025-0014",
+    "customerId": "CUST-6003",
+    "customerName": "Suresh Choudary",
+    "propertyId": "PRP-5012",
+    "propertyName": "Sunrise Park 12",
+    "plotId": "PLT-100126",
+    "plotNumber": "A-001",
+    "ventureName": "Sunrise Farms",
+    "layoutName": "Sunrise Farms — Estate I",
+    "bookingAmount": 4000000,
+    "advancePaid": 800000,
+    "agreementStatus": "Signed",
+    "status": "Active",
+    "bookingDate": "2025-01-17",
+    "agreementDate": "2026-01-17",
+    "documents": [
+      {
+        "id": "bd13",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-01-17"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot C-024 booked",
+        "date": "2025-01-17",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-01-17",
+    "ventureId": "VNT-2005",
+    "layoutId": "LYT-3006",
+    "partnerId": "CP-10030"
+  },
+  {
+    "id": "BKG-9015",
+    "bookingNumber": "BK-2025-0015",
+    "customerId": "CUST-6021",
+    "customerName": "Lakshmi Reddy",
+    "propertyId": "PRP-5009",
+    "propertyName": "Urban Gardens 9",
+    "plotId": "PLT-100198",
+    "plotNumber": "A-023",
+    "ventureName": "Urban Heights",
+    "layoutName": "Urban Heights — Tower Plots",
+    "bookingAmount": 3000000,
+    "advancePaid": 600000,
+    "agreementStatus": "Signed",
+    "status": "Completed",
+    "bookingDate": "2025-05-22",
+    "agreementDate": "2025-05-14",
+    "documents": [
+      {
+        "id": "bd14",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-05-22"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot A-023 booked",
+        "date": "2025-05-22",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-05-22",
+    "ventureId": "VNT-2007",
+    "layoutId": "LYT-3008",
+    "partnerId": "CP-10025"
+  },
+  {
+    "id": "BKG-9016",
+    "bookingNumber": "BK-2025-0016",
+    "customerId": "CUST-6011",
+    "customerName": "Lakshmi Choudary",
+    "propertyId": "PRP-5005",
+    "propertyName": "Palm Park 5",
+    "plotId": "PLT-100099",
+    "plotNumber": "E-024",
+    "ventureName": "Palm County",
+    "layoutName": "Palm County — Villa Plots",
+    "bookingAmount": 4400000,
+    "advancePaid": 880000,
+    "agreementStatus": "Registered",
+    "status": "Completed",
+    "bookingDate": "2024-05-04",
+    "agreementDate": "2026-09-27",
+    "documents": [
+      {
+        "id": "bd15",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2024-05-04"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot E-024 booked",
+        "date": "2024-05-04",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-05-04",
+    "ventureId": "VNT-2003",
+    "layoutId": "LYT-3004",
+    "partnerId": "CP-10021"
+  },
+  {
+    "id": "BKG-9017",
+    "bookingNumber": "BK-2025-0017",
+    "customerId": "CUST-6024",
+    "customerName": "Priya Naidu",
+    "propertyId": "PRP-5016",
+    "propertyName": "Green Residence 16",
+    "plotId": "PLT-100004",
+    "plotNumber": "C-004",
+    "ventureName": "Green Valley Township",
+    "layoutName": "Green Valley — Phase 1",
+    "bookingAmount": 2000000,
+    "advancePaid": 400000,
+    "agreementStatus": "Registered",
+    "status": "Active",
+    "bookingDate": "2024-09-09",
+    "agreementDate": null,
+    "documents": [
+      {
+        "id": "bd16",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2024-09-09"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot C-004 booked",
+        "date": "2024-09-09",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-09-09",
+    "ventureId": "VNT-2001",
+    "layoutId": "LYT-3001",
+    "partnerId": "CP-10019"
+  },
+  {
+    "id": "BKG-9018",
+    "bookingNumber": "BK-2025-0018",
+    "customerId": "CUST-6001",
+    "customerName": "Deepak Choudary",
+    "propertyId": "PRP-5016",
+    "propertyName": "Green Residence 16",
+    "plotId": "PLT-100004",
+    "plotNumber": "C-004",
+    "ventureName": "Green Valley Township",
+    "layoutName": "Green Valley — Phase 1",
+    "bookingAmount": 3000000,
+    "advancePaid": 600000,
+    "agreementStatus": "Pending",
+    "status": "Cancelled",
+    "bookingDate": "2025-05-20",
+    "agreementDate": null,
+    "documents": [
+      {
+        "id": "bd17",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-05-20"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot C-004 booked",
+        "date": "2025-05-20",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-05-20"
+  },
+  {
+    "id": "BKG-9019",
+    "bookingNumber": "BK-2025-0019",
+    "customerId": "CUST-6001",
+    "customerName": "Deepak Choudary",
+    "propertyId": "PRP-5016",
+    "propertyName": "Green Residence 16",
+    "plotId": "PLT-100002",
+    "plotNumber": "B-002",
+    "ventureName": "Green Valley Township",
+    "layoutName": "Green Valley — Phase 1",
+    "bookingAmount": 500000,
+    "advancePaid": 100000,
+    "agreementStatus": "Signed",
+    "status": "Active",
+    "bookingDate": "2025-11-02",
+    "agreementDate": "2026-10-27",
+    "documents": [
+      {
+        "id": "bd18",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-11-02"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot C-004 booked",
+        "date": "2025-11-02",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-11-02",
+    "ventureId": "VNT-2001",
+    "layoutId": "LYT-3001",
+    "partnerId": "CP-10026"
+  },
+  {
+    "id": "BKG-9020",
+    "bookingNumber": "BK-2025-0020",
+    "customerId": "CUST-6014",
+    "customerName": "Kiran Verma",
+    "propertyId": "PRP-5009",
+    "propertyName": "Urban Gardens 9",
+    "plotId": "PLT-100176",
+    "plotNumber": "B-001",
+    "ventureName": "Urban Heights",
+    "layoutName": "Urban Heights — Tower Plots",
+    "bookingAmount": 3300000,
+    "advancePaid": 660000,
+    "agreementStatus": "Pending",
+    "status": "Completed",
+    "bookingDate": "2025-01-02",
+    "agreementDate": "2025-01-20",
+    "documents": [
+      {
+        "id": "bd19",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-01-02"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot A-023 booked",
+        "date": "2025-01-02",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-01-02",
+    "ventureId": "VNT-2007",
+    "layoutId": "LYT-3008",
+    "partnerId": "CP-10032"
+  },
+  {
+    "id": "BKG-9021",
+    "bookingNumber": "BK-2025-0021",
+    "customerId": "CUST-6029",
+    "customerName": "Anil Kumar",
+    "propertyId": "PRP-5001",
+    "propertyName": "Lakeview Park 1",
+    "plotId": "PLT-100231",
+    "plotNumber": "A-006",
+    "ventureName": "Lakeview Residency",
+    "layoutName": "Lakeview — Pre-launch Block",
+    "bookingAmount": 4000000,
+    "advancePaid": 800000,
+    "agreementStatus": "Pending",
+    "status": "Active",
+    "bookingDate": "2026-11-07",
+    "agreementDate": "2026-02-28",
+    "documents": [
+      {
+        "id": "bd20",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-11-07"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-024 booked",
+        "date": "2026-11-07",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-11-07",
+    "ventureId": "VNT-2009",
+    "layoutId": "LYT-3010",
+    "partnerId": "CP-10034"
+  },
+  {
+    "id": "BKG-9022",
+    "bookingNumber": "BK-2025-0022",
+    "customerId": "CUST-6007",
+    "customerName": "Deepak Rao",
+    "propertyId": "PRP-5008",
+    "propertyName": "Lakeview Heights 8",
+    "plotId": "PLT-100243",
+    "plotNumber": "D-018",
+    "ventureName": "Lakeview Residency",
+    "layoutName": "Lakeview — Pre-launch Block",
+    "bookingAmount": 800000,
+    "advancePaid": 160000,
+    "agreementStatus": "Pending",
+    "status": "Cancelled",
+    "bookingDate": "2026-01-08",
+    "agreementDate": "2026-12-12",
+    "documents": [
+      {
+        "id": "bd21",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-01-08"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot D-018 booked",
+        "date": "2026-01-08",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-01-08"
+  },
+  {
+    "id": "BKG-9023",
+    "bookingNumber": "BK-2025-0023",
+    "customerId": "CUST-6027",
+    "customerName": "Divya Sharma",
+    "propertyId": "PRP-5023",
+    "propertyName": "Palm Enclave 23",
+    "plotId": "PLT-100076",
+    "plotNumber": "E-001",
+    "ventureName": "Palm County",
+    "layoutName": "Palm County — Villa Plots",
+    "bookingAmount": 1600000,
+    "advancePaid": 320000,
+    "agreementStatus": "Pending",
+    "status": "Active",
+    "bookingDate": "2025-02-23",
+    "agreementDate": "2025-01-21",
+    "documents": [
+      {
+        "id": "bd22",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-02-23"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot B-018 booked",
+        "date": "2025-02-23",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-02-23",
+    "ventureId": "VNT-2003",
+    "layoutId": "LYT-3004",
+    "partnerId": "CP-10028"
+  },
+  {
+    "id": "BKG-9024",
+    "bookingNumber": "BK-2025-0024",
+    "customerId": "CUST-6019",
+    "customerName": "Sneha Verma",
+    "propertyId": "PRP-5012",
+    "propertyName": "Sunrise Park 12",
+    "plotId": "PLT-100149",
+    "plotNumber": "C-024",
+    "ventureName": "Sunrise Farms",
+    "layoutName": "Sunrise Farms — Estate I",
+    "bookingAmount": 4800000,
+    "advancePaid": 960000,
+    "agreementStatus": "Signed",
+    "status": "Completed",
+    "bookingDate": "2024-11-16",
+    "agreementDate": "2026-01-16",
+    "documents": [
+      {
+        "id": "bd23",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2024-11-16"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot C-024 booked",
+        "date": "2024-11-16",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-11-16",
+    "ventureId": "VNT-2005",
+    "layoutId": "LYT-3006",
+    "partnerId": "CP-10030"
+  },
+  {
+    "id": "BKG-9025",
+    "bookingNumber": "BK-2025-0025",
+    "customerId": "CUST-6003",
+    "customerName": "Suresh Choudary",
+    "propertyId": "PRP-5017",
+    "propertyName": "Merit Residence 17",
+    "plotId": "PLT-100104",
+    "plotNumber": "C-004",
+    "ventureName": "Merit Avenue",
+    "layoutName": "Merit Avenue — Block C",
+    "bookingAmount": 4300000,
+    "advancePaid": 860000,
+    "agreementStatus": "Registered",
+    "status": "Active",
+    "bookingDate": "2025-11-04",
+    "agreementDate": "2026-09-17",
+    "documents": [
+      {
+        "id": "bd24",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-11-04"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot F-022 booked",
+        "date": "2025-11-04",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-11-04",
+    "ventureId": "VNT-2004",
+    "layoutId": "LYT-3005",
+    "partnerId": "CP-10022"
+  },
+  {
+    "id": "BKG-9026",
+    "bookingNumber": "BK-2025-0026",
+    "customerId": "CUST-6029",
+    "customerName": "Anil Kumar",
+    "propertyId": "PRP-5005",
+    "propertyName": "Palm Park 5",
+    "plotId": "PLT-100077",
+    "plotNumber": "A-002",
+    "ventureName": "Palm County",
+    "layoutName": "Palm County — Villa Plots",
+    "bookingAmount": 3000000,
+    "advancePaid": 600000,
+    "agreementStatus": "Registered",
+    "status": "Active",
+    "bookingDate": "2025-11-07",
+    "agreementDate": null,
+    "documents": [
+      {
+        "id": "bd25",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-11-07"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot E-024 booked",
+        "date": "2025-11-07",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-11-07",
+    "ventureId": "VNT-2003",
+    "layoutId": "LYT-3004",
+    "partnerId": "CP-10028"
+  },
+  {
+    "id": "BKG-9027",
+    "bookingNumber": "BK-2025-0027",
+    "customerId": "CUST-6017",
+    "customerName": "Ravi Verma",
+    "propertyId": "PRP-5017",
+    "propertyName": "Merit Residence 17",
+    "plotId": "PLT-100122",
+    "plotNumber": "F-022",
+    "ventureName": "Merit Avenue",
+    "layoutName": "Merit Avenue — Block C",
+    "bookingAmount": 2500000,
+    "advancePaid": 500000,
+    "agreementStatus": "Signed",
+    "status": "Completed",
+    "bookingDate": "2026-08-23",
+    "agreementDate": "2025-08-03",
+    "documents": [
+      {
+        "id": "bd26",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2026-08-23"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot F-022 booked",
+        "date": "2026-08-23",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-08-23",
+    "ventureId": "VNT-2004",
+    "layoutId": "LYT-3005",
+    "partnerId": "CP-10029"
+  },
+  {
+    "id": "BKG-9028",
+    "bookingNumber": "BK-2025-0028",
+    "customerId": "CUST-6010",
+    "customerName": "Arjun Reddy",
+    "propertyId": "PRP-5015",
+    "propertyName": "Golden Heights 15",
+    "plotId": "PLT-100169",
+    "plotNumber": "F-019",
+    "ventureName": "Golden Enclave",
+    "layoutName": "Golden Enclave — Final Phase",
+    "bookingAmount": 4300000,
+    "advancePaid": 860000,
+    "agreementStatus": "Registered",
+    "status": "Completed",
+    "bookingDate": "2025-09-07",
+    "agreementDate": "2026-01-17",
+    "documents": [
+      {
+        "id": "bd27",
+        "name": "Booking Form",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-09-07"
+      }
+    ],
+    "payments": [],
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Booking created",
+        "description": "Plot F-019 booked",
+        "date": "2025-09-07",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-09-07",
+    "ventureId": "VNT-2006",
+    "layoutId": "LYT-3007",
+    "partnerId": "CP-10031"
+  }
+]

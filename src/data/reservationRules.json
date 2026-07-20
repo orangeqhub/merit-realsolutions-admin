@@ -1,0 +1,71 @@
+[
+  {
+    "id": "RULE-001",
+    "name": "Reservation Expiry",
+    "description": "Reservation expires after the configured validity duration from reservation date.",
+    "enabled": true,
+    "category": "expiry",
+    "configurable": true,
+    "parameter": "validityDays"
+  },
+  {
+    "id": "RULE-002",
+    "name": "No Overlapping Reservations",
+    "description": "A plot cannot have more than one active reservation at the same time.",
+    "enabled": true,
+    "category": "inventory",
+    "configurable": false
+  },
+  {
+    "id": "RULE-003",
+    "name": "Reserved Inventory Lock",
+    "description": "Reserved inventory cannot be reserved again until released or cancelled.",
+    "enabled": true,
+    "category": "inventory",
+    "configurable": false
+  },
+  {
+    "id": "RULE-004",
+    "name": "Confirmed Ignores Expiry",
+    "description": "Confirmed reservations are exempt from automatic expiry and release.",
+    "enabled": true,
+    "category": "expiry",
+    "configurable": true,
+    "parameter": "autoReleaseEnabled"
+  },
+  {
+    "id": "RULE-005",
+    "name": "Auto Release on Expiry",
+    "description": "Expired Reserved status reservations are automatically released and inventory returns to Available.",
+    "enabled": true,
+    "category": "automation",
+    "configurable": true,
+    "parameter": "autoReleaseEnabled"
+  },
+  {
+    "id": "RULE-006",
+    "name": "Status Transition Audit",
+    "description": "Every reservation status transition must be recorded in timeline and activity log.",
+    "enabled": true,
+    "category": "audit",
+    "configurable": false
+  },
+  {
+    "id": "RULE-007",
+    "name": "Minimum Reservation Payment",
+    "description": "Reservation is created only after customer pays the configured minimum reservation amount.",
+    "enabled": true,
+    "category": "payment",
+    "configurable": true,
+    "parameter": "minimumReservationPercent"
+  },
+  {
+    "id": "RULE-008",
+    "name": "Extension Limit",
+    "description": "Administrator extensions are limited to the configured maximum count.",
+    "enabled": true,
+    "category": "extension",
+    "configurable": true,
+    "parameter": "maxExtensions"
+  }
+]

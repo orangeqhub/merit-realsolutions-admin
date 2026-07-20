@@ -1,0 +1,58 @@
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  transition: box-shadow var(--erp-transition), border-color var(--erp-transition);
+}
+
+.summary-card:hover {
+  box-shadow: var(--erp-shadow-md);
+  border-color: var(--erp-border-strong);
+}
+
+.summary-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--erp-radius-sm);
+  flex-shrink: 0;
+}
+
+.summary-card__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.summary-card__value {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--erp-text);
+  line-height: 1.1;
+}
+
+.summary-card__label {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+  margin-top: 0.2rem;
+}
+
+.summary-card__caption {
+  font-size: 0.75rem;
+  color: var(--erp-text-soft);
+  margin-top: 0.2rem;
+}
+
+.summary-card--accent .summary-card__icon { background: var(--erp-accent-soft); color: var(--erp-accent); }
+.summary-card--success .summary-card__icon { background: var(--erp-success-soft); color: var(--erp-success); }
+.summary-card--warning .summary-card__icon { background: var(--erp-warning-soft); color: var(--erp-warning); }
+.summary-card--danger .summary-card__icon { background: var(--erp-danger-soft); color: var(--erp-danger); }
+.summary-card--info .summary-card__icon { background: var(--erp-info-soft); color: var(--erp-info); }
+.summary-card--violet .summary-card__icon { background: var(--erp-violet-soft); color: var(--erp-violet); }

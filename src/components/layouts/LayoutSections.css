@@ -1,0 +1,114 @@
+/* Documents */
+.layout-docs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.layout-docs__card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  transition: border-color var(--erp-transition), box-shadow var(--erp-transition);
+}
+
+.layout-docs__card:hover {
+  border-color: var(--erp-border-strong);
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.layout-docs__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-danger-soft);
+  color: var(--erp-danger);
+  flex-shrink: 0;
+}
+
+.layout-docs__info {
+  min-width: 0;
+  flex: 1;
+}
+
+.layout-docs__info h4 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--erp-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.layout-docs__info p {
+  margin: 0.15rem 0 0;
+  font-size: 0.74rem;
+  color: var(--erp-text-soft);
+}
+
+.layout-docs__download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--erp-radius-sm);
+  border: 1px solid var(--erp-border);
+  background: var(--erp-card);
+  color: var(--erp-text-muted);
+  cursor: pointer;
+  transition: all var(--erp-transition);
+  flex-shrink: 0;
+}
+
+.layout-docs__download:hover {
+  color: var(--erp-accent);
+  border-color: var(--erp-accent);
+  background: var(--erp-accent-soft);
+}
+
+/* Amenities */
+.layout-amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.layout-amenities__item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--erp-text);
+  transition: border-color var(--erp-transition), transform var(--erp-transition);
+}
+
+.layout-amenities__item:hover {
+  border-color: var(--erp-accent);
+  transform: translateY(-2px);
+}
+
+.layout-amenities__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-success-soft);
+  color: var(--erp-success);
+  flex-shrink: 0;
+}

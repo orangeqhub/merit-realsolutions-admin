@@ -1,0 +1,53 @@
+.erp-pills {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem;
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-pill);
+}
+
+.erp-pills__item {
+  position: relative;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  border-radius: var(--erp-radius-pill);
+  transition: color var(--erp-transition);
+  white-space: nowrap;
+}
+
+.erp-pills__item:hover {
+  color: var(--erp-text);
+}
+
+.erp-pills__item.is-active {
+  color: #fff;
+}
+
+.erp-pills__bg {
+  position: absolute;
+  inset: 0;
+  background: var(--erp-accent);
+  border-radius: var(--erp-radius-pill);
+  z-index: 0;
+}
+
+.erp-pills__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.erp-pills__icon {
+  display: inline-flex;
+}
+
+.erp-pills__icon svg {
+  width: 15px;
+  height: 15px;
+}

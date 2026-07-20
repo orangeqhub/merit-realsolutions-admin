@@ -1,0 +1,41 @@
+.filter-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--erp-gap-sm);
+  flex-wrap: wrap;
+}
+
+.filter-bar__item {
+  width: 180px;
+}
+
+.filter-bar__reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 44px;
+  padding: 0 1rem;
+  border-radius: var(--erp-radius-sm);
+  border: 1px solid var(--erp-border);
+  background: var(--erp-card);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  transition: all var(--erp-transition);
+}
+
+.filter-bar__reset:hover {
+  border-color: var(--erp-danger);
+  color: var(--erp-danger);
+}
+
+.filter-bar__reset svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 640px) {
+  .filter-bar__item {
+    width: 100%;
+  }
+}

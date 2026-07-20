@@ -1,0 +1,67 @@
+/* ===================================================================
+   Merit Real Solutions ERP — Color Tokens
+   Single source of truth for every color used across the ERP.
+   Never hardcode colors in components; always reference these tokens.
+   =================================================================== */
+
+:root {
+  /* Brand / Primary (Deep Navy) */
+  --erp-primary: #0a1628;
+  --erp-primary-light: #16233d;
+  --erp-primary-dark: #060e1a;
+
+  /* Accent / Secondary (Royal Blue) */
+  --erp-accent: #2563eb;
+  --erp-accent-dark: #1d4ed8;
+  --erp-accent-light: #3b82f6;
+  --erp-accent-soft: rgba(37, 99, 235, 0.08);
+  --erp-accent-soft-hover: rgba(37, 99, 235, 0.14);
+  --erp-secondary: #475569;
+
+  /* Semantic — Success (Emerald) */
+  --erp-success: #059669;
+  --erp-success-dark: #047857;
+  --erp-success-soft: rgba(5, 150, 105, 0.12);
+
+  /* Semantic — Warning (Amber) */
+  --erp-warning: #d97706;
+  --erp-warning-dark: #b45309;
+  --erp-warning-soft: rgba(217, 119, 6, 0.14);
+
+  /* Semantic — Danger (Red) */
+  --erp-danger: #dc2626;
+  --erp-danger-dark: #b91c1c;
+  --erp-danger-soft: rgba(220, 38, 38, 0.12);
+
+  /* Semantic — Info (Cyan) */
+  --erp-info: #0891b2;
+  --erp-info-dark: #0e7490;
+  --erp-info-soft: rgba(8, 145, 178, 0.12);
+
+  /* Neutral / Purple accent for variety */
+  --erp-violet: #7c3aed;
+  --erp-violet-soft: rgba(124, 58, 237, 0.12);
+
+  /* Surfaces */
+  --erp-bg: #f7f9fc;
+  --erp-card: #ffffff;
+  --erp-card-muted: #f9fafc;
+  --erp-sidebar-bg: #0a1628;
+  --erp-border: #e8ecf2;
+  --erp-border-strong: #d7dde7;
+
+  /* Text */
+  --erp-text: #111827;
+  --erp-text-muted: #5a6474;
+  --erp-text-soft: #98a2b3;
+  --erp-text-inverse: #ffffff;
+
+  /* States */
+  --erp-hover: #f2f5fa;
+  --erp-active: var(--erp-accent-soft);
+  --erp-disabled-bg: #f1f3f7;
+  --erp-disabled-text: #b6bdc9;
+
+  /* Focus ring */
+  --erp-focus-ring: 0 0 0 3px var(--erp-accent-soft);
+}

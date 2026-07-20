@@ -1,0 +1,65 @@
+.erp-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.erp-tooltip__bubble {
+  position: absolute;
+  z-index: 90;
+  padding: 0.4rem 0.6rem;
+  background: var(--erp-primary);
+  color: #fff;
+  font-size: var(--erp-text-xs);
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 6px;
+  box-shadow: var(--erp-shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  pointer-events: none;
+}
+
+.erp-tooltip:hover .erp-tooltip__bubble,
+.erp-tooltip:focus-within .erp-tooltip__bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.erp-tooltip--top .erp-tooltip__bubble {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+}
+.erp-tooltip--top:hover .erp-tooltip__bubble {
+  transform: translateX(-50%) translateY(0);
+}
+
+.erp-tooltip--bottom .erp-tooltip__bubble {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+}
+.erp-tooltip--bottom:hover .erp-tooltip__bubble {
+  transform: translateX(-50%) translateY(0);
+}
+
+.erp-tooltip--left .erp-tooltip__bubble {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%) translateX(4px);
+}
+.erp-tooltip--left:hover .erp-tooltip__bubble {
+  transform: translateY(-50%) translateX(0);
+}
+
+.erp-tooltip--right .erp-tooltip__bubble {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-4px);
+}
+.erp-tooltip--right:hover .erp-tooltip__bubble {
+  transform: translateY(-50%) translateX(0);
+}

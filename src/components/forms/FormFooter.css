@@ -1,0 +1,27 @@
+.form-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--erp-gap);
+  padding-top: var(--erp-gap);
+}
+
+.form-footer--right { justify-content: flex-end; }
+.form-footer--between { justify-content: space-between; }
+
+.form-footer__left {
+  margin-right: auto;
+}
+
+.form-footer__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--erp-gap-sm);
+}
+
+.form-footer--sticky {
+  position: sticky;
+  bottom: 0;
+  background: var(--erp-card);
+  border-top: 1px solid var(--erp-border);
+  padding: var(--erp-gap) 0;
+}

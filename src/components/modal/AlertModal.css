@@ -1,0 +1,55 @@
+.alert-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(10, 22, 40, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+.alert-modal {
+  width: 100%;
+  max-width: 400px;
+  background: var(--erp-card);
+  border-radius: var(--erp-radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--erp-shadow-xl);
+}
+
+.alert-modal__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.alert-modal__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.alert-modal__icon--success { color: var(--erp-success); background: var(--erp-success-soft); }
+.alert-modal__icon--warning { color: var(--erp-warning); background: var(--erp-warning-soft); }
+.alert-modal__icon--error { color: var(--erp-danger); background: var(--erp-danger-soft); }
+.alert-modal__icon--info { color: var(--erp-info); background: var(--erp-info-soft); }
+
+.alert-modal__title {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  margin-bottom: 0.5rem;
+}
+
+.alert-modal__message {
+  font-size: 0.9375rem;
+  color: var(--erp-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}

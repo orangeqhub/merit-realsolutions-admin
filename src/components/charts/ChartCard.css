@@ -1,0 +1,54 @@
+.chart-card {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  padding: 1.5rem;
+}
+
+.chart-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.chart-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.chart-card__subtitle {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+  margin-top: 0.2rem;
+}
+
+.chart-card__body {
+  width: 100%;
+}
+
+.chart-card__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--erp-border);
+}
+
+.chart-card__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+}
+
+.chart-card__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}

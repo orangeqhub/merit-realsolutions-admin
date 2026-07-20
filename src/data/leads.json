@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "LED-7001",
+    "name": "Ravi Goud",
+    "email": "ravi.goud@email.com",
+    "phone": "+91 8888900462",
+    "status": "New",
+    "source": "Walk-in",
+    "priority": "High",
+    "budget": 10500000,
+    "interestedProperty": "Lakeview Park 1",
+    "ventureName": "Lakeview Residency",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "",
+    "expectedCloseDate": "2026-05-05",
+    "createdDate": "2026-04-19",
+    "lastUpdated": "2026-10-09",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2026-04-19",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10019",
+    "interestedPropertyId": "PRP-5001",
+    "interestedVentureId": "VNT-2009",
+    "followUpDate": "2026-07-11"
+  },
+  {
+    "id": "LED-7002",
+    "name": "Divya Patel",
+    "email": "divya.patel@email.com",
+    "phone": "+91 8388080246",
+    "status": "Qualified",
+    "source": "Walk-in",
+    "priority": "Low",
+    "budget": 7900000,
+    "interestedProperty": "Silver Park 3",
+    "ventureName": "Silver Springs",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Interested in east-facing",
+    "expectedCloseDate": "2026-08-13",
+    "createdDate": "2024-08-28",
+    "lastUpdated": "2026-11-05",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2024-08-28",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10020",
+    "interestedPropertyId": "PRP-5003",
+    "interestedVentureId": "VNT-2010",
+    "followUpDate": "2026-08-13"
+  },
+  {
+    "id": "LED-7003",
+    "name": "Anil Goud",
+    "email": "anil.goud@email.com",
+    "phone": "+91 8766056327",
+    "status": "Qualified",
+    "source": "Social Media",
+    "priority": "High",
+    "budget": 9600000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-03-11",
+    "createdDate": "2024-06-06",
+    "lastUpdated": "2026-09-12",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2024-06-06",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10021",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-03-11"
+  },
+  {
+    "id": "LED-7004",
+    "name": "Naveen Sharma",
+    "email": "naveen.sharma@email.com",
+    "phone": "+91 7775050925",
+    "status": "Lost",
+    "source": "Website",
+    "priority": "High",
+    "budget": 11200000,
+    "interestedProperty": "Urban Gardens 9",
+    "ventureName": "Urban Heights",
+    "assignedExecutive": "Nisha Rao",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-07-09",
+    "createdDate": "2026-01-07",
+    "lastUpdated": "2025-10-27",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2026-01-07",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10022",
+    "interestedPropertyId": "PRP-5009",
+    "interestedVentureId": "VNT-2007",
+    "followUpDate": "2026-07-04"
+  },
+  {
+    "id": "LED-7005",
+    "name": "Arjun Rao",
+    "email": "arjun.rao@email.com",
+    "phone": "+91 8633952932",
+    "status": "Negotiation",
+    "source": "Agent",
+    "priority": "Low",
+    "budget": 15900000,
+    "interestedProperty": "Merit Residence 17",
+    "ventureName": "Merit Avenue",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "",
+    "expectedCloseDate": "2026-12-08",
+    "createdDate": "2026-09-06",
+    "lastUpdated": "2025-11-03",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2026-09-06",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10023",
+    "interestedPropertyId": "PRP-5017",
+    "interestedVentureId": "VNT-2004",
+    "followUpDate": "2026-07-06"
+  },
+  {
+    "id": "LED-7006",
+    "name": "Lakshmi Verma",
+    "email": "lakshmi.verma@email.com",
+    "phone": "+91 9578317901",
+    "status": "Proposal",
+    "source": "Walk-in",
+    "priority": "Low",
+    "budget": 8100000,
+    "interestedProperty": "Green Residence 16",
+    "ventureName": "Green Valley Township",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "Budget flexible",
+    "expectedCloseDate": "2026-02-05",
+    "createdDate": "2026-05-22",
+    "lastUpdated": "2025-11-15",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2026-05-22",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10024",
+    "interestedPropertyId": "PRP-5016",
+    "interestedVentureId": "VNT-2001",
+    "followUpDate": "2026-07-11"
+  },
+  {
+    "id": "LED-7007",
+    "name": "Deepak Patel",
+    "email": "deepak.patel@email.com",
+    "phone": "+91 8370368055",
+    "status": "Lost",
+    "source": "Agent",
+    "priority": "High",
+    "budget": 11700000,
+    "interestedProperty": "Lakeview Park 1",
+    "ventureName": "Lakeview Residency",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "",
+    "expectedCloseDate": "2026-01-18",
+    "createdDate": "2025-03-14",
+    "lastUpdated": "2025-09-14",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2025-03-14",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10025",
+    "interestedPropertyId": "PRP-5001",
+    "interestedVentureId": "VNT-2009",
+    "followUpDate": "2026-07-04"
+  },
+  {
+    "id": "LED-7008",
+    "name": "Anil Reddy",
+    "email": "anil.reddy@email.com",
+    "phone": "+91 8368992283",
+    "status": "Won",
+    "source": "Agent",
+    "priority": "High",
+    "budget": 15700000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-03-15",
+    "createdDate": "2026-02-18",
+    "lastUpdated": "2025-06-03",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2026-02-18",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10026",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-03-15"
+  },
+  {
+    "id": "LED-7009",
+    "name": "Kiran Verma",
+    "email": "kiran.verma@email.com",
+    "phone": "+91 9149746141",
+    "status": "Won",
+    "source": "Social Media",
+    "priority": "Medium",
+    "budget": 2500000,
+    "interestedProperty": "Lakeview Park 1",
+    "ventureName": "Lakeview Residency",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-02-09",
+    "createdDate": "2026-03-22",
+    "lastUpdated": "2026-11-18",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2026-03-22",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10027",
+    "interestedPropertyId": "PRP-5001",
+    "interestedVentureId": "VNT-2009",
+    "followUpDate": "2026-02-09"
+  },
+  {
+    "id": "LED-7010",
+    "name": "Meena Reddy",
+    "email": "meena.reddy@email.com",
+    "phone": "+91 9644851851",
+    "status": "Lost",
+    "source": "Walk-in",
+    "priority": "Medium",
+    "budget": 6000000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-07-23",
+    "createdDate": "2024-07-02",
+    "lastUpdated": "2025-05-16",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2024-07-02",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10028",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-07-23"
+  },
+  {
+    "id": "LED-7011",
+    "name": "Lakshmi Rao",
+    "email": "lakshmi.rao@email.com",
+    "phone": "+91 9373198302",
+    "status": "Qualified",
+    "source": "Website",
+    "priority": "High",
+    "budget": 19400000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-12-25",
+    "createdDate": "2025-07-27",
+    "lastUpdated": "2025-04-24",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2025-07-27",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10029",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-07-10"
+  },
+  {
+    "id": "LED-7012",
+    "name": "Anil Reddy",
+    "email": "anil.reddy@email.com",
+    "phone": "+91 9840341049",
+    "status": "Won",
+    "source": "Agent",
+    "priority": "High",
+    "budget": 4700000,
+    "interestedProperty": "Green Residence 16",
+    "ventureName": "Green Valley Township",
+    "assignedExecutive": "Nisha Rao",
+    "remarks": "Budget flexible",
+    "expectedCloseDate": "2026-12-13",
+    "createdDate": "2024-07-26",
+    "lastUpdated": "2026-03-12",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2024-07-26",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10030",
+    "interestedPropertyId": "PRP-5016",
+    "interestedVentureId": "VNT-2001",
+    "followUpDate": "2026-07-05"
+  },
+  {
+    "id": "LED-7013",
+    "name": "Sneha Goud",
+    "email": "sneha.goud@email.com",
+    "phone": "+91 7458502314",
+    "status": "Negotiation",
+    "source": "Walk-in",
+    "priority": "Low",
+    "budget": 6200000,
+    "interestedProperty": "Silver Park 3",
+    "ventureName": "Silver Springs",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "",
+    "expectedCloseDate": "2026-08-17",
+    "createdDate": "2025-08-17",
+    "lastUpdated": "2025-04-24",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2025-08-17",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10031",
+    "interestedPropertyId": "PRP-5003",
+    "interestedVentureId": "VNT-2010",
+    "followUpDate": "2026-08-17"
+  },
+  {
+    "id": "LED-7014",
+    "name": "Priya Reddy",
+    "email": "priya.reddy@email.com",
+    "phone": "+91 7616570987",
+    "status": "Qualified",
+    "source": "Agent",
+    "priority": "Low",
+    "budget": 2700000,
+    "interestedProperty": "Urban Gardens 9",
+    "ventureName": "Urban Heights",
+    "assignedExecutive": "Nisha Rao",
+    "remarks": "",
+    "expectedCloseDate": "2026-12-28",
+    "createdDate": "2026-08-22",
+    "lastUpdated": "2026-12-02",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2026-08-22",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10032",
+    "interestedPropertyId": "PRP-5009",
+    "interestedVentureId": "VNT-2007",
+    "followUpDate": "2026-12-28"
+  },
+  {
+    "id": "LED-7015",
+    "name": "Harish Naidu",
+    "email": "harish.naidu@email.com",
+    "phone": "+91 7420102623",
+    "status": "Contacted",
+    "source": "Agent",
+    "priority": "High",
+    "budget": 8800000,
+    "interestedProperty": "Lakeview Park 1",
+    "ventureName": "Lakeview Residency",
+    "assignedExecutive": "Nisha Rao",
+    "remarks": "",
+    "expectedCloseDate": "2026-03-06",
+    "createdDate": "2026-02-22",
+    "lastUpdated": "2026-09-15",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2026-02-22",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10033",
+    "interestedPropertyId": "PRP-5001",
+    "interestedVentureId": "VNT-2009",
+    "followUpDate": "2026-07-08"
+  },
+  {
+    "id": "LED-7016",
+    "name": "Rajesh Sharma",
+    "email": "rajesh.sharma@email.com",
+    "phone": "+91 9981319444",
+    "status": "Negotiation",
+    "source": "Agent",
+    "priority": "High",
+    "budget": 6200000,
+    "interestedProperty": "Urban Gardens 9",
+    "ventureName": "Urban Heights",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "",
+    "expectedCloseDate": "2026-02-16",
+    "createdDate": "2024-02-23",
+    "lastUpdated": "2025-03-01",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2024-02-23",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10034",
+    "interestedPropertyId": "PRP-5009",
+    "interestedVentureId": "VNT-2007",
+    "followUpDate": "2026-02-16"
+  },
+  {
+    "id": "LED-7017",
+    "name": "Arjun Goud",
+    "email": "arjun.goud@email.com",
+    "phone": "+91 8249110339",
+    "status": "New",
+    "source": "Referral",
+    "priority": "Medium",
+    "budget": 14100000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "",
+    "expectedCloseDate": "2026-10-16",
+    "createdDate": "2024-12-24",
+    "lastUpdated": "2026-03-11",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2024-12-24",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10035",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-10-16"
+  },
+  {
+    "id": "LED-7018",
+    "name": "Sneha Verma",
+    "email": "sneha.verma@email.com",
+    "phone": "+91 7049030864",
+    "status": "Won",
+    "source": "Website",
+    "priority": "Medium",
+    "budget": 8700000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Interested in east-facing",
+    "expectedCloseDate": "2026-07-09",
+    "createdDate": "2025-07-03",
+    "lastUpdated": "2025-12-17",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2025-07-03",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10036",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-07-03"
+  },
+  {
+    "id": "LED-7019",
+    "name": "Harish Naidu",
+    "email": "harish.naidu@email.com",
+    "phone": "+91 7183303240",
+    "status": "Negotiation",
+    "source": "Referral",
+    "priority": "Medium",
+    "budget": 18100000,
+    "interestedProperty": "Hill Park 2",
+    "ventureName": "Hill Crest Villas",
+    "assignedExecutive": "Nisha Rao",
+    "remarks": "",
+    "expectedCloseDate": "2026-07-11",
+    "createdDate": "2024-09-10",
+    "lastUpdated": "2026-10-20",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2024-09-10",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10037",
+    "interestedPropertyId": "PRP-5002",
+    "interestedVentureId": "VNT-2008",
+    "followUpDate": "2026-07-11"
+  },
+  {
+    "id": "LED-7020",
+    "name": "Sneha Kumar",
+    "email": "sneha.kumar@email.com",
+    "phone": "+91 7250816358",
+    "status": "Qualified",
+    "source": "Social Media",
+    "priority": "High",
+    "budget": 11200000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Nisha Rao",
+    "remarks": "Budget flexible",
+    "expectedCloseDate": "2026-03-06",
+    "createdDate": "2024-05-22",
+    "lastUpdated": "2026-08-13",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2024-05-22",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10038",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-07-07"
+  },
+  {
+    "id": "LED-7021",
+    "name": "Anil Kumar",
+    "email": "anil.kumar@email.com",
+    "phone": "+91 7697125771",
+    "status": "Contacted",
+    "source": "Website",
+    "priority": "Low",
+    "budget": 16500000,
+    "interestedProperty": "Lakeview Park 1",
+    "ventureName": "Lakeview Residency",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "",
+    "expectedCloseDate": "2026-08-12",
+    "createdDate": "2026-07-15",
+    "lastUpdated": "2026-09-10",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2026-07-15",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10039",
+    "interestedPropertyId": "PRP-5001",
+    "interestedVentureId": "VNT-2009",
+    "followUpDate": "2026-07-05"
+  },
+  {
+    "id": "LED-7022",
+    "name": "Kiran Reddy",
+    "email": "kiran.reddy@email.com",
+    "phone": "+91 9934453703",
+    "status": "Qualified",
+    "source": "Website",
+    "priority": "Medium",
+    "budget": 17800000,
+    "interestedProperty": "Merit Residence 17",
+    "ventureName": "Merit Avenue",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "",
+    "expectedCloseDate": "2026-08-22",
+    "createdDate": "2025-01-25",
+    "lastUpdated": "2025-09-18",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2025-01-25",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10040",
+    "interestedPropertyId": "PRP-5017",
+    "interestedVentureId": "VNT-2004",
+    "followUpDate": "2026-08-22"
+  },
+  {
+    "id": "LED-7023",
+    "name": "Meena Choudary",
+    "email": "meena.choudary@email.com",
+    "phone": "+91 9481689043",
+    "status": "Lost",
+    "source": "Social Media",
+    "priority": "High",
+    "budget": 6100000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "",
+    "expectedCloseDate": "2026-11-18",
+    "createdDate": "2025-05-08",
+    "lastUpdated": "2025-12-27",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2025-05-08",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10041",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-07-02"
+  },
+  {
+    "id": "LED-7024",
+    "name": "Deepak Rao",
+    "email": "deepak.rao@email.com",
+    "phone": "+91 8144387345",
+    "status": "Lost",
+    "source": "Website",
+    "priority": "Medium",
+    "budget": 8000000,
+    "interestedProperty": "Palm Park 5",
+    "ventureName": "Palm County",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Budget flexible",
+    "expectedCloseDate": "2026-03-05",
+    "createdDate": "2025-10-20",
+    "lastUpdated": "2026-06-11",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2025-10-20",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10042",
+    "interestedPropertyId": "PRP-5005",
+    "interestedVentureId": "VNT-2003",
+    "followUpDate": "2026-07-04"
+  },
+  {
+    "id": "LED-7025",
+    "name": "Rajesh Naidu",
+    "email": "rajesh.naidu@email.com",
+    "phone": "+91 8384770833",
+    "status": "Qualified",
+    "source": "Website",
+    "priority": "Low",
+    "budget": 17300000,
+    "interestedProperty": "Golden Heights 15",
+    "ventureName": "Golden Enclave",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-01-11",
+    "createdDate": "2025-11-02",
+    "lastUpdated": "2025-08-13",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2025-11-02",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10043",
+    "interestedPropertyId": "PRP-5015",
+    "interestedVentureId": "VNT-2006",
+    "followUpDate": "2026-01-11"
+  },
+  {
+    "id": "LED-7026",
+    "name": "Ravi Rao",
+    "email": "ravi.rao@email.com",
+    "phone": "+91 7921728395",
+    "status": "Contacted",
+    "source": "Referral",
+    "priority": "Medium",
+    "budget": 10900000,
+    "interestedProperty": "Urban Gardens 9",
+    "ventureName": "Urban Heights",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Interested in east-facing",
+    "expectedCloseDate": "2026-05-14",
+    "createdDate": "2024-09-28",
+    "lastUpdated": "2026-10-17",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2024-09-28",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10019",
+    "interestedPropertyId": "PRP-5009",
+    "interestedVentureId": "VNT-2007",
+    "followUpDate": "2026-07-03"
+  },
+  {
+    "id": "LED-7027",
+    "name": "Naveen Verma",
+    "email": "naveen.verma@email.com",
+    "phone": "+91 7640815586",
+    "status": "Won",
+    "source": "Website",
+    "priority": "Medium",
+    "budget": 13400000,
+    "interestedProperty": "Royal Residence 4",
+    "ventureName": "Royal Meadows",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "",
+    "expectedCloseDate": "2026-10-08",
+    "createdDate": "2024-11-10",
+    "lastUpdated": "2026-01-13",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2024-11-10",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10020",
+    "interestedPropertyId": "PRP-5004",
+    "interestedVentureId": "VNT-2002",
+    "followUpDate": "2026-07-10"
+  },
+  {
+    "id": "LED-7028",
+    "name": "Lakshmi Verma",
+    "email": "lakshmi.verma@email.com",
+    "phone": "+91 7324254629",
+    "status": "Qualified",
+    "source": "Agent",
+    "priority": "Low",
+    "budget": 10600000,
+    "interestedProperty": "Hill Park 2",
+    "ventureName": "Hill Crest Villas",
+    "assignedExecutive": "Nisha Rao",
+    "remarks": "Budget flexible",
+    "expectedCloseDate": "2026-06-25",
+    "createdDate": "2024-10-17",
+    "lastUpdated": "2025-03-23",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2024-10-17",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10021",
+    "interestedPropertyId": "PRP-5002",
+    "interestedVentureId": "VNT-2008",
+    "followUpDate": "2026-06-25"
+  },
+  {
+    "id": "LED-7029",
+    "name": "Harish Naidu",
+    "email": "harish.naidu@email.com",
+    "phone": "+91 7720934413",
+    "status": "Contacted",
+    "source": "Website",
+    "priority": "Medium",
+    "budget": 19600000,
+    "interestedProperty": "Urban Gardens 9",
+    "ventureName": "Urban Heights",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-05-13",
+    "createdDate": "2025-02-16",
+    "lastUpdated": "2025-11-27",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2025-02-16",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10022",
+    "interestedPropertyId": "PRP-5009",
+    "interestedVentureId": "VNT-2007",
+    "followUpDate": "2026-07-05"
+  },
+  {
+    "id": "LED-7030",
+    "name": "Suresh Verma",
+    "email": "suresh.verma@email.com",
+    "phone": "+91 8156410493",
+    "status": "Proposal",
+    "source": "Referral",
+    "priority": "Medium",
+    "budget": 8600000,
+    "interestedProperty": "Hill Park 2",
+    "ventureName": "Hill Crest Villas",
+    "assignedExecutive": "Praveen Kumar",
+    "remarks": "Budget flexible",
+    "expectedCloseDate": "2026-03-10",
+    "createdDate": "2026-07-02",
+    "lastUpdated": "2026-01-05",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2026-07-02",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10023",
+    "interestedPropertyId": "PRP-5002",
+    "interestedVentureId": "VNT-2008",
+    "followUpDate": "2026-03-10"
+  },
+  {
+    "id": "LED-7031",
+    "name": "Pooja Sharma",
+    "email": "pooja.sharma@email.com",
+    "phone": "+91 9092905092",
+    "status": "Lost",
+    "source": "Referral",
+    "priority": "Low",
+    "budget": 9800000,
+    "interestedProperty": "Lakeview Park 1",
+    "ventureName": "Lakeview Residency",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "Interested in east-facing",
+    "expectedCloseDate": "2026-07-25",
+    "createdDate": "2026-06-03",
+    "lastUpdated": "2026-01-10",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2026-06-03",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10024",
+    "interestedPropertyId": "PRP-5001",
+    "interestedVentureId": "VNT-2009",
+    "followUpDate": "2026-07-04"
+  },
+  {
+    "id": "LED-7032",
+    "name": "Divya Patel",
+    "email": "divya.patel@email.com",
+    "phone": "+91 7949307098",
+    "status": "Qualified",
+    "source": "Walk-in",
+    "priority": "High",
+    "budget": 8000000,
+    "interestedProperty": "Sunrise Park 12",
+    "ventureName": "Sunrise Farms",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "Needs loan assistance",
+    "expectedCloseDate": "2026-08-05",
+    "createdDate": "2025-02-20",
+    "lastUpdated": "2025-11-22",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2025-02-20",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10025",
+    "interestedPropertyId": "PRP-5012",
+    "interestedVentureId": "VNT-2005",
+    "followUpDate": "2026-07-03"
+  },
+  {
+    "id": "LED-7033",
+    "name": "Pooja Verma",
+    "email": "pooja.verma@email.com",
+    "phone": "+91 8661172067",
+    "status": "Proposal",
+    "source": "Website",
+    "priority": "Low",
+    "budget": 5700000,
+    "interestedProperty": "Urban Gardens 9",
+    "ventureName": "Urban Heights",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "",
+    "expectedCloseDate": "2026-01-02",
+    "createdDate": "2025-05-16",
+    "lastUpdated": "2025-02-06",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2025-05-16",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10026",
+    "interestedPropertyId": "PRP-5009",
+    "interestedVentureId": "VNT-2007",
+    "followUpDate": "2026-07-04"
+  },
+  {
+    "id": "LED-7034",
+    "name": "Meena Patel",
+    "email": "meena.patel@email.com",
+    "phone": "+91 9480722222",
+    "status": "Lost",
+    "source": "Agent",
+    "priority": "Medium",
+    "budget": 8800000,
+    "interestedProperty": "Merit Residence 17",
+    "ventureName": "Merit Avenue",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "Interested in east-facing",
+    "expectedCloseDate": "2026-12-04",
+    "createdDate": "2026-07-07",
+    "lastUpdated": "2025-12-23",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Website",
+        "date": "2026-07-07",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10027",
+    "interestedPropertyId": "PRP-5017",
+    "interestedVentureId": "VNT-2004",
+    "followUpDate": "2026-07-06"
+  },
+  {
+    "id": "LED-7035",
+    "name": "Anil Goud",
+    "email": "anil.goud@email.com",
+    "phone": "+91 7376846450",
+    "status": "Qualified",
+    "source": "Walk-in",
+    "priority": "Low",
+    "budget": 6200000,
+    "interestedProperty": "Green Residence 16",
+    "ventureName": "Green Valley Township",
+    "assignedExecutive": "Tarun Reddy",
+    "remarks": "Interested in east-facing",
+    "expectedCloseDate": "2026-10-10",
+    "createdDate": "2024-06-01",
+    "lastUpdated": "2025-05-20",
+    "timeline": [
+      {
+        "type": "created",
+        "title": "Lead captured",
+        "description": "Source: Referral",
+        "date": "2024-06-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerId": "CP-10028",
+    "interestedPropertyId": "PRP-5016",
+    "interestedVentureId": "VNT-2001",
+    "followUpDate": "2026-07-05"
+  }
+]

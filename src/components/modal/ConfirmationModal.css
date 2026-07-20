@@ -1,0 +1,97 @@
+.confirm-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(10, 22, 40, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+.confirm-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--erp-card);
+  border-radius: var(--erp-radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--erp-shadow-xl);
+}
+
+.confirm-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--erp-radius-sm);
+  color: var(--erp-text-soft);
+  transition: all var(--erp-transition);
+}
+
+.confirm-modal__close:hover {
+  background: var(--erp-card-muted);
+  color: var(--erp-text);
+}
+
+.confirm-modal__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.confirm-modal__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.confirm-modal__icon--danger { color: var(--erp-danger); background: var(--erp-danger-soft); }
+.confirm-modal__icon--warning { color: var(--erp-warning); background: var(--erp-warning-soft); }
+.confirm-modal__icon--accent { color: var(--erp-accent); background: var(--erp-accent-soft); }
+.confirm-modal__icon--success { color: var(--erp-success); background: var(--erp-success-soft); }
+.confirm-modal__icon--info { color: var(--erp-info); background: var(--erp-info-soft); }
+
+.confirm-modal__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  margin-bottom: 0.5rem;
+}
+
+.confirm-modal__message {
+  font-size: 0.9375rem;
+  color: var(--erp-text-muted);
+  line-height: 1.6;
+}
+
+.confirm-modal__highlight {
+  margin-top: 0.75rem;
+  padding: 0.625rem 1rem;
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.confirm-modal__actions {
+  display: flex;
+  gap: var(--erp-gap-sm);
+  margin-top: 1.75rem;
+}
+
+.confirm-modal__actions .btn {
+  flex: 1;
+}

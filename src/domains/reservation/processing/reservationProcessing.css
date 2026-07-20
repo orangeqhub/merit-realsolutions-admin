@@ -1,0 +1,171 @@
+.rsv-proc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.rsv-proc__kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.rsv-proc__row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .rsv-proc__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rsv-proc__panel {
+  background: var(--erp-surface);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-lg);
+  padding: 1.25rem;
+}
+
+.rsv-proc__panel h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.rsv-proc__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--erp-border);
+  background: var(--erp-bg);
+  color: var(--erp-text-muted);
+}
+
+.rsv-proc__chip--high {
+  border-color: rgba(239, 68, 68, 0.25);
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--erp-danger);
+}
+
+.rsv-proc__chip--medium {
+  border-color: rgba(245, 158, 11, 0.25);
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+}
+
+.rsv-proc__chip--normal {
+  border-color: rgba(100, 116, 139, 0.25);
+  background: rgba(100, 116, 139, 0.10);
+  color: var(--erp-text-muted);
+}
+
+.rsv-proc__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.rsv-proc__actions--spaced {
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.rsv-proc__details-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .rsv-proc__details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rsv-proc__summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .rsv-proc__summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rsv-proc__summary dt {
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.rsv-proc__summary dd {
+  margin: 0.15rem 0 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.rsv-proc__checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rsv-proc__rule-kv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .rsv-proc__rule-kv {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rsv-proc__kv {
+  padding: 0.75rem;
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-md);
+  background: var(--erp-bg);
+}
+
+.rsv-proc__kv span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.rsv-proc__kv strong {
+  font-size: 0.875rem;
+}
+
+.rsv-proc__bulkbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px dashed var(--erp-border);
+  border-radius: var(--erp-radius-md);
+  background: var(--erp-bg);
+}
+
+.rsv-proc__bulkbar strong {
+  font-size: 0.875rem;
+}
+

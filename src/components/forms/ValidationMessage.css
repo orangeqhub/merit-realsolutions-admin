@@ -1,0 +1,24 @@
+.validation-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--erp-radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.validation-message__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.validation-message__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.validation-message--error { background: var(--erp-danger-soft); color: var(--erp-danger-dark); }
+.validation-message--success { background: var(--erp-success-soft); color: var(--erp-success-dark); }
+.validation-message--warning { background: var(--erp-warning-soft); color: var(--erp-warning-dark); }
+.validation-message--info { background: var(--erp-info-soft); color: var(--erp-info-dark); }

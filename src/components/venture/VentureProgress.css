@@ -1,0 +1,29 @@
+.venture-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.venture-progress--compact {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.venture-progress--compact .progress-bar {
+  flex: 1;
+  min-width: 80px;
+}
+
+.venture-progress__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+}
+
+.venture-progress__value {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--erp-accent);
+  white-space: nowrap;
+}

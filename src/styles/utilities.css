@@ -1,0 +1,70 @@
+/* ===================================================================
+   Merit Real Solutions ERP — Utility Classes
+   Small composable helpers. Keep minimal; prefer component CSS.
+   =================================================================== */
+
+.erp-flex { display: flex; }
+.erp-flex-col { display: flex; flex-direction: column; }
+.erp-items-center { align-items: center; }
+.erp-items-start { align-items: flex-start; }
+.erp-justify-between { justify-content: space-between; }
+.erp-justify-center { justify-content: center; }
+.erp-flex-wrap { flex-wrap: wrap; }
+.erp-flex-1 { flex: 1; min-width: 0; }
+
+.erp-grid { display: grid; }
+
+.erp-w-full { width: 100%; }
+.erp-h-full { height: 100%; }
+
+.erp-rounded-sm { border-radius: var(--erp-radius-sm); }
+.erp-rounded { border-radius: var(--erp-radius); }
+.erp-rounded-lg { border-radius: var(--erp-radius-lg); }
+.erp-rounded-full { border-radius: var(--erp-radius-pill); }
+
+.erp-shadow-sm { box-shadow: var(--erp-shadow-sm); }
+.erp-shadow-md { box-shadow: var(--erp-shadow-md); }
+.erp-shadow-lg { box-shadow: var(--erp-shadow-lg); }
+
+.erp-surface {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+}
+
+.erp-divider {
+  height: 1px;
+  background: var(--erp-border);
+  border: none;
+}
+
+.erp-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Custom scrollbar for ERP surfaces */
+.erp-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.erp-scroll::-webkit-scrollbar-track { background: transparent; }
+.erp-scroll::-webkit-scrollbar-thumb {
+  background: var(--erp-border-strong);
+  border-radius: 99px;
+}
+.erp-scroll::-webkit-scrollbar-thumb:hover { background: var(--erp-text-soft); }
+
+/* Print: hide chrome (used by export PDF) */
+@media print {
+  .erp-no-print { display: none !important; }
+}
+
+/* Responsive helpers — prefer @shared/styles/responsive.css utilities */
+.erp-min-w-0 { min-width: 0; }
+.erp-overflow-hidden { overflow: hidden; }
+.erp-overflow-x-auto { overflow-x: auto; max-width: 100%; }

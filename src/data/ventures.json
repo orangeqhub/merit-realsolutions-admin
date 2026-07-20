@@ -1,0 +1,1636 @@
+[
+  {
+    "id": "VNT-2001",
+    "name": "Green Valley Township",
+    "shortName": "Green Valley",
+    "code": "GVT-001",
+    "propertyType": "Open Plots",
+    "developer": "Skyline Infra Developers",
+    "developerId": "CMP-1001",
+    "description": "Green Valley Township is a premium DTCP-approved open plot venture spread across 42 acres with lush landscaping, wide internal roads, and excellent connectivity to Shamshabad Airport corridor.",
+    "state": "Telangana",
+    "district": "Rangareddy",
+    "city": "Shamshabad",
+    "village": "Mamidpally",
+    "mapUrl": "https://maps.google.com/?q=17.2403,78.4294",
+    "latitude": "17.2403",
+    "longitude": "78.4294",
+    "landmarks": [
+      "Rajiv Gandhi Intl Airport - 12 km",
+      "ORR Exit 13 - 4 km",
+      "TCS Adibatla - 8 km"
+    ],
+    "dtcp": "DTCP/TS/2021/0842",
+    "rera": "P02400001234",
+    "approvalNumber": "TS/LAO/2021/184",
+    "approvalDate": "2021-08-15",
+    "registration": "REG/TS/2021/GVT",
+    "basePrice": 8500,
+    "currentPrice": 12500,
+    "pricePerSqYard": 12500,
+    "priceMin": 850000,
+    "priceMax": 2800000,
+    "registrationCharges": 50000,
+    "developmentCharges": 75000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": true,
+      "security": true,
+      "park": true,
+      "temple": true,
+      "childrenPark": true,
+      "joggingTrack": true
+    },
+    "banner": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Green+Valley&background=059669&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+      "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "green-valley-brochure.pdf",
+    "slug": "green-valley-township",
+    "metaTitle": "Green Valley Township | Premium Open Plots Shamshabad",
+    "metaDescription": "DTCP approved open plots near Shamshabad Airport. Book your plot today.",
+    "keywords": "open plots, shamshabad, dtcp, real estate",
+    "status": "Active",
+    "approval": "Both",
+    "layouts": 4,
+    "plots": {
+      "total": 320,
+      "available": 185,
+      "booked": 92,
+      "sold": 43
+    },
+    "revenue": 18.4,
+    "bookings": 3,
+    "customers": 98,
+    "agents": 12,
+    "progress": 68,
+    "createdDate": "2021-09-01",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Apollo DRDO - 14 km",
+        "KIMS Hospital - 18 km"
+      ],
+      "schools": [
+        "Delhi Public School - 10 km",
+        "Oakridge Intl - 12 km"
+      ],
+      "airport": "Rajiv Gandhi Intl - 12 km",
+      "highway": "NH-44 (Bangalore Highway) - 6 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "DTCP Approval Certificate",
+        "type": "pdf",
+        "size": "2.4 MB",
+        "date": "2021-08-15"
+      },
+      {
+        "id": "doc2",
+        "name": "RERA Registration",
+        "type": "pdf",
+        "size": "1.8 MB",
+        "date": "2021-09-01"
+      },
+      {
+        "id": "doc3",
+        "name": "Layout Master Plan",
+        "type": "pdf",
+        "size": "5.2 MB",
+        "date": "2022-01-10"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 12
+        },
+        {
+          "label": "Feb",
+          "value": 18
+        },
+        {
+          "label": "Mar",
+          "value": 15
+        },
+        {
+          "label": "Apr",
+          "value": 22
+        },
+        {
+          "label": "May",
+          "value": 28
+        },
+        {
+          "label": "Jun",
+          "value": 24
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 185,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 92,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 43,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "booking",
+        "title": "12 new bookings",
+        "description": "June month booking drive completed",
+        "date": "2026-06-28",
+        "tone": "success"
+      },
+      {
+        "type": "layout",
+        "title": "Phase III layout added",
+        "description": "80 new plots registered in Block C",
+        "date": "2026-05-15",
+        "tone": "accent"
+      },
+      {
+        "type": "plots",
+        "title": "Plots imported",
+        "description": "240 plot records synced from survey",
+        "date": "2026-03-20",
+        "tone": "info"
+      },
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Green Valley Township onboarded",
+        "date": "2021-09-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10019",
+      "CP-10026"
+    ],
+    "activeLeads": 1
+  },
+  {
+    "id": "VNT-2002",
+    "name": "Royal Meadows",
+    "shortName": "Royal Meadows",
+    "code": "RMD-002",
+    "propertyType": "Farm Lands",
+    "developer": "Pranava Constructions",
+    "developerId": "CMP-1002",
+    "description": "Royal Meadows offers serene farm land parcels with organic farming support, weekend villa plots, and natural lake views along the Krishna river belt.",
+    "state": "Andhra Pradesh",
+    "district": "Krishna",
+    "city": "Vijayawada",
+    "village": "Kankipadu",
+    "mapUrl": "https://maps.google.com/?q=16.5062,80.6480",
+    "latitude": "16.5062",
+    "longitude": "80.6480",
+    "landmarks": [
+      "Krishna River Belt - 2 km",
+      "Vijayawada City - 18 km"
+    ],
+    "dtcp": "DTCP/AP/2020/1205",
+    "rera": "",
+    "approvalNumber": "AP/LAO/2020/442",
+    "approvalDate": "2020-11-20",
+    "registration": "REG/AP/2020/RMD",
+    "basePrice": 3500,
+    "currentPrice": 5200,
+    "pricePerSqYard": 5200,
+    "priceMin": 420000,
+    "priceMax": 1800000,
+    "registrationCharges": 35000,
+    "developmentCharges": 45000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": false,
+      "electricity": true,
+      "water": true,
+      "clubHouse": false,
+      "security": true,
+      "park": true,
+      "temple": true,
+      "childrenPark": false,
+      "joggingTrack": true
+    },
+    "banner": "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Royal+Meadows&background=7c3aed&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80",
+      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&q=80",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "royal-meadows-brochure.pdf",
+    "slug": "royal-meadows",
+    "metaTitle": "Royal Meadows Farm Lands | Vijayawada",
+    "metaDescription": "Premium farm land venture near Krishna river belt.",
+    "keywords": "farm land, vijayawada, agriculture plots",
+    "status": "Active",
+    "approval": "DTCP Approved",
+    "layouts": 2,
+    "plots": {
+      "total": 180,
+      "available": 112,
+      "booked": 48,
+      "sold": 20
+    },
+    "revenue": 8.2,
+    "bookings": 1,
+    "customers": 52,
+    "agents": 8,
+    "progress": 45,
+    "createdDate": "2020-12-10",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Ramesh Hospital - 16 km"
+      ],
+      "schools": [
+        "Bharatiya Vidya Bhavan - 14 km"
+      ],
+      "airport": "Vijayawada Airport - 22 km",
+      "highway": "NH-16 - 8 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "DTCP Layout Approval",
+        "type": "pdf",
+        "size": "3.1 MB",
+        "date": "2020-11-20"
+      },
+      {
+        "id": "doc2",
+        "name": "Survey Settlement Report",
+        "type": "pdf",
+        "size": "4.5 MB",
+        "date": "2021-02-05"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 8
+        },
+        {
+          "label": "Feb",
+          "value": 10
+        },
+        {
+          "label": "Mar",
+          "value": 7
+        },
+        {
+          "label": "Apr",
+          "value": 14
+        },
+        {
+          "label": "May",
+          "value": 11
+        },
+        {
+          "label": "Jun",
+          "value": 16
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 112,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 48,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 20,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "booking",
+        "title": "Farm plot festival bookings",
+        "description": "28 plots booked in weekend drive",
+        "date": "2026-06-20",
+        "tone": "success"
+      },
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Royal Meadows registered",
+        "date": "2020-12-10",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10020",
+      "CP-10027"
+    ],
+    "activeLeads": 0
+  },
+  {
+    "id": "VNT-2003",
+    "name": "Palm County",
+    "shortName": "Palm County",
+    "code": "PMC-003",
+    "propertyType": "Villas",
+    "developer": "Meridian Builders",
+    "developerId": "CMP-1003",
+    "description": "Palm County is an exclusive gated villa community featuring Mediterranean-inspired architecture, private gardens, and resort-style amenities in Gachibowli.",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "city": "Gachibowli",
+    "village": "Nanakramguda",
+    "mapUrl": "https://maps.google.com/?q=17.4401,78.3489",
+    "latitude": "17.4401",
+    "longitude": "78.3489",
+    "landmarks": [
+      "Financial District - 3 km",
+      "Wipro Circle - 2 km"
+    ],
+    "dtcp": "",
+    "rera": "P02400005678",
+    "approvalNumber": "TS/RERA/2022/890",
+    "approvalDate": "2022-04-10",
+    "registration": "REG/TS/2022/PMC",
+    "basePrice": 8500000,
+    "currentPrice": 12500000,
+    "pricePerSqYard": 18500,
+    "priceMin": 8500000,
+    "priceMax": 22000000,
+    "registrationCharges": 150000,
+    "developmentCharges": 200000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": true,
+      "security": true,
+      "park": true,
+      "temple": false,
+      "childrenPark": true,
+      "joggingTrack": true
+    },
+    "banner": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Palm+County&background=2563eb&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "palm-county-brochure.pdf",
+    "slug": "palm-county",
+    "metaTitle": "Palm County Villas | Gachibowli Hyderabad",
+    "metaDescription": "Luxury gated villa community in Gachibowli financial district.",
+    "keywords": "villas, gachibowli, luxury homes",
+    "status": "Active",
+    "approval": "RERA Approved",
+    "layouts": 3,
+    "plots": {
+      "total": 86,
+      "available": 24,
+      "booked": 38,
+      "sold": 24
+    },
+    "revenue": 42.8,
+    "bookings": 4,
+    "customers": 48,
+    "agents": 15,
+    "progress": 72,
+    "createdDate": "2022-05-01",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Continental Hospital - 4 km",
+        "AIG Hospitals - 6 km"
+      ],
+      "schools": [
+        "Oakridge Intl - 5 km",
+        "Delhi Public School - 7 km"
+      ],
+      "airport": "RGIA - 28 km",
+      "highway": "ORR Gachibowli - 3 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "1.2 MB",
+        "date": "2022-04-10"
+      },
+      {
+        "id": "doc2",
+        "name": "Building Permissions",
+        "type": "pdf",
+        "size": "3.8 MB",
+        "date": "2022-06-15"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 4
+        },
+        {
+          "label": "Feb",
+          "value": 6
+        },
+        {
+          "label": "Mar",
+          "value": 5
+        },
+        {
+          "label": "Apr",
+          "value": 8
+        },
+        {
+          "label": "May",
+          "value": 7
+        },
+        {
+          "label": "Jun",
+          "value": 9
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 24,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 38,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 24,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "booking",
+        "title": "Villa showcase event",
+        "description": "6 premium villas booked",
+        "date": "2026-06-25",
+        "tone": "success"
+      },
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Palm County launched",
+        "date": "2022-05-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10021",
+      "CP-10028"
+    ],
+    "activeLeads": 4
+  },
+  {
+    "id": "VNT-2004",
+    "name": "Merit Avenue",
+    "shortName": "Merit Avenue",
+    "code": "MAV-004",
+    "propertyType": "Open Plots",
+    "developer": "Merit Real Solutions",
+    "developerId": "CMP-1004",
+    "description": "Merit Avenue is a flagship open plot venture by Merit Real Solutions featuring smart city infrastructure, solar street lighting, and underground utilities.",
+    "state": "Telangana",
+    "district": "Medchal",
+    "city": "Kompally",
+    "village": "Dundigal",
+    "mapUrl": "https://maps.google.com/?q=17.5425,78.4831",
+    "latitude": "17.5425",
+    "longitude": "78.4831",
+    "landmarks": [
+      "Kompally Junction - 5 km",
+      "Suchitra Road - 2 km"
+    ],
+    "dtcp": "DTCP/TS/2023/2108",
+    "rera": "P02400008901",
+    "approvalNumber": "TS/LAO/2023/512",
+    "approvalDate": "2023-01-20",
+    "registration": "REG/TS/2023/MAV",
+    "basePrice": 7200,
+    "currentPrice": 9800,
+    "pricePerSqYard": 9800,
+    "priceMin": 650000,
+    "priceMax": 2200000,
+    "registrationCharges": 45000,
+    "developmentCharges": 60000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": true,
+      "security": true,
+      "park": true,
+      "temple": true,
+      "childrenPark": true,
+      "joggingTrack": true
+    },
+    "banner": "https://images.unsplash.com/photo-1448630360428-65456885c650?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1448630360428-65456885c650?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Merit+Avenue&background=0a1628&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "merit-avenue-brochure.pdf",
+    "slug": "merit-avenue",
+    "metaTitle": "Merit Avenue Open Plots | Kompally",
+    "metaDescription": "Smart city open plots in Kompally with premium amenities.",
+    "keywords": "merit avenue, kompally, open plots",
+    "status": "Active",
+    "approval": "Both",
+    "layouts": 5,
+    "plots": {
+      "total": 450,
+      "available": 268,
+      "booked": 124,
+      "sold": 58
+    },
+    "revenue": 24.6,
+    "bookings": 4,
+    "customers": 140,
+    "agents": 18,
+    "progress": 55,
+    "createdDate": "2023-02-15",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Yashoda Hospital - 12 km"
+      ],
+      "schools": [
+        "Chirec Intl - 10 km"
+      ],
+      "airport": "RGIA - 35 km",
+      "highway": "NH-44 - 4 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "DTCP & RERA Approvals",
+        "type": "pdf",
+        "size": "2.8 MB",
+        "date": "2023-01-20"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 20
+        },
+        {
+          "label": "Feb",
+          "value": 25
+        },
+        {
+          "label": "Mar",
+          "value": 22
+        },
+        {
+          "label": "Apr",
+          "value": 30
+        },
+        {
+          "label": "May",
+          "value": 28
+        },
+        {
+          "label": "Jun",
+          "value": 32
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 268,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 124,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 58,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "layout",
+        "title": "Block D layout released",
+        "description": "90 plots added to inventory",
+        "date": "2026-06-10",
+        "tone": "accent"
+      },
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Merit Avenue launched",
+        "date": "2023-02-15",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10022",
+      "CP-10029"
+    ],
+    "activeLeads": 2
+  },
+  {
+    "id": "VNT-2005",
+    "name": "Sunrise Farms",
+    "shortName": "Sunrise",
+    "code": "SRF-005",
+    "propertyType": "Farm Lands",
+    "developer": "Greenfield Estates",
+    "developerId": "CMP-1005",
+    "description": "Sunrise Farms offers affordable agriculture and farmhouse plots with drip irrigation setup and weekend retreat facilities near Srisailam highway.",
+    "state": "Telangana",
+    "district": "Nagarkurnool",
+    "city": "Kalwakurthy",
+    "village": "Utkoor",
+    "mapUrl": "https://maps.google.com/?q=16.9956,78.5089",
+    "latitude": "16.9956",
+    "longitude": "78.5089",
+    "landmarks": [
+      "Srisailam Highway - 3 km",
+      "Kalwakurthy Town - 8 km"
+    ],
+    "dtcp": "DTCP/TS/2022/1567",
+    "rera": "",
+    "approvalNumber": "TS/LAO/2022/298",
+    "approvalDate": "2022-07-05",
+    "registration": "REG/TS/2022/SRF",
+    "basePrice": 2800,
+    "currentPrice": 4200,
+    "pricePerSqYard": 4200,
+    "priceMin": 280000,
+    "priceMax": 1200000,
+    "registrationCharges": 25000,
+    "developmentCharges": 35000,
+    "amenities": {
+      "roads": true,
+      "streetLights": false,
+      "drainage": false,
+      "electricity": true,
+      "water": true,
+      "clubHouse": false,
+      "security": true,
+      "park": true,
+      "temple": true,
+      "childrenPark": false,
+      "joggingTrack": false
+    },
+    "banner": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Sunrise+Farms&background=d97706&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&q=80",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "sunrise-farms-brochure.pdf",
+    "slug": "sunrise-farms",
+    "metaTitle": "Sunrise Farms | Farm Lands Kalwakurthy",
+    "metaDescription": "Affordable farm land plots near Srisailam highway.",
+    "keywords": "farm land, kalwakurthy, agriculture",
+    "status": "Active",
+    "approval": "DTCP Approved",
+    "layouts": 2,
+    "plots": {
+      "total": 240,
+      "available": 156,
+      "booked": 58,
+      "sold": 26
+    },
+    "revenue": 5.8,
+    "bookings": 2,
+    "customers": 62,
+    "agents": 6,
+    "progress": 38,
+    "createdDate": "2022-08-20",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Area Hospital Kalwakurthy - 8 km"
+      ],
+      "schools": [
+        "ZP High School - 5 km"
+      ],
+      "airport": "RGIA - 85 km",
+      "highway": "Srisailam Highway - 3 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "DTCP Layout",
+        "type": "pdf",
+        "size": "2.1 MB",
+        "date": "2022-07-05"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 10
+        },
+        {
+          "label": "Feb",
+          "value": 12
+        },
+        {
+          "label": "Mar",
+          "value": 9
+        },
+        {
+          "label": "Apr",
+          "value": 15
+        },
+        {
+          "label": "May",
+          "value": 14
+        },
+        {
+          "label": "Jun",
+          "value": 18
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 156,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 58,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 26,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Sunrise Farms registered",
+        "date": "2022-08-20",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10023",
+      "CP-10030"
+    ],
+    "activeLeads": 1
+  },
+  {
+    "id": "VNT-2006",
+    "name": "Golden Enclave",
+    "shortName": "Golden Enclave",
+    "code": "GEN-006",
+    "propertyType": "Open Plots",
+    "developer": "Aurobindo Realty",
+    "developerId": "CMP-1006",
+    "description": "Golden Enclave is a HMDA-adjacent premium plot venture in Warangal with golden temple proximity and excellent appreciation potential.",
+    "state": "Telangana",
+    "district": "Warangal",
+    "city": "Warangal",
+    "village": "Madikonda",
+    "mapUrl": "https://maps.google.com/?q=17.9689,79.5941",
+    "latitude": "17.9689",
+    "longitude": "79.5941",
+    "landmarks": [
+      "Warangal Fort - 8 km",
+      "Kakatiya University - 6 km"
+    ],
+    "dtcp": "DTCP/TS/2020/0987",
+    "rera": "",
+    "approvalNumber": "TS/LAO/2020/156",
+    "approvalDate": "2020-05-12",
+    "registration": "REG/TS/2020/GEN",
+    "basePrice": 4500,
+    "currentPrice": 7800,
+    "pricePerSqYard": 7800,
+    "priceMin": 380000,
+    "priceMax": 1500000,
+    "registrationCharges": 40000,
+    "developmentCharges": 55000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": false,
+      "security": true,
+      "park": true,
+      "temple": true,
+      "childrenPark": true,
+      "joggingTrack": false
+    },
+    "banner": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Golden+Enclave&background=d97706&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "golden-enclave-brochure.pdf",
+    "slug": "golden-enclave",
+    "metaTitle": "Golden Enclave Plots | Warangal",
+    "metaDescription": "Premium open plots in Warangal with DTCP approval.",
+    "keywords": "warangal plots, golden enclave",
+    "status": "Completed",
+    "approval": "DTCP Approved",
+    "layouts": 3,
+    "plots": {
+      "total": 280,
+      "available": 12,
+      "booked": 28,
+      "sold": 240
+    },
+    "revenue": 15.2,
+    "bookings": 1,
+    "customers": 240,
+    "agents": 10,
+    "progress": 96,
+    "createdDate": "2020-06-01",
+    "nearbyPlaces": {
+      "hospitals": [
+        "MGM Hospital - 7 km"
+      ],
+      "schools": [
+        "Kakatiya High School - 5 km"
+      ],
+      "airport": "Hyderabad RGIA - 145 km",
+      "highway": "NH-163 - 4 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "Completion Certificate",
+        "type": "pdf",
+        "size": "1.5 MB",
+        "date": "2025-12-01"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 2
+        },
+        {
+          "label": "Feb",
+          "value": 1
+        },
+        {
+          "label": "Mar",
+          "value": 3
+        },
+        {
+          "label": "Apr",
+          "value": 2
+        },
+        {
+          "label": "May",
+          "value": 1
+        },
+        {
+          "label": "Jun",
+          "value": 2
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 12,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 28,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 240,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "booking",
+        "title": "Project completed",
+        "description": "96% plots sold out",
+        "date": "2025-12-15",
+        "tone": "success"
+      },
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Golden Enclave launched",
+        "date": "2020-06-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10024",
+      "CP-10031"
+    ],
+    "activeLeads": 1
+  },
+  {
+    "id": "VNT-2007",
+    "name": "Urban Heights",
+    "shortName": "Urban Heights",
+    "code": "URH-007",
+    "propertyType": "Apartments",
+    "developer": "Skyline Infra Developers",
+    "developerId": "CMP-1001",
+    "description": "Urban Heights is a high-rise apartment venture in Kukatpally featuring 2 & 3 BHK units with rooftop amenities and metro connectivity.",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "city": "Kukatpally",
+    "village": "KPHB Colony",
+    "mapUrl": "https://maps.google.com/?q=17.4849,78.4138",
+    "latitude": "17.4849",
+    "longitude": "78.4138",
+    "landmarks": [
+      "KPHB Metro - 1 km",
+      "Forum Mall - 2 km"
+    ],
+    "dtcp": "",
+    "rera": "P02400003456",
+    "approvalNumber": "TS/RERA/2024/1120",
+    "approvalDate": "2024-03-01",
+    "registration": "REG/TS/2024/URH",
+    "basePrice": 5500000,
+    "currentPrice": 7200000,
+    "pricePerSqYard": 0,
+    "priceMin": 5500000,
+    "priceMax": 12000000,
+    "registrationCharges": 100000,
+    "developmentCharges": 150000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": true,
+      "security": true,
+      "park": false,
+      "temple": false,
+      "childrenPark": true,
+      "joggingTrack": true
+    },
+    "banner": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Urban+Heights&background=0891b2&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "urban-heights-brochure.pdf",
+    "slug": "urban-heights",
+    "metaTitle": "Urban Heights Apartments | Kukatpally",
+    "metaDescription": "Premium apartments near KPHB metro station.",
+    "keywords": "apartments, kukatpally, metro",
+    "status": "Upcoming",
+    "approval": "RERA Approved",
+    "layouts": 1,
+    "plots": {
+      "total": 120,
+      "available": 98,
+      "booked": 18,
+      "sold": 4
+    },
+    "revenue": 3.2,
+    "bookings": 3,
+    "customers": 18,
+    "agents": 9,
+    "progress": 22,
+    "createdDate": "2024-04-01",
+    "nearbyPlaces": {
+      "hospitals": [
+        "KIMS Hospital - 5 km"
+      ],
+      "schools": [
+        "Narayana School - 2 km"
+      ],
+      "airport": "RGIA - 38 km",
+      "highway": "NH-65 - 3 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "RERA Registration",
+        "type": "pdf",
+        "size": "1.4 MB",
+        "date": "2024-03-01"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 2
+        },
+        {
+          "label": "Feb",
+          "value": 3
+        },
+        {
+          "label": "Mar",
+          "value": 4
+        },
+        {
+          "label": "Apr",
+          "value": 5
+        },
+        {
+          "label": "May",
+          "value": 4
+        },
+        {
+          "label": "Jun",
+          "value": 6
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 98,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 18,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 4,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Urban Heights pre-launch",
+        "date": "2024-04-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10025",
+      "CP-10032"
+    ],
+    "activeLeads": 4
+  },
+  {
+    "id": "VNT-2008",
+    "name": "Hill Crest Villas",
+    "shortName": "Hill Crest",
+    "code": "HCV-008",
+    "propertyType": "Villas",
+    "developer": "Pranava Constructions",
+    "developerId": "CMP-1002",
+    "description": "Hill Crest Villas sits on scenic hilltop terrain in Jubilee Hills offering panoramic city views and ultra-luxury 4 & 5 BHK independent villas.",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "city": "Jubilee Hills",
+    "village": "Road No. 45",
+    "mapUrl": "https://maps.google.com/?q=17.4239,78.4078",
+    "latitude": "17.4239",
+    "longitude": "78.4078",
+    "landmarks": [
+      "Jubilee Hills Checkpost - 1 km",
+      "Film Nagar - 2 km"
+    ],
+    "dtcp": "",
+    "rera": "P02400006789",
+    "approvalNumber": "TS/RERA/2023/1456",
+    "approvalDate": "2023-06-15",
+    "registration": "REG/TS/2023/HCV",
+    "basePrice": 18000000,
+    "currentPrice": 25000000,
+    "pricePerSqYard": 32000,
+    "priceMin": 18000000,
+    "priceMax": 45000000,
+    "registrationCharges": 250000,
+    "developmentCharges": 350000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": true,
+      "security": true,
+      "park": true,
+      "temple": false,
+      "childrenPark": true,
+      "joggingTrack": true
+    },
+    "banner": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Hill+Crest&background=1d4ed8&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "hill-crest-brochure.pdf",
+    "slug": "hill-crest-villas",
+    "metaTitle": "Hill Crest Villas | Jubilee Hills",
+    "metaDescription": "Ultra-luxury hilltop villas in Jubilee Hills.",
+    "keywords": "luxury villas, jubilee hills",
+    "status": "Active",
+    "approval": "RERA Approved",
+    "layouts": 2,
+    "plots": {
+      "total": 42,
+      "available": 8,
+      "booked": 18,
+      "sold": 16
+    },
+    "revenue": 38.5,
+    "bookings": 0,
+    "customers": 28,
+    "agents": 12,
+    "progress": 78,
+    "createdDate": "2023-07-01",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Apollo Jubilee Hills - 3 km"
+      ],
+      "schools": [
+        "Oakridge Jubilee Hills - 2 km"
+      ],
+      "airport": "RGIA - 32 km",
+      "highway": "Jubilee Hills Road - 0.5 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "RERA Certificate",
+        "type": "pdf",
+        "size": "1.6 MB",
+        "date": "2023-06-15"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 2
+        },
+        {
+          "label": "Feb",
+          "value": 3
+        },
+        {
+          "label": "Mar",
+          "value": 2
+        },
+        {
+          "label": "Apr",
+          "value": 4
+        },
+        {
+          "label": "May",
+          "value": 3
+        },
+        {
+          "label": "Jun",
+          "value": 5
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 8,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 18,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 16,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "booking",
+        "title": "Premium villa sold",
+        "description": "5 BHK hilltop villa booked",
+        "date": "2026-06-18",
+        "tone": "success"
+      },
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Hill Crest Villas launched",
+        "date": "2023-07-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10026",
+      "CP-10033"
+    ],
+    "activeLeads": 2
+  },
+  {
+    "id": "VNT-2009",
+    "name": "Lakeview Residency",
+    "shortName": "Lakeview",
+    "code": "LVR-009",
+    "propertyType": "Open Plots",
+    "developer": "Greenfield Estates",
+    "developerId": "CMP-1005",
+    "description": "Lakeview Residency features lake-facing open plots in Shankarpally with serene environment and rapid ORR connectivity.",
+    "state": "Telangana",
+    "district": "Rangareddy",
+    "city": "Shankarpally",
+    "village": "Muthangi",
+    "mapUrl": "https://maps.google.com/?q=17.4589,78.1321",
+    "latitude": "17.4589",
+    "longitude": "78.1321",
+    "landmarks": [
+      "ORR Shankarpally Exit - 5 km",
+      "Lakeside Park - 1 km"
+    ],
+    "dtcp": "DTCP/TS/2024/2890",
+    "rera": "P02400009123",
+    "approvalNumber": "TS/LAO/2024/678",
+    "approvalDate": "2024-08-10",
+    "registration": "REG/TS/2024/LVR",
+    "basePrice": 6800,
+    "currentPrice": 9200,
+    "pricePerSqYard": 9200,
+    "priceMin": 580000,
+    "priceMax": 2100000,
+    "registrationCharges": 48000,
+    "developmentCharges": 65000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": true,
+      "security": true,
+      "park": true,
+      "temple": false,
+      "childrenPark": true,
+      "joggingTrack": true
+    },
+    "banner": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Lakeview&background=0891b2&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+      "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "lakeview-brochure.pdf",
+    "slug": "lakeview-residency",
+    "metaTitle": "Lakeview Residency | Shankarpally Plots",
+    "metaDescription": "Lake-facing open plots near ORR Shankarpally.",
+    "keywords": "shankarpally, lakeview, open plots",
+    "status": "Upcoming",
+    "approval": "Both",
+    "layouts": 3,
+    "plots": {
+      "total": 200,
+      "available": 200,
+      "booked": 0,
+      "sold": 0
+    },
+    "revenue": 0,
+    "bookings": 3,
+    "customers": 0,
+    "agents": 5,
+    "progress": 15,
+    "createdDate": "2024-09-01",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Care Hospital Gachibowli - 18 km"
+      ],
+      "schools": [
+        "Indus Intl - 12 km"
+      ],
+      "airport": "RGIA - 25 km",
+      "highway": "ORR - 5 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "Pre-launch Approvals",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2024-08-10"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 0
+        },
+        {
+          "label": "Feb",
+          "value": 0
+        },
+        {
+          "label": "Mar",
+          "value": 0
+        },
+        {
+          "label": "Apr",
+          "value": 0
+        },
+        {
+          "label": "May",
+          "value": 0
+        },
+        {
+          "label": "Jun",
+          "value": 0
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 200,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 0,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 0,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Lakeview Residency pre-launch",
+        "date": "2024-09-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10027",
+      "CP-10034"
+    ],
+    "activeLeads": 3
+  },
+  {
+    "id": "VNT-2010",
+    "name": "Silver Springs",
+    "shortName": "Silver Springs",
+    "code": "SSR-010",
+    "propertyType": "Commercial",
+    "developer": "Meridian Builders",
+    "developerId": "CMP-1003",
+    "description": "Silver Springs is a commercial plot venture in Guntur designed for retail, office, and mixed-use development along the NH-16 corridor.",
+    "state": "Andhra Pradesh",
+    "district": "Guntur",
+    "city": "Guntur",
+    "village": "Autonagar",
+    "mapUrl": "https://maps.google.com/?q=16.3067,80.4365",
+    "latitude": "16.3067",
+    "longitude": "80.4365",
+    "landmarks": [
+      "NH-16 Corridor - 1 km",
+      "Guntur Medical College - 4 km"
+    ],
+    "dtcp": "DTCP/AP/2023/1890",
+    "rera": "",
+    "approvalNumber": "AP/LAO/2023/890",
+    "approvalDate": "2023-11-20",
+    "registration": "REG/AP/2023/SSR",
+    "basePrice": 12000,
+    "currentPrice": 16500,
+    "pricePerSqYard": 16500,
+    "priceMin": 1200000,
+    "priceMax": 8500000,
+    "registrationCharges": 75000,
+    "developmentCharges": 100000,
+    "amenities": {
+      "roads": true,
+      "streetLights": true,
+      "drainage": true,
+      "electricity": true,
+      "water": true,
+      "clubHouse": false,
+      "security": true,
+      "park": false,
+      "temple": false,
+      "childrenPark": false,
+      "joggingTrack": false
+    },
+    "banner": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1400&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&q=80",
+    "logo": "https://ui-avatars.com/api/?name=Silver+Springs&background=475569&color=ffffff&size=128&bold=true",
+    "gallery": [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+    ],
+    "layoutPlan": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "masterPlan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "brochure": "silver-springs-brochure.pdf",
+    "slug": "silver-springs",
+    "metaTitle": "Silver Springs Commercial | Guntur",
+    "metaDescription": "Commercial plots on NH-16 corridor Guntur.",
+    "keywords": "commercial plots, guntur",
+    "status": "Active",
+    "approval": "DTCP Approved",
+    "layouts": 2,
+    "plots": {
+      "total": 64,
+      "available": 38,
+      "booked": 16,
+      "sold": 10
+    },
+    "revenue": 9.8,
+    "bookings": 0,
+    "customers": 20,
+    "agents": 7,
+    "progress": 52,
+    "createdDate": "2023-12-01",
+    "nearbyPlaces": {
+      "hospitals": [
+        "Ramesh Hospital Guntur - 5 km"
+      ],
+      "schools": [
+        "Vignan University - 8 km"
+      ],
+      "airport": "Vijayawada Airport - 55 km",
+      "highway": "NH-16 - 1 km"
+    },
+    "documents": [
+      {
+        "id": "doc1",
+        "name": "Commercial Zoning Approval",
+        "type": "pdf",
+        "size": "3.2 MB",
+        "date": "2023-11-20"
+      }
+    ],
+    "analytics": {
+      "monthlySales": [
+        {
+          "label": "Jan",
+          "value": 3
+        },
+        {
+          "label": "Feb",
+          "value": 4
+        },
+        {
+          "label": "Mar",
+          "value": 5
+        },
+        {
+          "label": "Apr",
+          "value": 4
+        },
+        {
+          "label": "May",
+          "value": 6
+        },
+        {
+          "label": "Jun",
+          "value": 5
+        }
+      ],
+      "plotStatus": [
+        {
+          "label": "Available",
+          "value": 38,
+          "color": "#059669"
+        },
+        {
+          "label": "Booked",
+          "value": 16,
+          "color": "#d97706"
+        },
+        {
+          "label": "Sold",
+          "value": 10,
+          "color": "#2563eb"
+        }
+      ]
+    },
+    "activities": [
+      {
+        "type": "booking",
+        "title": "Commercial plot booked",
+        "description": "Retail corner plot reserved",
+        "date": "2026-06-12",
+        "tone": "success"
+      },
+      {
+        "type": "created",
+        "title": "Venture created",
+        "description": "Silver Springs launched",
+        "date": "2023-12-01",
+        "tone": "accent"
+      }
+    ],
+    "assignedPartnerIds": [
+      "CP-10028",
+      "CP-10035"
+    ],
+    "activeLeads": 2
+  }
+]

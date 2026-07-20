@@ -1,0 +1,7 @@
+.venture-stats {
+  margin-bottom: var(--erp-gap-lg);
+}
+
+.venture-stats--compact {
+  margin-bottom: var(--erp-gap-md);
+}

@@ -1,0 +1,121 @@
+.venture-header {
+  position: relative;
+  margin: -1.5rem -1.5rem var(--erp-gap-lg);
+  border-radius: var(--erp-radius);
+  overflow: hidden;
+}
+
+.venture-header__banner {
+  position: relative;
+  height: 220px;
+  background: var(--erp-primary);
+}
+
+.venture-header__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.venture-header__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 22, 40, 0.1) 0%,
+    rgba(10, 22, 40, 0.75) 100%
+  );
+}
+
+.venture-header__content {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0 1.75rem 1.5rem;
+  margin-top: -48px;
+}
+
+.venture-header__profile {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.venture-header__logo {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--erp-radius);
+  border: 4px solid var(--erp-card);
+  box-shadow: var(--erp-shadow-lg);
+  object-fit: cover;
+  background: var(--erp-card);
+}
+
+.venture-header__badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.venture-header__type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--erp-radius-pill);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.venture-header__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.venture-header__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.35rem;
+}
+
+.venture-header__meta svg {
+  width: 15px;
+  height: 15px;
+}
+
+.venture-header__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .venture-header {
+    margin: -1rem -1rem var(--erp-gap-md);
+  }
+  .venture-header__banner {
+    height: 160px;
+  }
+  .venture-header__logo {
+    width: 72px;
+    height: 72px;
+  }
+  .venture-header__title {
+    font-size: 1.375rem;
+  }
+  .venture-header__actions {
+    width: 100%;
+  }
+}

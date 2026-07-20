@@ -1,0 +1,59 @@
+.receipts-page .receipts-preview {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  padding: var(--erp-gap-lg);
+  box-shadow: var(--erp-shadow-xs);
+}
+
+.receipts-page .receipts-preview__header {
+  text-align: center;
+  border-bottom: 2px dashed var(--erp-border);
+  padding-bottom: var(--erp-gap-md);
+  margin-bottom: var(--erp-gap-md);
+}
+
+.receipts-page .receipts-preview__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.receipts-page .receipts-preview__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--erp-border-light);
+}
+
+.receipts-page .receipts-preview__row strong {
+  color: var(--erp-text-muted);
+  font-weight: 600;
+}
+
+.receipts-page .receipts-preview__amount {
+  text-align: center;
+  margin-top: var(--erp-gap-md);
+  padding: var(--erp-gap-md);
+  background: var(--erp-card-muted);
+  border-radius: var(--erp-radius-sm);
+}
+
+.receipts-page .receipts-preview__amount span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.receipts-page .receipts-preview__amount strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--erp-accent);
+}
+
+.receipts-table__no {
+  font-weight: 600;
+  color: var(--erp-text);
+}

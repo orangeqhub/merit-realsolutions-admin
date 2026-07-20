@@ -1,0 +1,37 @@
+.backend-status-banner {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.backend-status-banner--offline {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.backend-status-banner--starting {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.backend-status-banner code {
+  margin-left: auto;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.25rem;
+  background: rgba(0, 0, 0, 0.06);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .backend-status-banner code {
+    margin-left: 0;
+    width: 100%;
+  }
+}

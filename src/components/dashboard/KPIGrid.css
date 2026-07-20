@@ -1,0 +1,10 @@
+.kpi-grid {
+  display: grid;
+  gap: var(--erp-gap-md);
+}
+
+@media (max-width: 540px) {
+  .kpi-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

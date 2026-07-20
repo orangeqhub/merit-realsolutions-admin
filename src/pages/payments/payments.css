@@ -1,0 +1,199 @@
+/* Payments module — page styles */
+
+.payments-dashboard__installment {
+  margin-top: var(--erp-gap-lg);
+}
+
+.payments-dashboard__summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--erp-gap-sm);
+  padding: 0.5rem 0;
+}
+
+.payments-dashboard__summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--erp-card-muted);
+  border-radius: var(--erp-radius-sm);
+}
+
+.payments-dashboard__summary-item span {
+  font-size: 0.78rem;
+  color: var(--erp-text-muted);
+  font-weight: 600;
+}
+
+.payments-dashboard__summary-item strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--erp-text);
+}
+
+.payments-dashboard__recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payments-dashboard__recent-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.15rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  transition: all var(--erp-transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.payments-dashboard__recent-item:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-sm);
+  transform: translateX(4px);
+}
+
+.payments-dashboard__recent-no {
+  min-width: 130px;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-success-soft);
+  color: var(--erp-success-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.payments-dashboard__recent-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.payments-dashboard__recent-info strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.payments-dashboard__recent-info span {
+  font-size: 0.8rem;
+  color: var(--erp-text-muted);
+}
+
+.payments-dashboard__recent-price {
+  font-weight: 700;
+  color: var(--erp-success);
+}
+
+.payments-table__no {
+  font-weight: 700;
+}
+
+.payments-table__muted {
+  color: var(--erp-text-muted);
+  font-size: 0.85rem;
+}
+
+.payments-table__link {
+  font-weight: 600;
+  color: var(--erp-accent);
+  text-decoration: none;
+}
+
+.payments-table__link:hover {
+  text-decoration: underline;
+}
+
+.payments-details__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--erp-gap-md);
+  margin-bottom: var(--erp-gap-lg);
+}
+
+.payments-details__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--erp-gap-sm);
+}
+
+.payments-collect-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.payments-collect__drawer {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-md);
+  overflow: hidden;
+}
+
+.payments-collect__drawer-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--erp-accent-soft);
+  border-bottom: 1px solid var(--erp-border);
+}
+
+.payments-collect__drawer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-card);
+  color: var(--erp-accent);
+  font-size: 1.35rem;
+}
+
+.payments-collect__drawer-head h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--erp-text);
+}
+
+.payments-collect__drawer-head p {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: var(--erp-text-muted);
+}
+
+.payments-collect__body {
+  padding: 1.5rem;
+}
+
+.payments-collect__booking-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--erp-gap-sm);
+  margin-top: var(--erp-gap-sm);
+}
+
+.payments-collect__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--erp-gap-sm);
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--erp-border);
+  background: var(--erp-card-muted);
+}
+
+@media (max-width: 640px) {
+  .payments-collect__booking-preview {
+    grid-template-columns: 1fr;
+  }
+  .payments-dashboard__recent-item {
+    flex-wrap: wrap;
+  }
+}

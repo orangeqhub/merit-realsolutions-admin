@@ -1,0 +1,66 @@
+.erp-chart {
+  width: 100%;
+}
+
+.erp-chart__svg {
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+
+.erp-chart__grid {
+  stroke: var(--erp-border);
+  stroke-width: 0.4;
+  stroke-dasharray: 1.5 1.5;
+}
+
+.erp-chart__bar {
+  transition: opacity var(--erp-transition);
+}
+
+.erp-chart__bar:hover {
+  opacity: 0.82;
+}
+
+.erp-chart__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
+
+.erp-chart__label {
+  font-size: 0.6875rem;
+  color: var(--erp-text-soft);
+  text-align: center;
+  flex: 1;
+}
+
+/* Donut */
+.erp-donut {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erp-donut__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.erp-donut__value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  line-height: 1;
+}
+
+.erp-donut__label {
+  font-size: 0.75rem;
+  color: var(--erp-text-soft);
+  margin-top: 0.25rem;
+}

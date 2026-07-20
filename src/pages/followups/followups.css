@@ -1,0 +1,145 @@
+@import "../../styles/module.css";
+
+.followups-page {
+  max-width: 1440px;
+}
+
+.followups-calendar {
+  margin-bottom: var(--erp-gap-lg);
+  padding: 1.25rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+}
+
+.followups-calendar__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--erp-gap-md);
+}
+
+.followups-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.followups-calendar__day-label {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--erp-text-muted);
+  text-transform: uppercase;
+  padding-bottom: 0.35rem;
+}
+
+.followups-calendar__cell {
+  min-height: 72px;
+  padding: 0.4rem;
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  font-size: 0.75rem;
+}
+
+.followups-calendar__cell--today {
+  border-color: var(--erp-accent);
+  background: color-mix(in srgb, var(--erp-accent) 8%, var(--erp-card-muted));
+}
+
+.followups-calendar__cell--muted {
+  opacity: 0.45;
+}
+
+.followups-calendar__date {
+  font-weight: 700;
+  color: var(--erp-text);
+  margin-bottom: 0.25rem;
+}
+
+.followups-calendar__dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--erp-accent);
+  margin-top: 0.15rem;
+}
+
+.followups-table__name {
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.followups-table__muted {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+}
+
+.followups-table__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.followups-list__statusbar {
+  margin-bottom: var(--erp-gap-md);
+}
+
+.followups-recent__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.followups-recent__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  text-decoration: none;
+  transition: all var(--erp-transition);
+}
+
+.followups-recent__item:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.followups-recent__item strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--erp-text);
+}
+
+.followups-recent__item span {
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.followups-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--erp-gap-md);
+}
+
+.followups-form__full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .followups-form__grid {
+    grid-template-columns: 1fr;
+  }
+  .followups-calendar__grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.25rem;
+  }
+}

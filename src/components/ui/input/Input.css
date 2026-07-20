@@ -1,0 +1,40 @@
+.erp-input__wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.erp-input__icon {
+  position: absolute;
+  left: 0.875rem;
+  display: inline-flex;
+  color: var(--erp-text-soft);
+  pointer-events: none;
+}
+
+.erp-input__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.erp-input__control--icon {
+  padding-left: 2.6rem;
+}
+
+.erp-input__trailing {
+  position: absolute;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--erp-text-soft);
+}
+
+.erp-field__error {
+  font-size: var(--erp-text-xs);
+  color: var(--erp-danger);
+}
+
+.erp-input__control[type="search"]::-webkit-search-decoration,
+.erp-input__control[type="search"]::-webkit-search-cancel-button {
+  appearance: none;
+}

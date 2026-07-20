@@ -1,0 +1,23 @@
+.placeholder-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 3rem 2rem;
+}
+
+.placeholder-page__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.placeholder-page__text {
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  max-width: 400px;
+}

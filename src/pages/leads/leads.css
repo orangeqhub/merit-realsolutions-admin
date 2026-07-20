@@ -1,0 +1,110 @@
+@import "../../styles/module.css";
+
+.leads-page {
+  max-width: 1440px;
+}
+
+.leads-dashboard__status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.leads-dashboard__status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--erp-border);
+}
+
+.leads-dashboard__status-row:last-child {
+  border-bottom: none;
+}
+
+.leads-table__name {
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.leads-table__muted {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+}
+
+.leads-table__dash {
+  color: var(--erp-text-muted);
+}
+
+.leads-recent__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.leads-recent__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  text-decoration: none;
+  transition: all var(--erp-transition);
+}
+
+.leads-recent__item:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.leads-recent__item strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--erp-text);
+}
+
+.leads-recent__item span {
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.leads-status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.leads-detail__remarks,
+.leads-details__remarks {
+  padding: 1rem;
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  font-size: 0.875rem;
+  color: var(--erp-text);
+  line-height: 1.6;
+}
+
+.leads-details__status-select {
+  max-width: 220px;
+}
+
+.leads-pipeline__budget {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--erp-accent);
+}
+
+.leads-pipeline__card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}

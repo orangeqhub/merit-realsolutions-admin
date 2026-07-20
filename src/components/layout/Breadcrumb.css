@@ -1,0 +1,38 @@
+.breadcrumb {
+  margin-bottom: var(--erp-gap);
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.breadcrumb__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+}
+
+.breadcrumb__link {
+  color: var(--erp-text-muted);
+  font-weight: 500;
+  transition: color var(--erp-transition);
+}
+
+.breadcrumb__link:hover {
+  color: var(--erp-accent);
+}
+
+.breadcrumb__current {
+  color: var(--erp-text);
+  font-weight: 600;
+}
+
+.breadcrumb__separator {
+  width: 14px;
+  height: 14px;
+  color: var(--erp-text-soft);
+}

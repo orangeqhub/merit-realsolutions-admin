@@ -1,0 +1,181 @@
+.plan-viewer {
+  display: flex;
+  flex-direction: column;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  overflow: hidden;
+}
+
+.plan-viewer--empty {
+  padding: 1rem;
+}
+
+.plan-viewer__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--erp-border);
+  background: var(--erp-card-muted);
+  flex-wrap: wrap;
+}
+
+.plan-viewer__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.plan-viewer__title svg {
+  color: var(--erp-accent);
+}
+
+.plan-viewer__tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.plan-viewer__tools button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--erp-radius-sm);
+  border: 1px solid var(--erp-border);
+  background: var(--erp-card);
+  color: var(--erp-text-muted);
+  cursor: pointer;
+  transition: all var(--erp-transition);
+}
+
+.plan-viewer__tools button:hover:not(:disabled) {
+  color: var(--erp-accent);
+  border-color: var(--erp-accent);
+  background: var(--erp-accent-soft);
+}
+
+.plan-viewer__tools button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.plan-viewer__tools button.is-active {
+  color: var(--erp-accent);
+  border-color: var(--erp-accent);
+  background: var(--erp-accent-soft);
+}
+
+.plan-viewer__zoom {
+  min-width: 46px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--erp-text-muted);
+}
+
+.plan-viewer__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--erp-border-strong);
+  margin: 0 0.25rem;
+}
+
+.plan-viewer__stage {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  background:
+    repeating-conic-gradient(#f1f3f7 0% 25%, #ffffff 0% 50%) 50% / 24px 24px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.plan-viewer__stage.is-zoomed {
+  cursor: grab;
+}
+
+.plan-viewer__stage.is-panning {
+  cursor: grabbing;
+}
+
+.plan-viewer__canvas {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center center;
+  transition: transform 0.08s linear;
+  will-change: transform;
+}
+
+.plan-viewer__canvas img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.plan-viewer__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(37, 99, 235, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.25) 1px, transparent 1px);
+  background-size: 5% 5%;
+  pointer-events: none;
+}
+
+/* Future clickable plot hotspots */
+.plan-viewer__plot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  min-width: 24px;
+  height: 24px;
+  padding: 0 0.35rem;
+  border-radius: var(--erp-radius-sm);
+  border: 2px solid var(--erp-card);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--erp-text-inverse);
+  cursor: pointer;
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.plan-viewer__plot--available { background: var(--erp-success); }
+.plan-viewer__plot--booked { background: var(--erp-warning); }
+.plan-viewer__plot--reserved { background: var(--erp-violet); }
+.plan-viewer__plot--sold { background: var(--erp-accent); }
+
+.plan-viewer__hint {
+  margin: 0;
+  padding: 0.6rem 1rem;
+  font-size: 0.74rem;
+  color: var(--erp-text-soft);
+  border-top: 1px solid var(--erp-border);
+  background: var(--erp-card-muted);
+  text-align: center;
+}
+
+.plan-viewer.is-fullscreen {
+  border-radius: 0;
+}
+
+.plan-viewer.is-fullscreen .plan-viewer__stage {
+  height: calc(100vh - 110px);
+}
+
+@media (max-width: 640px) {
+  .plan-viewer__stage {
+    height: 340px;
+  }
+}

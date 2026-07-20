@@ -1,0 +1,120 @@
+@import "../../styles/module.css";
+
+.builders-page {
+  max-width: 1440px;
+}
+
+.builders-page__loading {
+  padding: 2rem;
+  color: var(--erp-text-muted);
+}
+
+.builders-table__name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.builders-table__name img {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--erp-radius-sm);
+  object-fit: contain;
+  background: var(--erp-border);
+  padding: 0.25rem;
+}
+
+.builders-table__name span {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+}
+
+.builders-table__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.builders-form__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--erp-border);
+}
+
+.builders-form__hint {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+  margin-top: 0.35rem;
+}
+
+.builders-details__hero {
+  position: relative;
+  border-radius: var(--erp-radius-lg);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  min-height: 220px;
+  background: linear-gradient(135deg, #0a1628, #132240);
+}
+
+.builders-details__hero img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.builders-details__hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(10, 22, 40, 0.92), transparent 60%);
+}
+
+.builders-details__hero-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.builders-details__hero-head img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: var(--erp-radius-sm);
+  background: #fff;
+  padding: 0.35rem;
+  opacity: 1;
+}
+
+.builders-details__hero-overlay h1 {
+  margin: 0.35rem 0 0;
+  font-size: 1.75rem;
+}
+
+.builders-details__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.builders-details__cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.builders-details__city-tag {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(10, 22, 40, 0.08);
+  font-size: 0.8125rem;
+}

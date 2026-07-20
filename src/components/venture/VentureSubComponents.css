@@ -1,0 +1,252 @@
+.venture-sub__empty {
+  font-size: 0.875rem;
+  color: var(--erp-text-muted);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Documents */
+.venture-docs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.venture-docs__card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  transition: border-color var(--erp-transition), box-shadow var(--erp-transition);
+}
+
+.venture-docs__card:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.venture-docs__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-danger-soft);
+  color: var(--erp-danger);
+  flex-shrink: 0;
+}
+
+.venture-docs__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.venture-docs__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.venture-docs__info h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--erp-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.venture-docs__info p {
+  font-size: 0.75rem;
+  color: var(--erp-text-soft);
+  margin-top: 0.15rem;
+}
+
+.venture-docs__download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--erp-radius-sm);
+  color: var(--erp-text-muted);
+  transition: all var(--erp-transition);
+}
+
+.venture-docs__download:hover {
+  background: var(--erp-accent-soft);
+  color: var(--erp-accent);
+}
+
+.venture-docs__download svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Amenities */
+.venture-amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.venture-amenities__item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--erp-text);
+  transition: border-color var(--erp-transition);
+}
+
+.venture-amenities__item:hover {
+  border-color: var(--erp-accent);
+}
+
+.venture-amenities__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-accent-soft);
+  color: var(--erp-accent);
+}
+
+.venture-amenities__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Pricing */
+.venture-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  overflow: hidden;
+}
+
+.venture-pricing__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.15rem;
+  border-bottom: 1px solid var(--erp-border);
+}
+
+.venture-pricing__row:last-child {
+  border-bottom: none;
+}
+
+.venture-pricing__label {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+}
+
+.venture-pricing__value {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+/* Location */
+.venture-location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.venture-location__map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 280px;
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  color: var(--erp-text-muted);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.venture-location__map-placeholder svg {
+  width: 40px;
+  height: 40px;
+  color: var(--erp-accent);
+}
+
+.venture-location__map-placeholder p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.venture-location__map-placeholder span {
+  font-size: 0.8125rem;
+  color: var(--erp-text-soft);
+}
+
+.venture-location__map-placeholder a {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-accent);
+}
+
+.venture-location__places {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.venture-location__group h4 {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  margin-bottom: 0.5rem;
+}
+
+.venture-location__group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.venture-location__group li,
+.venture-location__group p {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+  padding-left: 0.75rem;
+  position: relative;
+}
+
+.venture-location__group li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--erp-accent);
+}
+
+@media (max-width: 768px) {
+  .venture-location {
+    grid-template-columns: 1fr;
+  }
+}

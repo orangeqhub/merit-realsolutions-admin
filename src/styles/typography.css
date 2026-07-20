@@ -1,0 +1,99 @@
+/* ===================================================================
+   Merit Real Solutions ERP — Typography System
+   Reusable text styles. Apply via classes for consistency.
+   =================================================================== */
+
+:root {
+  --erp-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+
+  --erp-text-xs: 0.75rem;
+  --erp-text-sm: 0.8125rem;
+  --erp-text-base: 0.875rem;
+  --erp-text-md: 0.9375rem;
+  --erp-text-lg: 1.0625rem;
+  --erp-text-xl: 1.25rem;
+  --erp-text-2xl: 1.5rem;
+  --erp-text-3xl: 1.875rem;
+  --erp-text-4xl: 2.25rem;
+
+  --erp-weight-regular: 400;
+  --erp-weight-medium: 500;
+  --erp-weight-semibold: 600;
+  --erp-weight-bold: 700;
+
+  --erp-leading-tight: 1.2;
+  --erp-leading-snug: 1.4;
+  --erp-leading-normal: 1.6;
+}
+
+.erp-page-title {
+  font-size: clamp(1.375rem, 3vw, var(--erp-text-3xl));
+  font-weight: var(--erp-weight-bold);
+  letter-spacing: -0.02em;
+  line-height: var(--erp-leading-tight);
+  color: var(--erp-text);
+}
+
+.erp-section-title {
+  font-size: clamp(1.0625rem, 2vw, var(--erp-text-xl));
+  font-weight: var(--erp-weight-bold);
+  letter-spacing: -0.01em;
+  line-height: var(--erp-leading-snug);
+  color: var(--erp-text);
+}
+
+.erp-card-title {
+  font-size: var(--erp-text-lg);
+  font-weight: var(--erp-weight-semibold);
+  line-height: var(--erp-leading-snug);
+  color: var(--erp-text);
+}
+
+.erp-body {
+  font-size: var(--erp-text-base);
+  font-weight: var(--erp-weight-regular);
+  line-height: var(--erp-leading-normal);
+  color: var(--erp-text-muted);
+}
+
+.erp-caption {
+  font-size: var(--erp-text-xs);
+  font-weight: var(--erp-weight-medium);
+  color: var(--erp-text-soft);
+}
+
+.erp-label {
+  font-size: var(--erp-text-sm);
+  font-weight: var(--erp-weight-semibold);
+  color: var(--erp-text);
+}
+
+.erp-eyebrow {
+  font-size: var(--erp-text-xs);
+  font-weight: var(--erp-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+}
+
+.erp-table-header {
+  font-size: var(--erp-text-xs);
+  font-weight: var(--erp-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+}
+
+/* Helpers */
+.erp-text-muted {
+  color: var(--erp-text-muted);
+}
+.erp-text-soft {
+  color: var(--erp-text-soft);
+}
+.erp-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

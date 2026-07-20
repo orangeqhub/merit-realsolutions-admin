@@ -1,0 +1,56 @@
+.meeting-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.meeting-popup {
+  width: min(520px, 100%);
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25);
+}
+
+.meeting-popup__eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent, #c9a227);
+}
+
+.meeting-popup h2 {
+  margin: 0 0 1rem;
+}
+
+.meeting-popup__details p {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.meeting-popup__details span {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: rgba(26, 39, 68, 0.55);
+}
+
+.meeting-popup__complete {
+  margin: 1rem 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.meeting-popup__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

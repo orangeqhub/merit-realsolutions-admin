@@ -1,0 +1,375 @@
+/* ===================================================================
+   Venture Management Module — Page Styles
+   =================================================================== */
+
+.venture-page {
+  width: 100%;
+}
+
+.venture-section-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  margin-bottom: var(--erp-gap-md);
+}
+
+/* Dashboard */
+.venture-dashboard__charts {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--erp-gap-md);
+  margin-bottom: var(--erp-gap-lg);
+}
+
+.venture-dashboard__donut {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.venture-dashboard__top-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.venture-dashboard__top-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  transition: all var(--erp-transition);
+}
+
+.venture-dashboard__top-item:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-sm);
+  transform: translateX(4px);
+}
+
+.venture-dashboard__rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--erp-accent-soft);
+  color: var(--erp-accent-dark);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.venture-dashboard__top-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--erp-radius-sm);
+  object-fit: cover;
+}
+
+.venture-dashboard__top-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.venture-dashboard__top-info strong {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--erp-text);
+}
+
+.venture-dashboard__top-info span {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+}
+
+.venture-dashboard__revenue {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--erp-success);
+}
+
+/* Toolbar */
+.venture-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--erp-gap-sm);
+  margin-bottom: var(--erp-gap-md);
+  padding: 1.25rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+}
+
+.venture-toolbar__search {
+  width: 280px;
+  max-width: 100%;
+}
+
+.venture-toolbar__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--erp-gap-sm);
+  flex: 1;
+}
+
+.venture-toolbar__filters .erp-field {
+  width: 160px;
+  min-width: 140px;
+}
+
+.venture-toolbar__reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 44px;
+  padding: 0 1rem;
+  border-radius: var(--erp-radius-sm);
+  border: 1px solid var(--erp-border);
+  background: var(--erp-card);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  transition: all var(--erp-transition);
+}
+
+.venture-toolbar__reset:hover:not(:disabled) {
+  border-color: var(--erp-danger);
+  color: var(--erp-danger);
+}
+
+.venture-toolbar__reset:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.venture-toolbar__reset svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Venture list */
+.venture-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.venture-list--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 1rem;
+}
+
+/* Wizard form */
+.venture-form-page {
+  max-width: 1200px;
+}
+
+.venture-wizard {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--erp-gap-lg);
+  align-items: start;
+}
+
+.venture-wizard__steps {
+  position: sticky;
+  top: 1rem;
+  padding: 1.25rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+}
+
+.venture-wizard__content {
+  padding: 1.5rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.venture-wizard__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--erp-gap-lg);
+  border-top: 1px solid var(--erp-border);
+}
+
+.venture-wizard__footer-right {
+  display: flex;
+  gap: var(--erp-gap-sm);
+}
+
+/* Details page */
+.venture-details-page {
+  position: relative;
+}
+
+.venture-details__layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: var(--erp-gap-lg);
+  align-items: start;
+}
+
+.venture-details__main {
+  min-width: 0;
+}
+
+.venture-details__tab-content {
+  padding: var(--erp-gap-lg) 0;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.venture-details__summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--erp-gap-sm);
+  margin-bottom: var(--erp-gap-lg);
+}
+
+.venture-details__overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--erp-gap-md);
+  margin-bottom: var(--erp-gap-md);
+}
+
+.venture-details__progress-card {
+  padding: 1.25rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+}
+
+.venture-details__progress-card h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.venture-details__plot-breakdown {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.venture-details__plot-breakdown .avail { color: var(--erp-success); }
+.venture-details__plot-breakdown .booked { color: var(--erp-warning); }
+.venture-details__plot-breakdown .sold { color: var(--erp-accent); }
+
+.venture-details__description {
+  font-size: 0.9375rem;
+  color: var(--erp-text-muted);
+  line-height: 1.7;
+  padding: 1.25rem;
+  background: var(--erp-card-muted);
+  border-radius: var(--erp-radius-sm);
+}
+
+.venture-details__analytics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--erp-gap-md);
+}
+
+.venture-details__donut-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.venture-details__sidebar {
+  position: sticky;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  z-index: 2;
+}
+
+.cp-assigned {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.cp-assigned__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--erp-border);
+}
+
+.cp-assigned__meta strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--erp-text);
+}
+
+.cp-assigned__meta span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+  margin-top: 0.1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .venture-dashboard__charts {
+    grid-template-columns: 1fr;
+  }
+  .venture-wizard {
+    grid-template-columns: 1fr;
+  }
+  .venture-wizard__steps {
+    position: static;
+  }
+  .venture-details__layout {
+    grid-template-columns: 1fr;
+  }
+  .venture-details__sidebar {
+    position: static;
+  }
+  .venture-details__overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .venture-toolbar__filters .erp-field {
+    width: 100%;
+  }
+  .venture-list--grid {
+    grid-template-columns: 1fr;
+  }
+  .venture-wizard__footer {
+    flex-direction: column;
+    gap: var(--erp-gap-sm);
+  }
+  .venture-wizard__footer-right {
+    width: 100%;
+    flex-direction: column;
+  }
+}

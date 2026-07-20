@@ -1,0 +1,89 @@
+.plot-pricing {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  overflow: hidden;
+}
+
+.plot-pricing__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--erp-border);
+}
+
+.plot-pricing__head h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.plot-pricing__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-success-soft);
+  color: var(--erp-success);
+}
+
+.plot-pricing__rows {
+  padding: 0.5rem 1.25rem;
+}
+
+.plot-pricing__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+  color: var(--erp-text-muted);
+  border-bottom: 1px dashed var(--erp-border);
+}
+
+.plot-pricing__row:last-child {
+  border-bottom: none;
+}
+
+.plot-pricing__row strong {
+  color: var(--erp-text);
+  font-weight: 600;
+}
+
+.plot-pricing__row--discount strong {
+  color: var(--erp-success);
+}
+
+.plot-pricing__row--offer {
+  font-weight: 600;
+}
+
+.plot-pricing__row--offer span,
+.plot-pricing__row--offer strong {
+  color: var(--erp-text);
+}
+
+.plot-pricing__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: var(--erp-primary);
+  color: var(--erp-text-inverse);
+}
+
+.plot-pricing__total span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.plot-pricing__total strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+}

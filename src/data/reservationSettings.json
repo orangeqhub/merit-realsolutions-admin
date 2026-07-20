@@ -1,0 +1,30 @@
+{
+  "validityDays": 15,
+  "minimumReservationPercent": 10,
+  "minimumReservationFlat": 50000,
+  "autoReleaseEnabled": true,
+  "reminderFrequencyDays": [
+    5,
+    2,
+    1
+  ],
+  "gracePeriodDays": 2,
+  "maxExtensions": 3,
+  "workingDaysOnly": true,
+  "workingDays": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "extensionOptions": [
+    7,
+    15,
+    30
+  ],
+  "currency": "INR",
+  "updatedAt": "2026-07-01",
+  "updatedBy": "System Administrator"
+}

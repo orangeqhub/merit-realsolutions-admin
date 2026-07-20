@@ -1,0 +1,168 @@
+.data-table__card {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-sm);
+  overflow: hidden;
+}
+
+.data-table__scroll {
+  width: 100%;
+  overflow-x: auto;
+  max-height: 70vh;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 920px;
+}
+
+.data-table__th {
+  padding: 0.875rem 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--erp-text-soft);
+  background: var(--erp-card-muted);
+  border-bottom: 1px solid var(--erp-border);
+  white-space: nowrap;
+}
+
+.data-table--sticky thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.data-table__th.is-sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--erp-transition);
+}
+
+.data-table__th.is-sortable:hover {
+  color: var(--erp-text);
+}
+
+.data-table__th-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.data-table__th--right .data-table__th-inner {
+  justify-content: flex-end;
+}
+.data-table__th--center .data-table__th-inner {
+  justify-content: center;
+}
+
+.data-table__sort {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 0;
+}
+
+.data-table__sort svg {
+  width: 11px;
+  height: 11px;
+  color: var(--erp-border-strong);
+  margin: -1px 0;
+}
+
+.data-table__sort svg.is-on {
+  color: var(--erp-accent);
+}
+
+.data-table__td {
+  padding: 0.875rem 1.25rem;
+  color: var(--erp-text);
+  border-bottom: 1px solid var(--erp-border);
+  vertical-align: middle;
+}
+
+.data-table__row:last-child .data-table__td {
+  border-bottom: none;
+}
+
+.data-table__th--left,
+.data-table__td--left { text-align: left; }
+.data-table__th--center,
+.data-table__td--center { text-align: center; }
+.data-table__th--right,
+.data-table__td--right { text-align: right; }
+
+.data-table__row {
+  transition: background var(--erp-transition);
+}
+
+.data-table__row:hover {
+  background: var(--erp-card-muted);
+}
+
+.data-table__row.is-clickable {
+  cursor: pointer;
+}
+
+.data-table__footer {
+  padding: 0.875rem 1.25rem;
+  border-top: 1px solid var(--erp-border);
+  background: var(--erp-card);
+}
+
+/* Mobile card layout */
+.data-table__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+.data-table__card-row {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  transition: border-color var(--erp-transition), box-shadow var(--erp-transition);
+}
+
+.data-table__card-row.is-clickable {
+  cursor: pointer;
+}
+
+.data-table__card-row.is-clickable:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.data-table__card-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.data-table__card-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+}
+
+.data-table__card-value {
+  font-size: 0.875rem;
+  color: var(--erp-text);
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .data-table__cards {
+    display: none;
+  }
+}

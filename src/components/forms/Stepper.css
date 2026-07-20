@@ -1,0 +1,134 @@
+.stepper {
+  display: flex;
+}
+
+.stepper--horizontal {
+  flex-direction: row;
+}
+
+.stepper--vertical {
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stepper__step {
+  display: flex;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.stepper--horizontal .stepper__step {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.55rem;
+}
+
+.stepper--vertical .stepper__step {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding-bottom: 1.5rem;
+}
+
+.stepper__step.is-clickable {
+  cursor: pointer;
+}
+
+.stepper__indicator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepper--horizontal .stepper__indicator {
+  width: 100%;
+}
+
+.stepper__bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--erp-card);
+  border: 2px solid var(--erp-border-strong);
+  color: var(--erp-text-soft);
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  z-index: 1;
+  transition: all var(--erp-transition);
+}
+
+.stepper__bubble svg {
+  width: 16px;
+  height: 16px;
+}
+
+.stepper__line {
+  position: absolute;
+  background: var(--erp-border);
+  transition: background var(--erp-transition);
+}
+
+.stepper--horizontal .stepper__line {
+  top: 18px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+}
+
+.stepper--vertical .stepper__line {
+  top: 36px;
+  bottom: -6px;
+  left: 17px;
+  width: 2px;
+}
+
+.stepper__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.stepper__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text-soft);
+  transition: color var(--erp-transition);
+}
+
+.stepper__description {
+  font-size: 0.6875rem;
+  color: var(--erp-text-soft);
+}
+
+/* States */
+.stepper__step--active .stepper__bubble {
+  background: var(--erp-accent);
+  border-color: var(--erp-accent);
+  color: #fff;
+  box-shadow: 0 0 0 4px var(--erp-accent-soft);
+}
+
+.stepper__step--active .stepper__label {
+  color: var(--erp-text);
+}
+
+.stepper__step--completed .stepper__bubble {
+  background: var(--erp-success);
+  border-color: var(--erp-success);
+  color: #fff;
+}
+
+.stepper__step--completed .stepper__label {
+  color: var(--erp-text);
+}
+
+.stepper__step--completed .stepper__line {
+  background: var(--erp-success);
+}

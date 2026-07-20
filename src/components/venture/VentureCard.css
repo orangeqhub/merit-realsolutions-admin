@@ -1,0 +1,317 @@
+.venture-card {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  overflow: hidden;
+  transition: box-shadow var(--erp-transition), border-color var(--erp-transition);
+  container-type: inline-size;
+}
+
+.venture-card:hover {
+  box-shadow: var(--erp-shadow-md);
+  border-color: var(--erp-border-strong);
+}
+
+.venture-card.is-expanded {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-md);
+}
+
+/* Base (narrow / grid view) — stacked layout */
+.venture-card__main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.venture-card__cover {
+  width: 100%;
+  height: 150px;
+  border-radius: var(--erp-radius-sm);
+  overflow: hidden;
+  background: var(--erp-card-muted);
+}
+
+.venture-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--erp-ease);
+}
+
+.venture-card:hover .venture-card__cover img {
+  transform: scale(1.05);
+}
+
+.venture-card__logo {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--erp-radius-sm);
+  overflow: hidden;
+  border: 3px solid var(--erp-card);
+  box-shadow: var(--erp-shadow-sm);
+  margin-top: -34px;
+  margin-left: 0.25rem;
+  background: var(--erp-card);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.venture-card__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.venture-card__info {
+  min-width: 0;
+}
+
+.venture-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.venture-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  letter-spacing: -0.01em;
+}
+
+.venture-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+  margin-top: 0.25rem;
+}
+
+.venture-card__meta svg {
+  width: 14px;
+  height: 14px;
+  color: var(--erp-text-soft);
+}
+
+.venture-card__dot {
+  color: var(--erp-text-soft);
+}
+
+.venture-card__tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.venture-card__tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--erp-radius-pill);
+  background: var(--erp-accent-soft);
+  color: var(--erp-accent-dark);
+}
+
+.venture-card__tag--price {
+  background: var(--erp-success-soft);
+  color: var(--erp-success-dark);
+}
+
+.venture-card__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--erp-border);
+}
+
+.venture-card__metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  min-width: 48px;
+}
+
+.venture-card__metric svg {
+  width: 16px;
+  height: 16px;
+  color: var(--erp-text-soft);
+}
+
+.venture-card__metric span {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.venture-card__metric small {
+  font-size: 0.6875rem;
+  color: var(--erp-text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.venture-card__metric--avail span { color: var(--erp-success); }
+.venture-card__metric--booked span { color: var(--erp-warning); }
+.venture-card__metric--sold span { color: var(--erp-accent); }
+
+.venture-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.venture-card__progress {
+  flex: 1;
+  min-width: 0;
+}
+
+.venture-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.venture-card__expand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--erp-radius-sm);
+  color: var(--erp-text-muted);
+  transition: all var(--erp-transition);
+}
+
+.venture-card__expand:hover {
+  background: var(--erp-hover);
+  color: var(--erp-text);
+}
+
+.venture-card__expand svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--erp-transition);
+}
+
+.venture-card__expand.is-open svg {
+  transform: rotate(180deg);
+}
+
+.venture-card__details {
+  overflow: hidden;
+  border-top: 1px solid var(--erp-border);
+  background: var(--erp-card-muted);
+}
+
+.venture-card__details-inner {
+  padding: 1.25rem 1.5rem;
+}
+
+.venture-card__description {
+  font-size: 0.875rem;
+  color: var(--erp-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 720px;
+}
+
+.venture-card__detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.venture-card__detail-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--erp-text-soft);
+  margin-bottom: 0.2rem;
+}
+
+.venture-card__detail-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.venture-card__view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-accent);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: background var(--erp-transition);
+}
+
+.venture-card__view-btn:hover {
+  background: var(--erp-accent-dark);
+}
+
+.venture-card__view-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.venture-card__detail-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Wide layout — triggers on the card's OWN width (list view / large screens) */
+@container (min-width: 720px) {
+  .venture-card__main {
+    display: grid;
+    grid-template-columns: 150px 44px minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .venture-card__cover {
+    width: 150px;
+    height: 92px;
+  }
+
+  .venture-card__logo {
+    width: 48px;
+    height: 48px;
+    margin: 0 0 0 -32px;
+  }
+
+  .venture-card__metrics {
+    flex-wrap: nowrap;
+    gap: 0.85rem;
+    padding: 0;
+    border-top: none;
+  }
+
+  .venture-card__footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+    min-width: 150px;
+  }
+
+  .venture-card__detail-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

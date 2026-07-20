@@ -1,0 +1,56 @@
+.erp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-pill);
+  font-size: var(--erp-text-sm);
+  font-weight: 500;
+  color: var(--erp-text-muted);
+  transition: all var(--erp-transition);
+}
+
+.erp-chip__icon {
+  display: inline-flex;
+}
+
+.erp-chip__icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.erp-chip.is-clickable {
+  cursor: pointer;
+}
+
+.erp-chip.is-clickable:hover {
+  border-color: var(--erp-accent);
+  color: var(--erp-accent);
+}
+
+.erp-chip.is-active {
+  background: var(--erp-accent);
+  border-color: var(--erp-accent);
+  color: #fff;
+}
+
+.erp-chip--accent { background: var(--erp-accent-soft); border-color: transparent; color: var(--erp-accent-dark); }
+.erp-chip--success { background: var(--erp-success-soft); border-color: transparent; color: var(--erp-success-dark); }
+
+.erp-chip__remove {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  opacity: 0.65;
+}
+
+.erp-chip__remove:hover {
+  opacity: 1;
+}
+
+.erp-chip__remove svg {
+  width: 14px;
+  height: 14px;
+}

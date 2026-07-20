@@ -1,0 +1,263 @@
+[
+  {
+    "id": "REG-13001",
+    "registrationNumber": "REG-2025-0001",
+    "bookingId": "BKG-9003",
+    "customerName": "Sneha Verma",
+    "propertyName": "Lakeview Park 1",
+    "plotNumber": "B-024",
+    "status": "Completed",
+    "submittedDate": "2026-02-05",
+    "completedDate": null,
+    "documents": [
+      {
+        "id": "rd0",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2025-12-22"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2025-12-11",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-12-22"
+  },
+  {
+    "id": "REG-13002",
+    "registrationNumber": "REG-2025-0002",
+    "bookingId": "BKG-9004",
+    "customerName": "Deepak Rao",
+    "propertyName": "Urban Enclave 20",
+    "plotNumber": "E-010",
+    "status": "Completed",
+    "submittedDate": "2026-11-08",
+    "completedDate": null,
+    "documents": [
+      {
+        "id": "rd1",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2026-11-02"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2025-05-23",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2026-11-02"
+  },
+  {
+    "id": "REG-13003",
+    "registrationNumber": "REG-2025-0003",
+    "bookingId": "BKG-9008",
+    "customerName": "Deepak Choudary",
+    "propertyName": "Urban Enclave 20",
+    "plotNumber": "E-010",
+    "status": "In Progress",
+    "submittedDate": "2025-03-06",
+    "completedDate": "2025-03-21",
+    "documents": [
+      {
+        "id": "rd2",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2025-10-17"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2026-12-25",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-10-17"
+  },
+  {
+    "id": "REG-13004",
+    "registrationNumber": "REG-2025-0004",
+    "bookingId": "BKG-9010",
+    "customerName": "Suresh Choudary",
+    "propertyName": "Silver Gardens 13",
+    "plotNumber": "F-023",
+    "status": "Rejected",
+    "submittedDate": "2026-08-15",
+    "completedDate": "2025-04-05",
+    "documents": [
+      {
+        "id": "rd3",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2024-07-21"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2025-08-20",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-07-21"
+  },
+  {
+    "id": "REG-13005",
+    "registrationNumber": "REG-2025-0005",
+    "bookingId": "BKG-9016",
+    "customerName": "Lakshmi Choudary",
+    "propertyName": "Palm Park 5",
+    "plotNumber": "E-024",
+    "status": "Pending",
+    "submittedDate": "2026-12-09",
+    "completedDate": "2025-01-27",
+    "documents": [
+      {
+        "id": "rd4",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2024-05-04"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2025-10-16",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-05-04"
+  },
+  {
+    "id": "REG-13006",
+    "registrationNumber": "REG-2025-0006",
+    "bookingId": "BKG-9017",
+    "customerName": "Priya Naidu",
+    "propertyName": "Green Residence 16",
+    "plotNumber": "C-004",
+    "status": "In Progress",
+    "submittedDate": "2025-09-24",
+    "completedDate": null,
+    "documents": [
+      {
+        "id": "rd5",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2024-09-09"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2026-02-19",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2024-09-09"
+  },
+  {
+    "id": "REG-13007",
+    "registrationNumber": "REG-2025-0007",
+    "bookingId": "BKG-9025",
+    "customerName": "Suresh Choudary",
+    "propertyName": "Merit Residence 17",
+    "plotNumber": "F-022",
+    "status": "Completed",
+    "submittedDate": "2026-10-06",
+    "completedDate": "2025-12-01",
+    "documents": [
+      {
+        "id": "rd6",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2025-11-04"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2026-06-22",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-11-04"
+  },
+  {
+    "id": "REG-13008",
+    "registrationNumber": "REG-2025-0008",
+    "bookingId": "BKG-9026",
+    "customerName": "Anil Kumar",
+    "propertyName": "Palm Park 5",
+    "plotNumber": "E-024",
+    "status": "Rejected",
+    "submittedDate": "2025-06-01",
+    "completedDate": null,
+    "documents": [
+      {
+        "id": "rd7",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2025-11-07"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2025-01-09",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-11-07"
+  },
+  {
+    "id": "REG-13009",
+    "registrationNumber": "REG-2025-0009",
+    "bookingId": "BKG-9028",
+    "customerName": "Arjun Reddy",
+    "propertyName": "Golden Heights 15",
+    "plotNumber": "F-019",
+    "status": "Pending",
+    "submittedDate": "2025-09-03",
+    "completedDate": null,
+    "documents": [
+      {
+        "id": "rd8",
+        "name": "Registration Application",
+        "type": "pdf",
+        "size": "2.0 MB",
+        "date": "2025-09-07"
+      }
+    ],
+    "timeline": [
+      {
+        "type": "submitted",
+        "title": "Application submitted",
+        "date": "2026-07-02",
+        "tone": "accent"
+      }
+    ],
+    "createdDate": "2025-09-07"
+  }
+]

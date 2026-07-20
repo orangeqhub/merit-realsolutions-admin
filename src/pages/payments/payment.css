@@ -1,0 +1,162 @@
+@import "../../styles/module.css";
+
+.payments-page {
+  width: 100%;
+}
+
+.payments-dashboard__charts {
+  margin-bottom: var(--erp-gap-lg);
+}
+
+.payments-dashboard__method-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payments-dashboard__method-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.75rem;
+  background: var(--erp-card-muted);
+  border-radius: var(--erp-radius-sm);
+  font-size: 0.875rem;
+}
+
+.payments-dashboard__recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payments-dashboard__recent-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.15rem;
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--erp-transition);
+}
+
+.payments-dashboard__recent-item:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.payments-table__receipt {
+  font-weight: 700;
+  color: var(--erp-accent-dark);
+}
+
+.payments-table__muted {
+  font-size: 0.8125rem;
+  color: var(--erp-text-muted);
+}
+
+.payments-collect__layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--erp-gap-lg);
+  align-items: start;
+}
+
+.payments-collect__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--erp-gap-md);
+  padding: var(--erp-gap-lg);
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+}
+
+.payments-collect__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--erp-gap-md);
+}
+
+.payments-collect__full {
+  grid-column: 1 / -1;
+}
+
+.payments-collect__summary {
+  padding: var(--erp-gap-lg);
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  position: sticky;
+  top: 1rem;
+}
+
+.payments-collect__summary h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.payments-collect__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--erp-border);
+  font-size: 0.875rem;
+}
+
+.payments-collect__row:last-child {
+  border-bottom: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-top: 0.75rem;
+}
+
+.payments-collect__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--erp-gap-sm);
+  margin-top: var(--erp-gap-md);
+}
+
+.payments-details__txn {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--erp-gap-sm);
+}
+
+.payments-details__txn-item {
+  padding: 0.85rem 1rem;
+  background: var(--erp-card-muted);
+  border-radius: var(--erp-radius-sm);
+}
+
+.payments-details__txn-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.payments-details__txn-item strong {
+  font-size: 0.9375rem;
+  color: var(--erp-text);
+}
+
+@media (max-width: 1024px) {
+  .payments-collect__layout {
+    grid-template-columns: 1fr;
+  }
+  .payments-collect__summary {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .payments-collect__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,37 @@
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: var(--erp-gap-md);
+}
+
+.section-header__title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--erp-text);
+}
+
+.section-header__icon {
+  display: inline-flex;
+  color: var(--erp-accent);
+}
+
+.section-header__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.section-header__description {
+  font-size: 0.875rem;
+  color: var(--erp-text-muted);
+  margin-top: 0.3rem;
+}
+
+.section-header__action {
+  flex-shrink: 0;
+}

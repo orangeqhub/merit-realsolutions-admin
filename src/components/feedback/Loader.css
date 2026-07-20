@@ -1,0 +1,35 @@
+.erp-loader {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.erp-loader__spinner {
+  display: block;
+  border-radius: 50%;
+  border: 3px solid var(--erp-border);
+  border-top-color: var(--erp-accent);
+  animation: erp-spin 0.7s linear infinite;
+}
+
+.erp-loader__spinner--sm { width: 20px; height: 20px; border-width: 2px; }
+.erp-loader__spinner--md { width: 34px; height: 34px; }
+.erp-loader__spinner--lg { width: 48px; height: 48px; border-width: 4px; }
+
+.erp-loader__label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--erp-text-muted);
+}
+
+.erp-loader__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(247, 249, 252, 0.7);
+  backdrop-filter: blur(2px);
+}

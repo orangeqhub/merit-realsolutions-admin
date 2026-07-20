@@ -1,0 +1,96 @@
+.plot-map {
+  background: var(--erp-card);
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  box-shadow: var(--erp-shadow-xs);
+  overflow: hidden;
+}
+
+.plot-map__canvas {
+  position: relative;
+  height: 150px;
+  background:
+    linear-gradient(135deg, #eef2f8 0%, #dce6f5 100%);
+  background-image:
+    linear-gradient(to right, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+  background-size: 100%, 26px 26px, 26px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plot-map__pin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: var(--erp-accent);
+  color: #fff;
+  box-shadow: var(--erp-shadow-md);
+}
+
+.plot-map__pin svg {
+  transform: rotate(45deg);
+  width: 22px;
+  height: 22px;
+}
+
+.plot-map__compass {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--erp-text-inverse);
+  background: rgba(10, 22, 40, 0.6);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--erp-radius-pill);
+}
+
+.plot-map__info {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.plot-map__info h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.plot-map__info h3 svg {
+  color: var(--erp-accent);
+}
+
+.plot-map__info p {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-map__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.78rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-map__meta strong {
+  color: var(--erp-text);
+}
+
+.plot-map__corner {
+  font-weight: 700;
+  color: var(--erp-violet);
+}
