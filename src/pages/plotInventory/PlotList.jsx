@@ -28,7 +28,7 @@ import PlotStatistics from "../../components/plots/PlotStatistics";
 import PlotFilters from "../../components/plots/PlotFilters";
 import PlotStatusBadge from "../../components/plots/PlotStatusBadge";
 import PlotCard from "../../components/plots/PlotCard";
-import MapWorkspace from "../../features/plot-map/components/MapWorkspace";
+import MapWorkspace from "../../features/plot-map/MapWorkspace";
 import { useLayouts } from "../../context/LayoutsContext";
 import { useVentures } from "../../context/VenturesContext";
 import { usePlots } from "../../context/PlotsContext";

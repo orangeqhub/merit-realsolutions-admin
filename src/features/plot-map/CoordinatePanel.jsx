@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiCrosshair, FiMapPin, FiTarget } from 'react-icons/fi';
-import { formatCoordinate } from '../utils/coordinates';
-import MapStatus from './MapStatus';
+import { formatCoordinate } from './utils/coordinateUtils';
+import { MapStatus } from './PlotStatusBar';
 
 export default function CoordinatePanel({ liveCoords, frozenCoords, selectedPlot }) {
   const display = frozenCoords || liveCoords;

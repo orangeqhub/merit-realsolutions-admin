@@ -25,3 +25,8 @@ export function addDays(days) {
   d.setDate(d.getDate() + days);
   return d.toISOString().split('T')[0];
 }
+
+export function toLatLng(coords) {
+  if (!coords) return null;
+  return [parseCoordinate(coords.lat), parseCoordinate(coords.lng)];
+}

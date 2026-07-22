@@ -1,10 +1,10 @@
-import Button from '../../../components/ui/button/Button';
-import Input from '../../../components/ui/input/Input';
-import Select from '../../../components/ui/select/Select';
-import RightDrawer from '../../../components/drawer/RightDrawer';
-import { MAP_STATUS_OPTIONS } from '../constants/mapStatus';
-import { formatCoordinate } from '../utils/coordinates';
-import { FACINGS } from '../../../pages/plotInventory/constants';
+import Button from '../../components/ui/button/Button';
+import Input from '../../components/ui/input/Input';
+import Select from '../../components/ui/select/Select';
+import RightDrawer from '../../components/drawer/RightDrawer';
+import { MAP_STATUS_OPTIONS, SHAPE_TYPES } from './constants/mapStatus';
+import { formatCoordinate } from './utils/coordinateUtils';
+import { FACINGS } from '../../pages/plotInventory/constants';
 
 export default function PlotFormDrawer({
   open,
@@ -13,14 +13,16 @@ export default function PlotFormDrawer({
   setForm,
   frozenCoords,
   onSave,
+  mode = 'create',
 }) {
   const setField = (key, value) => setForm((prev) => ({ ...prev, [key]: value }));
+  const isEdit = mode === 'edit';
 
   return (
     <RightDrawer
       open={open}
       onClose={onClose}
-      title="Create Plot"
+      title={isEdit ? 'Edit Plot' : 'Create Plot'}
       subtitle="Plot will appear on the map instantly after save"
       size="md"
       footer={
@@ -29,7 +31,7 @@ export default function PlotFormDrawer({
             Cancel
           </Button>
           <Button variant="accent" size="md" onClick={onSave}>
-            Save Plot
+            {isEdit ? 'Update Plot' : 'Save Plot'}
           </Button>
         </div>
       }
@@ -55,6 +57,15 @@ export default function PlotFormDrawer({
         <Input label="Width (px)" type="number" value={form.mapWidth} onChange={(e) => setField('mapWidth', e.target.value)} />
         <Input label="Height (px)" type="number" value={form.mapHeight} onChange={(e) => setField('mapHeight', e.target.value)} />
         <Input label="Rotation (°)" type="number" value={form.rotation} onChange={(e) => setField('rotation', e.target.value)} />
+        <Select
+          label="Shape Type"
+          value={form.shapeType || SHAPE_TYPES.RECTANGLE}
+          onChange={(v) => setField('shapeType', v)}
+          options={[
+            { value: SHAPE_TYPES.RECTANGLE, label: 'Rectangle' },
+            { value: SHAPE_TYPES.POLYGON, label: 'Polygon (coming soon)' },
+          ]}
+        />
       </div>
     </RightDrawer>
   );

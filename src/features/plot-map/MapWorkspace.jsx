@@ -1,14 +1,18 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useToast } from '../../../components/feedback/Toast';
-import GoogleMapCanvas, { useMapControls } from './GoogleMapCanvas';
+import { useToast } from '../../components/feedback/Toast';
+import OpenStreetMapCanvas from './OpenStreetMapCanvas';
 import MapToolbar from './MapToolbar';
 import CoordinatePanel from './CoordinatePanel';
 import PlotFormDrawer from './PlotFormDrawer';
 import PlotDetailDrawer from './PlotDetailDrawer';
-import { usePlotMapState } from '../hooks/usePlotMapState';
-import { resolveMapCenter } from '../utils/coordinates';
-import '../styles/plot-map.css';
+import PlotStatusBar from './PlotStatusBar';
+import { usePlotWorkspace } from './hooks/usePlotWorkspace';
+import { useLeafletMap } from './hooks/useLeafletMap';
+import { resolveMapCenter } from './utils/coordinateUtils';
+import { getMapTypeLabel } from './utils/mapHelpers';
+import { filterPlottablePlots } from './utils/overlayUtils';
+import './styles/plot-map.css';
 
 export default function MapWorkspace({ layout, venture, className = '' }) {
   const toast = useToast();
@@ -18,20 +22,29 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const center = resolveMapCenter(venture, layout);
 
-  const state = usePlotMapState({ layout, venture });
-  const { zoomIn, zoomOut, centerMap } = useMapControls(mapRef, center);
+  const state = usePlotWorkspace({ layout, venture });
+  const { zoomIn, zoomOut, centerMap } = useLeafletMap(mapRef, center);
+
+  const mappedCount = useMemo(
+    () => filterPlottablePlots(state.layoutPlots).length,
+    [state.layoutPlots]
+  );
 
   const handleMapReady = useCallback((map) => {
     mapRef.current = map;
   }, []);
 
   const handleSaveToolbar = useCallback(() => {
+    state.saveLayoutMap();
     toast.success('Layout map saved locally');
-  }, [toast]);
+  }, [state, toast]);
 
   const handleUndo = useCallback(() => {
-    state.undo();
-    toast.info('Undid last map change');
+    if (state.undo()) toast.info('Undid last map change');
+  }, [state, toast]);
+
+  const handleRedo = useCallback(() => {
+    if (state.redo()) toast.info('Redid last map change');
   }, [state, toast]);
 
   const toggleFullscreen = useCallback(async () => {
@@ -68,14 +81,18 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
         onCenter={centerMap}
         onSave={handleSaveToolbar}
         onUndo={handleUndo}
+        onRedo={handleRedo}
+        canUndo={state.canUndo}
+        canRedo={state.canRedo}
         isFullscreen={isFullscreen}
         onToggleFullscreen={toggleFullscreen}
         layoutName={layout.name}
+        plots={state.layoutPlots}
       />
 
       <div className="plot-map-workspace__body">
         <div className="plot-map-workspace__map">
-          <GoogleMapCanvas
+          <OpenStreetMapCanvas
             venture={venture}
             layout={layout}
             plots={state.filteredPlots}
@@ -95,6 +112,13 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
         />
       </div>
 
+      <PlotStatusBar
+        layoutName={layout.name}
+        plotCount={state.layoutPlots.length}
+        mappedCount={mappedCount}
+        mapTypeLabel={getMapTypeLabel(mapType)}
+      />
+
       <PlotFormDrawer
         open={state.createOpen}
         onClose={state.closeDrawers}
@@ -105,6 +129,20 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
           const saved = state.savePlot();
           if (saved) toast.success(`Plot ${saved.plotNumber} added to map`);
         }}
+        mode="create"
+      />
+
+      <PlotFormDrawer
+        open={state.editOpen}
+        onClose={state.closeDrawers}
+        form={state.form}
+        setForm={state.setForm}
+        frozenCoords={state.frozenCoords}
+        onSave={() => {
+          const saved = state.savePlot();
+          if (saved) toast.success(`Plot ${saved.plotNumber} updated`);
+        }}
+        mode="edit"
       />
 
       <PlotDetailDrawer
@@ -123,6 +161,7 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
           state.scheduleVisit();
           toast.success('Site visit scheduled (mock)');
         }}
+        onEdit={state.openEditPlot}
       />
     </motion.div>
   );

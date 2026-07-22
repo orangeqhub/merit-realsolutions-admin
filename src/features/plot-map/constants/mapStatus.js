@@ -17,10 +17,16 @@ export const MAP_LEGEND_ITEMS = Object.entries(MAP_STATUS_COLORS).map(([status, 
   ...meta,
 }));
 
+export const SHAPE_TYPES = {
+  RECTANGLE: 'RECTANGLE',
+  POLYGON: 'POLYGON',
+};
+
 export const DEFAULT_PLOT_OVERLAY = {
   mapWidth: 72,
   mapHeight: 48,
   rotation: 0,
+  shapeType: SHAPE_TYPES.RECTANGLE,
 };
 
 export const MOCK_CUSTOMERS = [

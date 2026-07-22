@@ -4,7 +4,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 import Breadcrumb from '../../components/layout/Breadcrumb';
 import Button from '../../components/ui/button/Button';
 import EmptyState from '../../components/layout/EmptyState';
-import MapWorkspace from '../../features/plot-map/components/MapWorkspace';
+import MapWorkspace from '../../features/plot-map/MapWorkspace';
 import { useLayouts } from '../../context/LayoutsContext';
 import { useVentures } from '../../context/VenturesContext';
 

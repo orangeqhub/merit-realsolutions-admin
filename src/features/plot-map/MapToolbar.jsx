@@ -3,13 +3,14 @@ import {
   FiMaximize2,
   FiMinimize2,
   FiRotateCcw,
+  FiRotateCw,
   FiSave,
   FiZoomIn,
   FiZoomOut,
 } from 'react-icons/fi';
-import Button from '../../../components/ui/button/Button';
+import Button from '../../components/ui/button/Button';
 import PlotSearch from './PlotSearch';
-import Legend from './Legend';
+import PlotLegend from './PlotLegend';
 
 export default function MapToolbar({
   searchQuery,
@@ -21,9 +22,13 @@ export default function MapToolbar({
   onCenter,
   onSave,
   onUndo,
+  onRedo,
+  canUndo = false,
+  canRedo = false,
   isFullscreen,
   onToggleFullscreen,
   layoutName,
+  plots = [],
 }) {
   return (
     <div className="plot-map-toolbar">
@@ -53,10 +58,10 @@ export default function MapToolbar({
           className={`plot-map-toolbar__pill ${mapType === 'roadmap' ? 'is-active' : ''}`}
           onClick={() => onMapTypeChange('roadmap')}
         >
-          Road
+          Standard
         </button>
-        <button type="button" className="plot-map-toolbar__btn" onClick={onCenter} aria-label="Center venture">
-          Center
+        <button type="button" className="plot-map-toolbar__btn" onClick={onCenter} aria-label="Center layout">
+          Center Layout
         </button>
         <button type="button" className="plot-map-toolbar__btn" onClick={onToggleFullscreen} aria-label="Toggle fullscreen">
           {isFullscreen ? <FiMinimize2 /> : <FiMaximize2 />}
@@ -64,9 +69,12 @@ export default function MapToolbar({
       </div>
 
       <div className="plot-map-toolbar__right">
-        <Legend />
-        <Button variant="ghost" size="sm" onClick={onUndo}>
+        <PlotLegend plots={plots} />
+        <Button variant="ghost" size="sm" onClick={onUndo} disabled={!canUndo}>
           <FiRotateCcw /> Undo
+        </Button>
+        <Button variant="ghost" size="sm" onClick={onRedo} disabled={!canRedo}>
+          <FiRotateCw /> Redo
         </Button>
         <Button variant="accent" size="sm" onClick={onSave}>
           <FiSave /> Save

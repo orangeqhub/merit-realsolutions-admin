@@ -3,7 +3,7 @@ import { FiMap, FiPlus } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/ui/button/Button';
 import EmptyState from '../../components/layout/EmptyState';
-import MapWorkspace from '../../features/plot-map/components/MapWorkspace';
+import MapWorkspace from '../../features/plot-map/MapWorkspace';
 
 export default function VentureLayoutsPanel({ venture, layouts = [] }) {
   const navigate = useNavigate();

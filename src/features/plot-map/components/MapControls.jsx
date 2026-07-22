@@ -1,1 +1,0 @@
-export { useMapControls } from './GoogleMapCanvas';

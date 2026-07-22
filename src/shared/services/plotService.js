@@ -80,6 +80,8 @@ export const plotService = {
         mapWidth: data.mapWidth ?? 72,
         mapHeight: data.mapHeight ?? 48,
         rotation: data.rotation ?? 0,
+        shapeType: data.shapeType || 'RECTANGLE',
+        polygonPoints: data.polygonPoints || [],
         documents: [],
         createdDate: today(),
       },

@@ -62,7 +62,9 @@
     "longitude": 78.4299,
     "mapWidth": 78,
     "mapHeight": 52,
-    "rotation": 0
+    "rotation": 0,
+    "shapeType": "RECTANGLE",
+    "polygonPoints": []
   },
   {
     "id": "PLT-100002",
