@@ -1,0 +1,492 @@
+/* Plot Map Workspace — premium glass UI */
+
+.plot-map-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-height: min(78vh, 860px);
+  border-radius: var(--erp-radius-lg, 20px);
+  overflow: hidden;
+}
+
+.plot-map-workspace__body {
+  position: relative;
+  flex: 1;
+  min-height: 520px;
+  border-radius: var(--erp-radius-lg, 20px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 60px rgba(10, 22, 40, 0.14);
+}
+
+.plot-map-workspace__map {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+}
+
+.plot-map-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--erp-radius, 16px);
+  box-shadow: var(--erp-shadow-sm);
+}
+
+.plot-map-toolbar__left,
+.plot-map-toolbar__center,
+.plot-map-toolbar__right {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.plot-map-toolbar__layout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  white-space: nowrap;
+}
+
+.plot-map-toolbar__btn,
+.plot-map-toolbar__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--erp-border);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--erp-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.plot-map-toolbar__btn:hover,
+.plot-map-toolbar__pill:hover {
+  border-color: var(--erp-accent);
+  box-shadow: var(--erp-shadow-xs);
+}
+
+.plot-map-toolbar__pill.is-active {
+  background: var(--color-navy, #0a1628);
+  color: #fff;
+  border-color: var(--color-navy, #0a1628);
+}
+
+.plot-map-search {
+  position: relative;
+  min-width: min(100%, 240px);
+}
+
+.plot-map-search svg {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--erp-text-soft);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.plot-map-search .erp-field,
+.plot-map-search input {
+  padding-left: 2.25rem;
+}
+
+.plot-map-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid var(--erp-border);
+}
+
+.plot-map-legend__title {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+}
+
+.plot-map-legend__items {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.plot-map-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+}
+
+.plot-map-legend__item i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.plot-map-panel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 5;
+  width: min(100%, 280px);
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 18px 50px rgba(10, 22, 40, 0.16);
+}
+
+.plot-map-panel__head {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.plot-map-panel__head svg {
+  width: 20px;
+  height: 20px;
+  color: var(--erp-accent);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.plot-map-panel__head h3 {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.plot-map-panel__head p {
+  margin: 0.2rem 0 0;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-map-panel__coords {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
+.plot-map-panel__coord {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid var(--erp-border);
+}
+
+.plot-map-panel__coord span {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+}
+
+.plot-map-panel__coord strong {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--erp-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.plot-map-panel__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  background: rgba(241, 245, 249, 0.95);
+}
+
+.plot-map-panel__badge--frozen {
+  color: #92400e;
+  background: rgba(254, 243, 199, 0.95);
+}
+
+.plot-map-panel__selected {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--erp-border);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.plot-map-panel__selected span {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+}
+
+.plot-map-panel__selected strong {
+  font-size: 1rem;
+  color: var(--erp-text);
+}
+
+.map-status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.plot-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: box-shadow 0.22s ease;
+}
+
+.plot-block__label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.plot-block--selected {
+  z-index: 30;
+}
+
+.plot-map-drawer__coords-readonly {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.plot-map-drawer__coords-readonly div {
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+}
+
+.plot-map-drawer__coords-readonly span {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--erp-text-soft);
+  margin-bottom: 0.25rem;
+}
+
+.plot-map-drawer__coords-readonly strong {
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.plot-map-drawer__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.plot-map-drawer__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.plot-map-drawer__footer--stack {
+  flex-direction: column;
+}
+
+.plot-map-detail__status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.plot-map-detail__id {
+  font-size: 0.75rem;
+  color: var(--erp-text-soft);
+}
+
+.plot-map-detail__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.plot-map-detail__grid dt {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+  margin-bottom: 0.2rem;
+}
+
+.plot-map-detail__grid dd {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.plot-map-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 420px;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #fff;
+}
+
+.plot-map-fallback--loading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.plot-map-fallback--error {
+  color: #fecaca;
+}
+
+.plot-map-empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--erp-text-muted);
+}
+
+.venture-layouts-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.venture-layouts-panel__picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.85rem 1rem;
+  border-radius: var(--erp-radius);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--erp-border);
+}
+
+.venture-layouts-panel__chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.venture-layouts-panel__chip {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--erp-border);
+  background: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.venture-layouts-panel__chip.is-active {
+  background: var(--color-navy, #0a1628);
+  border-color: var(--color-navy, #0a1628);
+  color: #fff;
+}
+
+.plot-list-map-shell {
+  min-height: 70vh;
+}
+
+@media (max-width: 1024px) {
+  .plot-map-toolbar__right .plot-map-legend {
+    display: none;
+  }
+
+  .plot-map-drawer__form,
+  .plot-map-detail__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .plot-map-panel {
+    position: static;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .plot-map-workspace__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plot-map-workspace__map {
+    min-height: 360px;
+  }
+}
+
+.plot-list-map-shell {
+  margin-top: 1rem;
+  border-radius: var(--erp-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--erp-border);
+  min-height: 560px;
+}
+
+.plot-list-map-shell .plot-map-workspace {
+  min-height: 560px;
+}

@@ -7,6 +7,7 @@ import {
   FiBarChart2,
   FiGrid,
   FiList,
+  FiMap,
   FiEye,
   FiEdit2,
   FiBookmark,
@@ -27,9 +28,13 @@ import PlotStatistics from "../../components/plots/PlotStatistics";
 import PlotFilters from "../../components/plots/PlotFilters";
 import PlotStatusBadge from "../../components/plots/PlotStatusBadge";
 import PlotCard from "../../components/plots/PlotCard";
+import MapWorkspace from "../../features/plot-map/components/MapWorkspace";
+import { useLayouts } from "../../context/LayoutsContext";
+import { useVentures } from "../../context/VenturesContext";
 import { usePlots } from "../../context/PlotsContext";
 import { useToast } from "../../components/feedback/Toast";
 import { formatINR, formatRate } from "./constants";
+import "../../features/plot-map/styles/plot-map.css";
 import "./plotInventory.css";
 
 const EMPTY_FILTERS = {
@@ -54,10 +59,22 @@ export default function PlotList() {
   const navigate = useNavigate();
   const toast = useToast();
   const { plots, reservePlot, bookPlot, blockPlot, releasePlot, removePlot } = usePlots();
+  const { layouts } = useLayouts();
+  const { getVenture } = useVentures();
 
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [view, setView] = useState("table");
   const [deleteTarget, setDeleteTarget] = useState(null);
+
+  const mapLayout = useMemo(() => {
+    if (!filters.layout) return null;
+    return layouts.find((l) => l.name === filters.layout) || null;
+  }, [filters.layout, layouts]);
+
+  const mapVenture = useMemo(
+    () => (mapLayout ? getVenture(mapLayout.ventureId) : null),
+    [getVenture, mapLayout]
+  );
 
   const ventures = useMemo(
     () => [...new Set(plots.map((p) => p.ventureName).filter(Boolean))].sort(),
@@ -258,6 +275,7 @@ export default function PlotList() {
           items={[
             { id: "table", label: "Table", icon: <FiList /> },
             { id: "grid", label: "Grid", icon: <FiGrid /> },
+            { id: "map", label: "Map", icon: <FiMap /> },
           ]}
           active={view}
           onChange={setView}
@@ -281,6 +299,17 @@ export default function PlotList() {
             )
           }
         />
+      ) : view === "map" ? (
+        mapLayout ? (
+          <div className="plot-list-map-shell">
+            <MapWorkspace layout={mapLayout} venture={mapVenture} />
+          </div>
+        ) : (
+          <EmptyState
+            title="Select a layout to open the map"
+            description="Choose a layout from the filters above to view and manage plots on the satellite map."
+          />
+        )
       ) : view === "table" ? (
         <DataTable
           columns={columns}

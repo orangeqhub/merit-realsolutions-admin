@@ -86,10 +86,12 @@ export default function VentureForm() {
     if (editing) {
       updateVenture(editing.id, payload);
       toast.success("Venture updated successfully");
+      if (payload.mapUrl) window.open(payload.mapUrl, "_blank", "noopener,noreferrer");
       navigate(`/dashboard/ventures/${editing.id}`);
     } else {
       const record = addVenture(payload);
       toast.success(status === "Draft" ? "Draft saved" : "Venture published successfully");
+      if (payload.mapUrl) window.open(payload.mapUrl, "_blank", "noopener,noreferrer");
       navigate(`/dashboard/ventures/${record.id}`);
     }
   };

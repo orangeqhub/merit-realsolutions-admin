@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FiArrowLeft,
@@ -44,6 +44,7 @@ import { useToast } from "../../components/feedback/Toast";
 import { getVentureAnalytics, getVentureStatistics } from "../../shared/services/statisticsService.js";
 import { useCollection } from "../../shared/hooks/useDataStore.js";
 import InteractivePlotReservationWorkspace from "../../domains/venture/interactivePlots/InteractivePlotReservationWorkspace";
+import VentureLayoutsPanel from "./VentureLayoutsPanel";
 import "./venture.css";
 
 export default function VentureDetails() {
@@ -60,7 +61,9 @@ export default function VentureDetails() {
   const stats = useMemo(() => (id ? getVentureStatistics(id) : null), [id, plots, layouts]);
   const analytics = useMemo(() => (id ? getVentureAnalytics(id) : null), [id, plots, layouts]);
   const ventureLayouts = useMemo(() => (id ? getByVenture(id) : []), [id, getByVenture, layouts]);
-  const [tab, setTab] = useState("overview");
+  const [searchParams] = useSearchParams();
+  const initialTab = searchParams.get("tab") || "layouts";
+  const [tab, setTab] = useState(initialTab);
   const [deleteOpen, setDeleteOpen] = useState(false);
 
   if (!venture) {
@@ -125,38 +128,7 @@ export default function VentureDetails() {
           </>
         );
       case "layouts":
-        return ventureLayouts.length ? (
-          <div className="venture-details__layouts">
-            <div className="venture-details__layouts-head">
-              <h3>Layouts ({ventureLayouts.length})</h3>
-              <Button variant="accent" size="sm" to={`/dashboard/layouts/new?venture=${venture.id}`}>
-                <FiPlus /> Add Layout
-              </Button>
-            </div>
-            <div className="venture-details__layouts-grid">
-              {ventureLayouts.map((layout) => (
-                <article key={layout.id} className="venture-details__layout-card">
-                  <h4>{layout.name}</h4>
-                  <p>{layout.city}, {layout.district}</p>
-                  <span className="venture-details__layout-status">{layout.status}</span>
-                  <Button variant="ghost" size="sm" to={`/dashboard/layouts/${layout.id}`}>
-                    <FiEye /> Open
-                  </Button>
-                </article>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <EmptyState
-            title="No layouts yet"
-            description="Create the first layout for this venture to start adding plots."
-            action={
-              <Button variant="accent" size="md" to={`/dashboard/layouts/new?venture=${venture.id}`}>
-                <FiPlus /> Create Layout
-              </Button>
-            }
-          />
-        );
+        return <VentureLayoutsPanel venture={venture} layouts={ventureLayouts} />;
       case "plots":
         return <InteractivePlotReservationWorkspace venture={venture} />;
       case "pricing":

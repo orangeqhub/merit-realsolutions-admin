@@ -49,6 +49,11 @@ export default function LayoutCard({ layout, onEdit, onDelete }) {
               { label: "View Details", icon: <FiEye />, onClick: open },
               { label: "Edit", icon: <FiEdit2 />, onClick: () => onEdit?.(layout) },
               {
+                label: "Open Workspace",
+                icon: <FiMap />,
+                onClick: () => navigate(`/dashboard/layouts/${layout.id}/workspace`),
+              },
+              {
                 label: "Open Plot Inventory",
                 icon: <FiGrid />,
                 onClick: () => navigate(`/dashboard/layouts/${layout.id}?tab=plots`),
@@ -120,7 +125,16 @@ export default function LayoutCard({ layout, onEdit, onDelete }) {
           <span className="layout-card__updated">
             <FiClock /> Updated {layout.lastUpdated}
           </span>
-          <span className="layout-card__code">{layout.code}</span>
+          <div className="layout-card__footer-actions">
+            <button
+              type="button"
+              className="layout-card__workspace-btn"
+              onClick={() => navigate(`/dashboard/layouts/${layout.id}/workspace`)}
+            >
+              <FiMap /> Open Workspace
+            </button>
+            <span className="layout-card__code">{layout.code}</span>
+          </div>
         </footer>
       </div>
     </motion.article>

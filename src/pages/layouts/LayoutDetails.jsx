@@ -240,6 +240,9 @@ export default function LayoutDetails() {
             </p>
           </div>
           <div className="layout-hero__actions">
+            <Button variant="accent" size="md" onClick={() => navigate(`/dashboard/layouts/${layout.id}/workspace`)}>
+              <FiMap /> Open Workspace
+            </Button>
             <Button variant="ghost" size="md" onClick={() => navigate(`/dashboard/layouts/${layout.id}/edit`)}>
               <FiEdit2 /> Edit
             </Button>

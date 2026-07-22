@@ -13,13 +13,13 @@ import {
 
 const VENTURE_TABS = [
   { id: "overview", label: "Overview", icon: <FiHome /> },
+  { id: "gallery", label: "Gallery", icon: <FiImage /> },
+  { id: "amenities", label: "Amenities", icon: <FiHeart /> },
+  { id: "documents", label: "Documents", icon: <FiFileText /> },
   { id: "layouts", label: "Layouts", icon: <FiLayers /> },
+  { id: "timeline", label: "Activity", icon: <FiClock /> },
   { id: "plots", label: "Plots", icon: <FiGrid /> },
   { id: "pricing", label: "Pricing", icon: <FiDollarSign /> },
-  { id: "amenities", label: "Amenities", icon: <FiHeart /> },
-  { id: "gallery", label: "Gallery", icon: <FiImage /> },
-  { id: "documents", label: "Documents", icon: <FiFileText /> },
-  { id: "timeline", label: "Timeline", icon: <FiClock /> },
   { id: "analytics", label: "Analytics", icon: <FiBarChart2 /> },
 ];
 

@@ -57,7 +57,12 @@
         "tone": "violet"
       }
     ],
-    "assignedPartnerId": "CP-10019"
+    "assignedPartnerId": "CP-10019",
+    "latitude": 17.2408,
+    "longitude": 78.4299,
+    "mapWidth": 78,
+    "mapHeight": 52,
+    "rotation": 0
   },
   {
     "id": "PLT-100002",
@@ -104,7 +109,12 @@
       }
     ],
     "bookingId": "BKG-9019",
-    "assignedPartnerId": "CP-10026"
+    "assignedPartnerId": "CP-10026",
+    "latitude": 17.2412,
+    "longitude": 78.4303,
+    "mapWidth": 84,
+    "mapHeight": 50,
+    "rotation": -4
   },
   {
     "id": "PLT-100003",
@@ -164,7 +174,12 @@
         "tone": "success"
       }
     ],
-    "assignedPartnerId": "CP-10019"
+    "assignedPartnerId": "CP-10019",
+    "latitude": 17.2416,
+    "longitude": 78.4308,
+    "mapWidth": 80,
+    "mapHeight": 56,
+    "rotation": 6
   },
   {
     "id": "PLT-100004",

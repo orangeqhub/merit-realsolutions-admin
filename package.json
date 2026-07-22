@@ -13,6 +13,7 @@
     "gen-reservations": "node scripts/genReservations.cjs"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.8",
     "framer-motion": "^12.42.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",

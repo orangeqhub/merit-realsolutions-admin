@@ -9,6 +9,7 @@ import {
   FiList,
   FiEye,
   FiEdit2,
+  FiMap,
   FiTrash2,
 } from "react-icons/fi";
 import PageHeader from "../../components/layout/PageHeader";
@@ -141,6 +142,7 @@ export default function LayoutList() {
         <div onClick={(e) => e.stopPropagation()}>
           <Dropdown
             items={[
+              { label: "Open Workspace", icon: <FiMap />, onClick: () => navigate(`/dashboard/layouts/${row.id}/workspace`) },
               { label: "View", icon: <FiEye />, onClick: () => navigate(`/dashboard/layouts/${row.id}`) },
               { label: "Edit", icon: <FiEdit2 />, onClick: () => navigate(`/dashboard/layouts/${row.id}/edit`) },
               { label: "Delete", icon: <FiTrash2 />, tone: "danger", onClick: () => setDeleteTarget(row) },

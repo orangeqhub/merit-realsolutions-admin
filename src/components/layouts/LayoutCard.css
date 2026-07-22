@@ -180,9 +180,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
   margin-top: auto;
   padding-top: 0.7rem;
   border-top: 1px solid var(--erp-border);
+}
+
+.layout-card__footer-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.layout-card__workspace-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--erp-accent);
+  background: rgba(0, 122, 255, 0.08);
+  border: 1px solid rgba(0, 122, 255, 0.2);
+  border-radius: var(--erp-radius-sm);
+  cursor: pointer;
+  transition: background var(--erp-transition), transform var(--erp-transition);
+}
+
+.layout-card__workspace-btn:hover {
+  background: rgba(0, 122, 255, 0.14);
+  transform: translateY(-1px);
 }
 
 .layout-card__updated {

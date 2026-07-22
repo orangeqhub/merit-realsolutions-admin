@@ -23,6 +23,7 @@ import LayoutDashboard from "./pages/layouts/LayoutDashboard";
 import LayoutList from "./pages/layouts/LayoutList";
 import LayoutForm from "./pages/layouts/LayoutForm";
 import LayoutDetails from "./pages/layouts/LayoutDetails";
+import LayoutMapWorkspace from "./pages/layouts/LayoutMapWorkspace";
 import { PlotsLayout } from "./context/PlotsContext";
 import PlotDashboard from "./pages/plotInventory/PlotDashboard";
 import PlotList from "./pages/plotInventory/PlotList";
@@ -106,6 +107,7 @@ import UserList from "./pages/users/UserList";
 import UserForm from "./pages/users/UserForm";
 import UserDetails from "./pages/users/UserDetails";
 import { PartnerAssignmentsLayout } from "./context/PartnerAssignmentsContext";
+import { ReservationLayout } from "./context/ReservationContext";
 
 function App() {
   return (
@@ -135,12 +137,14 @@ function App() {
             <Route path=":id" element={<CompanyDetails />} />
           </Route>
 
-          <Route path="ventures" element={<VenturesLayout />}>
+          <Route path="ventures" element={<ReservationLayout />}>
+            <Route element={<VenturesLayout />}>
             <Route index element={<VentureDashboard />} />
             <Route path="list" element={<VentureList />} />
             <Route path="new" element={<VentureForm />} />
             <Route path=":id/edit" element={<VentureForm />} />
             <Route path=":id" element={<VentureDetails />} />
+            </Route>
           </Route>
 
           <Route path="layouts" element={<LayoutsLayout />}>
@@ -148,6 +152,7 @@ function App() {
             <Route path="list" element={<LayoutList />} />
             <Route path="new" element={<LayoutForm />} />
             <Route path=":id/edit" element={<LayoutForm />} />
+            <Route path=":id/workspace" element={<LayoutMapWorkspace />} />
             <Route path=":id" element={<LayoutDetails />} />
           </Route>
 
