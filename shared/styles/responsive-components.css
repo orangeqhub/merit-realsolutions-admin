@@ -1,0 +1,62 @@
+/* Shared responsive component overrides (website + admin ERP modules) */
+
+@media (max-width: 1023px) {
+  .erp-dashboard__charts {
+    grid-template-columns: 1fr;
+  }
+
+  .erp-details__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .erp-details__sidebar {
+    position: static;
+  }
+
+  .erp-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .erp-toolbar__search {
+    max-width: none;
+    width: 100%;
+  }
+
+  .erp-toolbar__filters {
+    width: 100%;
+  }
+
+  .erp-pipeline {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .erp-details__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .erp-details__actions {
+    width: 100%;
+  }
+
+  .erp-details__summary {
+    grid-template-columns: 1fr;
+  }
+
+  .erp-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid--2,
+  .dashboard-grid--3,
+  .dashboard-grid--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-content {
+    padding: 1rem;
+  }
+}

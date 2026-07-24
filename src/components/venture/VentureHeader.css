@@ -1,8 +1,10 @@
 .venture-header {
   position: relative;
-  margin: -1.5rem -1.5rem var(--erp-gap-lg);
+  margin-bottom: var(--erp-gap-lg);
   border-radius: var(--erp-radius);
   overflow: hidden;
+  border: 1px solid var(--erp-border);
+  box-shadow: var(--erp-shadow-xs);
 }
 
 .venture-header__banner {
@@ -11,10 +13,18 @@
   background: var(--erp-primary);
 }
 
+.venture-header__banner-image,
 .venture-header__banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.venture-header__banner-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 55%, #2563eb 100%);
 }
 
 .venture-header__overlay {
@@ -103,7 +113,7 @@
 
 @media (max-width: 768px) {
   .venture-header {
-    margin: -1rem -1rem var(--erp-gap-md);
+    margin-bottom: var(--erp-gap-md);
   }
   .venture-header__banner {
     height: 160px;

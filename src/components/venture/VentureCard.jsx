@@ -13,8 +13,10 @@ import {
 import Badge from "../ui/badge/Badge";
 import Dropdown from "../ui/dropdown/Dropdown";
 import VentureProgress from "./VentureProgress";
+import MediaImage from "./MediaImage";
 import { formatPriceRange, formatSqYardPrice } from "../../pages/ventures/constants";
 import { getVentureStatistics } from "../../shared/services/statisticsService.js";
+import { getAvatarFallback, getVentureCardImageUrl } from "../../utils/media";
 import "./VentureCard.css";
 
 export default function VentureCard({ venture, onEdit, onDelete }) {
@@ -35,11 +37,22 @@ export default function VentureCard({ venture, onEdit, onDelete }) {
         onKeyDown={(e) => e.key === "Enter" && setExpanded((p) => !p)}
       >
         <div className="venture-card__cover">
-          <img src={venture.thumbnail || venture.banner} alt={venture.name} loading="lazy" />
+          <MediaImage
+            src={getVentureCardImageUrl(venture)}
+            alt={venture.name}
+            className="venture-card__cover-image"
+            placeholderClassName="venture-card__cover-placeholder"
+            loading="lazy"
+          />
         </div>
 
         <div className="venture-card__logo">
-          <img src={venture.logo} alt="" />
+          <MediaImage
+            src={venture.logo || venture.thumbnail}
+            fallback={getAvatarFallback(venture.name)}
+            alt=""
+            className="venture-card__logo-image"
+          />
         </div>
 
         <div className="venture-card__info">

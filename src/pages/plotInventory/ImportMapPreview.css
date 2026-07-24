@@ -1,0 +1,98 @@
+.plot-import-map {
+  height: 420px;
+  border: 1px solid var(--erp-border);
+  border-radius: var(--erp-radius);
+  overflow: hidden;
+  background: var(--erp-card-muted);
+}
+
+.plot-import-map .plot-leaflet-map {
+  height: 100%;
+  width: 100%;
+}
+
+.plot-import-map--loading,
+.plot-import-map--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  color: var(--erp-text-muted);
+  font-size: 0.9rem;
+}
+
+.plot-import__errors-table {
+  margin-top: var(--erp-gap-md);
+}
+
+.plot-import__preview-layout {
+  display: grid;
+  gap: var(--erp-gap-md);
+}
+
+@media (min-width: 1024px) {
+  .plot-import__preview-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .plot-import-map {
+    height: 520px;
+  }
+}
+
+.plot-import__summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--erp-gap-sm);
+  width: 100%;
+  max-width: 640px;
+  margin: var(--erp-gap-md) 0;
+}
+
+.plot-import__summary-card {
+  padding: 1rem;
+  border-radius: var(--erp-radius-sm);
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+}
+
+.plot-import__summary-card strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--erp-text);
+}
+
+.plot-import__summary-card span {
+  font-size: 0.8rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-import__layout-select {
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: var(--erp-gap-md);
+}
+
+.plot-import__template-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--erp-gap-sm);
+  align-items: center;
+}
+
+.plot-import__instructions {
+  margin: 0 0 var(--erp-gap-md);
+  color: var(--erp-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.plot-import__instructions p {
+  margin: 0 0 0.5rem;
+}
+
+.plot-import__instructions ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}

@@ -115,6 +115,12 @@ export const NAV_TREE = [
             icon: NavIcons.customers,
           },
           {
+            id: "users-agents",
+            label: "Channel Agents",
+            path: "/dashboard/users/agents",
+            icon: NavIcons.channelPartners,
+          },
+          {
             id: "users-customers",
             label: "Customers",
             path: "/dashboard/users/customers",
@@ -236,6 +242,18 @@ export const NAV_TREE = [
         label: "Receipts",
         path: "/dashboard/receipts",
         icon: NavIcons.receipts,
+      },
+      {
+        id: "finance-dashboard",
+        label: "Finance Dashboard",
+        path: "/dashboard/finance",
+        icon: NavIcons.financeReports,
+      },
+      {
+        id: "finance-tracker",
+        label: "Payment Tracker",
+        path: "/dashboard/finance/tracker",
+        icon: NavIcons.payments,
       },
     ],
   },

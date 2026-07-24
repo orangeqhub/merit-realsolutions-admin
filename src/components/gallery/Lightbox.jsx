@@ -2,11 +2,9 @@ import { useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { getGalleryImageSrc } from "../../utils/media";
 import "./Lightbox.css";
 
-function srcOf(image) {
-  return typeof image === "string" ? image : image?.src;
-}
 function altOf(image) {
   return typeof image === "string" ? "" : image?.alt || "";
 }
@@ -71,7 +69,7 @@ export default function Lightbox({ images = [], index = 0, onClose, onChange }) 
 
           <motion.img
             key={index}
-            src={srcOf(current)}
+            src={getGalleryImageSrc(current)}
             alt={altOf(current)}
             className="lightbox__image"
             initial={{ opacity: 0, scale: 0.96 }}

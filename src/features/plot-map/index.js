@@ -1,7 +1,5 @@
 export { default as OpenStreetMapCanvas } from './OpenStreetMapCanvas';
-export { default as PlotOverlayLayer } from './PlotOverlayLayer';
-export { default as PlotRectangle } from './PlotRectangle';
-export { default as PlotPolygon } from './PlotPolygon';
+export { default as PlotPolygonLayer } from './PlotPolygonLayer';
 export { default as CoordinatePanel } from './CoordinatePanel';
 export { default as PlotFormDrawer } from './PlotFormDrawer';
 export { default as PlotDetailDrawer } from './PlotDetailDrawer';
@@ -16,4 +14,4 @@ export { plotStorage } from './services/plotStorage';
 export * from './constants/mapStatus';
 export * from './utils/coordinateUtils';
 export * from './utils/mapHelpers';
-export * from './utils/overlayUtils';
+export * from './utils/polygonUtils';

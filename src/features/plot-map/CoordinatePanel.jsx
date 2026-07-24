@@ -3,9 +3,7 @@ import { FiCrosshair, FiMapPin, FiTarget } from 'react-icons/fi';
 import { formatCoordinate } from './utils/coordinateUtils';
 import { MapStatus } from './PlotStatusBar';
 
-export default function CoordinatePanel({ liveCoords, frozenCoords, selectedPlot }) {
-  const display = frozenCoords || liveCoords;
-
+export default function CoordinatePanel({ liveCoords, selectedPlot, previewActive = false }) {
   return (
     <motion.aside
       className="plot-map-panel plot-map-panel--coords"
@@ -17,28 +15,28 @@ export default function CoordinatePanel({ liveCoords, frozenCoords, selectedPlot
         <FiCrosshair />
         <div>
           <h3>Live Coordinates</h3>
-          <p>Move cursor over map · click to place plot</p>
+          <p>Move cursor over map to track pointer position</p>
         </div>
       </div>
 
       <div className="plot-map-panel__coords">
         <div className="plot-map-panel__coord">
           <span>Latitude</span>
-          <strong>{formatCoordinate(display?.lat)}</strong>
+          <strong>{formatCoordinate(liveCoords?.lat)}</strong>
         </div>
         <div className="plot-map-panel__coord">
           <span>Longitude</span>
-          <strong>{formatCoordinate(display?.lng)}</strong>
+          <strong>{formatCoordinate(liveCoords?.lng)}</strong>
         </div>
       </div>
 
-      {frozenCoords ? (
+      {previewActive ? (
         <div className="plot-map-panel__badge plot-map-panel__badge--frozen">
-          <FiTarget /> Coordinates frozen — creating plot
+          <FiTarget /> Preview polygon visible on map
         </div>
       ) : (
         <div className="plot-map-panel__badge">
-          <FiMapPin /> Tracking live pointer
+          <FiMapPin /> Use Add Plot to enter corner coordinates
         </div>
       )}
 

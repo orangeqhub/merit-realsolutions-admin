@@ -2,6 +2,7 @@ import { dataStore } from "../repositories/dataStore.js";
 import { getLayoutStatistics } from "./statisticsService.js";
 import { nextId } from "../utils/idGenerator.js";
 import { getVentureOrThrow, cascadeDeleteLayout } from "./relationshipService.js";
+import { applyMapUrlGeo } from "../utils/mapUrlParser.js";
 
 const today = () => new Date().toISOString().split("T")[0];
 const FALLBACK_BANNER =
@@ -46,7 +47,7 @@ export const layoutService = {
     const layouts = dataStore.getList("layouts");
     const id = nextId("LYT", layouts, 3001);
 
-    const record = {
+    const record = applyMapUrlGeo({
       ...data,
       id,
       ventureId: venture.id,
@@ -74,7 +75,7 @@ export const layoutService = {
           tone: "accent",
         },
       ],
-    };
+    });
 
     dataStore.updateList("layouts", (list) => [record, ...list]);
     return record;
@@ -95,7 +96,7 @@ export const layoutService = {
       ventureName = venture.name;
     }
 
-    const record = {
+    const record = applyMapUrlGeo({
       ...existing,
       ...data,
       ventureId,
@@ -114,7 +115,7 @@ export const layoutService = {
         },
         ...(existing.activities || []),
       ],
-    };
+    });
 
     dataStore.updateList("layouts", (list) =>
       list.map((l) => (l.id === id ? record : l))
@@ -127,6 +128,35 @@ export const layoutService = {
         )
       );
     }
+
+    return record;
+  },
+
+  saveGenerationSnapshot(id, snapshot) {
+    const existing = dataStore.getList("layouts").find((l) => l.id === id);
+    if (!existing) return null;
+
+    const record = {
+      ...existing,
+      hasGeneratedLayout: true,
+      generationSnapshot: snapshot,
+      plotCount: snapshot?.summary?.plots ?? existing.plotCount,
+      lastUpdated: today(),
+      activities: [
+        {
+          type: "update",
+          title: "Generated layout saved",
+          description: `${snapshot?.summary?.plots ?? 0} plots persisted from layout generator`,
+          date: today(),
+          tone: "success",
+        },
+        ...(existing.activities || []),
+      ],
+    };
+
+    dataStore.updateList("layouts", (list) =>
+      list.map((l) => (l.id === id ? record : l))
+    );
 
     return record;
   },

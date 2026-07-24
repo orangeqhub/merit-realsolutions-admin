@@ -77,6 +77,18 @@ export function ToastProvider({ children, duration = 4000 }) {
                 <div className="toast__body">
                   {toast.title && <p className="toast__title">{toast.title}</p>}
                   {toast.message && <p className="toast__message">{toast.message}</p>}
+                  {toast.action?.label ? (
+                    <button
+                      type="button"
+                      className="toast__action"
+                      onClick={() => {
+                        toast.action.onClick?.();
+                        dismiss(toast.id);
+                      }}
+                    >
+                      {toast.action.label}
+                    </button>
+                  ) : null}
                 </div>
                 <button
                   type="button"

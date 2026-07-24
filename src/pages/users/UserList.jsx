@@ -14,6 +14,7 @@ import {
   listUsers,
   deleteUser,
   setUserStatus,
+  approveAgent,
   ROLE_LABELS,
   USER_ROLES,
 } from '../../services/users/userApi.js';
@@ -22,6 +23,7 @@ const STATUS_OPTIONS = [
   { value: '', label: 'All statuses' },
   { value: 'ACTIVE', label: 'Active' },
   { value: 'INACTIVE', label: 'Inactive' },
+  { value: 'PENDING', label: 'Pending Approval' },
   { value: 'SUSPENDED', label: 'Suspended' },
 ];
 
@@ -34,6 +36,7 @@ export default function UserList() {
     abp: USER_ROLES.AREA_BUSINESS_PARTNER,
     abc: USER_ROLES.AREA_BUSINESS_COORDINATOR,
     abe: USER_ROLES.AREA_BUSINESS_EXECUTIVE,
+    agents: USER_ROLES.CHANNEL_AGENT,
     customers: USER_ROLES.CUSTOMER,
   };
   const roleFilter = segmentRoleMap[segment] || searchParams.get('role') || '';
@@ -43,7 +46,12 @@ export default function UserList() {
   const [loading, setLoading] = useState(true);
   const [deleteTarget, setDeleteTarget] = useState(null);
   const [deleting, setDeleting] = useState(false);
-  const [filters, setFilters] = useState({ search: '', status: '', page: 1 });
+  const [approvingId, setApprovingId] = useState(null);
+  const [filters, setFilters] = useState({
+    search: '',
+    status: roleFilter === USER_ROLES.CHANNEL_AGENT ? 'PENDING' : '',
+    page: 1,
+  });
 
   const pageTitle = roleFilter ? ROLE_LABELS[roleFilter] || 'Users' : 'All Users';
 
@@ -71,6 +79,22 @@ export default function UserList() {
     load();
   }, [filters.page, filters.status, roleFilter]);
 
+  const handleApprove = async (row) => {
+    setApprovingId(row.id);
+    try {
+      const data = await approveAgent(row.id);
+      const temp = data?.credentials?.temporaryPassword;
+      toast.success(temp
+        ? `Agent approved. Temporary password: ${temp}`
+        : 'Agent approved.');
+      load();
+    } catch (err) {
+      toast.error(err.message || 'Approval failed.');
+    } finally {
+      setApprovingId(null);
+    }
+  };
+
   const columns = useMemo(() => [
     {
       key: 'name',
@@ -80,6 +104,7 @@ export default function UserList() {
           <strong>{row.name}</strong>
           <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
             {row.employeeCode || row.username}
+            {row.agencyName ? ` · ${row.agencyName}` : ''}
           </div>
         </div>
       ),
@@ -96,7 +121,17 @@ export default function UserList() {
       key: 'actions',
       header: 'Actions',
       render: (row) => (
-        <div style={{ display: 'flex', gap: '0.35rem' }}>
+        <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
+          {row.role === USER_ROLES.CHANNEL_AGENT && row.status === 'PENDING' ? (
+            <Button
+              variant="accent"
+              size="sm"
+              disabled={approvingId === row.id}
+              onClick={() => handleApprove(row)}
+            >
+              {approvingId === row.id ? 'Approving…' : 'Approve'}
+            </Button>
+          ) : null}
           <Button variant="ghost" size="sm" iconOnly onClick={() => navigate(`/dashboard/users/${row.id}`)} title="View"><FiEye /></Button>
           <Button variant="ghost" size="sm" iconOnly onClick={() => navigate(`/dashboard/users/${row.id}/edit`)} title="Edit"><FiEdit2 /></Button>
           {row.role !== USER_ROLES.ADMIN && (
@@ -105,7 +140,7 @@ export default function UserList() {
         </div>
       ),
     },
-  ], [navigate]);
+  ], [navigate, approvingId]);
 
   const handleDelete = async () => {
     if (!deleteTarget || deleting) return;
@@ -140,8 +175,10 @@ export default function UserList() {
     <motion.div className="erp-module-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageHeader
         title={pageTitle}
-        description="Manage sales hierarchy users and customers. Credentials are generated on create."
-        actions={(
+        description={roleFilter === USER_ROLES.CHANNEL_AGENT
+          ? 'Approve pending channel agents. Approval issues a temporary password for first login.'
+          : 'Manage sales hierarchy users and customers. Credentials are generated on create.'}
+        actions={roleFilter === USER_ROLES.CHANNEL_AGENT ? null : (
           <Button variant="accent" size="md" to={`/dashboard/users/new${roleFilter ? `?role=${roleFilter}` : ''}`}>
             <FiPlus /> Create User
           </Button>

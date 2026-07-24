@@ -581,6 +581,12 @@
   justify-content: center;
 }
 
+.plot-import__error-text {
+  font-size: 0.82rem;
+  color: var(--erp-danger-dark, #b91c1c);
+  line-height: 1.4;
+}
+
 .plot-import__footer {
   display: flex;
   align-items: center;

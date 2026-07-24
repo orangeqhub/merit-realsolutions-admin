@@ -13,10 +13,13 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     resolve: {
-      dedupe: ['react', 'react-dom', 'react-hook-form', 'react-router-dom', 'react-icons'],
+      dedupe: ['react', 'react-dom', 'react-hook-form', 'react-router-dom', 'react-icons', 'react-leaflet'],
       alias: {
-        '@shared': path.resolve(__dirname, '../shared'),
+        '@shared': path.resolve(__dirname, 'shared'),
       },
+    },
+    optimizeDeps: {
+      include: ['leaflet', 'react-leaflet', 'xlsx'],
     },
     server: createDevServerConfig(apiTarget),
   }

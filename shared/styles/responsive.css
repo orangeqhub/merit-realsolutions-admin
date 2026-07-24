@@ -1,0 +1,49 @@
+/* Shared responsive tokens + utilities (website + admin) */
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .responsive-stack {
+    flex-direction: column !important;
+  }
+
+  .responsive-stack > * {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .show-mobile-only {
+    display: block;
+  }
+
+  .hide-tablet-up {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-laptop-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hide-below-laptop {
+    display: none !important;
+  }
+}

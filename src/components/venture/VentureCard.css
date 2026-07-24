@@ -35,6 +35,7 @@
   background: var(--erp-card-muted);
 }
 
+.venture-card__cover-image,
 .venture-card__cover img {
   width: 100%;
   height: 100%;
@@ -42,6 +43,13 @@
   transition: transform 0.4s var(--erp-ease);
 }
 
+.venture-card__cover-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+}
+
+.venture-card:hover .venture-card__cover-image,
 .venture-card:hover .venture-card__cover img {
   transform: scale(1.05);
 }

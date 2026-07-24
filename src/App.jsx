@@ -70,6 +70,9 @@ import AgreementDetails from "./pages/documents/agreements/AgreementDetails";
 import { RegistrationsLayout } from "./context/RegistrationsContext";
 import RegistrationList from "./pages/documents/registrations/RegistrationList";
 import RegistrationDetails from "./pages/documents/registrations/RegistrationDetails";
+import FinanceDashboard from "./pages/finance/FinanceDashboard";
+import FinanceTracker from "./pages/finance/FinanceTracker";
+import CustomerLedgerPage from "./pages/finance/CustomerLedgerPage";
 import ReportsDashboard from "./pages/reports/ReportsDashboard";
 import SalesReports from "./pages/reports/SalesReports";
 import InventoryReports from "./pages/reports/InventoryReports";
@@ -186,6 +189,7 @@ function App() {
             <Route path="abp" element={<UserList />} />
             <Route path="abc" element={<UserList />} />
             <Route path="abe" element={<UserList />} />
+            <Route path="agents" element={<UserList />} />
             <Route path="customers" element={<UserList />} />
             <Route path=":id/edit" element={<UserForm />} />
             <Route path=":id" element={<UserDetails />} />
@@ -221,6 +225,12 @@ function App() {
               <Route index element={<RegistrationList />} />
               <Route path=":id" element={<RegistrationDetails />} />
             </Route>
+          </Route>
+
+          <Route path="finance">
+            <Route index element={<FinanceDashboard />} />
+            <Route path="tracker" element={<FinanceTracker />} />
+            <Route path="ledgers/:bookingId" element={<CustomerLedgerPage />} />
           </Route>
 
           <Route path="reports">
@@ -269,8 +279,8 @@ function App() {
             <Route path="performance" element={<Navigate to="/dashboard/sales-crm/performance" replace />} />
             <Route path="notifications" element={<Navigate to="/dashboard/sales-crm/notifications" replace />} />
             <Route path="applications" element={<Navigate to="/dashboard/users/abp" replace />} />
-            <Route path="channel-partners" element={<Navigate to="/dashboard/users/abp" replace />} />
-            <Route path="sub-agents" element={<Navigate to="/dashboard/users/abc" replace />} />
+            <Route path="channel-partners" element={<Navigate to="/dashboard/users/agents" replace />} />
+            <Route path="sub-agents" element={<Navigate to="/dashboard/users/agents" replace />} />
           </Route>
 
           <Route path="partners/*" element={<Navigate to="/dashboard/users/abp" replace />} />

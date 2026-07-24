@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiArrowLeft,
@@ -9,6 +9,7 @@ import {
   FiFileText,
   FiDownloadCloud,
   FiList,
+  FiMap,
 } from "react-icons/fi";
 import PageHeader from "../../components/layout/PageHeader";
 import Button from "../../components/ui/button/Button";
@@ -18,133 +19,192 @@ import DataTable from "../../components/table/DataTable";
 import Badge from "../../components/ui/badge/Badge";
 import { usePlots } from "../../context/PlotsContext";
 import { useLayouts } from "../../shared/hooks/useLayouts.js";
+import { useVentures } from "../../context/VenturesContext";
 import { useToast } from "../../components/feedback/Toast";
+import {
+  ExcelParserService,
+  PlotValidationService,
+  PlotImportService,
+  IMPORT_WIZARD_STEPS,
+} from "../../services/plotImport";
+import ImportMapPreview from "./ImportMapPreview";
+import PlotStatusBadge from "../../components/plots/PlotStatusBadge";
 import { formatINR } from "./constants";
 import "./plotInventory.css";
-
-const STEPS = [
-  { label: "Upload", description: "Excel / CSV" },
-  { label: "Map Columns", description: "Match fields" },
-  { label: "Preview", description: "Validate rows" },
-  { label: "Done", description: "Summary" },
-];
-
-const TARGET_FIELDS = [
-  { value: "plotNumber", label: "Plot Number" },
-  { value: "dimensions", label: "Dimensions" },
-  { value: "areaSqYards", label: "Area (sq.yd)" },
-  { value: "facing", label: "Facing" },
-  { value: "ratePerSqYard", label: "Rate / sq.yd" },
-  { value: "status", label: "Status" },
-  { value: "ignore", label: "— Ignore —" },
-];
-
-const SAMPLE = [
-  { plot_no: "S-101", size: "30x40", area: 133, face: "East", rate: 12500, state: "Available" },
-  { plot_no: "S-102", size: "30x50", area: 167, face: "West", rate: 12500, state: "Available" },
-  { plot_no: "S-103", size: "40x60", area: 267, face: "North", rate: 12800, state: "Reserved" },
-  { plot_no: "S-104", size: "40x60", area: 267, face: "South", rate: 12800, state: "Available" },
-  { plot_no: "S-105", size: "50x80", area: 444, face: "East", rate: 13500, state: "Booked" },
-  { plot_no: "", size: "30x40", area: 133, face: "East", rate: 12500, state: "Available" },
-  { plot_no: "S-107", size: "30x40", area: 0, face: "West", rate: 12500, state: "Available" },
-  { plot_no: "S-108", size: "60x90", area: 600, face: "North-East", rate: 14000, state: "Available" },
-];
-
-const SOURCE_COLUMNS = ["plot_no", "size", "area", "face", "rate", "state"];
-const DEFAULT_MAP = {
-  plot_no: "plotNumber",
-  size: "dimensions",
-  area: "areaSqYards",
-  face: "facing",
-  rate: "ratePerSqYard",
-  state: "status",
-};
+import "./ImportMapPreview.css";
 
 export default function PlotBulkImport() {
   const toast = useToast();
-  const { addPlot } = usePlots();
+  const { plots } = usePlots();
   const { layouts } = useLayouts();
+  const { getVenture } = useVentures();
 
   const [step, setStep] = useState(0);
-  const [fileName, setFileName] = useState("");
-  const [rows, setRows] = useState([]);
-  const [mapping, setMapping] = useState(DEFAULT_MAP);
   const [targetLayoutId, setTargetLayoutId] = useState(layouts[0]?.id || "");
-  const [importedCount, setImportedCount] = useState(0);
+  const [fileName, setFileName] = useState("");
+  const [parsedRows, setParsedRows] = useState([]);
+  const [validation, setValidation] = useState(null);
+  const [importing, setImporting] = useState(false);
+  const [importSummary, setImportSummary] = useState(null);
 
-  const layoutOptions = layouts.map((l) => ({ value: l.id, label: `${l.name} (${l.ventureName})` }));
+  const layoutOptions = layouts.map((l) => ({
+    value: l.id,
+    label: `${l.name} (${l.ventureName})`,
+  }));
 
-  const loadSample = () => {
-    setFileName("sample-plots.csv");
-    setRows(SAMPLE);
-    toast.info("Sample file loaded");
-  };
+  const selectedLayout = useMemo(
+    () => layouts.find((l) => l.id === targetLayoutId) || null,
+    [layouts, targetLayoutId]
+  );
 
-  const handleFile = (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    setFileName(file.name);
-    setRows(SAMPLE);
-    toast.info(`${file.name} parsed (${SAMPLE.length} rows)`);
-  };
+  const selectedVenture = useMemo(
+    () => (selectedLayout ? getVenture(selectedLayout.ventureId) : null),
+    [getVenture, selectedLayout]
+  );
 
-  const mapped = rows.map((r) => {
-    const obj = {};
-    Object.entries(mapping).forEach(([src, target]) => {
-      if (target && target !== "ignore") obj[target] = r[src];
+  const previewPlots = useMemo(
+    () => (validation?.validRows || []).map((row) => PlotValidationService.toPreviewPlot(row)),
+    [validation]
+  );
+
+  const runValidation = (rows) => {
+    const report = PlotValidationService.validateRows(rows, {
+      layoutId: targetLayoutId,
+      existingPlots: plots,
     });
-    const valid = Boolean(obj.plotNumber) && Number(obj.areaSqYards) > 0;
-    return { ...obj, __valid: valid };
-  });
+    setValidation(report);
+    return report;
+  };
 
-  const validRows = mapped.filter((r) => r.__valid);
-  const invalidRows = mapped.filter((r) => !r.__valid);
-
-  const next = () => {
-    if (step === 0 && !rows.length) {
-      toast.error("Upload a file or load the sample first");
+  const handleDownloadTemplate = () => {
+    if (!targetLayoutId) {
+      toast.error("Select a layout before downloading the template");
       return;
     }
-    setStep((s) => Math.min(s + 1, STEPS.length - 1));
+    ExcelParserService.downloadTemplate(
+      `plot-import-${selectedLayout?.name?.replace(/\s+/g, "-").toLowerCase() || "template"}.xlsx`
+    );
+    toast.success("Template downloaded");
   };
-  const prev = () => setStep((s) => Math.max(s - 1, 0));
 
-  const runImport = () => {
-    const layout = layouts.find((l) => l.id === targetLayoutId);
-    validRows.forEach((r) => {
-      addPlot({
-        plotNumber: r.plotNumber,
-        dimensions: r.dimensions,
-        areaSqYards: Number(r.areaSqYards),
-        facing: r.facing,
-        ratePerSqYard: Number(r.ratePerSqYard),
-        status: r.status || "Available",
-        ventureId: layout?.ventureId || "",
-        ventureName: layout?.ventureName || "",
-        layoutId: layout?.id || "",
-        layoutName: layout?.name || "",
+  const handleFile = async (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    if (!targetLayoutId) {
+      toast.error("Select a target layout first");
+      return;
+    }
+
+    try {
+      const parsed = await ExcelParserService.parseFile(file);
+      setFileName(parsed.fileName);
+      setParsedRows(parsed.rows);
+      setValidation(null);
+      setImportSummary(null);
+      toast.success(`${parsed.totalRows} rows loaded from ${parsed.fileName}`);
+    } catch (error) {
+      toast.error(error.message || "Unable to parse file");
+    }
+  };
+
+  const next = () => {
+    if (step === 0 && !targetLayoutId) {
+      toast.error("Select the layout you are importing into");
+      return;
+    }
+    if (step === 1 && !parsedRows.length) {
+      toast.error("Upload an Excel file first");
+      return;
+    }
+    if (step === 1) {
+      const report = runValidation(parsedRows);
+      if (!report.validRows.length && report.invalidRows.length) {
+        toast.warning("All rows failed validation — review errors before continuing");
+      }
+    }
+    if (step === 2 && !validation?.validRows.length) {
+      toast.error("Fix validation errors or upload a valid file before preview");
+      return;
+    }
+    setStep((current) => Math.min(current + 1, IMPORT_WIZARD_STEPS.length - 1));
+  };
+
+  const prev = () => setStep((current) => Math.max(current - 1, 0));
+
+  const handleDownloadErrors = () => {
+    if (!validation?.invalidRows?.length) return;
+    ExcelParserService.downloadErrorReport(validation.invalidRows);
+    toast.info("Error report downloaded");
+  };
+
+  const handleImport = async () => {
+    if (!validation?.validRows?.length) {
+      toast.error("No valid rows to import");
+      return;
+    }
+
+    setImporting(true);
+    try {
+      const result = await PlotImportService.importPlots(validation.validRows, {
+        layoutId: targetLayoutId,
+        layout: selectedLayout,
       });
-    });
-    setImportedCount(validRows.length);
-    setStep(3);
-    toast.success(`${validRows.length} plots imported`);
+      setImportSummary({
+        ...result.summary,
+        skipped: validation?.summary?.invalid ?? 0,
+        duplicates:
+          result.summary?.duplicates ?? validation?.summary?.duplicates ?? 0,
+      });
+      setStep(4);
+      toast.success(`${result.summary.imported} plots imported successfully`);
+    } catch (error) {
+      toast.error(error.message || "Import failed");
+    } finally {
+      setImporting(false);
+    }
   };
 
   const previewColumns = [
-    { key: "plotNumber", header: "Plot No.", render: (r) => r.plotNumber || <span className="plot-table__dash">missing</span> },
-    { key: "dimensions", header: "Dimensions" },
-    { key: "areaSqYards", header: "Area", align: "right", render: (r) => (Number(r.areaSqYards) > 0 ? `${r.areaSqYards} sq.yd` : <span className="plot-table__dash">invalid</span>) },
-    { key: "facing", header: "Facing" },
-    { key: "ratePerSqYard", header: "Rate", align: "right", render: (r) => formatINR(r.ratePerSqYard) },
-    { key: "status", header: "Status" },
     {
-      key: "__valid",
-      header: "Validation",
-      render: (r) =>
-        r.__valid ? (
+      key: "plotNumber",
+      header: "Plot No.",
+      render: (row) => row.plotNumber,
+    },
+    {
+      key: "areaSqYards",
+      header: "Area",
+      align: "right",
+      render: (row) => `${row.areaSqYards} sq.yd`,
+    },
+    {
+      key: "ratePerSqYard",
+      header: "Rate",
+      align: "right",
+      render: (row) => formatINR(row.ratePerSqYard),
+    },
+    {
+      key: "status",
+      header: "Status",
+      render: (row) => <PlotStatusBadge status={row.status} size="sm" />,
+    },
+    {
+      key: "facing",
+      header: "Facing",
+    },
+  ];
+
+  const validationColumns = [
+    { key: "rowNumber", header: "Row", render: (row) => row.rowNumber },
+    { key: "plotNumber", header: "Plot No.", render: (row) => row.plotNumber || "—" },
+    {
+      key: "errors",
+      header: "Errors",
+      render: (row) =>
+        row.valid ? (
           <Badge tone="success" size="sm"><FiCheckCircle /> Valid</Badge>
         ) : (
-          <Badge tone="danger" size="sm"><FiAlertTriangle /> Invalid</Badge>
+          <span className="plot-import__error-text">{row.errors.join(" ")}</span>
         ),
     },
   ];
@@ -153,7 +213,7 @@ export default function PlotBulkImport() {
     <motion.div className="plot-page plot-import-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageHeader
         title="Bulk Plot Import"
-        description="Import plots in bulk from Excel or CSV with preview, column mapping and validation."
+        description="Import plots from Excel with coordinate validation, map preview, and batch save."
         actions={
           <Button variant="ghost" size="md" to="/dashboard/plots/list">
             <FiList /> Inventory
@@ -162,83 +222,147 @@ export default function PlotBulkImport() {
       />
 
       <div className="plot-import__stepper">
-        <Stepper steps={STEPS} current={step} />
+        <Stepper steps={IMPORT_WIZARD_STEPS} current={step} />
       </div>
 
       <div className="plot-import__panel">
         {step === 0 && (
-          <div className="plot-import__upload">
-            <label className="plot-import__dropzone">
-              <span className="plot-import__icon"><FiUploadCloud /></span>
-              <strong>Click to upload</strong>
-              <span>or drag &amp; drop your Excel / CSV file</span>
-              <small>Supported: .xlsx, .csv — up to 5MB</small>
-              <input type="file" accept=".csv,.xlsx,.xls" onChange={handleFile} hidden />
-            </label>
-            <div className="plot-import__or">or</div>
-            <Button variant="soft" size="md" onClick={loadSample}>
-              <FiDownloadCloud /> Load Sample Data
-            </Button>
-            {fileName && (
-              <p className="plot-import__file">
-                <FiFileText /> {fileName} · {rows.length} rows detected
-              </p>
-            )}
+          <div>
+            <Select
+              label="Import into Layout"
+              value={targetLayoutId}
+              onChange={setTargetLayoutId}
+              options={layoutOptions}
+              searchable
+              className="plot-import__layout-select"
+            />
+            <div className="plot-import__instructions">
+              <p>Download the Excel template, fill one row per plot, then upload it in the next step.</p>
+              <ul>
+                <li>Plot Number must be unique within the layout.</li>
+                <li>Area, Price (Rate per sq.yd), and Status are required.</li>
+                <li>All four corner latitude/longitude pairs are required (decimal degrees).</li>
+                <li>Status: AVAILABLE, RESERVED, BOOKED, SOLD, or BLOCKED.</li>
+              </ul>
+            </div>
+            <div className="plot-import__template-actions">
+              <Button variant="accent" size="md" onClick={handleDownloadTemplate}>
+                <FiDownloadCloud /> Download Excel Template
+              </Button>
+            </div>
           </div>
         )}
 
         {step === 1 && (
-          <div className="plot-import__mapping">
-            <p className="plot-import__hint">Match each column from your file to a plot field.</p>
-            <div className="plot-import__map-grid">
-              {SOURCE_COLUMNS.map((src) => (
-                <div key={src} className="plot-import__map-row">
-                  <span className="plot-import__map-source">{src}</span>
-                  <FiArrowRight />
-                  <Select
-                    value={mapping[src] || "ignore"}
-                    onChange={(v) => setMapping((m) => ({ ...m, [src]: v }))}
-                    options={TARGET_FIELDS}
-                  />
-                </div>
-              ))}
+          <div className="plot-import__upload">
+            <Select
+              label="Target Layout"
+              value={targetLayoutId}
+              onChange={setTargetLayoutId}
+              options={layoutOptions}
+              searchable
+              className="plot-import__layout-select"
+            />
+            <label className="plot-import__dropzone">
+              <span className="plot-import__icon"><FiUploadCloud /></span>
+              <strong>Click to upload Excel file</strong>
+              <span>or drag &amp; drop .xlsx / .xls</span>
+              <small>Max recommended: 500 rows per import</small>
+              <input type="file" accept=".xlsx,.xls,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" onChange={handleFile} hidden />
+            </label>
+            {fileName && (
+              <p className="plot-import__file">
+                <FiFileText /> {fileName} · {parsedRows.length} rows detected
+              </p>
+            )}
+          </div>
+        )}
+
+        {step === 2 && validation && (
+          <div>
+            <div className="plot-import__validation">
+              <Badge tone="success"><FiCheckCircle /> {validation.summary.valid} valid</Badge>
+              <Badge tone="danger"><FiAlertTriangle /> {validation.summary.invalid} invalid</Badge>
+              {validation.summary.duplicates > 0 && (
+                <Badge tone="warning"><FiAlertTriangle /> {validation.summary.duplicates} duplicate conflicts</Badge>
+              )}
             </div>
-            <div className="plot-import__target">
-              <Select
-                label="Import into Layout"
-                value={targetLayoutId}
-                onChange={setTargetLayoutId}
-                options={layoutOptions}
-                searchable
+            {validation.invalidRows.length > 0 && (
+              <div className="plot-import__template-actions" style={{ marginBottom: "1rem" }}>
+                <Button variant="soft" size="md" onClick={handleDownloadErrors}>
+                  <FiDownloadCloud /> Download Error Report
+                </Button>
+              </div>
+            )}
+            <DataTable
+              className="plot-import__errors-table"
+              columns={validationColumns}
+              data={validation.results}
+              rowKey={(row) => `row-${row.rowNumber}`}
+              paginated
+              pageSize={10}
+            />
+          </div>
+        )}
+
+        {step === 3 && validation && (
+          <div className="plot-import__preview-layout">
+            <div>
+              <div className="plot-import__validation">
+                <Badge tone="info"><FiMap /> {previewPlots.length} polygons on map (preview only)</Badge>
+              </div>
+              <DataTable
+                columns={previewColumns}
+                data={validation.validRows}
+                rowKey={(row) => `preview-${row.rowNumber}`}
+                paginated
+                pageSize={8}
               />
             </div>
+            <ImportMapPreview
+              layout={selectedLayout}
+              venture={selectedVenture}
+              previewPlots={previewPlots}
+            />
           </div>
         )}
 
-        {step === 2 && (
-          <div className="plot-import__preview">
-            <div className="plot-import__validation">
-              <Badge tone="success"><FiCheckCircle /> {validRows.length} valid</Badge>
-              <Badge tone="danger"><FiAlertTriangle /> {invalidRows.length} invalid</Badge>
-            </div>
-            <DataTable columns={previewColumns} data={mapped} rowKey={(r) => r.plotNumber || Math.random()} paginated={false} />
-          </div>
-        )}
-
-        {step === 3 && (
+        {step === 4 && importSummary && (
           <div className="plot-import__done">
             <span className="plot-import__done-icon"><FiCheckCircle /></span>
             <h2>Import Complete</h2>
-            <p>{importedCount} plots were successfully imported into the inventory.</p>
-            {invalidRows.length > 0 && (
-              <p className="plot-import__done-warn">
-                {invalidRows.length} rows were skipped due to validation errors.
-              </p>
-            )}
+            <p>Plots were saved for layout <strong>{selectedLayout?.name}</strong>.</p>
+            <div className="plot-import__summary-grid">
+              <div className="plot-import__summary-card">
+                <strong>{importSummary.imported}</strong>
+                <span>Imported</span>
+              </div>
+              <div className="plot-import__summary-card">
+                <strong>{importSummary.failed ?? 0}</strong>
+                <span>Failed</span>
+              </div>
+              <div className="plot-import__summary-card">
+                <strong>{importSummary.duplicates ?? validation?.summary?.duplicates ?? 0}</strong>
+                <span>Duplicates skipped</span>
+              </div>
+              <div className="plot-import__summary-card">
+                <strong>{validation?.summary?.invalid ?? 0}</strong>
+                <span>Invalid rows skipped</span>
+              </div>
+            </div>
             <div className="plot-import__done-actions">
               <Button variant="accent" size="md" to="/dashboard/plots/list">
                 <FiList /> View Inventory
               </Button>
+              {selectedLayout && (
+                <Button
+                  variant="ghost"
+                  size="md"
+                  to={`/dashboard/layouts/${selectedLayout.id}/workspace`}
+                >
+                  <FiMap /> Open Layout Workspace
+                </Button>
+              )}
               <Button variant="ghost" size="md" to="/dashboard/plots">
                 Back to Dashboard
               </Button>
@@ -246,18 +370,18 @@ export default function PlotBulkImport() {
           </div>
         )}
 
-        {step < 3 && (
+        {step < 4 && (
           <footer className="plot-import__footer">
             <Button variant="ghost" size="md" onClick={prev} disabled={step === 0}>
               <FiArrowLeft /> Back
             </Button>
-            {step < 2 ? (
+            {step < 3 ? (
               <Button variant="accent" size="md" onClick={next}>
                 Next <FiArrowRight />
               </Button>
             ) : (
-              <Button variant="accent" size="md" onClick={runImport} disabled={!validRows.length}>
-                Import {validRows.length} Plots
+              <Button variant="accent" size="md" onClick={handleImport} disabled={importing || !validation?.validRows?.length}>
+                {importing ? "Importing…" : `Import ${validation?.validRows?.length || 0} Plots`}
               </Button>
             )}
           </footer>

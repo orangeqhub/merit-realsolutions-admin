@@ -11,6 +11,12 @@
   backdrop-filter: blur(3px);
 }
 
+.right-drawer__overlay--transparent {
+  background: transparent;
+  backdrop-filter: none;
+  pointer-events: none;
+}
+
 .right-drawer {
   position: absolute;
   top: 0;

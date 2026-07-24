@@ -1,42 +1,79 @@
-import { FiCalendar, FiEdit2, FiShoppingBag, FiBookmark } from 'react-icons/fi';
+import {
+  FiBookmark,
+  FiBookOpen,
+  FiEdit2,
+  FiLock,
+  FiShoppingBag,
+  FiTrash2,
+  FiUnlock,
+} from 'react-icons/fi';
 import Button from '../../components/ui/button/Button';
 import RightDrawer from '../../components/drawer/RightDrawer';
 import { MapStatus } from './PlotStatusBar';
-import { formatINR } from '../../pages/plotInventory/constants';
-import { formatCoordinate } from './utils/coordinateUtils';
+import { PlotDrawerService } from './services/plotInteraction';
+
+const ACTION_CONFIG = {
+  reserve: { label: 'Reserve', icon: FiBookmark, variant: 'accent' },
+  book: { label: 'Book', icon: FiBookOpen, variant: 'accent' },
+  sold: { label: 'Mark Sold', icon: FiShoppingBag, variant: 'ghost' },
+  block: { label: 'Block', icon: FiLock, variant: 'ghost' },
+  release: { label: 'Release', icon: FiUnlock, variant: 'ghost' },
+  edit: { label: 'Edit', icon: FiEdit2, variant: 'ghost' },
+  delete: { label: 'Delete', icon: FiTrash2, variant: 'ghost', tone: 'danger' },
+};
 
 export default function PlotDetailDrawer({
   open,
   onClose,
   plot,
+  layout,
   onReserve,
+  onBook,
   onPurchase,
-  onScheduleVisit,
+  onBlock,
+  onRelease,
   onEdit,
+  onDelete,
 }) {
   if (!plot) return null;
+
+  const view = PlotDrawerService.buildDetailView(plot, layout);
+
+  const handlers = {
+    reserve: onReserve,
+    book: onBook,
+    sold: onPurchase,
+    block: onBlock,
+    release: onRelease,
+    edit: onEdit,
+    delete: onDelete,
+  };
 
   return (
     <RightDrawer
       open={open}
       onClose={onClose}
-      title={`Plot ${plot.plotNumber}`}
-      subtitle={plot.layoutName || 'Layout plot'}
+      title={`Plot ${view.plotNumber}`}
+      subtitle={`${view.block !== '—' ? `${view.block} · ` : ''}${view.layout}`}
       size="md"
       footer={
         <div className="plot-map-drawer__footer plot-map-drawer__footer--stack">
-          <Button variant="accent" size="md" onClick={onReserve} disabled={plot.status === 'Sold'}>
-            <FiBookmark /> Reserve
-          </Button>
-          <Button variant="ghost" size="md" onClick={onPurchase} disabled={plot.status === 'Sold'}>
-            <FiShoppingBag /> Purchase
-          </Button>
-          <Button variant="ghost" size="md" onClick={onScheduleVisit}>
-            <FiCalendar /> Schedule Visit
-          </Button>
-          <Button variant="ghost" size="md" onClick={onEdit}>
-            <FiEdit2 /> Edit Plot
-          </Button>
+          {view.actions.map((actionKey) => {
+            const config = ACTION_CONFIG[actionKey];
+            if (!config) return null;
+            const Icon = config.icon;
+            return (
+              <Button
+                key={actionKey}
+                variant={config.variant}
+                size="md"
+                className={config.tone === 'danger' ? 'plot-map-detail__delete-btn' : undefined}
+                onClick={handlers[actionKey]}
+              >
+                <Icon /> {config.label}
+              </Button>
+            );
+          })}
           <Button variant="ghost" size="md" onClick={onClose}>
             Close
           </Button>
@@ -45,21 +82,29 @@ export default function PlotDetailDrawer({
     >
       <div className="plot-map-detail">
         <div className="plot-map-detail__status-row">
-          <MapStatus status={plot.status} />
-          <span className="plot-map-detail__id">{plot.id}</span>
+          <MapStatus status={view.status} />
         </div>
 
         <dl className="plot-map-detail__grid">
-          <div><dt>Area</dt><dd>{plot.areaSqYards ? `${plot.areaSqYards} sq.yd` : '—'}</dd></div>
-          <div><dt>Dimensions</dt><dd>{plot.dimensions || '—'}</dd></div>
-          <div><dt>Facing</dt><dd>{plot.facing || '—'}</dd></div>
-          <div><dt>Price</dt><dd>{formatINR(plot.finalPrice || plot.totalPrice)}</dd></div>
-          <div><dt>Reservation</dt><dd>{plot.reservationExpiry || '—'}</dd></div>
-          <div><dt>Customer</dt><dd>{plot.customer || '—'}</dd></div>
-          <div><dt>Partner</dt><dd>{plot.agent || '—'}</dd></div>
-          <div><dt>Shape</dt><dd>{plot.shapeType || 'RECTANGLE'}</dd></div>
-          <div><dt>Latitude</dt><dd>{formatCoordinate(plot.latitude)}</dd></div>
-          <div><dt>Longitude</dt><dd>{formatCoordinate(plot.longitude)}</dd></div>
+          <div><dt>Plot Number</dt><dd>{view.plotNumber}</dd></div>
+          <div><dt>Block</dt><dd>{view.block}</dd></div>
+          <div><dt>Layout</dt><dd>{view.layout}</dd></div>
+          <div><dt>Row</dt><dd>{view.rowNumber}</dd></div>
+          <div><dt>Column</dt><dd>{view.columnNumber}</dd></div>
+          <div><dt>Area</dt><dd>{view.area}</dd></div>
+          <div><dt>Facing</dt><dd>{view.facing}</dd></div>
+          <div><dt>Dimensions</dt><dd>{view.dimensions}</dd></div>
+          <div><dt>Road Width</dt><dd>{view.roadWidth}</dd></div>
+          <div><dt>PLC Type</dt><dd>{view.plcType}</dd></div>
+          <div><dt>Corner Plot</dt><dd>{view.cornerPlot}</dd></div>
+          <div><dt>Price</dt><dd>{view.price}</dd></div>
+          <div><dt>Rate / Sq.Yd</dt><dd>{view.ratePerSqYard}</dd></div>
+          <div><dt>Current Status</dt><dd>{view.statusLabel}</dd></div>
+          <div><dt>Latitude</dt><dd>{view.latitude}</dd></div>
+          <div><dt>Longitude</dt><dd>{view.longitude}</dd></div>
+          {view.description !== '—' ? (
+            <div className="plot-map-detail__full"><dt>Description</dt><dd>{view.description}</dd></div>
+          ) : null}
         </dl>
 
         {plot.history?.length ? (

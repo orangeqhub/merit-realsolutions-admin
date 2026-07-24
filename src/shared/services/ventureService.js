@@ -3,6 +3,10 @@ import { ventureRepository } from "../repositories/index.js";
 import { getVentureStatistics } from "./statisticsService.js";
 import { nextId } from "../utils/idGenerator.js";
 import { cascadeDeleteVenture } from "./relationshipService.js";
+import {
+  deactivateVentureOnBackend,
+  syncVentureToBackend,
+} from "./ventureCatalogSync.js";
 
 const today = () => new Date().toISOString().split("T")[0];
 
@@ -13,14 +17,25 @@ function fallbackLogo(name) {
 
 function normalizeMedia(value, fallback) {
   if (!value) return fallback;
-  if (typeof value === "string") return value;
+  if (typeof value === 'string') {
+    if (value.startsWith('blob:')) return fallback;
+    return value;
+  }
   if (value instanceof File) return URL.createObjectURL(value);
   return fallback;
 }
 
 function normalizeGallery(gallery) {
   if (!Array.isArray(gallery)) return [];
-  return gallery.map((item) => (typeof item === "string" ? item : URL.createObjectURL(item)));
+  return gallery
+    .map((item) => {
+      if (typeof item === 'string') {
+        return item.startsWith('blob:') ? null : item;
+      }
+      if (item instanceof File) return URL.createObjectURL(item);
+      return null;
+    })
+    .filter(Boolean);
 }
 
 export const ventureService = {
@@ -79,6 +94,12 @@ export const ventureService = {
     };
 
     dataStore.updateList("ventures", (list) => [record, ...list]);
+    void syncVentureToBackend(record).then((result) => {
+      if (!result?.ok || !result.media) return;
+      dataStore.updateList("ventures", (list) =>
+        list.map((v) => (v.id === record.id ? { ...v, ...result.media } : v))
+      );
+    });
     return record;
   },
 
@@ -128,11 +149,18 @@ export const ventureService = {
       );
     }
 
+    void syncVentureToBackend(record).then((result) => {
+      if (!result?.ok || !result.media) return;
+      dataStore.updateList("ventures", (list) =>
+        list.map((v) => (v.id === id ? { ...v, ...result.media } : v))
+      );
+    });
     return record;
   },
 
   deleteVenture(id) {
     cascadeDeleteVenture(id);
+    void deactivateVentureOnBackend(id);
     return { id };
   },
 };

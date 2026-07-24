@@ -1,242 +1,209 @@
-import { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { FiEye, FiCheckCircle, FiClock, FiAlertCircle } from 'react-icons/fi';
+import PageHeader from '../../../components/layout/PageHeader';
+import Input from '../../../components/ui/input/Input';
+import Select from '../../../components/ui/select/Select';
+import Button from '../../../components/ui/button/Button';
+import Badge from '../../../components/ui/badge/Badge';
+import StatsCard from '../../../components/cards/StatsCard';
+import DataTable from '../../../components/table/DataTable';
+import { useToast } from '../../../components/feedback/Toast';
 import {
-  FiEye,
-  FiDownload,
-  FiRotateCcw,
-  FiShield,
-  FiCheckCircle,
-  FiClock,
-  FiAlertCircle,
-} from "react-icons/fi";
-import PageHeader from "../../../components/layout/PageHeader";
-import Input from "../../../components/ui/input/Input";
-import Select from "../../../components/ui/select/Select";
-import Button from "../../../components/ui/button/Button";
-import Badge from "../../../components/ui/badge/Badge";
-import StatsCard from "../../../components/cards/StatsCard";
-import DataTable from "../../../components/table/DataTable";
-import EmptyState from "../../../components/layout/EmptyState";
-import Dropdown from "../../../components/ui/dropdown/Dropdown";
-import { useRegistrations } from "../../../context/RegistrationsContext";
-import {
+  REGISTRATION_STATUS_LABELS,
   REGISTRATION_STATUSES,
-  REGISTRATION_STATUS_META,
-  formatDate,
-} from "./constants";
-import "../../../styles/module.css";
-import "./registrations.css";
+  listRegistrations,
+  markRegistrationRegistered,
+  markRegistrationSold,
+  scheduleRegistration,
+  updateRegistrationStatus,
+} from '../../../services/finance/financeApi.js';
+import { formatDate, formatINR } from '../../../utils/format';
+import '../../../styles/module.css';
+import './registrations.css';
+
+const STATUS_TONE = {
+  PENDING: 'warning',
+  DOCUMENTS_PENDING: 'warning',
+  SCHEDULED: 'info',
+  IN_PROGRESS: 'info',
+  REGISTERED: 'success',
+  COMPLETED: 'success',
+  CANCELLED: 'danger',
+};
 
 export default function RegistrationList() {
   const navigate = useNavigate();
-  const { registrations } = useRegistrations();
+  const toast = useToast();
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [busyId, setBusyId] = useState('');
+  const [search, setSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState('');
 
-  const [search, setSearch] = useState("");
-  const [statusFilter, setStatusFilter] = useState("");
+  const load = () => {
+    setLoading(true);
+    listRegistrations({ search, status: statusFilter, pageSize: 100 })
+      .then((data) => setItems(data?.items || []))
+      .catch((err) => toast.error(err.message || 'Failed to load registrations.'))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    load();
+  }, [statusFilter]);
 
   const stats = useMemo(() => ({
-    total: registrations.length,
-    completed: registrations.filter((r) => r.status === "Completed").length,
-    inProgress: registrations.filter((r) => r.status === "In Progress").length,
-    pending: registrations.filter((r) => r.status === "Pending").length,
-  }), [registrations]);
+    total: items.length,
+    pending: items.filter((r) => ['PENDING', 'DOCUMENTS_PENDING'].includes(r.status)).length,
+    inProgress: items.filter((r) => ['SCHEDULED', 'IN_PROGRESS'].includes(r.status)).length,
+    completed: items.filter((r) => ['REGISTERED', 'COMPLETED'].includes(r.status)).length,
+  }), [items]);
 
-  const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase();
-    return registrations.filter((r) => {
-      const matchSearch =
-        !q ||
-        [
-          r.registrationNumber,
-          r.customerName,
-          r.propertyName,
-          r.plotNumber,
-          r.bookingId,
-        ]
-          .join(" ")
-          .toLowerCase()
-          .includes(q);
-      const matchStatus = !statusFilter || r.status === statusFilter;
-      return matchSearch && matchStatus;
-    });
-  }, [registrations, search, statusFilter]);
-
-  const hasFilters = search || statusFilter;
+  const run = async (id, action) => {
+    setBusyId(id);
+    try {
+      await action();
+      toast.success('Updated successfully.');
+      load();
+    } catch (err) {
+      toast.error(err.message || 'Action failed.');
+    } finally {
+      setBusyId('');
+    }
+  };
 
   const columns = [
+    { key: 'registrationNumber', header: 'Registration #' },
+    { key: 'bookingNumber', header: 'Booking #' },
+    { key: 'customer', header: 'Customer', render: (row) => `${row.customer || '—'} · ${row.mobile || ''}` },
+    { key: 'venture', header: 'Venture' },
+    { key: 'layout', header: 'Layout' },
+    { key: 'plotNumber', header: 'Plot' },
+    { key: 'registrationDate', header: 'Reg. Date', render: (row) => formatDate(row.registrationDate || row.scheduledAt) },
+    { key: 'registrationOffice', header: 'Office', render: (row) => row.registrationOffice || '—' },
     {
-      key: "registrationNumber",
-      header: "Registration No.",
-      sortable: true,
+      key: 'executive',
+      header: 'Executive',
+      render: (row) => row.registrationExecutive?.name || '—',
+    },
+    {
+      key: 'charges',
+      header: 'Charges / Stamp',
+      render: (row) => `${formatINR(row.registrationCharges)} / ${formatINR(row.stampDuty)}`,
+    },
+    {
+      key: 'status',
+      header: 'Status',
       render: (row) => (
-        <div>
-          <span className="registrations-cell__title">{row.registrationNumber}</span>
-          <span className="registrations-cell__sub">{row.id}</span>
-        </div>
+        <Badge variant={STATUS_TONE[row.status] || 'neutral'}>
+          {row.statusLabel || REGISTRATION_STATUS_LABELS[row.status] || row.status}
+        </Badge>
       ),
     },
     {
-      key: "customerName",
-      header: "Customer",
-      sortable: true,
-      render: (row) => <span className="registrations-cell__title">{row.customerName}</span>,
-    },
-    {
-      key: "propertyName",
-      header: "Property",
-      sortable: true,
+      key: 'actions',
+      header: 'Actions',
       render: (row) => (
-        <div>
-          <span className="registrations-cell__title">{row.propertyName}</span>
-          <span className="registrations-cell__sub">{row.bookingId}</span>
-        </div>
-      ),
-    },
-    { key: "plotNumber", header: "Plot", sortable: true },
-    {
-      key: "status",
-      header: "Status",
-      sortable: true,
-      render: (row) => (
-        <Badge
-          tone={REGISTRATION_STATUS_META[row.status]?.tone}
-          label={REGISTRATION_STATUS_META[row.status]?.label || row.status}
-          dot
-        />
-      ),
-    },
-    {
-      key: "submittedDate",
-      header: "Submitted",
-      sortable: true,
-      render: (row) => (
-        <span className="registrations-cell__muted">{formatDate(row.submittedDate)}</span>
-      ),
-    },
-    {
-      key: "completedDate",
-      header: "Completed",
-      sortable: true,
-      render: (row) => (
-        <span className="registrations-cell__muted">{formatDate(row.completedDate)}</span>
-      ),
-    },
-    {
-      key: "actions",
-      header: "",
-      align: "right",
-      className: "registrations-col-actions",
-      render: (row) => (
-        <span
-          className="registrations-cell__actions"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <Button
-            variant="ghost"
-            size="sm"
-            iconOnly
-            onClick={() => navigate(`/dashboard/documents/registrations/${row.id}`)}
-            aria-label="View registration"
-          >
+        <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
+          <Button variant="ghost" size="sm" iconOnly onClick={() => navigate(`/dashboard/documents/registrations/${row.id}`)} title="View">
             <FiEye />
           </Button>
-          <Dropdown
-            items={[
-              {
-                label: "View Details",
-                icon: <FiEye />,
-                onClick: () => navigate(`/dashboard/documents/registrations/${row.id}`),
-              },
-              { label: "Download", icon: <FiDownload />, onClick: () => {} },
-            ]}
-          />
-        </span>
+          {!['COMPLETED', 'CANCELLED', 'REGISTERED'].includes(row.status) ? (
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={busyId === row.id}
+              onClick={() => run(row.id, () => scheduleRegistration(row.id, {
+                registrationOffice: row.registrationOffice || 'Sub-Registrar Office',
+                scheduledAt: new Date().toISOString(),
+              }))}
+            >
+              Schedule
+            </Button>
+          ) : null}
+          {row.status === 'SCHEDULED' ? (
+            <Button
+              variant="outline"
+              size="sm"
+              disabled={busyId === row.id}
+              onClick={() => run(row.id, () => updateRegistrationStatus(row.id, 'IN_PROGRESS'))}
+            >
+              In Progress
+            </Button>
+          ) : null}
+          {!['REGISTERED', 'COMPLETED', 'CANCELLED'].includes(row.status) ? (
+            <Button
+              variant="accent"
+              size="sm"
+              disabled={busyId === row.id}
+              onClick={() => run(row.id, () => markRegistrationRegistered(row.id))}
+            >
+              Mark Registered
+            </Button>
+          ) : null}
+          {row.status === 'REGISTERED' ? (
+            <Button
+              variant="accent"
+              size="sm"
+              disabled={busyId === row.id}
+              onClick={() => run(row.id, () => markRegistrationSold(row.id))}
+            >
+              Mark Sold
+            </Button>
+          ) : null}
+        </div>
       ),
     },
   ];
 
   return (
-    <motion.div
-      className="erp-module-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.35 }}
-    >
+    <motion.div className="erp-module-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageHeader
-        title="Plot Registrations"
-        description="Track registration applications, document submissions and completion status."
+        title="Registration Management"
+        description="Schedule registrations, assign executives, upload documents, and mark plots sold."
+        actions={<Button variant="ghost" size="md" to="/dashboard/finance">Finance Dashboard</Button>}
       />
 
-      <div className="registrations-stats">
-        <StatsCard icon={<FiShield />} label="Total" value={stats.total} tone="accent" />
-        <StatsCard icon={<FiCheckCircle />} label="Completed" value={stats.completed} tone="success" />
-        <StatsCard icon={<FiClock />} label="In Progress" value={stats.inProgress} tone="info" />
-        <StatsCard icon={<FiAlertCircle />} label="Pending" value={stats.pending} tone="warning" />
+      <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
+        <StatsCard label="Total" value={stats.total} icon={<FiClock />} />
+        <StatsCard label="Pending" value={stats.pending} icon={<FiAlertCircle />} />
+        <StatsCard label="In Progress" value={stats.inProgress} icon={<FiClock />} />
+        <StatsCard label="Completed" value={stats.completed} icon={<FiCheckCircle />} />
       </div>
 
-      <div className="erp-toolbar">
-        <div className="erp-toolbar__search">
-          <Input
-            placeholder="Search registrations, customers, plots..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            icon={<FiShield />}
-          />
+      <div className="erp-filters" style={{ display: 'flex', gap: '1rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+        <Input
+          label="Search"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && load()}
+          placeholder="Registration, booking, customer, plot…"
+        />
+        <Select
+          label="Status"
+          value={statusFilter}
+          onChange={setStatusFilter}
+          options={[
+            { value: '', label: 'All statuses' },
+            ...REGISTRATION_STATUSES.map((status) => ({
+              value: status,
+              label: REGISTRATION_STATUS_LABELS[status],
+            })),
+          ]}
+        />
+        <div style={{ alignSelf: 'flex-end' }}>
+          <Button variant="outline" onClick={load}>Search</Button>
         </div>
-        <div className="erp-toolbar__filters">
-          <Select
-            value={statusFilter}
-            onChange={setStatusFilter}
-            options={[
-              { value: "", label: "All Statuses" },
-              ...REGISTRATION_STATUSES.map((s) => ({ value: s, label: s })),
-            ]}
-            placeholder="Status"
-          />
-        </div>
-        <button
-          type="button"
-          className="erp-toolbar__reset"
-          onClick={() => {
-            setSearch("");
-            setStatusFilter("");
-          }}
-          disabled={!hasFilters}
-        >
-          <FiRotateCcw /> Reset
-        </button>
       </div>
 
       <DataTable
         columns={columns}
-        data={filtered}
-        rowKey="id"
-        onRowClick={(row) => navigate(`/dashboard/documents/registrations/${row.id}`)}
-        emptyState={
-          <EmptyState
-            title="No registrations found"
-            description={
-              hasFilters
-                ? "Try adjusting your search or filters."
-                : "Registration records appear when agreements are submitted."
-            }
-            action={
-              hasFilters ? (
-                <Button
-                  variant="ghost"
-                  size="md"
-                  onClick={() => {
-                    setSearch("");
-                    setStatusFilter("");
-                  }}
-                >
-                  Clear Filters
-                </Button>
-              ) : null
-            }
-          />
-        }
+        data={items}
+        loading={loading}
+        emptyTitle="No registrations found"
+        emptyDescription="Registrations are created automatically when a plot booking is confirmed."
       />
     </motion.div>
   );

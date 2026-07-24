@@ -3,6 +3,7 @@ import { getPlotInventoryStatistics } from "./statisticsService.js";
 import { nextId } from "../utils/idGenerator.js";
 import { getLayoutOrThrow } from "./relationshipService.js";
 import { derivePricing } from "../../pages/plotInventory/constants.js";
+import { PLOT_MODES, PLOT_SOURCES } from "./plotCreation/plotDto.js";
 
 const today = () => new Date().toISOString().split("T")[0];
 
@@ -21,6 +22,52 @@ function withHistory(plot, event) {
     lastUpdated: today(),
     history: [{ ...event, date: today() }, ...(plot.history || [])],
   };
+}
+
+function buildPlotRecordFromDto(normalized, ctx, plots, { source, historyTitle, historyDescription }) {
+  const id = normalized.id || nextId("PLT", plots, 100001);
+  const pricing = derivePricing({ ...normalized, ...ctx });
+
+  return withHistory(
+    {
+      ...normalized,
+      ...ctx,
+      id,
+      ...pricing,
+      areaSqYards: normalized.areaSqYards ?? pricing.area,
+      ratePerSqYard: normalized.ratePerSqYard ?? pricing.rate,
+      totalPrice: normalized.totalPrice ?? pricing.totalPrice,
+      finalPrice: normalized.finalPrice ?? normalized.totalPrice ?? pricing.totalPrice,
+      status: normalized.status || "Available",
+      latitude: normalized.latitude ?? null,
+      longitude: normalized.longitude ?? null,
+      mapWidth: normalized.mapWidth ?? 72,
+      mapHeight: normalized.mapHeight ?? 48,
+      rotation: normalized.rotation ?? 0,
+      shapeType: normalized.shapeType || "POLYGON",
+      polygonPoints: normalized.polygonPoints || [],
+      facing: normalized.facing || "East",
+      blockName: normalized.metadata?.blockName || normalized.blockName || "",
+      row: normalized.metadata?.row ?? normalized.row ?? null,
+      col: normalized.metadata?.col ?? normalized.col ?? null,
+      rowNumber: normalized.metadata?.rowNumber ?? normalized.rowNumber ?? null,
+      columnNumber: normalized.metadata?.columnNumber ?? normalized.columnNumber ?? null,
+      dimensions: normalized.metadata?.dimensions ?? normalized.dimensions ?? null,
+      roadWidthFeet: normalized.metadata?.roadWidthFeet ?? normalized.roadWidthFeet ?? null,
+      plcType: normalized.metadata?.plcType ?? normalized.plcType ?? "Open",
+      cornerPlot: Boolean(normalized.metadata?.cornerPlot ?? normalized.cornerPlot),
+      metadata: normalized.metadata || { source },
+      source: normalized.metadata?.source || source,
+      documents: normalized.documents || [],
+      createdDate: normalized.createdDate || today(),
+    },
+    {
+      type: "created",
+      title: historyTitle,
+      description: historyDescription,
+      tone: "accent",
+    }
+  );
 }
 
 function resolveLayoutContext(data) {
@@ -95,6 +142,108 @@ export const plotService = {
 
     dataStore.updateList("plots", (list) => [record, ...list]);
     return record;
+  },
+
+  persistPlots({ layoutId, plots = [], mode = PLOT_MODES.APPEND, source = PLOT_SOURCES.EXCEL }) {
+    if (!layoutId) throw new Error("Layout is required");
+    if (!Array.isArray(plots) || !plots.length) {
+      throw new Error("No plots to persist");
+    }
+
+    const ctx = resolveLayoutContext({ layoutId });
+    let plotsList =
+      mode === PLOT_MODES.REPLACE
+        ? dataStore.getList("plots").filter((plot) => plot.layoutId !== layoutId)
+        : [...dataStore.getList("plots")];
+
+    const isGenerator = source === PLOT_SOURCES.GENERATOR;
+    const historyTitle = isGenerator ? "Plot saved from layout generator" : "Plot imported";
+    const created = [];
+
+    for (const normalized of plots) {
+      const record = buildPlotRecordFromDto(normalized, ctx, plotsList, {
+        source,
+        historyTitle,
+        historyDescription: `Plot ${normalized.plotNumber} ${isGenerator ? "saved to" : "imported into"} ${ctx.layoutName}`,
+      });
+      plotsList.unshift(record);
+      created.push(record);
+    }
+
+    dataStore.setList("plots", plotsList);
+
+    return {
+      plots: created,
+      summary: {
+        imported: created.length,
+        failed: 0,
+        duplicates: 0,
+        total: plots.length,
+        mode,
+        source,
+      },
+    };
+  },
+
+  bulkCreatePlots(rows, layoutId, source = PLOT_SOURCES.EXCEL) {
+    return plotService.persistPlots({
+      layoutId,
+      plots: rows,
+      mode: PLOT_MODES.APPEND,
+      source,
+    });
+  },
+
+  replaceLayoutPlots(layoutId, rows, source = PLOT_SOURCES.GENERATOR) {
+    if (!Array.isArray(rows)) throw new Error("Rows must be an array");
+
+    if (!rows.length) {
+      const remaining = dataStore.getList("plots").filter((plot) => plot.layoutId !== layoutId);
+      dataStore.setList("plots", remaining);
+      return { plots: [], summary: { imported: 0, total: 0, mode: PLOT_MODES.REPLACE, source } };
+    }
+
+    return plotService.persistPlots({
+      layoutId,
+      plots: rows,
+      mode: PLOT_MODES.REPLACE,
+      source,
+    });
+  },
+
+  syncImportedPlots(records = []) {
+    if (!records.length) return;
+    const enriched = records.map((record) => {
+      const pricing = derivePricing(record);
+      return withHistory(
+        {
+          ...record,
+          ...pricing,
+          areaSqYards: record.areaSqYards ?? pricing.area,
+          ratePerSqYard: record.ratePerSqYard ?? pricing.rate,
+          totalPrice: record.totalPrice ?? pricing.totalPrice,
+          finalPrice: record.finalPrice ?? record.totalPrice ?? pricing.totalPrice,
+          polygonPoints: record.polygonPoints || [],
+          shapeType: record.shapeType || "POLYGON",
+          metadata: record.metadata || { source: record.source || PLOT_SOURCES.EXCEL },
+          source: record.metadata?.source || record.source || PLOT_SOURCES.EXCEL,
+          documents: record.documents || [],
+          createdDate: record.createdDate || today(),
+        },
+        {
+          type: "created",
+          title: "Plot imported",
+          description: `Plot ${record.plotNumber} imported`,
+          tone: "accent",
+        }
+      );
+    });
+
+    dataStore.updateList("plots", (list) => {
+      const ids = new Set(enriched.map((r) => r.id));
+      const filtered = list.filter((p) => !ids.has(p.id));
+      return [...enriched, ...filtered];
+    });
   },
 
   updatePlot(id, data) {

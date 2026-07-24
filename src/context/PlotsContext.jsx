@@ -1,6 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext } from "react";
 import { Outlet } from "react-router-dom";
+import { LayoutsProvider } from "./LayoutsContext";
+import { VenturesProvider } from "./VenturesContext";
 import { usePlots as usePlotsHook } from "../shared/hooks/usePlots.js";
 
 const PlotsContext = createContext(null);
@@ -13,7 +15,11 @@ export function PlotsProvider({ children }) {
 export function PlotsLayout() {
   return (
     <PlotsProvider>
-      <Outlet />
+      <LayoutsProvider>
+        <VenturesProvider>
+          <Outlet />
+        </VenturesProvider>
+      </LayoutsProvider>
     </PlotsProvider>
   );
 }

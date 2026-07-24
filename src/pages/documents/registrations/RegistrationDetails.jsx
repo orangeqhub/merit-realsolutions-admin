@@ -1,281 +1,263 @@
-import { useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import PageHeader from '../../../components/layout/PageHeader';
+import Button from '../../../components/ui/button/Button';
+import Badge from '../../../components/ui/badge/Badge';
+import Input from '../../../components/ui/input/Input';
+import Select from '../../../components/ui/select/Select';
+import { useToast } from '../../../components/feedback/Toast';
 import {
-  FiArrowLeft,
-  FiDownload,
-  FiEye,
-  FiFileText,
-  FiHome,
-  FiUser,
-  FiClock,
-  FiShield,
-} from "react-icons/fi";
-import Breadcrumb from "../../../components/layout/Breadcrumb";
-import Button from "../../../components/ui/button/Button";
-import Badge from "../../../components/ui/badge/Badge";
-import Select from "../../../components/ui/select/Select";
-import Upload from "../../../components/ui/upload/Upload";
-import SummaryCard from "../../../components/cards/SummaryCard";
-import InfoCard from "../../../components/cards/InfoCard";
-import Tabs from "../../../components/navigation/Tabs";
-import Timeline from "../../../components/timeline/Timeline";
-import EmptyState from "../../../components/layout/EmptyState";
-import { useRegistrations } from "../../../context/RegistrationsContext";
-import { useToast } from "../../../components/feedback/Toast";
-import {
+  REGISTRATION_STATUS_LABELS,
   REGISTRATION_STATUSES,
-  REGISTRATION_STATUS_META,
-  formatDate,
-} from "./constants";
-import "../../../styles/module.css";
-import "./registrations.css";
+  assignRegistrationExecutive,
+  getRegistration,
+  markRegistrationRegistered,
+  markRegistrationSold,
+  scheduleRegistration,
+  updateRegistrationStatus,
+  uploadRegistrationDocument,
+} from '../../../services/finance/financeApi.js';
+import { listSalesUsers } from '../../../services/users/userApi.js';
+import { formatDate, formatINR } from '../../../utils/format';
+import '../../../styles/module.css';
+import './registrations.css';
 
-const TABS = [
-  { id: "overview", label: "Overview", icon: <FiHome /> },
-  { id: "documents", label: "Documents", icon: <FiFileText /> },
-  { id: "timeline", label: "Timeline", icon: <FiClock /> },
+const DOC_TYPES = [
+  'SALE_AGREEMENT',
+  'REGISTRATION_COPY',
+  'AADHAAR',
+  'PAN',
+  'PASSPORT_PHOTO',
+  'EC',
+  'LEGAL',
+  'TAX_RECEIPT',
+  'MUTATION',
 ];
 
 export default function RegistrationDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const toast = useToast();
-  const { getRegistration, updateRegistration } = useRegistrations();
-  const registration = getRegistration(id);
+  const [data, setData] = useState(null);
+  const [executives, setExecutives] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [busy, setBusy] = useState(false);
+  const [form, setForm] = useState({
+    registrationOffice: '',
+    registrationDate: '',
+    executiveUserId: '',
+    status: '',
+    remarks: '',
+    documentType: 'REGISTRATION_COPY',
+    title: '',
+    fileUrl: '',
+  });
 
-  const [tab, setTab] = useState("overview");
-  const [previewDoc, setPreviewDoc] = useState(null);
-  const [statusDraft, setStatusDraft] = useState("");
-  const [uploadFile, setUploadFile] = useState(null);
-
-  const primaryDoc = useMemo(
-    () => registration?.documents?.[0] || null,
-    [registration]
-  );
-
-  if (!registration) {
-    return (
-      <EmptyState
-        title="Registration not found"
-        description="This registration may have been removed or the link is invalid."
-        action={
-          <Button variant="accent" size="md" to="/dashboard/documents/registrations">
-            <FiArrowLeft /> Back to Registrations
-          </Button>
-        }
-      />
-    );
-  }
-
-  const handleDownload = (doc) => {
-    toast.success(`Downloading ${doc?.name || "document"}...`);
+  const load = () => {
+    setLoading(true);
+    getRegistration(id)
+      .then((row) => {
+        setData(row);
+        setForm((prev) => ({
+          ...prev,
+          registrationOffice: row.registrationOffice || '',
+          registrationDate: row.registrationDate || '',
+          executiveUserId: row.executiveUserId ? String(row.executiveUserId) : '',
+          status: row.status || '',
+          remarks: row.remarks || '',
+        }));
+      })
+      .catch((err) => toast.error(err.message || 'Failed to load registration.'))
+      .finally(() => setLoading(false));
   };
 
-  const handleStatusUpdate = () => {
-    const next = statusDraft || registration.status;
-    if (next === registration.status) return;
-    const today = new Date().toISOString().split("T")[0];
-    const patch = {
-      status: next,
-      timeline: [
-        ...(registration.timeline || []),
-        {
-          type: "status",
-          title: `Status changed to ${next}`,
-          date: today,
-          tone: REGISTRATION_STATUS_META[next]?.tone || "accent",
-        },
-      ],
-    };
-    if (next === "Completed") patch.completedDate = today;
-    updateRegistration(registration.id, patch);
-    toast.success(`Status updated to ${next}`);
-    setStatusDraft("");
-  };
+  useEffect(() => {
+    load();
+    listSalesUsers().then((rows) => {
+      const list = Array.isArray(rows) ? rows : (rows?.items || rows?.users || []);
+      setExecutives(list);
+    }).catch(() => setExecutives([]));
+  }, [id]);
 
-  const handleUpload = () => {
-    if (!uploadFile) return;
-    const today = new Date().toISOString().split("T")[0];
-    const newDoc = {
-      id: `rd-new-${Date.now()}`,
-      name: uploadFile.name || "Registration Document",
-      type: "pdf",
-      size: uploadFile.size ? `${(uploadFile.size / 1048576).toFixed(1)} MB` : "—",
-      date: today,
-    };
-    updateRegistration(registration.id, {
-      documents: [...(registration.documents || []), newDoc],
-      timeline: [
-        ...(registration.timeline || []),
-        {
-          type: "upload",
-          title: `Document uploaded: ${newDoc.name}`,
-          date: today,
-          tone: "info",
-        },
-      ],
-    });
-    toast.success("Document uploaded");
-    setUploadFile(null);
-  };
-
-  const timelineItems = (registration.timeline || []).map((item, i) => ({
-    id: `reg-tl-${i}`,
-    title: item.title,
-    time: formatDate(item.date),
-    tone: item.tone || "accent",
-  }));
-
-  const renderTab = () => {
-    switch (tab) {
-      case "overview":
-        return (
-          <InfoCard
-            title="Registration Details"
-            icon={<FiShield />}
-            items={[
-              { label: "Registration No.", value: registration.registrationNumber },
-              { label: "Customer", value: registration.customerName },
-              { label: "Property", value: registration.propertyName },
-              { label: "Plot", value: registration.plotNumber },
-              { label: "Booking ID", value: registration.bookingId },
-              { label: "Submitted", value: formatDate(registration.submittedDate) },
-              { label: "Completed", value: formatDate(registration.completedDate) },
-              { label: "Status", value: registration.status },
-            ]}
-          />
-        );
-      case "documents":
-        return (
-          <>
-            <div className="registrations-doc-list">
-              {(registration.documents || []).map((doc) => (
-                <article key={doc.id} className="registrations-doc-item">
-                  <span className="registrations-doc-item__icon">
-                    <FiFileText />
-                  </span>
-                  <div className="registrations-doc-item__info">
-                    <strong>{doc.name}</strong>
-                    <span>
-                      {doc.type?.toUpperCase()} · {doc.size} · {formatDate(doc.date)}
-                    </span>
-                  </div>
-                  <div className="registrations-doc-item__actions">
-                    <Button variant="ghost" size="sm" onClick={() => setPreviewDoc(doc)}>
-                      <FiEye /> Preview
-                    </Button>
-                    <Button variant="ghost" size="sm" onClick={() => handleDownload(doc)}>
-                      <FiDownload /> Download
-                    </Button>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="registrations-preview">
-              <FiFileText />
-              <p>
-                {previewDoc
-                  ? `Preview: ${previewDoc.name}`
-                  : primaryDoc
-                    ? `Select Preview on ${primaryDoc.name} to view`
-                    : "No document uploaded"}
-              </p>
-            </div>
-            <Upload
-              label="Upload Registration Document"
-              accept=".pdf,image/*"
-              variant="file"
-              value={uploadFile}
-              onChange={setUploadFile}
-            />
-            {uploadFile && (
-              <Button variant="accent" size="md" onClick={handleUpload}>
-                Save Document
-              </Button>
-            )}
-          </>
-        );
-      case "timeline":
-        return timelineItems.length > 0 ? (
-          <Timeline items={timelineItems} />
-        ) : (
-          <p className="registrations-cell__muted">No timeline events recorded.</p>
-        );
-      default:
-        return null;
+  const run = async (action, successMessage) => {
+    setBusy(true);
+    try {
+      await action();
+      toast.success(successMessage || 'Updated.');
+      load();
+    } catch (err) {
+      toast.error(err.message || 'Action failed.');
+    } finally {
+      setBusy(false);
     }
   };
 
+  if (loading) return <p>Loading registration…</p>;
+  if (!data) {
+    return (
+      <div className="erp-module-page">
+        <p>Registration not found.</p>
+        <Button to="/dashboard/documents/registrations">Back</Button>
+      </div>
+    );
+  }
+
   return (
-    <motion.div
-      className="erp-module-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.35 }}
-    >
-      <Breadcrumb
-        items={[
-          { label: "Registrations", to: "/dashboard/documents/registrations" },
-          { label: registration.registrationNumber },
-        ]}
+    <motion.div className="erp-module-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <PageHeader
+        title={data.registrationNumber}
+        description={`${data.customer} · Booking ${data.bookingNumber || data.bookingId}`}
+        actions={(
+          <>
+            <Button variant="ghost" size="md" to={`/dashboard/finance/ledgers/${data.bookingId}`}>View Ledger</Button>
+            <Button variant="outline" size="md" to="/dashboard/documents/registrations">Back</Button>
+          </>
+        )}
       />
 
-      <section className="erp-details__header">
-        <div>
-          <div className="erp-details__title-row">
-            <h1>{registration.registrationNumber}</h1>
-            <Badge
-              tone={REGISTRATION_STATUS_META[registration.status]?.tone}
-              label={
-                REGISTRATION_STATUS_META[registration.status]?.label || registration.status
-              }
-            />
+      <div className="dashboard__summary">
+        <div className="dashboard__summary-item"><span className="dashboard__summary-label">Status</span><span className="dashboard__summary-value"><Badge>{data.statusLabel}</Badge></span></div>
+        <div className="dashboard__summary-item"><span className="dashboard__summary-label">Venture</span><span className="dashboard__summary-value">{data.venture}</span></div>
+        <div className="dashboard__summary-item"><span className="dashboard__summary-label">Layout</span><span className="dashboard__summary-value">{data.layout}</span></div>
+        <div className="dashboard__summary-item"><span className="dashboard__summary-label">Plot</span><span className="dashboard__summary-value">{data.plotNumber}</span></div>
+        <div className="dashboard__summary-item"><span className="dashboard__summary-label">Charges</span><span className="dashboard__summary-value">{formatINR(data.registrationCharges)}</span></div>
+        <div className="dashboard__summary-item"><span className="dashboard__summary-label">Stamp Duty</span><span className="dashboard__summary-value">{formatINR(data.stampDuty)}</span></div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '1.25rem' }}>
+        <section className="property-booking-settings">
+          <h3>Schedule / Update</h3>
+          <Input label="Registration Office" value={form.registrationOffice} onChange={(e) => setForm((p) => ({ ...p, registrationOffice: e.target.value }))} />
+          <Input label="Registration Date" type="date" value={form.registrationDate} onChange={(e) => setForm((p) => ({ ...p, registrationDate: e.target.value }))} />
+          <Select
+            label="Status"
+            value={form.status}
+            onChange={(value) => setForm((p) => ({ ...p, status: value }))}
+            options={REGISTRATION_STATUSES.map((status) => ({ value: status, label: REGISTRATION_STATUS_LABELS[status] }))}
+          />
+          <Input label="Remarks" value={form.remarks} onChange={(e) => setForm((p) => ({ ...p, remarks: e.target.value }))} />
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.75rem' }}>
+            <Button
+              variant="outline"
+              disabled={busy}
+              onClick={() => run(() => scheduleRegistration(id, {
+                registrationOffice: form.registrationOffice,
+                registrationDate: form.registrationDate,
+                remarks: form.remarks,
+              }), 'Registration scheduled.')}
+            >
+              Schedule Registration
+            </Button>
+            <Button
+              variant="outline"
+              disabled={busy}
+              onClick={() => run(() => updateRegistrationStatus(id, form.status, form.remarks), 'Status updated.')}
+            >
+              Update Status
+            </Button>
+            <Button
+              variant="accent"
+              disabled={busy}
+              onClick={() => run(() => markRegistrationRegistered(id, { remarks: form.remarks }), 'Marked registered.')}
+            >
+              Mark Registered
+            </Button>
+            <Button
+              variant="accent"
+              disabled={busy}
+              onClick={() => run(() => markRegistrationSold(id, { remarks: form.remarks }), 'Marked sold.')}
+            >
+              Mark Sold
+            </Button>
           </div>
-          <p className="erp-details__subtitle">
-            {registration.customerName} · {registration.propertyName} · Plot {registration.plotNumber}
-          </p>
-        </div>
-        <div className="erp-details__actions">
+        </section>
+
+        <section className="property-booking-settings">
+          <h3>Assign Executive</h3>
+          <Select
+            label="Registration Executive"
+            value={form.executiveUserId}
+            onChange={(value) => setForm((p) => ({ ...p, executiveUserId: value }))}
+            options={[
+              { value: '', label: 'Select executive' },
+              ...executives.map((user) => ({
+                value: String(user.id),
+                label: `${user.name}${user.employeeCode ? ` (${user.employeeCode})` : ''}`,
+              })),
+            ]}
+          />
           <Button
-            variant="ghost"
-            size="md"
-            onClick={() => primaryDoc && handleDownload(primaryDoc)}
-            disabled={!primaryDoc}
+            variant="accent"
+            disabled={busy || !form.executiveUserId}
+            onClick={() => run(() => assignRegistrationExecutive(id, Number(form.executiveUserId)), 'Executive assigned.')}
           >
-            <FiDownload /> Download
+            Assign Executive
           </Button>
-        </div>
+          <p style={{ marginTop: '0.75rem' }}>
+            Current: {data.registrationExecutive?.name || 'Unassigned'}
+          </p>
+        </section>
+
+        <section className="property-booking-settings">
+          <h3>Upload Registration Document</h3>
+          <Select
+            label="Document Type"
+            value={form.documentType}
+            onChange={(value) => setForm((p) => ({ ...p, documentType: value }))}
+            options={DOC_TYPES.map((type) => ({ value: type, label: type.replace(/_/g, ' ') }))}
+          />
+          <Input label="Title" value={form.title} onChange={(e) => setForm((p) => ({ ...p, title: e.target.value }))} />
+          <Input label="File URL" value={form.fileUrl} onChange={(e) => setForm((p) => ({ ...p, fileUrl: e.target.value }))} placeholder="https://..." />
+          <Button
+            variant="accent"
+            disabled={busy || !form.fileUrl.trim()}
+            onClick={() => run(() => uploadRegistrationDocument(id, {
+              documentType: form.documentType,
+              title: form.title || form.documentType.replace(/_/g, ' '),
+              fileUrl: form.fileUrl.trim(),
+            }), 'Document uploaded.')}
+          >
+            Upload Document
+          </Button>
+        </section>
+      </div>
+
+      <section className="property-booking-settings" style={{ marginTop: '1.25rem' }}>
+        <h3>Documents</h3>
+        {(data.documents || []).length === 0 ? <p>No documents uploaded.</p> : (
+          <ul className="dashboard__activity-list">
+            {data.documents.map((doc) => (
+              <li key={doc.id} className="dashboard__activity-item">
+                <a href={doc.fileUrl} target="_blank" rel="noreferrer" className="dashboard__activity-text">
+                  {doc.title} · {doc.documentTypeLabel} · {formatDate(doc.createdAt)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
 
-      <div className="erp-details__summary">
-        <SummaryCard icon={<FiUser />} label="Customer" value={registration.customerName} tone="violet" />
-        <SummaryCard icon={<FiHome />} label="Property" value={registration.propertyName} tone="info" />
-        <SummaryCard icon={<FiClock />} label="Submitted" value={formatDate(registration.submittedDate)} tone="warning" />
-        <SummaryCard icon={<FiShield />} label="Status" value={registration.status} tone="accent" />
-      </div>
+      <section className="property-booking-settings" style={{ marginTop: '1.25rem' }}>
+        <h3>Audit History</h3>
+        {(data.audit || []).length === 0 ? <p>No audit events yet.</p> : (
+          <ul className="dashboard__activity-list">
+            {data.audit.map((item) => (
+              <li key={item.id} className="dashboard__activity-item">
+                <span className="dashboard__activity-text">
+                  {item.action} · {formatDate(item.createdAt)} · actor #{item.actorId || '—'}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
 
-      <div className="registrations-status-form">
-        <Select
-          label="Update Status"
-          value={statusDraft || registration.status}
-          onChange={setStatusDraft}
-          options={REGISTRATION_STATUSES.map((s) => ({ value: s, label: s }))}
-        />
-        <Button variant="accent" size="md" onClick={handleStatusUpdate}>
-          Save Status
-        </Button>
-      </div>
-
-      <Tabs tabs={TABS} active={tab} onChange={setTab} layoutId="registration-tabs" />
-      <motion.div
-        key={tab}
-        className="erp-details__tab-content"
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-      >
-        {renderTab()}
-      </motion.div>
+      <p style={{ marginTop: '1rem' }}>
+        <Link to={`/dashboard/finance/ledgers/${data.bookingId}`}>Open customer financial ledger</Link>
+        {' · '}
+        <button type="button" className="btn btn--ghost btn--sm" onClick={() => navigate(-1)}>Back</button>
+      </p>
     </motion.div>
   );
 }

@@ -73,6 +73,12 @@ class DataStore {
     return state;
   }
 
+  clearInventory() {
+    this.setList("ventures", []);
+    this.setList("layouts", []);
+    this.setList("plots", []);
+  }
+
   get initialized() {
     return this._initialized;
   }

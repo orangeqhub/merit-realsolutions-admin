@@ -88,16 +88,19 @@
   opacity: 0.6;
 }
 
-.plot-map-statusbar__provider {
+.plot-map-statusbar__source {
   margin-left: auto;
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
-  background: rgba(34, 197, 94, 0.12);
-  color: #15803d;
+  background: rgba(37, 99, 235, 0.1);
+  color: #1d4ed8;
   font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.plot-map-statusbar__provider {
+  display: none;
 }
 
 .plot-map-detail__history {
@@ -258,6 +261,26 @@
   font-size: 0.6875rem;
   font-weight: 600;
   color: var(--erp-text-muted);
+  border: none;
+  background: transparent;
+  padding: 0.15rem 0.35rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.plot-map-legend__item:hover {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.plot-map-legend__item.is-active {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--erp-text);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+.plot-map-legend__item.is-dimmed {
+  opacity: 0.45;
 }
 
 .plot-map-legend__item i {
@@ -416,6 +439,73 @@
   z-index: 30;
 }
 
+.plot-leaflet-map .leaflet-overlay-pane svg {
+  z-index: 450;
+}
+
+.plot-preview-polygon {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.95));
+  animation: plot-preview-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes plot-preview-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+.plot-saved-polygon {
+  filter: drop-shadow(0 4px 10px rgba(10, 22, 40, 0.28));
+}
+
+.plot-map-drawer__form--plot-create {
+  grid-template-columns: 1fr 1fr;
+}
+
+.plot-map-drawer__full {
+  grid-column: 1 / -1;
+}
+
+.plot-map-drawer__corner-section h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--erp-text);
+}
+
+.plot-map-drawer__corner-section p {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-map-drawer__corner-row {
+  display: grid;
+  grid-template-columns: 88px 1fr 1fr;
+  gap: 0.65rem;
+  align-items: end;
+  margin-bottom: 0.65rem;
+  padding: 0.65rem;
+  border-radius: 12px;
+  background: var(--erp-card-muted);
+  border: 1px solid var(--erp-border);
+}
+
+.plot-map-drawer__corner-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--erp-text-soft);
+  padding-bottom: 0.65rem;
+}
+
+.plot-map-drawer__footer--stack {
+  flex-direction: column;
+}
+
 .plot-map-drawer__coords-readonly {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -495,6 +585,56 @@
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--erp-text);
+}
+
+.plot-map-detail__full {
+  grid-column: 1 / -1;
+}
+
+.plot-map-detail__delete-btn {
+  color: #dc2626 !important;
+}
+
+.plot-map-polygon-tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.plot-map-polygon-tooltip strong {
+  font-size: 0.8125rem;
+}
+
+.plot-saved-polygon--hovered,
+.plot-saved-polygon--selected,
+.plot-saved-polygon--highlighted {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.65));
+}
+
+.plot-saved-polygon--highlighted {
+  animation: plot-map-highlight-pulse 1.4s ease-in-out 2;
+}
+
+@keyframes plot-map-highlight-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.95));
+  }
+}
+
+.plot-map-drawer__form--plot-edit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.plot-map-drawer__form--plot-edit .plot-map-drawer__full {
+  grid-column: 1 / -1;
 }
 
 .plot-map-fallback {
@@ -577,8 +717,13 @@
   }
 
   .plot-map-drawer__form,
-  .plot-map-detail__grid {
+  .plot-map-detail__grid,
+  .plot-map-drawer__corner-row {
     grid-template-columns: 1fr;
+  }
+
+  .plot-map-drawer__corner-label {
+    padding-bottom: 0;
   }
 }
 
@@ -609,4 +754,456 @@
 
 .plot-list-map-shell .plot-map-workspace {
   min-height: 560px;
+}
+
+.plot-map-toolbar__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.35rem;
+  margin-left: 0.35rem;
+  border-radius: 999px;
+  background: var(--erp-accent);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.plot-map-drawer__form--layout-generate {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.plot-generate-drawer__errors {
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--erp-radius-sm);
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.plot-generate-drawer__errors p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--erp-danger-dark, #b91c1c);
+}
+
+.plot-generate-drawer__errors p + p {
+  margin-top: 0.35rem;
+}
+
+.plot-generate-drawer__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--erp-text-muted);
+}
+
+.plot-generate-drawer__hint--success {
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--erp-radius-sm);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  color: var(--erp-text);
+}
+
+.plot-map-layout-pin-tooltip {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+}
+
+.plot-generate-drawer__stats {
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--erp-radius-sm, 12px);
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid var(--erp-border, rgba(15, 23, 42, 0.08));
+}
+
+.plot-generate-drawer__stats-title {
+  margin: 0 0 0.55rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--erp-text-muted);
+}
+
+.plot-generate-drawer__stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 0.75rem;
+}
+
+.plot-generate-drawer__stats-grid strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--erp-text);
+  line-height: 1.2;
+}
+
+.plot-generate-drawer__stats-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.plot-generate-drawer__section-label {
+  grid-column: 1 / -1;
+  margin-top: 0.35rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--erp-border, rgba(15, 23, 42, 0.08));
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-muted);
+}
+
+.plot-road-preview-polygon {
+  pointer-events: none;
+}
+
+.plot-road-preview-tooltip {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #334155;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #94a3b8;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.plot-amenity-preview-tooltip {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #14532d;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #86efac;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.plot-generate-drawer__amenities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  grid-column: 1 / -1;
+}
+
+.plot-block-label-marker {
+  background: transparent;
+  border: none;
+}
+
+.plot-block-label-marker__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.82);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.28);
+  white-space: nowrap;
+}
+
+.plot-block-cluster-marker {
+  background: transparent;
+  border: none;
+}
+
+.plot-block-cluster-marker__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  min-width: 132px;
+  padding: 0.45rem 0.65rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.plot-block-cluster-marker__card strong {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.plot-block-cluster-marker__card > span {
+  font-size: 0.6875rem;
+  opacity: 0.92;
+}
+
+.plot-block-cluster-marker__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.1rem;
+}
+
+.plot-block-cluster-marker__stats em {
+  font-style: normal;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 0.1rem 0.3rem;
+  border-radius: 999px;
+}
+
+.plot-block-cluster-marker__stats .is-available {
+  background: rgba(34, 197, 94, 0.22);
+  color: #bbf7d0;
+}
+
+.plot-block-cluster-marker__stats .is-reserved {
+  background: rgba(234, 179, 8, 0.22);
+  color: #fef08a;
+}
+
+.plot-block-cluster-marker__stats .is-sold {
+  background: rgba(239, 68, 68, 0.22);
+  color: #fecaca;
+}
+
+.plot-road-preview-polygon--main {
+  filter: saturate(1.1);
+}
+
+.plot-number-label-marker {
+  background: transparent;
+  border: none;
+}
+
+.plot-number-label-marker__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  padding: 0.12rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  font-size: 0.625rem;
+  font-weight: 800;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+  white-space: nowrap;
+}
+
+.plot-layout-boundary-polygon {
+  pointer-events: none;
+}
+
+.layout-map-chrome {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.layout-map-chrome__north {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--erp-border);
+  font-size: 0.625rem;
+  font-weight: 800;
+  color: #334155;
+}
+
+.layout-map-chrome__north-arrow {
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.layout-map-chrome__legend {
+  position: absolute;
+  bottom: 3.25rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--erp-border);
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.layout-map-chrome__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.layout-map-chrome__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.layout-map-chrome__swatch--plot { background: #22c55e; }
+.layout-map-chrome__swatch--main-road { background: #475569; }
+.layout-map-chrome__swatch--internal-road { background: #64748b; }
+.layout-map-chrome__swatch--amenity { background: #86efac; }
+
+.layout-map-chrome__scale {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--erp-border);
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.layout-map-chrome__scale-bar {
+  display: block;
+  width: 72px;
+  height: 4px;
+  border-radius: 999px;
+  background: #334155;
+}
+
+.layout-health-card {
+  grid-column: 1 / -1;
+  padding: 0.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--erp-border);
+  background: rgba(248, 250, 252, 0.95);
+}
+
+.layout-health-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.layout-health-card__title {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-soft);
+}
+
+.layout-health-card__score {
+  font-size: 1.25rem;
+  color: var(--erp-text);
+}
+
+.layout-health-card__counts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.layout-health-card__issues {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.layout-health-card__issue-btn {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+  cursor: pointer;
+}
+
+.layout-health-card__issue-btn:hover {
+  color: var(--erp-accent);
+  text-decoration: underline;
+}
+
+.layout-health-card__review,
+.layout-health-card__ok,
+.layout-health-card__empty,
+.layout-health-card__more {
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.layout-health-card__review {
+  margin-top: 0.55rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-weight: 700;
+  color: var(--erp-accent);
+  cursor: pointer;
+}
+
+.plot-generate-drawer__progress {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.plot-generate-drawer__progress-bar {
+  display: block;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa, #2563eb);
+  background-size: 200% 100%;
+  animation: plot-generate-progress 1.2s linear infinite;
+}
+
+@keyframes plot-generate-progress {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.plot-map-workspace__map {
+  position: relative;
 }

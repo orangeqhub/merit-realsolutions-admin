@@ -7,6 +7,7 @@ import Loader from "../../components/feedback/Loader.jsx";
 import EmptyState from "../../components/layout/EmptyState.jsx";
 
 const MOCK_DATA_CLEARED_KEY = "mrs_erp_mock_companies_properties_cleared";
+const INVENTORY_CLEARED_KEY = "mrs_erp_inventory_cleared_v1";
 
 function clearSeededCompaniesAndProperties() {
   if (typeof window === "undefined" || !window.localStorage) return;
@@ -16,6 +17,15 @@ function clearSeededCompaniesAndProperties() {
   window.localStorage.setItem(MOCK_DATA_CLEARED_KEY, "1");
 }
 
+function clearInventoryData() {
+  if (typeof window === "undefined" || !window.localStorage) return;
+  if (window.localStorage.getItem(INVENTORY_CLEARED_KEY)) return;
+  dataStore.setList("ventures", []);
+  dataStore.setList("layouts", []);
+  dataStore.setList("plots", []);
+  window.localStorage.setItem(INVENTORY_CLEARED_KEY, "1");
+}
+
 function bootstrapDataStore() {
   if (dataStore.initialized) return;
   const loaded = dataStore.loadFromStorage();
@@ -23,6 +33,7 @@ function bootstrapDataStore() {
     dataStore.init(getSeedData());
   } else {
     clearSeededCompaniesAndProperties();
+    clearInventoryData();
   }
 }
 

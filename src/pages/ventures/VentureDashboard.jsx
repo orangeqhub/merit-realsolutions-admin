@@ -9,6 +9,8 @@ import ChartCard from "../../components/charts/ChartCard";
 import BarChart from "../../components/charts/BarChart";
 import DonutChart from "../../components/charts/DonutChart";
 import VentureStats from "../../components/venture/VentureStats";
+import MediaImage from "../../components/venture/MediaImage";
+import { getAvatarFallback, getVentureLogoUrl } from "../../utils/media";
 import { useVentures } from "../../context/VenturesContext";
 import { useCollection } from "../../shared/hooks/useDataStore.js";
 import { getPlotInventoryStatistics } from "../../shared/services/statisticsService.js";
@@ -113,7 +115,12 @@ export default function VentureDashboard() {
           {topVentures.map((v, i) => (
             <Link key={v.id} to={`/dashboard/ventures/${v.id}`} className="venture-dashboard__top-item">
               <span className="venture-dashboard__rank">{i + 1}</span>
-              <img src={v.logo} alt="" />
+              <MediaImage
+                src={getVentureLogoUrl(v)}
+                fallback={getAvatarFallback(v.name)}
+                alt=""
+                className="venture-dashboard__top-logo"
+              />
               <div className="venture-dashboard__top-info">
                 <strong>{v.name}</strong>
                 <span>{v.city}, {v.district}</span>

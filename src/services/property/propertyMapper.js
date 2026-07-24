@@ -1,19 +1,8 @@
-import { getMediaBaseUrl } from '../../config/api.js';
+import { resolveMediaUrl } from '../../utils/media.js';
 
-export function resolveMediaPath(filePath) {
-  if (!filePath) return '';
-  if (
-    filePath.startsWith('http://') ||
-    filePath.startsWith('https://') ||
-    filePath.startsWith('blob:') ||
-    filePath.startsWith('data:')
-  ) {
-    return filePath;
-  }
-  const path = filePath.startsWith('/') ? filePath : `/${filePath}`;
-  const mediaBase = getMediaBaseUrl();
-  return mediaBase ? `${mediaBase}${path}` : path;
-}
+export { resolveMediaUrl as resolveMediaPath } from '../../utils/media.js';
+
+const resolveMediaPath = resolveMediaUrl;
 
 function mediaPathOrEmpty(value) {
   return typeof value === 'string' ? value : '';

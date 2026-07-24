@@ -1,14 +1,35 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { FiMaximize2 } from "react-icons/fi";
+import { FiImage, FiMaximize2 } from "react-icons/fi";
 import Lightbox from "./Lightbox";
+import { getGalleryImageSrc } from "../../utils/media";
 import "./ImageGrid.css";
 
-function srcOf(image) {
-  return typeof image === "string" ? image : image?.src;
-}
 function altOf(image, i) {
   return typeof image === "string" ? `Image ${i + 1}` : image?.alt || `Image ${i + 1}`;
+}
+
+function GridImage({ image, index, placeholderClassName = "image-grid__placeholder" }) {
+  const [failed, setFailed] = useState(false);
+  const src = useMemo(() => getGalleryImageSrc(image), [image]);
+
+  if (!src || failed) {
+    return (
+      <div className={placeholderClassName} aria-hidden="true">
+        <FiImage />
+        <span>Unavailable</span>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={altOf(image, index)}
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
 }
 
 export default function ImageGrid({
@@ -21,11 +42,22 @@ export default function ImageGrid({
 }) {
   const [activeIndex, setActiveIndex] = useState(null);
 
+  const displayImages = useMemo(
+    () => images.filter((image) => getGalleryImageSrc(image)),
+    [images]
+  );
+
   const limited =
-    maxVisible && images.length > maxVisible ? images.slice(0, maxVisible) : images;
-  const remaining = maxVisible ? images.length - limited.length : 0;
+    maxVisible && displayImages.length > maxVisible
+      ? displayImages.slice(0, maxVisible)
+      : displayImages;
+  const remaining = maxVisible ? displayImages.length - limited.length : 0;
 
   const open = (i) => enableLightbox && setActiveIndex(i);
+
+  if (!displayImages.length) {
+    return null;
+  }
 
   return (
     <>
@@ -37,13 +69,13 @@ export default function ImageGrid({
           return (
             <motion.button
               type="button"
-              key={i}
+              key={`${getGalleryImageSrc(image)}-${i}`}
               className="image-grid__item"
               onClick={() => open(i)}
               whileHover={{ scale: enableLightbox ? 1.01 : 1 }}
               transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             >
-              <img src={srcOf(image)} alt={altOf(image, i)} loading="lazy" />
+              <GridImage image={image} index={i} />
               {enableLightbox && !isLastWithMore && (
                 <span className="image-grid__overlay">
                   <FiMaximize2 />
@@ -59,7 +91,7 @@ export default function ImageGrid({
 
       {enableLightbox && (
         <Lightbox
-          images={images}
+          images={displayImages}
           index={activeIndex}
           onChange={setActiveIndex}
           onClose={() => setActiveIndex(null)}

@@ -33,6 +33,7 @@ export const USER_ROLES = {
   AREA_BUSINESS_PARTNER: 'AREA_BUSINESS_PARTNER',
   AREA_BUSINESS_COORDINATOR: 'AREA_BUSINESS_COORDINATOR',
   AREA_BUSINESS_EXECUTIVE: 'AREA_BUSINESS_EXECUTIVE',
+  CHANNEL_AGENT: 'CHANNEL_AGENT',
   CUSTOMER: 'CUSTOMER',
 };
 
@@ -41,6 +42,7 @@ export const ROLE_LABELS = {
   AREA_BUSINESS_PARTNER: 'Area Business Partner',
   AREA_BUSINESS_COORDINATOR: 'Area Business Coordinator',
   AREA_BUSINESS_EXECUTIVE: 'Area Business Executive',
+  CHANNEL_AGENT: 'Channel Agent',
   CUSTOMER: 'Customer',
 };
 
@@ -102,6 +104,20 @@ export async function deleteUser(id) {
 export async function listSalesUsers(role) {
   const query = buildQuery(role ? { role } : {});
   const response = await fetch(`${API_V1}/admin/users/sales-options${query ? `?${query}` : ''}`, { headers: authHeaders() });
+  return parseResponse(response);
+}
+
+export async function listPendingAgents() {
+  const response = await fetch(`${API_V1}/admin/agents/pending`, { headers: authHeaders() });
+  return parseResponse(response);
+}
+
+export async function approveAgent(agentId) {
+  const response = await fetch(`${API_V1}/admin/agents/${agentId}/approve`, {
+    method: 'POST',
+    headers: authHeaders(true),
+    body: JSON.stringify({}),
+  });
   return parseResponse(response);
 }
 

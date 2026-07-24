@@ -53,6 +53,21 @@
   line-height: 1.5;
 }
 
+.toast__action {
+  margin-top: 0.55rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--erp-accent);
+  cursor: pointer;
+}
+
+.toast__action:hover {
+  text-decoration: underline;
+}
+
 .toast__close {
   display: inline-flex;
   color: var(--erp-text-soft);

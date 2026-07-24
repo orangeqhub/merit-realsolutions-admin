@@ -13,6 +13,7 @@ import {
   FiActivity,
 } from "react-icons/fi";
 import ImageGrid from "../gallery/ImageGrid";
+import { filterDisplayableGalleryImages } from "../../utils/media";
 import Timeline from "../timeline/Timeline";
 import { AMENITY_KEYS } from "../../pages/ventures/constants";
 import { formatPrice, formatSqYardPrice } from "../../pages/ventures/constants";
@@ -33,7 +34,17 @@ const AMENITY_ICONS = {
 };
 
 export function VentureGallery({ images = [] }) {
-  return <ImageGrid images={images} columns={3} masonry enableLightbox />;
+  const displayImages = filterDisplayableGalleryImages(images);
+
+  if (!displayImages.length) {
+    return (
+      <p className="venture-sub__empty">
+        No gallery images available. Edit the venture and upload photos to display them here.
+      </p>
+    );
+  }
+
+  return <ImageGrid images={displayImages} columns={3} masonry enableLightbox />;
 }
 
 export function VentureTimeline({ activities = [] }) {

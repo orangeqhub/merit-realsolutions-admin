@@ -26,6 +26,7 @@ export function usePlots() {
       releasePlot: (id) => plotService.releasePlot(id),
       cancelPlot: (id) => plotService.cancelPlot(id),
       assignPlot: (id, assignment) => plotService.assignPlot(id, assignment),
+      bulkImportPlots: (rows, layoutId) => plotService.bulkCreatePlots(rows, layoutId),
     }),
     [plots]
   );

@@ -1,21 +1,34 @@
-import { FiMapPin, FiEdit2, FiShare2, FiFileText } from "react-icons/fi";
-import Badge from "../ui/badge/Badge";
-import Button from "../ui/button/Button";
-import "./VentureHeader.css";
+import { FiMapPin, FiEdit2, FiShare2, FiFileText } from 'react-icons/fi';
+import Badge from '../ui/badge/Badge';
+import Button from '../ui/button/Button';
+import MediaImage from './MediaImage';
+import { getVentureBannerUrl, getAvatarFallback } from '../../utils/media';
+import './VentureHeader.css';
 
 export default function VentureHeader({ venture, onEdit, onShare, onDocuments }) {
-  const location = [venture.city, venture.district, venture.state].filter(Boolean).join(", ");
+  const location = [venture.city, venture.district, venture.state].filter(Boolean).join(', ');
+  const bannerUrl = getVentureBannerUrl(venture);
 
   return (
     <section className="venture-header">
       <div className="venture-header__banner">
-        <img src={venture.banner} alt={venture.name} />
+        <MediaImage
+          src={bannerUrl}
+          alt=""
+          className="venture-header__banner-image"
+          placeholderClassName="venture-header__banner-placeholder"
+        />
         <div className="venture-header__overlay" />
       </div>
 
       <div className="venture-header__content">
         <div className="venture-header__profile">
-          <img className="venture-header__logo" src={venture.logo} alt={venture.name} />
+          <MediaImage
+            src={venture.logo || venture.thumbnail}
+            fallback={getAvatarFallback(venture.name)}
+            alt=""
+            className="venture-header__logo"
+          />
           <div className="venture-header__text">
             <div className="venture-header__badges">
               <Badge status={venture.status} dot />

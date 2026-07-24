@@ -2,9 +2,12 @@ import {
   FiLayers,
   FiMaximize2,
   FiMinimize2,
+  FiPlus,
   FiRotateCcw,
   FiRotateCw,
   FiSave,
+  FiUploadCloud,
+  FiGrid,
   FiZoomIn,
   FiZoomOut,
 } from 'react-icons/fi';
@@ -15,6 +18,7 @@ import PlotLegend from './PlotLegend';
 export default function MapToolbar({
   searchQuery,
   onSearchChange,
+  onSearchSubmit,
   mapType,
   onMapTypeChange,
   onZoomIn,
@@ -28,12 +32,22 @@ export default function MapToolbar({
   isFullscreen,
   onToggleFullscreen,
   layoutName,
-  plots = [],
+  layoutId,
+  legendPlots = [],
+  statusFilters = [],
+  onToggleStatusFilter,
+  onAddPlot,
+  onGenerateLayout,
+  generatedPreviewCount = 0,
 }) {
   return (
     <div className="plot-map-toolbar">
       <div className="plot-map-toolbar__left">
-        <PlotSearch value={searchQuery} onChange={onSearchChange} />
+        <PlotSearch
+          value={searchQuery}
+          onChange={onSearchChange}
+          onSubmit={onSearchSubmit}
+        />
         <span className="plot-map-toolbar__layout">
           <FiLayers /> {layoutName}
         </span>
@@ -69,7 +83,27 @@ export default function MapToolbar({
       </div>
 
       <div className="plot-map-toolbar__right">
-        <PlotLegend plots={plots} />
+        <Button variant="ghost" size="sm" onClick={onGenerateLayout}>
+          <FiGrid /> Generate Layout
+          {generatedPreviewCount > 0 ? (
+            <span className="plot-map-toolbar__badge">{generatedPreviewCount}</span>
+          ) : null}
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          to={layoutId ? `/dashboard/plots/import?layout=${layoutId}` : '/dashboard/plots/import'}
+        >
+          <FiUploadCloud /> Import Plots
+        </Button>
+        <Button variant="accent" size="sm" onClick={onAddPlot}>
+          <FiPlus /> Add Plot
+        </Button>
+        <PlotLegend
+          plots={legendPlots}
+          activeStatuses={statusFilters}
+          onToggleStatus={onToggleStatusFilter}
+        />
         <Button variant="ghost" size="sm" onClick={onUndo} disabled={!canUndo}>
           <FiRotateCcw /> Undo
         </Button>

@@ -11,6 +11,7 @@ export default function RightDrawer({
   size = "md",
   footer,
   children,
+  overlayMode = "default",
 }) {
   useEffect(() => {
     if (!open) return;
@@ -27,14 +28,18 @@ export default function RightDrawer({
     <AnimatePresence>
       {open && (
         <div className="right-drawer__root">
-          <motion.div
-            className="right-drawer__overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            onClick={onClose}
-          />
+          {overlayMode !== "none" && (
+            <motion.div
+              className={`right-drawer__overlay ${
+                overlayMode === "transparent" ? "right-drawer__overlay--transparent" : ""
+              }`.trim()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={overlayMode === "transparent" ? undefined : onClose}
+            />
+          )}
           <motion.aside
             className={`right-drawer right-drawer--${size}`}
             role="dialog"
