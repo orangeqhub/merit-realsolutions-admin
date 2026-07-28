@@ -1,1 +1,1 @@
-export * from '@map-rendering/plotLabelBuilder.js';
+/** Premium plot labels are temporarily unavailable. */

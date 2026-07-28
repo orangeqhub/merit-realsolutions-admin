@@ -1,7 +1,5 @@
-/**
- * GIS integration — apply premium centerline → polygon road geometry after hierarchy step.
- */
-export {
-  processPremiumRoadNetwork,
-  PREMIUM_ROAD_MARKER,
-} from '@map-rendering/road-engine/PremiumRoadGenerator.js';
+/** Preserve base road geometry while premium road processing is disabled. */
+export const PREMIUM_ROAD_MARKER = 'premium-road-disabled';
+export function processPremiumRoadNetwork(roads = []) {
+  return roads;
+}

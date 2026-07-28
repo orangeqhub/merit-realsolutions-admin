@@ -16,7 +16,6 @@ export default defineConfig(({ mode }) => {
       dedupe: ['react', 'react-dom', 'react-hook-form', 'react-router-dom', 'react-icons', 'react-leaflet', 'leaflet'],
       alias: {
         '@shared': path.resolve(__dirname, 'shared'),
-        '@map-rendering': path.resolve(__dirname, '../shared/rendering'),
         leaflet: path.resolve(__dirname, 'node_modules/leaflet'),
         'react-leaflet': path.resolve(__dirname, 'node_modules/react-leaflet'),
       },

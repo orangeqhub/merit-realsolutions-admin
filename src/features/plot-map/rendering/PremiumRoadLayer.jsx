@@ -1,2 +1,5 @@
-export { default } from '@map-rendering/PremiumRoadLayer.jsx';
-export { PremiumRoadLayer } from '@map-rendering/PremiumRoadLayer.jsx';
+/** Premium road rendering is temporarily unavailable. */
+export function PremiumRoadLayer() {
+  return null;
+}
+export default PremiumRoadLayer;

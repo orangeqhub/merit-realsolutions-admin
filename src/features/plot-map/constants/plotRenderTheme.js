@@ -1,10 +1,8 @@
-/** Re-export premium plot theme from shared rendering engine */
-export {
-  PLOT_STATUS_THEME,
-  MAP_STATUS_COLORS,
-  PLOT_RENDER_TIMING,
-  PLOT_LABEL_ZOOM,
-  getPlotStatusTheme,
-  getPremiumPlotPathOptions,
-  formatPlotPriceLabel,
-} from '@map-rendering/PremiumMapTheme.js';
+/** Premium plot rendering is temporarily disabled. */
+export const PLOT_STATUS_THEME = {};
+export const MAP_STATUS_COLORS = {};
+export const PLOT_RENDER_TIMING = {};
+export const PLOT_LABEL_ZOOM = {};
+export const getPlotStatusTheme = () => ({});
+export const getPremiumPlotPathOptions = () => ({});
+export const formatPlotPriceLabel = () => null;

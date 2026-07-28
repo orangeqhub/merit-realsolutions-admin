@@ -3,7 +3,6 @@ import { formatRoadLabel, formatRoadName, ROAD_TYPES } from '../RoadGenerator.js
 import { getAmenityStyle } from './amenityPlanner.js';
 import { bboxFromPolygon } from './geometry.js';
 import { polygonCentroid } from './polygonGeometry.js';
-import { formatPremiumRoadLabel } from '@map-rendering/road-engine/PremiumRoadGenerator.js';
 
 /**
  * Convert feet-space township model to lat/lng schema compatible with PremiumMapRenderer.
@@ -53,7 +52,7 @@ export function adaptTownshipOutput(model, originLat, originLng) {
       ? centerlineLatLng
       : polygonLatLng;
 
-    const label = road.label || formatPremiumRoadLabel({ roadType, widthFeet }) || formatRoadLabel(
+    const label = road.label || formatRoadLabel(
       roadType === 'main' ? ROAD_TYPES.MAIN : ROAD_TYPES.INTERNAL,
       widthFeet
     );

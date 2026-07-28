@@ -1,1 +1,1 @@
-export * from '@map-rendering/utils/roadRenderUtils.js';
+/** Premium road rendering utilities are temporarily unavailable. */
