@@ -1,0 +1,28 @@
+/* ===================================================================
+   DS Tokens — Motion
+   Durations + easings. Pair with src/animations/presets.js.
+   =================================================================== */
+
+:root {
+  --erp-duration-100: 100ms;
+  --erp-duration-150: 150ms;
+  --erp-duration-250: 250ms;
+  --erp-duration-400: 400ms;
+  --erp-duration-600: 600ms;
+
+  --erp-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --erp-ease-entrance: cubic-bezier(0.22, 1, 0.36, 1);
+  --erp-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --erp-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --erp-ease-hover: cubic-bezier(0.22, 1, 0.36, 1);
+  --erp-ease-focus: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Canonical short aliases */
+  --erp-ease: var(--erp-ease-entrance);
+  --erp-transition: var(--erp-duration-250) var(--erp-ease-entrance);
+  --erp-transition-fast: var(--erp-duration-150) var(--erp-ease-standard);
+  --erp-transition-slow: var(--erp-duration-400) var(--erp-ease-entrance);
+
+  /* Reduced motion — override durations when preference is set */
+  --erp-motion-ok: 1;
+}

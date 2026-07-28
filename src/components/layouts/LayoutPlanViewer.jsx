@@ -9,6 +9,7 @@ import {
   FiMap,
 } from "react-icons/fi";
 import EmptyState from "../layout/EmptyState";
+import { isUsableMediaUrl, resolveMediaUrl } from "../../utils/media.js";
 import "./LayoutPlanViewer.css";
 
 const MIN_SCALE = 1;
@@ -103,7 +104,7 @@ export default function LayoutPlanViewer({
     return () => el.removeEventListener("wheel", handleWheel);
   }, [handleWheel]);
 
-  if (!src) {
+  if (!src || !isUsableMediaUrl(src)) {
     return (
       <div className={`plan-viewer plan-viewer--empty ${className}`.trim()}>
         <EmptyState
@@ -115,6 +116,8 @@ export default function LayoutPlanViewer({
       </div>
     );
   }
+
+  const planSrc = resolveMediaUrl(src);
 
   return (
     <div
@@ -164,7 +167,7 @@ export default function LayoutPlanViewer({
           className="plan-viewer__canvas"
           style={{ transform: `translate(${offset.x}px, ${offset.y}px) scale(${scale})` }}
         >
-          <img src={src} alt={title} draggable={false} />
+          <img src={planSrc} alt={title} draggable={false} />
 
           {showGrid && <div className="plan-viewer__grid" aria-hidden="true" />}
 

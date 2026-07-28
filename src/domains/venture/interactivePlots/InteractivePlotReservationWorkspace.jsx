@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { FiGrid, FiSearch } from "react-icons/fi";
-import StatsCard from "../../../components/cards/StatsCard";
+import { FiSearch } from "react-icons/fi";
 import Input from "../../../components/ui/input/Input";
 import Select from "../../../components/ui/select/Select";
 import LayoutPlanViewer from "../../../components/layouts/LayoutPlanViewer";
@@ -12,8 +11,10 @@ import { useLayouts } from "../../../shared/hooks/useLayouts.js";
 import { usePlots } from "../../../shared/hooks/usePlots.js";
 import { useReservations } from "../../../context/ReservationContext";
 import { assignPlotGridPositions } from "../../../services/reservation/reservationService";
+import { WorkspaceKPIStrip, computeWorkspaceMetrics } from "../../../features/plot-map/workspace";
 import PlotReservationDrawer from "./PlotReservationDrawer";
 import "../../../components/reservation/reservation.css";
+import "../../../features/plot-map/workspace/workspace-premium.css";
 import "./interactivePlots.css";
 
 const STATUS_OPTIONS = [
@@ -97,6 +98,21 @@ export default function InteractivePlotReservationWorkspace({ venture }) {
       sold: count("Sold"),
       cancelled: count("Cancelled"),
     };
+  }, [plots]);
+
+  const workspaceMetrics = useMemo(() => {
+    const normalized = plots.map((p) => {
+      const statusMap = {
+        Confirmed: "Booked",
+        Registered: "Sold",
+        Cancelled: "Blocked",
+      };
+      return {
+        ...p,
+        status: statusMap[p.effectiveStatus] || p.effectiveStatus || p.status,
+      };
+    });
+    return computeWorkspaceMetrics(normalized);
   }, [plots]);
 
   const [search, setSearch] = useState("");
@@ -223,16 +239,11 @@ export default function InteractivePlotReservationWorkspace({ venture }) {
   );
 
   return (
-    <div className="v-plotws">
-      <div className="v-plotws__kpis">
-        <StatsCard icon={<FiGrid />} label="Total Plots" value={kpis.total} tone="accent" delay={0} />
-        <StatsCard icon={<FiGrid />} label="Available" value={kpis.available} tone="success" delay={0.04} />
-        <StatsCard icon={<FiGrid />} label="Reserved" value={kpis.reserved} tone="warning" delay={0.08} />
-        <StatsCard icon={<FiGrid />} label="Confirmed" value={kpis.confirmed} tone="info" delay={0.12} />
-        <StatsCard icon={<FiGrid />} label="Registered" value={kpis.registered} tone="violet" delay={0.16} />
-        <StatsCard icon={<FiGrid />} label="Sold" value={kpis.sold} tone="danger" delay={0.2} />
-        <StatsCard icon={<FiGrid />} label="Cancelled" value={kpis.cancelled} tone="muted" delay={0.24} />
-      </div>
+    <div className="v-plotws ws-premium">
+      <WorkspaceKPIStrip metrics={workspaceMetrics} />
+      <p className="v-plotws__kpi-note" aria-live="polite">
+        {kpis.confirmed} confirmed · {kpis.registered} registered · {kpis.cancelled} cancelled
+      </p>
 
       <section className="v-plotws__panel">
         <header className="v-plotws__panel-head">

@@ -6,6 +6,15 @@ export { default as PlotDetailDrawer } from './PlotDetailDrawer';
 export { default as PlotLegend } from './PlotLegend';
 export { default as MapToolbar } from './MapToolbar';
 export { default as MapWorkspace } from './MapWorkspace';
+export {
+  WorkspaceKPIStrip,
+  FloatingToolbar,
+  FloatingActions,
+  PlotInfoCard,
+  WorkspaceSidebar,
+  BottomStatusBar,
+} from './workspace';
+export { WORKSPACE_DATA_SOURCE, describeWorkspaceProvider } from './data/workspaceDataSource';
 export { default as PlotStatusBar, MapStatus } from './PlotStatusBar';
 export { default as PlotSearch } from './PlotSearch';
 export { usePlotWorkspace } from './hooks/usePlotWorkspace';

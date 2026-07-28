@@ -255,6 +255,24 @@ export const NAV_TREE = [
         path: "/dashboard/finance/tracker",
         icon: NavIcons.payments,
       },
+      {
+        id: "sales-commission-management",
+        label: "Commission Management",
+        path: "/dashboard/sales/commissions",
+        icon: NavIcons.performanceDashboard,
+      },
+      {
+        id: "sales-commission-settlement",
+        label: "Commission Settlement",
+        path: "/dashboard/sales/commission-settlement",
+        icon: NavIcons.payments,
+      },
+      {
+        id: "sales-performance-dashboard",
+        label: "Performance Dashboard",
+        path: "/dashboard/sales/performance",
+        icon: NavIcons.performanceDashboard,
+      },
     ],
   },
   {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -15,16 +15,12 @@ import {
   FiFileText,
   FiClock,
   FiBarChart2,
-  FiCheckCircle,
-  FiBookmark,
-  FiTag,
+  FiUploadCloud,
+  FiDownload,
 } from "react-icons/fi";
 import Breadcrumb from "../../components/layout/Breadcrumb";
 import Button from "../../components/ui/button/Button";
 import Badge from "../../components/ui/badge/Badge";
-import SummaryCard from "../../components/cards/SummaryCard";
-import InfoCard from "../../components/cards/InfoCard";
-import ProgressBar from "../../components/feedback/ProgressBar";
 import Tabs from "../../components/navigation/Tabs";
 import ChartCard from "../../components/charts/ChartCard";
 import BarChart from "../../components/charts/BarChart";
@@ -34,6 +30,7 @@ import EmptyState from "../../components/layout/EmptyState";
 import ConfirmationModal from "../../components/modal/ConfirmationModal";
 import LayoutPlanViewer from "../../components/layouts/LayoutPlanViewer";
 import LayoutQuickActions from "../../components/layouts/LayoutQuickActions";
+import LayoutDashboardPanels from "../../components/layouts/LayoutDashboardPanels";
 import LayoutGallery from "../../components/layouts/LayoutGallery";
 import LayoutDocuments from "../../components/layouts/LayoutDocuments";
 import LayoutTimeline from "../../components/layouts/LayoutTimeline";
@@ -45,11 +42,17 @@ import {
   EntityRelationshipSummary,
 } from "../../components/erp/RelationshipCards";
 import { useToast } from "../../components/feedback/Toast";
-import { formatArea, formatPrice, formatSqYardPrice } from "./constants";
+import { useVentures } from "../../context/VenturesContext";
+import ImportLayoutWizard from "../../features/layout-import/ImportLayoutWizard";
+import { LayoutExcelExporter } from "../../services/layoutImport";
+import { getLayoutHeroImageUrl, getLayoutPlanSrc } from "../../utils/media.js";
+import { LAYOUT_LABELS } from "./layoutTerminology";
+import { formatArea } from "./constants";
+import { getLayoutGisSummary } from "./layoutGisSummary";
 import "./layout.css";
 
 const TABS = [
-  { id: "overview", label: "Overview", icon: <FiHome /> },
+  { id: "dashboard", label: "Dashboard", icon: <FiHome /> },
   { id: "plan", label: "Layout Plan", icon: <FiMap /> },
   { id: "plots", label: "Plots", icon: <FiGrid /> },
   { id: "amenities", label: "Amenities", icon: <FiHeart /> },
@@ -65,15 +68,33 @@ export default function LayoutDetails() {
   const toast = useToast();
   const { getLayoutStats } = usePartnerAssignments();
   const [searchParams] = useSearchParams();
-  const { getLayout, removeLayout } = useLayouts();
+  const { getLayout, getLayoutRecord, removeLayout } = useLayouts();
+  const { getVenture } = useVentures();
   const layout = getLayout(id);
+  const layoutRecord = getLayoutRecord(id);
+  const venture = useMemo(
+    () => (layout ? getVenture(layout.ventureId) : null),
+    [getVenture, layout]
+  );
   const layoutStats = getLayoutStats(id);
 
   const initialTab = TABS.some((t) => t.id === searchParams.get("tab"))
     ? searchParams.get("tab")
-    : "overview";
+    : "dashboard";
   const [tab, setTab] = useState(initialTab);
   const [deleteOpen, setDeleteOpen] = useState(false);
+  const [importOpen, setImportOpen] = useState(false);
+  const [heroImageFailed, setHeroImageFailed] = useState(false);
+
+  const plots = layout ? (layoutStats.plots || layout.plots || {}) : {};
+  const location = layout
+    ? [layout.city, layout.district, layout.state].filter(Boolean).join(", ")
+    : "";
+
+  const gisSummary = useMemo(
+    () => (layout ? getLayoutGisSummary(layout, layoutRecord, plots) : { hasGisData: false, plots: 0 }),
+    [layout, layoutRecord, plots]
+  );
 
   if (!layout) {
     return (
@@ -89,8 +110,17 @@ export default function LayoutDetails() {
     );
   }
 
-  const plots = layoutStats.plots || layout.plots || {};
-  const location = [layout.city, layout.district, layout.state].filter(Boolean).join(", ");
+  const openWorkspace = () => navigate(`/dashboard/layouts/${layout.id}/workspace`);
+  const openGenerate = () => navigate(`/dashboard/layouts/${layout.id}/workspace?generate=1`);
+
+  const handleExportGis = () => {
+    try {
+      const result = LayoutExcelExporter.exportLayout(layout.id, venture);
+      toast.success(`Exported GIS workbook — ${result.counts.plots} plots to ${result.filename}`);
+    } catch (err) {
+      toast.error(err.message || "Nothing to export yet — import or generate township data first");
+    }
+  };
 
   const handleDelete = () => {
     removeLayout(layout.id);
@@ -98,76 +128,47 @@ export default function LayoutDetails() {
     navigate("/dashboard/layouts/list");
   };
 
+  const handleQuickAction = (actionId) => {
+    if (actionId === "open-workspace") openWorkspace();
+    else if (actionId === "import-gis") setImportOpen(true);
+    else if (actionId === "generate-township") openGenerate();
+    else if (actionId === "manage-plots") setTab("plots");
+    else if (actionId === "export-gis") handleExportGis();
+    else if (actionId === "documents") setTab("documents");
+    else if (actionId === "analytics") setTab("analytics");
+  };
+
+  const heroImageUrl = getLayoutHeroImageUrl(layout);
+  const layoutPlanSrc = getLayoutPlanSrc(layout);
+  const safeHeroImageUrl = heroImageFailed ? '' : heroImageUrl;
+
   const renderTab = () => {
     switch (tab) {
-      case "overview":
+      case "dashboard":
         return (
-          <>
-            <div className="layout-details__summary">
-              <SummaryCard icon={<FiGrid />} label="Total Plots" value={plots.total || 0} tone="accent" />
-              <SummaryCard icon={<FiCheckCircle />} label="Available" value={plots.available || 0} tone="success" />
-              <SummaryCard icon={<FiClock />} label="Booked" value={plots.booked || 0} tone="warning" />
-              <SummaryCard icon={<FiBookmark />} label="Reserved" value={plots.reserved || 0} tone="violet" />
-              <SummaryCard icon={<FiTag />} label="Sold" value={plots.sold || 0} tone="info" />
-              <SummaryCard icon={<FiMaximize />} label="Bookings" value={layoutStats.bookingStats?.total || 0} tone="primary" />
-            </div>
-
-            <div className="layout-details__overview-grid">
-              <InfoCard
-                title="Layout Information"
-                items={[
-                  { label: "Code", value: layout.code },
-                  { label: "Survey No.", value: layout.surveyNumber },
-                  { label: "Approval", value: layout.approval },
-                  { label: "Approval No.", value: layout.approvalNumber },
-                  { label: "Approval Date", value: layout.approvalDate },
-                  { label: "Plot Count", value: layout.plotCount },
-                ]}
-              />
-              <InfoCard
-                title="Venture & Pricing"
-                items={[
-                  { label: "Venture", value: layout.ventureName },
-                  { label: "Base Price", value: formatSqYardPrice(layout.basePrice) },
-                  { label: "Current Price", value: formatSqYardPrice(layout.currentPrice) },
-                  { label: "Registration", value: formatPrice(layout.registrationCharges) },
-                  { label: "Development", value: formatPrice(layout.developmentCharges) },
-                  { label: "Revenue", value: `₹${(layout.revenue || 0).toFixed(1)} Cr` },
-                ]}
-              />
-              <div className="layout-details__progress-card">
-                <h3>Development Progress</h3>
-                <ProgressBar value={layout.progress} showValue tone="accent" />
-                <div className="layout-details__plot-breakdown">
-                  <span className="avail">{plots.available} Available</span>
-                  <span className="booked">{plots.booked} Booked</span>
-                  <span className="reserved">{plots.reserved} Reserved</span>
-                  <span className="sold">{plots.sold} Sold</span>
-                </div>
-                <Button variant="soft" size="sm" onClick={() => setTab("plan")}>
-                  <FiMap /> View Layout Plan
-                </Button>
-              </div>
-            </div>
-
-            {layout.description && (
-              <p className="layout-details__description">{layout.description}</p>
-            )}
-          </>
+          <LayoutDashboardPanels
+            layout={layout}
+            venture={venture}
+            location={location}
+            gisSummary={gisSummary}
+            plots={plots}
+            onImport={() => setImportOpen(true)}
+            onGenerate={openGenerate}
+          />
         );
       case "plan":
         return (
-          <LayoutPlanViewer src={layout.layoutPlan} title={`${layout.name} — Layout Plan`} />
+          <LayoutPlanViewer src={layoutPlanSrc} title={`${layout.name} — Layout Plan`} />
         );
       case "plots":
         return (
           <EmptyState
             icon={<FiGrid />}
-            title="Plot Inventory"
-            description={`${plots.total || 0} plots registered for this layout. The interactive plot inventory & booking module is coming next.`}
+            title={LAYOUT_LABELS.managePlots}
+            description={`${plots.total || 0} plots registered for this layout. Open the workspace to manage plot inventory and bookings.`}
             action={
-              <Button variant="accent" size="md" onClick={() => setTab("plan")}>
-                <FiMap /> Open Layout Plan
+              <Button variant="accent" size="md" onClick={openWorkspace}>
+                <FiMap /> {LAYOUT_LABELS.openWorkspace}
               </Button>
             }
           />
@@ -218,9 +219,17 @@ export default function LayoutDetails() {
         ]}
       />
 
-      <section className="layout-hero">
+      <section className="layout-hero layout-hero--dashboard">
         <div className="layout-hero__banner">
-          <img src={layout.banner} alt={layout.name} />
+          {safeHeroImageUrl ? (
+            <img
+              src={safeHeroImageUrl}
+              alt={layout.name}
+              onError={() => setHeroImageFailed(true)}
+            />
+          ) : (
+            <div className="layout-hero__banner-placeholder" aria-hidden />
+          )}
           <div className="layout-hero__overlay" />
         </div>
         <div className="layout-hero__content">
@@ -231,27 +240,52 @@ export default function LayoutDetails() {
               <Link to={`/dashboard/ventures/${layout.ventureId}`} className="layout-hero__venture">
                 {layout.ventureName}
               </Link>
+              {!gisSummary.hasGisData ? (
+                <span className="layout-hero__gis-badge">Metadata only</span>
+              ) : null}
             </div>
             <h1 className="layout-hero__title">{layout.name}</h1>
             <p className="layout-hero__meta">
-              <span><FiMapPin /> {location}</span>
+              <span><FiMapPin /> {location || venture?.city || "—"}</span>
               <span><FiMaximize /> {formatArea(layout.totalArea)}</span>
-              <span><FiGrid /> {plots.total || 0} plots</span>
+              <span><FiGrid /> {gisSummary.plots || 0} plots</span>
             </p>
           </div>
-          <div className="layout-hero__actions">
-            <Button variant="accent" size="md" onClick={() => navigate(`/dashboard/layouts/${layout.id}/workspace`)}>
-              <FiMap /> Open Workspace
-            </Button>
-            <Button variant="ghost" size="md" onClick={() => navigate(`/dashboard/layouts/${layout.id}/edit`)}>
-              <FiEdit2 /> Edit
-            </Button>
-            <Button variant="ghost" size="md" onClick={() => setTab("plots")}>
-              <FiGrid /> Plot Inventory
-            </Button>
-            <Button variant="danger" size="md" onClick={() => setDeleteOpen(true)}>
-              <FiTrash2 /> Delete
-            </Button>
+
+          <div className="layout-hero__actions layout-hero__actions--grouped">
+            <div className="layout-hero__actions-primary">
+              <Button variant="accent" size="md" onClick={openWorkspace}>
+                <FiMap /> {LAYOUT_LABELS.openWorkspace}
+              </Button>
+              <Button variant="accent" size="md" onClick={() => setImportOpen(true)}>
+                <FiUploadCloud /> {LAYOUT_LABELS.importGisWorkbook}
+              </Button>
+            </div>
+            <div className="layout-hero__actions-secondary">
+              <Button variant="soft" size="md" onClick={openGenerate}>
+                <FiGrid /> {LAYOUT_LABELS.generateTownship}
+              </Button>
+              <Button variant="soft" size="md" onClick={() => setTab("plots")}>
+                <FiGrid /> {LAYOUT_LABELS.managePlots}
+              </Button>
+              <Button variant="ghost" size="md" onClick={handleExportGis}>
+                <FiDownload /> {LAYOUT_LABELS.exportGisWorkbook}
+              </Button>
+              <Button variant="ghost" size="md" onClick={() => setTab("documents")}>
+                <FiFileText /> {LAYOUT_LABELS.documents}
+              </Button>
+              <Button variant="ghost" size="md" onClick={() => setTab("analytics")}>
+                <FiBarChart2 /> {LAYOUT_LABELS.analytics}
+              </Button>
+              <Button variant="ghost" size="md" onClick={() => navigate(`/dashboard/layouts/${layout.id}/edit`)}>
+                <FiEdit2 /> {LAYOUT_LABELS.editLayout}
+              </Button>
+            </div>
+            <div className="layout-hero__actions-danger">
+              <Button variant="danger" size="md" onClick={() => setDeleteOpen(true)}>
+                <FiTrash2 /> {LAYOUT_LABELS.deleteLayout}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -290,13 +324,7 @@ export default function LayoutDetails() {
 
         <LayoutQuickActions
           className="layout-details__sidebar"
-          onAction={(actionId) => {
-            if (actionId === "open-plots") setTab("plots");
-            else if (actionId === "export") toast.success("Layout export started");
-            else if (actionId === "upload-docs") setTab("documents");
-            else if (actionId === "report") setTab("analytics");
-            else toast.info("This action will be available soon");
-          }}
+          onAction={handleQuickAction}
         />
       </div>
 
@@ -305,10 +333,21 @@ export default function LayoutDetails() {
         onClose={() => setDeleteOpen(false)}
         onConfirm={handleDelete}
         title="Delete Layout?"
-        message="This action cannot be undone."
+        message="This removes layout metadata. GIS data linked to this layout may also become inaccessible."
         highlight={layout.name}
         confirmLabel="Delete"
         tone="danger"
+      />
+
+      <ImportLayoutWizard
+        open={importOpen}
+        onClose={() => setImportOpen(false)}
+        layout={layout}
+        venture={venture}
+        onOpenWorkspace={openWorkspace}
+        onImportComplete={() => {
+          toast.success("Township imported successfully — open workspace to view on map.");
+        }}
       />
     </motion.div>
   );

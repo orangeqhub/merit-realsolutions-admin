@@ -1,0 +1,23 @@
+/* ===================================================================
+   DS Tokens — Elevation / Shadow
+   Named levels for surfaces and overlays.
+   =================================================================== */
+
+:root {
+  --erp-elevation-surface: none;
+  --erp-elevation-card: 0 1px 3px rgba(16, 24, 40, 0.07), 0 1px 2px rgba(16, 24, 40, 0.04);
+  --erp-elevation-floating: 0 8px 24px rgba(10, 22, 40, 0.12);
+  --erp-elevation-drawer: 0 16px 40px rgba(16, 24, 40, 0.14);
+  --erp-elevation-popover: 0 12px 32px rgba(16, 24, 40, 0.14);
+  --erp-elevation-modal: 0 28px 70px rgba(16, 24, 40, 0.22);
+  --erp-elevation-glass: 0 18px 48px rgba(10, 22, 40, 0.16);
+  --erp-elevation-hero: 0 24px 60px rgba(10, 22, 40, 0.18);
+
+  /* Legacy shadow scale */
+  --erp-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --erp-shadow-sm: var(--erp-elevation-card);
+  --erp-shadow-md: 0 6px 16px rgba(16, 24, 40, 0.07), 0 2px 6px rgba(16, 24, 40, 0.04);
+  --erp-shadow-lg: var(--erp-elevation-drawer);
+  --erp-shadow-xl: var(--erp-elevation-modal);
+  --erp-shadow-gold: 0 4px 20px rgba(201, 168, 76, 0.25);
+}

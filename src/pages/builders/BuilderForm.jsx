@@ -16,7 +16,7 @@ import {
   getBuilderById,
   updateBuilder,
 } from '../../services/builder/builderApi.js';
-import { EMPTY_BUILDER, BUILDER_STATUS, mapBuilderToForm, mapFormToPayload } from './constants';
+import { EMPTY_BUILDER, BUILDER_STATUS, SALES_PARTNERSHIP_TYPES, mapBuilderToForm, mapFormToPayload } from './constants';
 import './builders.css';
 
 export default function BuilderForm() {
@@ -48,6 +48,7 @@ export default function BuilderForm() {
   const validate = () => {
     const e = {};
     if (!form.builderName?.trim()) e.builderName = 'Builder name is required';
+    if (!form.salesPartnershipType) e.salesPartnershipType = 'Select a sales partnership type';
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Enter a valid email';
     return e;
   };
@@ -107,6 +108,18 @@ export default function BuilderForm() {
           className="form-section__full"
         />
         <Input label="Builder Code" value={form.builderCode} disabled placeholder="Auto-generated on save" />
+        <div className="form-group form-group--light form-section__full">
+          <span className="form-label">Sales Partnership Type *</span>
+          <div className="builders-form__radio-group" role="radiogroup" aria-label="Sales Partnership Type">
+            {SALES_PARTNERSHIP_TYPES.map((option) => (
+              <label key={option.value} className="builders-form__radio">
+                <input type="radio" name="salesPartnershipType" value={option.value} checked={form.salesPartnershipType === option.value} onChange={(e) => setField('salesPartnershipType', e.target.value)} />
+                {option.label} Sales
+              </label>
+            ))}
+          </div>
+          {errors.salesPartnershipType && <span className="form-error">{errors.salesPartnershipType}</span>}
+        </div>
         <Upload label="Company Logo" accept="image/*" value={form.logo} onChange={(v) => setField('logo', v)} />
         <Upload label="Cover Banner" accept="image/*" value={form.coverImage} onChange={(v) => setField('coverImage', v)} />
         <Textarea label="Description" value={form.description} onChange={(e) => setField('description', e.target.value)} rows={3} className="form-section__full" />

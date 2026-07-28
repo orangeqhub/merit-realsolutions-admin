@@ -1,0 +1,17 @@
+/* ===================================================================
+   DS Tokens — Radius
+   =================================================================== */
+
+:root {
+  --erp-radius-xs: 6px;
+  --erp-radius-sm: 10px;
+  --erp-radius-md: 12px;
+  --erp-radius-lg: 16px;
+  --erp-radius-xl: 20px;
+  --erp-radius-2xl: 28px;
+  --erp-radius-pill: 999px;
+  --erp-radius-circle: 50%;
+
+  /* Canonical short aliases used across existing CSS */
+  --erp-radius: var(--erp-radius-lg);
+}

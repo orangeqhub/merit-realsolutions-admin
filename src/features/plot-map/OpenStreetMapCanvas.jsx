@@ -21,14 +21,15 @@ function MapReadyBridge({ onMouseMove, onMapReady }) {
   return null;
 }
 
-function MapViewController({ center, zoom, layoutId, mapType }) {
+function MapViewController({ center, zoom, layoutId, mapType, disabled = false }) {
   const map = useMap();
 
   useEffect(() => {
+    if (disabled) return;
     const targetZoom = clampMapZoom(Math.max(zoom, 18), mapType);
     map.setView([center.lat, center.lng], targetZoom, { animate: false });
     window.requestAnimationFrame(() => map.invalidateSize());
-  }, [center.lat, center.lng, layoutId, map, mapType, zoom]);
+  }, [center.lat, center.lng, disabled, layoutId, map, mapType, zoom]);
 
   return null;
 }
@@ -122,7 +123,13 @@ export default function OpenStreetMapCanvas({
         maxZoom={tiles.maxZoom}
         maxNativeZoom={tiles.maxNativeZoom}
       />
-      <MapViewController center={center} zoom={zoom} layoutId={layout?.id} mapType={mapType} />
+      <MapViewController
+        center={center}
+        zoom={zoom}
+        layoutId={layout?.id}
+        mapType={mapType}
+        disabled={plots.length > 0 || generatedPreviewPlots.length > 0}
+      />
       <MapReadyBridge onMouseMove={onMouseMove} onMapReady={onMapReady} />
       <MapZoomBridge onZoomChange={onZoomChange} />
       <LayoutPinMarker center={center} />
@@ -135,7 +142,9 @@ export default function OpenStreetMapCanvas({
         generatedPreviewAmenities={generatedPreviewAmenities}
         generatedBlockLabels={generatedBlockLabels}
         layoutBoundary={layoutBoundary}
+        layout={layout}
         mapZoom={mapZoom}
+        layoutKey={layout?.id}
         savedLayoutActive={savedLayoutActive}
         selectedPlotId={selectedPlotId}
         hoveredPlotId={hoveredPlotId}

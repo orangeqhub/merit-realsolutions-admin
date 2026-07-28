@@ -1,0 +1,22 @@
+/* ===================================================================
+   DS Tokens — Control Sizes
+   Standard heights for buttons, inputs, toolbar chips, badges.
+   =================================================================== */
+
+:root {
+  --erp-control-h-xs: 28px;
+  --erp-control-h-sm: 32px;
+  --erp-control-h-md: 40px;
+  --erp-control-h-lg: 48px;
+  --erp-control-h-xl: 56px;
+
+  --erp-control-px-xs: var(--erp-space-8);
+  --erp-control-px-sm: var(--erp-space-12);
+  --erp-control-px-md: var(--erp-space-16);
+  --erp-control-px-lg: var(--erp-space-20);
+  --erp-control-px-xl: var(--erp-space-24);
+
+  --erp-control-gap: var(--erp-space-8);
+  --erp-control-radius: var(--erp-radius-md);
+  --erp-control-radius-pill: var(--erp-radius-pill);
+}

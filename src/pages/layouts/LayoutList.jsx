@@ -42,6 +42,7 @@ export default function LayoutList() {
   const [view, setView] = useState("grid");
   const [deleteTarget, setDeleteTarget] = useState(null);
 
+  // `layouts` from context are Venture-merged read models (resolveLayoutView).
   const ventures = useMemo(
     () => [...new Set(layouts.map((l) => l.ventureName).filter(Boolean))].sort(),
     [layouts]

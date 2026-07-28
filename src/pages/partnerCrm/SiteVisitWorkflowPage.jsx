@@ -209,6 +209,7 @@ export default function SiteVisitWorkflowPage() {
                   <th>Sales Rep</th>
                   <th>Visit Date</th>
                   <th>Visit Time</th>
+                  <th>Vehicle Preference</th>
                   <th>Pickup Address</th>
                   <th>Destination</th>
                   <th>Remarks</th>
@@ -223,12 +224,12 @@ export default function SiteVisitWorkflowPage() {
                     <td>{row.salesRepresentative || row.requestedBy}</td>
                     <td>{row.visitDate}</td>
                     <td>{row.visitTime}</td>
+                    <td><Badge status={row.vehiclePreference === 'SELF' ? 'info' : 'success'}>{row.vehiclePreference === 'SELF' ? 'Self Vehicle' : 'Company Vehicle'}</Badge></td>
                     <td>{row.pickupAddress}</td>
                     <td>{row.destination}</td>
                     <td>{row.remarks || '—'}</td>
                     <td className="partner-crm-actions">
-                      <Button size="sm" variant="accent" onClick={() => openApprove(row)}>Approve</Button>
-                      <Button size="sm" variant="ghost" onClick={() => handleReject(row)}>Reject</Button>
+                      {row.vehiclePreference === 'SELF' ? <span>Self arranged</span> : <><Button size="sm" variant="accent" onClick={() => openApprove(row)}>Approve</Button><Button size="sm" variant="ghost" onClick={() => handleReject(row)}>Reject</Button></>}
                     </td>
                   </tr>
                 ))}

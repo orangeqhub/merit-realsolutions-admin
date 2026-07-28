@@ -15,6 +15,7 @@ import { usePlots } from "../../context/PlotsContext";
 import { useVentures } from "../../shared/hooks/useVentures.js";
 import { useLayouts } from "../../shared/hooks/useLayouts.js";
 import { useToast } from "../../components/feedback/Toast";
+import { resolveLayoutPricingDefaults } from "../../shared/services/layoutView.js";
 import {
   FACINGS,
   ROAD_WIDTHS,
@@ -23,6 +24,8 @@ import {
   EMPTY_PLOT,
   derivePricing,
   formatINR,
+  formatRate,
+  areaFromDimensions,
 } from "./constants";
 import "./plotInventory.css";
 
@@ -34,6 +37,7 @@ export default function PlotForm() {
   const { getPlot, addPlot, updatePlot } = usePlots();
   const { ventures } = useVentures();
   const { layouts } = useLayouts();
+  // Edit from merged view for display; persistence strips parent fields in plotService.
   const editing = id ? getPlot(id) : null;
 
   const ventureOptions = useMemo(
@@ -41,21 +45,55 @@ export default function PlotForm() {
     [ventures]
   );
 
+  const applyParentDefaults = (layout, venture, prev = {}) => {
+    const pricing = resolveLayoutPricingDefaults(layout, venture);
+    return {
+      ratePerSqYard: prev.ratePerSqYard || (pricing.defaultRatePerSqYard ? String(pricing.defaultRatePerSqYard) : ""),
+      developmentCharges:
+        prev.developmentCharges ||
+        (venture?.developmentCharges != null && venture.developmentCharges !== ""
+          ? String(venture.developmentCharges)
+          : ""),
+      registrationCharges:
+        prev.registrationCharges ||
+        (venture?.registrationCharges != null && venture.registrationCharges !== ""
+          ? String(venture.registrationCharges)
+          : ""),
+    };
+  };
+
   const [step, setStep] = useState(0);
   const [errors, setErrors] = useState({});
   const [form, setForm] = useState(() => {
     if (editing) return { ...EMPTY_PLOT, ...editing };
     const preLayoutId = searchParams.get("layout");
     const preLayout = layouts.find((l) => l.id === preLayoutId);
+    const preVenture = ventures.find((v) => v.id === preLayout?.ventureId);
+    const defaults = applyParentDefaults(preLayout, preVenture);
     return {
       ...EMPTY_PLOT,
       ventureId: preLayout?.ventureId || "",
-      ventureName: preLayout?.ventureName || "",
+      ventureName: preVenture?.name || preLayout?.ventureName || "",
       layoutId: preLayout?.id || "",
       layoutName: preLayout?.name || "",
-      ratePerSqYard: preLayout?.currentPrice || "",
+      ...defaults,
     };
   });
+
+  const selectedVenture = useMemo(
+    () => ventures.find((v) => v.id === form.ventureId) || null,
+    [ventures, form.ventureId]
+  );
+
+  const selectedLayout = useMemo(
+    () => layouts.find((l) => l.id === form.layoutId) || null,
+    [layouts, form.layoutId]
+  );
+
+  const parentPricing = useMemo(
+    () => resolveLayoutPricingDefaults(selectedLayout, selectedVenture),
+    [selectedLayout, selectedVenture]
+  );
 
   const layoutOptions = useMemo(
     () =>
@@ -70,21 +108,41 @@ export default function PlotForm() {
     setErrors((p) => (p[name] ? { ...p, [name]: undefined } : p));
   };
 
+  const setDimensions = (value) => {
+    const derivedArea = areaFromDimensions(value);
+    setForm((p) => ({
+      ...p,
+      dimensions: value,
+      areaSqYards: derivedArea || p.areaSqYards,
+    }));
+    setErrors((p) => (p.areaSqYards ? { ...p, areaSqYards: undefined } : p));
+  };
+
   const setVenture = (ventureId) => {
     const v = ventures.find((x) => x.id === ventureId);
-    setForm((p) => ({ ...p, ventureId, ventureName: v?.name || "", layoutId: "", layoutName: "" }));
+    setForm((p) => ({
+      ...p,
+      ventureId,
+      ventureName: v?.name || "",
+      layoutId: "",
+      layoutName: "",
+      ...applyParentDefaults(null, v, {}),
+    }));
     setErrors((p) => ({ ...p, ventureId: undefined }));
   };
 
   const setLayout = (layoutId) => {
     const l = layouts.find((x) => x.id === layoutId);
+    const v = ventures.find((x) => x.id === l?.ventureId);
     setForm((p) => ({
       ...p,
       layoutId,
       layoutName: l?.name || "",
-      ratePerSqYard: p.ratePerSqYard || l?.currentPrice || "",
+      ventureId: l?.ventureId || p.ventureId,
+      ventureName: v?.name || p.ventureName,
+      ...applyParentDefaults(l, v, {}),
     }));
-    setErrors((p) => ({ ...p, layoutId: undefined }));
+    setErrors((p) => ({ ...p, layoutId: undefined, ventureId: undefined }));
   };
 
   const validateStep = (target) => {
@@ -136,32 +194,104 @@ export default function PlotForm() {
     switch (step) {
       case 0:
         return (
-          <FormSection title="Property Details" columns={2}>
-            <Input label="Plot Number" required value={form.plotNumber} onChange={(e) => setField("plotNumber", e.target.value)} placeholder="A-112" error={errors.plotNumber} />
-            <Input label="Block" value={form.block} onChange={(e) => setField("block", e.target.value)} placeholder="A" />
-            <Select label="Venture" required value={form.ventureId} onChange={setVenture} options={ventureOptions} placeholder="Select venture" searchable error={errors.ventureId} />
-            <Select label="Layout" required value={form.layoutId} onChange={setLayout} options={layoutOptions} placeholder="Select layout" searchable error={errors.layoutId} />
-            <Select label="Facing" value={form.facing} onChange={(v) => setField("facing", v)} options={FACINGS} />
-            <Select label="Road Width" value={form.roadWidth} onChange={(v) => setField("roadWidth", v)} options={ROAD_WIDTHS} />
-            <div className="form-section__full">
-              <Switch label="Corner Plot" checked={form.corner} onChange={(v) => setField("corner", v)} />
-            </div>
-          </FormSection>
+          <>
+            <FormSection title="Property Details" columns={2}>
+              <Input
+                label="Plot Number"
+                required
+                value={form.plotNumber}
+                onChange={(e) => setField("plotNumber", e.target.value)}
+                placeholder="A-112"
+                error={errors.plotNumber}
+              />
+              <Input label="Block" value={form.block} onChange={(e) => setField("block", e.target.value)} placeholder="A" />
+              <Select
+                label="Venture"
+                required
+                value={form.ventureId}
+                onChange={setVenture}
+                options={ventureOptions}
+                placeholder="Select venture"
+                searchable
+                error={errors.ventureId}
+              />
+              <Select
+                label="Layout"
+                required
+                value={form.layoutId}
+                onChange={setLayout}
+                options={layoutOptions}
+                placeholder="Select layout"
+                searchable
+                error={errors.layoutId}
+              />
+              <Select label="Facing" value={form.facing} onChange={(v) => setField("facing", v)} options={FACINGS} />
+              <Select label="Road Width" value={form.roadWidth} onChange={(v) => setField("roadWidth", v)} options={ROAD_WIDTHS} />
+              <div className="form-section__full">
+                <Switch label="Corner Plot" checked={form.corner} onChange={(v) => setField("corner", v)} />
+              </div>
+            </FormSection>
+            {selectedVenture ? (
+              <div className="plot-inherit" role="note">
+                <strong>Defaults from {selectedVenture.name}</strong>
+                <span>
+                  Selling rate {formatRate(parentPricing.defaultRatePerSqYard)} · Reg{" "}
+                  {selectedVenture.registrationCharges || 0} · Dev {selectedVenture.developmentCharges || 0}
+                </span>
+              </div>
+            ) : null}
+          </>
         );
       case 1:
         return (
           <FormSection title="Dimensions" columns={2}>
-            <Input label="Dimensions" value={form.dimensions} onChange={(e) => setField("dimensions", e.target.value)} placeholder="40x60" />
-            <Input label="Area (sq.yd)" type="number" value={form.areaSqYards} onChange={(e) => setField("areaSqYards", e.target.value)} error={errors.areaSqYards} />
+            <Input
+              label="Dimensions (ft)"
+              value={form.dimensions}
+              onChange={(e) => setDimensions(e.target.value)}
+              placeholder="40x60"
+              hint="Area auto-calculates as (W × H) ÷ 9 sq.yd"
+            />
+            <Input
+              label="Area (sq.yd)"
+              type="number"
+              value={form.areaSqYards}
+              onChange={(e) => setField("areaSqYards", e.target.value)}
+              error={errors.areaSqYards}
+              hint="Override if survey area differs"
+            />
           </FormSection>
         );
       case 2:
         return (
-          <FormSection title="Pricing" columns={2}>
-            <Input label="Rate per sq.yd" type="number" value={form.ratePerSqYard} onChange={(e) => setField("ratePerSqYard", e.target.value)} />
-            <Input label="Development Charges" type="number" value={form.developmentCharges} onChange={(e) => setField("developmentCharges", e.target.value)} />
-            <Input label="Registration Charges" type="number" value={form.registrationCharges} onChange={(e) => setField("registrationCharges", e.target.value)} />
-            <Input label="Discount (%)" type="number" value={form.discountPct} onChange={(e) => setField("discountPct", e.target.value)} />
+          <FormSection title="Pricing overrides" columns={2}>
+            <Input
+              label="Rate per sq.yd"
+              type="number"
+              value={form.ratePerSqYard}
+              onChange={(e) => setField("ratePerSqYard", e.target.value)}
+              hint={`Venture default: ${formatRate(parentPricing.defaultRatePerSqYard)}`}
+            />
+            <Input
+              label="Development Charges"
+              type="number"
+              value={form.developmentCharges}
+              onChange={(e) => setField("developmentCharges", e.target.value)}
+              hint="Prefilled from venture — edit only to override"
+            />
+            <Input
+              label="Registration Charges"
+              type="number"
+              value={form.registrationCharges}
+              onChange={(e) => setField("registrationCharges", e.target.value)}
+              hint="Prefilled from venture — edit only to override"
+            />
+            <Input
+              label="Discount (%)"
+              type="number"
+              value={form.discountPct}
+              onChange={(e) => setField("discountPct", e.target.value)}
+            />
             <div className="form-section__full plot-form__preview">
               <span>Estimated Final Price</span>
               <strong>{formatINR(pricing.finalPrice)}</strong>
@@ -176,8 +306,19 @@ export default function PlotForm() {
             <Input label="Sales Agent" value={form.agent} onChange={(e) => setField("agent", e.target.value)} />
             <Input label="Executive" value={form.executive} onChange={(e) => setField("executive", e.target.value)} />
             <Input label="CRM Owner" value={form.crmOwner} onChange={(e) => setField("crmOwner", e.target.value)} />
-            <Input label="Reservation Expiry" type="date" value={form.reservationExpiry} onChange={(e) => setField("reservationExpiry", e.target.value)} />
-            <Textarea label="Notes" value={form.notes} onChange={(e) => setField("notes", e.target.value)} rows={3} className="form-section__full" />
+            <Input
+              label="Reservation Expiry"
+              type="date"
+              value={form.reservationExpiry}
+              onChange={(e) => setField("reservationExpiry", e.target.value)}
+            />
+            <Textarea
+              label="Notes"
+              value={form.notes}
+              onChange={(e) => setField("notes", e.target.value)}
+              rows={3}
+              className="form-section__full"
+            />
             <div className="form-section__full plot-form__summary">
               <SummaryCard label="Plot" value={form.plotNumber || "—"} tone="accent" />
               <SummaryCard label="Layout" value={form.layoutName || "—"} tone="info" />
@@ -192,11 +333,7 @@ export default function PlotForm() {
   };
 
   return (
-    <motion.div
-      className="plot-page plot-form-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
+    <motion.div className="plot-page plot-form-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageHeader
         title={editing ? "Edit Plot" : "Add Plot"}
         description={`Step ${step + 1} of ${WIZARD_STEPS.length} — ${WIZARD_STEPS[step].label}`}

@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext.jsx";
-import BackendStatusBanner from "./components/feedback/BackendStatusBanner.jsx";
 import AdminLogin from "./pages/AdminLogin";
 import Dashboard from "./pages/Dashboard";
 import PlaceholderPage from "./pages/PlaceholderPage";
@@ -81,6 +80,9 @@ import PartnerCrmDashboard from "./pages/partnerCrm/PartnerCrmDashboard";
 import PropertyAssignmentPage from "./pages/partnerCrm/PropertyAssignmentPage";
 import AreaAssignmentPage from "./pages/partnerCrm/AreaAssignmentPage";
 import CommissionConfigPage from "./pages/partnerCrm/CommissionConfigPage";
+import CommissionList from "./pages/sales/commissions/CommissionList";
+import CommissionSettlementDashboard from "./pages/sales/settlement/CommissionSettlementDashboard";
+import SalesPerformanceDashboard from "./pages/sales/performance/SalesPerformanceDashboard";
 import VentureAssignmentPage from "./pages/partnerCrm/VentureAssignmentPage";
 import CustomerAssignmentPage from "./pages/partnerCrm/CustomerAssignmentPage";
 import PartnerLeadsPage from "./pages/partnerCrm/PartnerLeadsPage";
@@ -115,7 +117,6 @@ import { ReservationLayout } from "./context/ReservationContext";
 function App() {
   return (
     <BrowserRouter>
-      <BackendStatusBanner />
       <AuthProvider>
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
@@ -267,6 +268,10 @@ function App() {
             <Route path="customers/:customerId" element={<SalesCustomer360Page />} />
             <Route path="notifications" element={<PartnerNotificationsPage />} />
           </Route>
+
+          <Route path="sales/commissions" element={<CommissionList />} />
+          <Route path="sales/commission-settlement" element={<CommissionSettlementDashboard />} />
+          <Route path="sales/performance" element={<SalesPerformanceDashboard />} />
 
           <Route path="partner-crm">
             <Route index element={<Navigate to="/dashboard/sales-crm" replace />} />

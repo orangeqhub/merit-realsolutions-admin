@@ -375,3 +375,64 @@
     flex-direction: column;
   }
 }
+
+/* Layouts tab — production MapWorkspace embed */
+.venture-layouts-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--erp-space-12);
+  min-width: 0;
+}
+
+.venture-layouts-panel__picker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--erp-space-12);
+  flex-wrap: wrap;
+  padding: var(--erp-space-12) var(--erp-space-16);
+  border-radius: var(--erp-radius-lg);
+  background: var(--erp-glass-bg);
+  backdrop-filter: blur(var(--erp-glass-blur));
+  border: 1px solid var(--erp-glass-border-dark);
+  box-shadow: var(--erp-elevation-card);
+}
+
+.venture-layouts-panel__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--erp-space-8);
+}
+
+.venture-layouts-panel__chip {
+  border: 1px solid var(--erp-border);
+  background: var(--erp-card);
+  color: var(--erp-text-muted);
+  border-radius: var(--erp-radius-pill);
+  padding: var(--erp-space-8) var(--erp-space-16);
+  font-size: var(--erp-font-size-sm);
+  font-weight: var(--erp-weight-bold);
+  cursor: pointer;
+  transition: background var(--erp-transition-fast), color var(--erp-transition-fast), border-color var(--erp-transition-fast);
+}
+
+.venture-layouts-panel__chip:hover {
+  border-color: var(--erp-accent);
+  color: var(--erp-accent-dark);
+}
+
+.venture-layouts-panel__chip.is-active {
+  background: var(--erp-primary);
+  border-color: var(--erp-primary);
+  color: var(--erp-text-inverse);
+}
+
+.venture-layouts-panel__actions {
+  display: flex;
+  gap: var(--erp-space-8);
+  flex-wrap: wrap;
+}
+
+.venture-layouts-panel__map.plot-map-workspace.ws-premium {
+  min-height: min(72vh, 820px);
+}

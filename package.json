@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "sync-data": "node scripts/syncErpRelationships.cjs",
     "gen-engagement": "node scripts/genEngagementData.cjs",
-    "gen-reservations": "node scripts/genReservations.cjs"
+    "gen-reservations": "node scripts/genReservations.cjs",
+    "verify:gis-template-v21": "node scripts/verify-gis-workbook-template-v21.js"
   },
   "dependencies": {
     "framer-motion": "^12.42.0",

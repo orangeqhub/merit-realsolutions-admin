@@ -1,0 +1,25 @@
+/* ===================================================================
+   DS Tokens — Interaction States
+   =================================================================== */
+
+:root {
+  --erp-state-hover-bg: var(--erp-color-hover);
+  --erp-state-hover-border: var(--erp-color-border-strong);
+  --erp-state-pressed-bg: var(--erp-color-neutral-100);
+  --erp-state-pressed-scale: 0.98;
+  --erp-state-focused-ring: var(--erp-focus-ring);
+  --erp-state-selected-bg: var(--erp-color-accent-soft);
+  --erp-state-selected-border: var(--erp-color-accent);
+  --erp-state-selected-text: var(--erp-color-accent-dark);
+  --erp-state-disabled-bg: var(--erp-color-disabled-bg);
+  --erp-state-disabled-text: var(--erp-color-disabled-text);
+  --erp-state-disabled-border: var(--erp-color-disabled-border);
+  --erp-state-disabled-opacity: 0.48;
+  --erp-state-loading-opacity: 0.72;
+  --erp-state-success-bg: var(--erp-color-success-soft);
+  --erp-state-success-text: var(--erp-color-success-dark);
+  --erp-state-warning-bg: var(--erp-color-warning-soft);
+  --erp-state-warning-text: var(--erp-color-warning-dark);
+  --erp-state-danger-bg: var(--erp-color-danger-soft);
+  --erp-state-danger-text: var(--erp-color-danger-dark);
+}

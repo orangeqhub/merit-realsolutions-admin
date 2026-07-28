@@ -3,9 +3,15 @@ export const BUILDER_STATUS = [
   { value: 'INACTIVE', label: 'Inactive' },
 ];
 
+export const SALES_PARTNERSHIP_TYPES = [
+  { value: 'FULL_TIME', label: 'Full Time' },
+  { value: 'PART_TIME', label: 'Part Time' },
+];
+
 export const EMPTY_BUILDER = {
   builderName: '',
   builderCode: '',
+  salesPartnershipType: '',
   logo: '',
   coverImage: '',
   description: '',
@@ -46,6 +52,7 @@ export function mapBuilderToForm(builder = {}) {
   return {
     builderName: builder.builderName || '',
     builderCode: builder.builderCode || '',
+    salesPartnershipType: builder.salesPartnershipType || '',
     logo: builder.logo || '',
     coverImage: builder.coverImage || '',
     description: builder.description || '',
@@ -74,6 +81,7 @@ export function mapBuilderToForm(builder = {}) {
 export function mapFormToPayload(form = {}) {
   return {
     builderName: form.builderName,
+    salesPartnershipType: form.salesPartnershipType,
     description: form.description || '',
     about: form.about || '',
     contactPerson: form.contactPerson || '',

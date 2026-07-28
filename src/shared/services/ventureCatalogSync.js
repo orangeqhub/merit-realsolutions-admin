@@ -25,10 +25,20 @@ async function uploadVentureMedia(file) {
   return body.data.url;
 }
 
-async function persistMediaValue(value) {
+export async function persistMediaValue(value) {
   if (!value) return null;
   if (typeof value === 'string') {
     if (value.startsWith('blob:')) return null;
+    if (value.startsWith('data:')) {
+      try {
+        const response = await fetch(value);
+        const blob = await response.blob();
+        const file = new File([blob], 'upload.png', { type: blob.type || 'image/png' });
+        return uploadVentureMedia(file);
+      } catch {
+        return null;
+      }
+    }
     return value;
   }
   if (typeof File !== 'undefined' && value instanceof File) {
@@ -116,10 +126,104 @@ export async function prepareVentureForCatalogSync(venture) {
   };
 }
 
+function normalizeWebsitePublishFields(venture) {
+  const status = String(venture?.status || '').trim();
+  const isPublished = status && status !== 'Draft' && status !== 'Inactive';
+  return {
+    ...venture,
+    showOnWebsite: venture?.showOnWebsite !== false,
+    publishStatus: venture?.publishStatus || (isPublished ? 'PUBLISHED' : 'DRAFT'),
+  };
+}
+
+/** Push all admin ventures to the website catalog (best-effort). */
+export async function syncAllVenturesToBackend(ventures = []) {
+  const list = Array.isArray(ventures) ? ventures : [];
+  const results = [];
+  for (const venture of list) {
+    results.push(await syncVentureToBackend(venture));
+  }
+  return results;
+}
+
+/** Sync layout profile so the public website can list layouts under a venture. */
+export async function syncLayoutProfileToBackend(layout, venture) {
+  if (!layout?.id || !venture?.id) return { ok: false, skipped: true };
+  try {
+    const response = await fetch(
+      `${API_BASE}/v1/admin/plot-inventory/layouts/${layout.id}/profile`,
+      {
+        method: 'PUT',
+        headers: authHeaders(true),
+        body: JSON.stringify({
+          layoutId: layout.id,
+          layoutName: layout.name,
+          name: layout.name,
+          code: layout.code,
+          layoutCode: layout.code,
+          ventureId: venture.id,
+          ventureName: venture.name,
+          layoutType: layout.layoutType,
+          description: layout.layoutNotes || layout.notes || '',
+          layoutPlan: layout.layoutPlan,
+          masterPlan: layout.masterPlan,
+          lifecycleStatus: layout.status,
+          source: 'admin',
+        }),
+      }
+    );
+    if (!response.ok) {
+      const body = await response.json().catch(() => ({}));
+      console.warn('[ventureCatalogSync] layout profile failed:', body.message || response.status);
+      return { ok: false, status: response.status };
+    }
+    return { ok: true };
+  } catch (error) {
+    console.warn('[ventureCatalogSync] layout profile error:', error.message);
+    return { ok: false, error };
+  }
+}
+
+/** Remove website catalog ventures that no longer exist in Admin ERP. */
+export async function reconcileVentureCatalogWithAdmin(ventureIds = []) {
+  try {
+    const response = await fetch(`${API_BASE}/v1/admin/ventures/reconcile`, {
+      method: 'POST',
+      headers: authHeaders(true),
+      body: JSON.stringify({
+        ventureIds: (ventureIds || []).filter(Boolean),
+      }),
+    });
+    if (!response.ok) {
+      const body = await response.json().catch(() => ({}));
+      console.warn('[ventureCatalogSync] reconcile failed:', body.message || response.status);
+      return { ok: false, status: response.status };
+    }
+    const body = await response.json().catch(() => ({}));
+    return { ok: true, data: body.data };
+  } catch (error) {
+    console.warn('[ventureCatalogSync] reconcile error:', error.message);
+    return { ok: false, error };
+  }
+}
+
+/** Push ventures + layouts from admin storage to the website catalog. */
+export async function syncInventoryCatalogToBackend({ ventures = [], layouts = [] } = {}) {
+  const ventureIds = (ventures || []).map((item) => item.id).filter(Boolean);
+  await reconcileVentureCatalogWithAdmin(ventureIds);
+  await syncAllVenturesToBackend(ventures);
+  for (const layout of layouts) {
+    const venture = ventures.find((item) => item.id === layout.ventureId);
+    if (venture) {
+      await syncLayoutProfileToBackend(layout, venture);
+    }
+  }
+}
+
 /** Best-effort sync to PostgreSQL catalog used by the public website. */
 export async function syncVentureToBackend(venture) {
   try {
-    const payload = await prepareVentureForCatalogSync(venture);
+    const payload = await prepareVentureForCatalogSync(normalizeWebsitePublishFields(venture));
     if (!payload) return { ok: false, skipped: true };
 
     const response = await fetch(`${API_BASE}/v1/admin/ventures`, {

@@ -18,9 +18,15 @@ export const STATES = [
 
 export const STATUS_OPTIONS = ["Active", "Inactive"];
 
+export const SALES_PARTNERSHIP_TYPES = [
+  { value: "FULL_TIME", label: "Full Time Sales" },
+  { value: "PART_TIME", label: "Part Time Sales" },
+];
+
 export const EMPTY_COMPANY = {
   name: "",
   type: "",
+  salesPartnershipType: "",
   description: "",
   contactPerson: "",
   designation: "",

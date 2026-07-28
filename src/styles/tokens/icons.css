@@ -1,0 +1,22 @@
+/* ===================================================================
+   DS Tokens — Icon System
+   Standard sizes / stroke / containers. Prefer these over ad-hoc px.
+   =================================================================== */
+
+:root {
+  --erp-icon-xs: 12px;
+  --erp-icon-sm: 14px;
+  --erp-icon-md: 16px;
+  --erp-icon-lg: 20px;
+  --erp-icon-xl: 24px;
+
+  --erp-icon-stroke: 1.75;
+  --erp-icon-gap: var(--erp-space-8);
+  --erp-icon-pad-sm: var(--erp-space-4);
+  --erp-icon-pad-md: var(--erp-space-8);
+  --erp-icon-pad-lg: var(--erp-space-12);
+
+  --erp-icon-box-sm: var(--erp-control-h-xs);
+  --erp-icon-box-md: var(--erp-control-h-sm);
+  --erp-icon-box-lg: var(--erp-control-h-md);
+}

@@ -4,15 +4,19 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../components/ui/button/Button';
 import EmptyState from '../../components/layout/EmptyState';
 import MapWorkspace from '../../features/plot-map/MapWorkspace';
+import { layoutService } from '../../shared/services/layoutService.js';
 
+/** Venture Details → Layouts tab. Production MapWorkspace only (no parallel premium screen). */
 export default function VentureLayoutsPanel({ venture, layouts = [] }) {
   const navigate = useNavigate();
   const [activeLayoutId, setActiveLayoutId] = useState(layouts[0]?.id || '');
 
-  const activeLayout = useMemo(
-    () => layouts.find((l) => l.id === activeLayoutId) || layouts[0] || null,
-    [layouts, activeLayoutId]
-  );
+  const activeLayout = useMemo(() => {
+    const fromList = layouts.find((l) => l.id === activeLayoutId) || layouts[0] || null;
+    if (!fromList) return null;
+    // Map engines need the persisted layout record, not a Venture-merged view.
+    return layoutService.getById(fromList.id) || fromList;
+  }, [layouts, activeLayoutId]);
 
   if (!layouts.length) {
     return (
@@ -43,7 +47,7 @@ export default function VentureLayoutsPanel({ venture, layouts = [] }) {
             </button>
           ))}
         </div>
-        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+        <div className="venture-layouts-panel__actions">
           <Button variant="ghost" size="sm" to={`/dashboard/layouts/new?venture=${venture.id}`}>
             <FiPlus /> Add Layout
           </Button>
@@ -59,7 +63,7 @@ export default function VentureLayoutsPanel({ venture, layouts = [] }) {
         </div>
       </div>
 
-      <MapWorkspace layout={activeLayout} venture={venture} />
+      <MapWorkspace layout={activeLayout} venture={venture} className="venture-layouts-panel__map" />
     </div>
   );
 }

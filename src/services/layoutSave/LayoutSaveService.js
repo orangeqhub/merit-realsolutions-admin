@@ -1,7 +1,6 @@
 import { layoutService } from '../../shared/services/layoutService.js';
 import { PlotCreationService } from '../../shared/services/plotCreation/index.js';
 import { getAuthToken } from '../auth/authStorage.js';
-import { checkBackendHealth } from '../../utils/backendHealth.js';
 import { buildLayoutSavePayload } from './PlotSaveService.js';
 import { RefreshService } from './RefreshService.js';
 import { prepareVentureForCatalogSync } from '../../shared/services/ventureCatalogSync.js';
@@ -9,10 +8,7 @@ import { prepareVentureForCatalogSync } from '../../shared/services/ventureCatal
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 async function canUseRemoteSave() {
-  const token = getAuthToken();
-  if (!token) return false;
-  const health = await checkBackendHealth();
-  return health.online && health.status === 'ready';
+  return Boolean(getAuthToken());
 }
 
 async function postSaveGeneratedLayout(layoutId, payload, token) {
@@ -130,7 +126,7 @@ export const LayoutSaveService = {
             blockLabels: data.blocks,
             summary: data.summary,
             savedAt: new Date().toISOString(),
-          });
+          }, { source: 'api' });
           result = { ...data, source: 'api' };
           source = 'api';
         }

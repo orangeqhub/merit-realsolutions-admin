@@ -1,35 +1,28 @@
 /* ===================================================================
-   Merit Real Solutions ERP — Spacing System
-   Standardized spacing scale + utility classes.
+   Merit ERP — Spacing Utility Classes
+   Token values: styles/tokens/spacing.css
    =================================================================== */
 
-:root {
-  --erp-space-xs: 0.5rem;
-  --erp-space-sm: 0.75rem;
-  --erp-space-md: 1rem;
-  --erp-space-lg: 1.5rem;
-  --erp-space-xl: 2rem;
-  --erp-space-2xl: 2.5rem;
-  --erp-space-3xl: 3.5rem;
-}
-
-/* Margin bottom */
 .erp-mb-xs { margin-bottom: var(--erp-space-xs); }
 .erp-mb-sm { margin-bottom: var(--erp-space-sm); }
 .erp-mb-md { margin-bottom: var(--erp-space-md); }
 .erp-mb-lg { margin-bottom: var(--erp-space-lg); }
 .erp-mb-xl { margin-bottom: var(--erp-space-xl); }
 
-/* Margin top */
 .erp-mt-xs { margin-top: var(--erp-space-xs); }
 .erp-mt-sm { margin-top: var(--erp-space-sm); }
 .erp-mt-md { margin-top: var(--erp-space-md); }
 .erp-mt-lg { margin-top: var(--erp-space-lg); }
 .erp-mt-xl { margin-top: var(--erp-space-xl); }
 
-/* Gaps for fl../grid wrappers */
 .erp-gap-xs { gap: var(--erp-space-xs); }
 .erp-gap-sm { gap: var(--erp-space-sm); }
 .erp-gap-md { gap: var(--erp-space-md); }
 .erp-gap-lg { gap: var(--erp-space-lg); }
 .erp-gap-xl { gap: var(--erp-space-xl); }
+
+.erp-p-xs { padding: var(--erp-space-xs); }
+.erp-p-sm { padding: var(--erp-space-sm); }
+.erp-p-md { padding: var(--erp-space-md); }
+.erp-p-lg { padding: var(--erp-space-lg); }
+.erp-p-xl { padding: var(--erp-space-xl); }

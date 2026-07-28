@@ -1,0 +1,20 @@
+/* ===================================================================
+   Merit ERP Design System — Token Index (UI SSOT)
+   Import order matters. Consume only --erp-* tokens in new code.
+   Legacy aliases live in legacy-aliases.css for backward compatibility.
+   =================================================================== */
+
+@import './colors.css';
+@import './typography.css';
+@import './spacing.css';
+@import './radius.css';
+@import './elevation.css';
+@import './motion.css';
+@import './z-index.css';
+@import './controls.css';
+@import './states.css';
+@import './breakpoints.css';
+@import './icons.css';
+@import './glass.css';
+@import './a11y.css';
+@import './legacy-aliases.css';

@@ -61,11 +61,12 @@ export default function PlotEditDrawer({ open, onClose, form, setForm, onSave })
           options={MAP_STATUS_OPTIONS}
         />
         <Textarea
-          label="Description"
+          label="Notes"
           rows={4}
           value={form.description}
           onChange={(e) => setField('description', e.target.value)}
           className="plot-map-drawer__full"
+          hint="Saved as plot notes"
         />
       </div>
     </RightDrawer>

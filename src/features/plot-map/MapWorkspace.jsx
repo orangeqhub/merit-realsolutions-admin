@@ -1,18 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState, lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import L from 'leaflet';
+import { useSearchParams } from 'react-router-dom';
 import { useToast } from '../../components/feedback/Toast';
-import MapToolbar from './MapToolbar';
-import CoordinatePanel from './CoordinatePanel';
 import PlotFormDrawer from './PlotFormDrawer';
 import PlotEditDrawer from './PlotEditDrawer';
 import PlotDetailDrawer from './PlotDetailDrawer';
 import GenerateLayoutDrawer from './GenerateLayoutDrawer';
-import PlotStatusBar from './PlotStatusBar';
 import ConfirmationModal from '../../components/modal/ConfirmationModal';
 import { usePlotWorkspace } from './hooks/usePlotWorkspace';
 import { useLeafletMap } from './hooks/useLeafletMap';
 import { resolveMapView } from './utils/coordinateUtils';
+import { resolveLayoutPricingDefaults } from '../../shared/services/layoutView.js';
 import { clampMapZoom, getMapTypeLabel } from './utils/mapHelpers';
 import { getMapRenderLevel, ZOOM_LEVEL, computeBoundaryFromPlots } from './utils/mapZoomRender';
 import { filterPolygonPlots, getPolygonPositions } from './utils/polygonUtils';
@@ -23,15 +22,34 @@ import {
 } from '../../services/layoutGeneration';
 import { LayoutSaveService } from '../../services/layoutSave';
 import { LayoutValidationService } from './services/LayoutValidationService';
+import { LayoutExcelExporter } from '../../services/layoutImport';
+import { RefreshService } from '../../services/layoutSave/RefreshService.js';
+import ImportLayoutWizard from '../layout-import/ImportLayoutWizard';
 import LayoutMapChrome from './LayoutMapChrome';
+import {
+  WorkspaceKPIStrip,
+  WorkspaceTopToolbar,
+  WorkspaceMapControls,
+  WorkspaceLoadingState,
+  WorkspaceEmptyState,
+  PlotInfoCard,
+  WorkspaceSidebar,
+  BottomStatusBar,
+  computeWorkspaceMetrics,
+  applyPresentationFilters,
+  collectFilterOptions,
+} from './workspace';
 import './styles/plot-map.css';
+import './workspace/workspace-premium.css';
+import './workspace/workspace-phase1.css';
 
 const OpenStreetMapCanvas = lazy(() => import('./OpenStreetMapCanvas'));
 
 function buildDefaultGenerationForm(layout, venture) {
+  // Raw layout for geo engines; pricing via SSOT resolve (Venture → legacy Layout → 0).
   const mapView = resolveMapView(venture, layout);
-  const defaultRate =
-    Number(layout?.currentPrice) || Number(layout?.basePrice) || '';
+  const pricing = resolveLayoutPricingDefaults(layout, venture);
+  const defaultRate = pricing.defaultRatePerSqYard;
   return {
     ...DEFAULT_GENERATION_PARAMS,
     amenities: { ...DEFAULT_GENERATION_PARAMS.amenities },
@@ -43,11 +61,14 @@ function buildDefaultGenerationForm(layout, venture) {
 
 export default function MapWorkspace({ layout, venture, className = '' }) {
   const toast = useToast();
+  const [searchParams, setSearchParams] = useSearchParams();
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const [mapType, setMapType] = useState('satellite');
+  const [showRoadLayer, setShowRoadLayer] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [generateDrawerOpen, setGenerateDrawerOpen] = useState(false);
+  const [importLayoutOpen, setImportLayoutOpen] = useState(false);
   const [generationForm, setGenerationForm] = useState(() =>
     buildDefaultGenerationForm(layout, venture)
   );
@@ -67,11 +88,63 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
   const [generationTimeMs, setGenerationTimeMs] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [mapZoom, setMapZoom] = useState(18);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [forceDetailDrawer, setForceDetailDrawer] = useState(false);
+  const [legendHoverStatus, setLegendHoverStatus] = useState(null);
+  const [viewport, setViewport] = useState(null);
+  const [presentationFilters, setPresentationFilters] = useState({
+    facing: '',
+    block: '',
+    minArea: '',
+    maxArea: '',
+    minPrice: '',
+    maxPrice: '',
+    roadWidth: '',
+    cornerOnly: false,
+    availability: '',
+  });
+  const searchInputRef = useRef(null);
   const validationToastIdRef = useRef(null);
   const mapView = useMemo(() => resolveMapView(venture, layout), [venture, layout]);
 
+  const reloadSavedLayoutLayers = useCallback(async () => {
+    if (!layout?.id) return null;
+    const saved = await LayoutSaveService.loadSavedLayout(layout.id);
+    if (!saved) return null;
+    const layers = {
+      roads: saved.roads || [],
+      amenities: saved.amenities || [],
+      blockLabels: saved.blockLabels || saved.blocks || [],
+      configuration: saved.configuration || null,
+    };
+    setSavedLayoutLayers(layers);
+    return layers;
+  }, [layout?.id]);
+
   const state = usePlotWorkspace({ layout, venture });
   const { zoomIn, zoomOut, centerMap } = useLeafletMap(mapRef, venture, layout, mapType);
+
+  const workspaceMetrics = useMemo(
+    () => computeWorkspaceMetrics(state.layoutPlots),
+    [state.layoutPlots]
+  );
+
+  const filterOptions = useMemo(
+    () => collectFilterOptions(state.layoutPlots),
+    [state.layoutPlots]
+  );
+
+  const displayPlots = useMemo(
+    () => applyPresentationFilters(state.filteredPlots, presentationFilters),
+    [state.filteredPlots, presentationFilters]
+  );
+
+  const legendHighlightIds = useMemo(() => {
+    if (!legendHoverStatus) return [];
+    return state.layoutPlots
+      .filter((plot) => plot.status === legendHoverStatus)
+      .map((plot) => plot.id);
+  }, [legendHoverStatus, state.layoutPlots]);
 
   const mappedCount = useMemo(
     () => filterPolygonPlots(state.layoutPlots).length,
@@ -91,8 +164,9 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
   const activeHighlightIds = useMemo(() => {
     const ids = new Set(validationHighlightIds);
     if (state.highlightedPlotId) ids.add(state.highlightedPlotId);
+    legendHighlightIds.forEach((id) => ids.add(id));
     return [...ids];
-  }, [state.highlightedPlotId, validationHighlightIds]);
+  }, [state.highlightedPlotId, validationHighlightIds, legendHighlightIds]);
 
   const effectiveBoundary = useMemo(() => {
     if (layoutBoundary.length) return layoutBoundary;
@@ -128,6 +202,17 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
     [state.layoutPlots]
   );
 
+  const syncViewport = useCallback((map) => {
+    if (!map) return;
+    const bounds = map.getBounds();
+    setViewport({
+      north: bounds.getNorth(),
+      south: bounds.getSouth(),
+      east: bounds.getEast(),
+      west: bounds.getWest(),
+    });
+  }, []);
+
   const handleMapReady = useCallback(
     (map) => {
       mapRef.current = map;
@@ -138,9 +223,16 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
         { animate: false }
       );
       window.requestAnimationFrame(() => map.invalidateSize());
+      syncViewport(map);
+      map.on('moveend', () => syncViewport(map));
+      map.on('zoomend', () => syncViewport(map));
     },
-    [layout, mapType, venture]
+    [layout, mapType, syncViewport, venture]
   );
+
+  useEffect(() => {
+    setForceDetailDrawer(false);
+  }, [state.selectedPlot?.id]);
 
   useEffect(() => {
     setGenerationForm(buildDefaultGenerationForm(layout, venture));
@@ -181,6 +273,41 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
       cancelled = true;
     };
   }, [layout?.id, venture?.id]);
+
+  useEffect(() => {
+    if (!layout?.id) return undefined;
+    return RefreshService.subscribe((detail) => {
+      if (detail.layoutId && detail.layoutId !== layout.id) return;
+      void reloadSavedLayoutLayers();
+    });
+  }, [layout?.id, reloadSavedLayoutLayers]);
+
+  useEffect(() => {
+    if (!layout?.id) return;
+    if (searchParams.get('generate') === '1') {
+      setGenerationForm(buildDefaultGenerationForm(layout, venture));
+      setGenerateDrawerOpen(true);
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete('generate');
+        return next;
+      }, { replace: true });
+    }
+    if (searchParams.get('import') === '1') {
+      setImportLayoutOpen(true);
+      setSearchParams((prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete('import');
+        return next;
+      }, { replace: true });
+    }
+  }, [layout?.id, searchParams, setSearchParams, venture]);
+
+  useEffect(() => {
+    if (typeof console !== 'undefined' && console.info) {
+      console.info('PREMIUM_WORKSPACE_PHASE1_COMPLETE');
+    }
+  }, [layout?.id]);
 
   useEffect(() => {
     if (mapView.source === 'default-fallback') {
@@ -273,10 +400,11 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
     setIsGenerating(true);
     await new Promise((resolve) => window.requestAnimationFrame(resolve));
 
+    const pricing = resolveLayoutPricingDefaults(layout, venture);
     const result = LayoutGenerationService.generatePreview({
       ...generationForm,
-      currentPrice: layout?.currentPrice,
-      basePrice: layout?.basePrice,
+      currentPrice: pricing.currentPrice ?? pricing.defaultRatePerSqYard,
+      basePrice: pricing.basePrice ?? pricing.defaultRatePerSqYard,
     });
 
     setIsGenerating(false);
@@ -322,7 +450,7 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
       `${result.plots.length} plots generated in ${result.generationTimeMs ?? 0} ms`
     );
     return true;
-  }, [generationForm, layout?.basePrice, layout?.currentPrice, toast]);
+  }, [generationForm, layout, venture, toast]);
 
   const handleGeneratePreview = useCallback(() => {
     runGenerationPreview();
@@ -348,17 +476,67 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
     toast.info('Layout preview cleared');
   }, [toast]);
 
+  const handleResetGenerationForm = useCallback(() => {
+    setGenerationForm(buildDefaultGenerationForm(layout, venture));
+  }, [layout, venture]);
+
   const handleExportExcel = useCallback(() => {
-    if (!generatedPreviewPlots.length) {
-      toast.info('Generate a layout preview before exporting');
+    if (generatedPreviewPlots.length) {
+      const { rowCount, filename } = LayoutGenerationService.exportPreviewToExcel(
+        generatedPreviewPlots,
+        layout
+      );
+      toast.success(`Exported ${rowCount} plots to ${filename}`);
       return;
     }
-    const { rowCount, filename } = LayoutGenerationService.exportPreviewToExcel(
-      generatedPreviewPlots,
-      layout
-    );
-    toast.success(`Exported ${rowCount} plots to ${filename}`);
-  }, [generatedPreviewPlots, layout, toast]);
+
+    try {
+      const result = LayoutExcelExporter.exportLayout(layout?.id, venture);
+      toast.success(
+        `Exported ${result.counts.plots} plots, ${result.counts.roads} roads to ${result.filename}`
+      );
+    } catch (err) {
+      toast.info(err.message || 'Generate a layout or import data before exporting');
+    }
+  }, [generatedPreviewPlots, layout, venture, toast]);
+
+  const handleOpenImportWizard = useCallback(() => {
+    setImportLayoutOpen(true);
+  }, []);
+
+  const handleImportComplete = useCallback(
+    async ({ preview, result }) => {
+      setGeneratedPreviewPlots([]);
+      setGeneratedPreviewRoads([]);
+      setGeneratedPreviewAmenities([]);
+      setGeneratedBlockLabels([]);
+      setPreviewSummary(null);
+      await reloadSavedLayoutLayers();
+
+      const plotCount = result?.plots?.length ?? preview?.plots?.length ?? 0;
+      const roadCount = preview?.roads?.length ?? 0;
+      toast.success(
+        `Township imported — ${plotCount} plots and ${roadCount} roads are now on the map`
+      );
+
+      if (mapRef.current && preview?.plots?.length) {
+        const positions = collectAllPreviewPositions(
+          preview.plots,
+          preview.roads || [],
+          preview.amenities || [],
+          []
+        );
+        if (positions.length >= 3) {
+          mapRef.current.fitBounds(L.latLngBounds(positions), {
+            padding: [72, 72],
+            maxZoom: 19,
+            animate: true,
+          });
+        }
+      }
+    },
+    [reloadSavedLayoutLayers, toast]
+  );
 
   const handleHealthViewIssues = useCallback(
     (plotIds = []) => {
@@ -507,102 +685,200 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
     }
   }, []);
 
+  const toggleRoadLayer = useCallback(() => {
+    setShowRoadLayer((prev) => !prev);
+  }, []);
+
+  const toggleLayers = useCallback(() => {
+    setMapType((prev) => (prev === 'satellite' ? 'roadmap' : 'satellite'));
+  }, []);
+
+  const handleMiniMapNavigate = useCallback(
+    ({ lat, lng }) => {
+      if (!mapRef.current) return;
+      mapRef.current.panTo([lat, lng], { animate: true, duration: 0.45 });
+    },
+    []
+  );
+
+  const handleQueryFocus = useCallback(() => {
+    searchInputRef.current?.focus();
+    searchInputRef.current?.select?.();
+  }, []);
+
+  const handlePrintPlot = useCallback(() => {
+    window.print();
+  }, []);
+
+  const handleClosePlotCard = useCallback(() => {
+    setForceDetailDrawer(false);
+    state.closeDrawers();
+  }, [state]);
+
+  const handleViewPlotDetails = useCallback(() => {
+    setForceDetailDrawer(true);
+  }, []);
+
   const isPreviewActive = generatedPreviewPlots.length > 0;
   const mapRoads = isPreviewActive ? generatedPreviewRoads : savedLayoutLayers?.roads || [];
+  const visibleMapRoads = showRoadLayer ? mapRoads : [];
   const mapAmenities = isPreviewActive ? generatedPreviewAmenities : savedLayoutLayers?.amenities || [];
   const mapBlockLabels = isPreviewActive ? generatedBlockLabels : savedLayoutLayers?.blockLabels || [];
+  const showPlotCard = Boolean(state.detailOpen && state.selectedPlot && !forceDetailDrawer);
 
   if (!layout) {
-    return <div className="plot-map-empty">Select a layout to open the map workspace.</div>;
+    return (
+      <WorkspaceEmptyState
+        className="plot-map-empty ws-p1-empty-page"
+        icon="map"
+        title="Select a layout"
+        description="Open a layout from the inventory to launch the premium map workspace."
+      />
+    );
   }
 
   return (
     <motion.div
       ref={containerRef}
-      className={`plot-map-workspace ${className}`.trim()}
+      className={`plot-map-workspace ws-premium ws-p1${
+        generatedPreviewPlots.length ? ' plot-map-workspace--gen-preview' : ''
+      } ${className}`.trim()}
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
     >
-      <MapToolbar
-        searchQuery={state.searchQuery}
-        onSearchChange={state.setSearchQuery}
-        onSearchSubmit={handleSearchSubmit}
-        mapType={mapType}
-        onMapTypeChange={setMapType}
-        onZoomIn={zoomIn}
-        onZoomOut={zoomOut}
-        onCenter={centerMap}
-        onSave={handleSaveToolbar}
-        onUndo={handleUndo}
-        onRedo={handleRedo}
-        canUndo={state.canUndo}
-        canRedo={state.canRedo}
-        isFullscreen={isFullscreen}
-        onToggleFullscreen={toggleFullscreen}
-        layoutName={layout.name}
-        layoutId={layout.id}
-        legendPlots={state.filteredPlots}
-        statusFilters={state.statusFilters}
-        onToggleStatusFilter={state.toggleStatusFilter}
-        onAddPlot={state.openAddPlot}
-        onGenerateLayout={handleOpenGenerateDrawer}
-        generatedPreviewCount={generatedPreviewPlots.length}
-      />
+      <WorkspaceKPIStrip metrics={workspaceMetrics} />
 
-      <div className="plot-map-workspace__body">
-        <div className="plot-map-workspace__map">
-          {(isPreviewActive || state.layoutPlots.length > 0) ? (
-            <LayoutMapChrome showLegend={getMapRenderLevel(mapZoom) !== ZOOM_LEVEL.OVERVIEW} />
-          ) : null}
-          <Suspense fallback={<div className="plot-map-fallback plot-map-fallback--loading">Loading map…</div>}>
-            <OpenStreetMapCanvas
-              venture={venture}
+      <div className="plot-map-workspace__stage">
+        <div className="ws-p1-main">
+          <WorkspaceTopToolbar
+            layoutName={layout.name}
+            searchInputRef={searchInputRef}
+            searchQuery={state.searchQuery}
+            onSearchChange={state.setSearchQuery}
+            onSearchSubmit={handleSearchSubmit}
+            onUndo={handleUndo}
+            onRedo={handleRedo}
+            canUndo={state.canUndo}
+            canRedo={state.canRedo}
+            importHref={layout.id ? `/dashboard/plots/import?layout=${layout.id}` : '/dashboard/plots/import'}
+            onQueryFocus={handleQueryFocus}
+            onGenerate={handleOpenGenerateDrawer}
+            onImport={handleOpenImportWizard}
+            onAddPlot={state.openAddPlot}
+            onSave={handleSaveToolbar}
+            onExport={handleExportExcel}
+            generatedPreviewCount={generatedPreviewPlots.length}
+          />
+
+          <div className="plot-map-workspace__body">
+            <div className="plot-map-workspace__map">
+              {(isPreviewActive || state.layoutPlots.length > 0) ? (
+                <LayoutMapChrome showLegend={getMapRenderLevel(mapZoom) !== ZOOM_LEVEL.OVERVIEW} />
+              ) : null}
+
+              <WorkspaceMapControls
+                onZoomIn={zoomIn}
+                onZoomOut={zoomOut}
+                onReset={centerMap}
+                onToggleLayers={toggleLayers}
+                onToggleRoadLayer={toggleRoadLayer}
+                showRoadLayer={showRoadLayer}
+                onToggleFullscreen={toggleFullscreen}
+                isFullscreen={isFullscreen}
+                mapType={mapType}
+                mapZoom={mapZoom}
+                mapCenter={mapView.center}
+              />
+
+              <Suspense fallback={<WorkspaceLoadingState label="Loading map canvas…" />}>
+              <OpenStreetMapCanvas
+                venture={venture}
+                layout={layout}
+                plots={displayPlots}
+                allPlots={state.layoutPlots}
+                previewPlot={state.previewPlot}
+                generatedPreviewPlots={generatedPreviewPlots}
+                generatedPreviewRoads={visibleMapRoads}
+                generatedPreviewAmenities={mapAmenities}
+                generatedBlockLabels={mapBlockLabels}
+                layoutBoundary={effectiveBoundary}
+                mapZoom={mapZoom}
+                savedLayoutActive={!isPreviewActive && Boolean(savedLayoutLayers)}
+                selectedPlotId={state.selectedPlot?.id}
+                hoveredPlotId={state.hoveredPlotId}
+                highlightedPlotIds={activeHighlightIds}
+                focusPlotId={state.focusPlotId}
+                focusRequest={state.focusRequest}
+                mapType={mapType}
+                onMouseMove={state.handleMouseMove}
+                onPlotClick={state.handlePlotClick}
+                onPlotHover={state.handlePlotHover}
+                onBlockClusterClick={handleBlockClusterClick}
+                onMapReady={handleMapReady}
+                onZoomChange={setMapZoom}
+              />
+            </Suspense>
+
+            <PlotInfoCard
+              open={showPlotCard}
+              plot={state.selectedPlot}
               layout={layout}
-              plots={state.filteredPlots}
-              allPlots={state.layoutPlots}
-              previewPlot={state.previewPlot}
-              generatedPreviewPlots={generatedPreviewPlots}
-              generatedPreviewRoads={mapRoads}
-              generatedPreviewAmenities={mapAmenities}
-              generatedBlockLabels={mapBlockLabels}
-              layoutBoundary={effectiveBoundary}
-              mapZoom={mapZoom}
-              savedLayoutActive={!isPreviewActive && Boolean(savedLayoutLayers)}
-              selectedPlotId={state.selectedPlot?.id}
-              hoveredPlotId={state.hoveredPlotId}
-              highlightedPlotIds={activeHighlightIds}
-              focusPlotId={state.focusPlotId}
-              focusRequest={state.focusRequest}
-              mapType={mapType}
-              onMouseMove={state.handleMouseMove}
-              onPlotClick={state.handlePlotClick}
-              onPlotHover={state.handlePlotHover}
-              onBlockClusterClick={handleBlockClusterClick}
-              onMapReady={handleMapReady}
-              onZoomChange={setMapZoom}
+              onClose={handleClosePlotCard}
+              onBook={() => {
+                state.bookSelected();
+                toast.success('Plot booked');
+              }}
+              onReserve={() => {
+                state.reserveSelected();
+                toast.success('Plot reserved');
+              }}
+              onViewDetails={handleViewPlotDetails}
+              onEdit={state.openEditPlot}
+              onDelete={() => setDeleteConfirmOpen(true)}
+              onPrint={handlePrintPlot}
             />
-          </Suspense>
+          </div>
         </div>
 
-        <CoordinatePanel
-          liveCoords={state.liveCoords}
+          <BottomStatusBar
+            layoutName={layout.name}
+            plotCount={state.layoutPlots.length}
+            mappedCount={mappedCount}
+            visibleCount={displayPlots.length}
+            mapTypeLabel={getMapTypeLabel(mapType)}
+            mapCenter={mapView.center}
+            centerSource={mapView.source}
+            generatedPreviewCount={generatedPreviewPlots.length}
+            liveCoords={state.liveCoords}
+            zoom={mapZoom}
+          />
+        </div>
+
+        <WorkspaceSidebar
+          collapsed={sidebarCollapsed}
+          onToggleCollapsed={() => setSidebarCollapsed((v) => !v)}
+          plots={state.layoutPlots}
+          filteredPlots={displayPlots}
+          metrics={workspaceMetrics}
+          statusFilters={state.statusFilters}
+          onToggleStatus={state.toggleStatusFilter}
+          onHoverStatus={setLegendHoverStatus}
+          searchQuery={state.searchQuery}
+          onSearchChange={state.setSearchQuery}
+          onSearchSubmit={handleSearchSubmit}
+          filters={presentationFilters}
+          onFiltersChange={setPresentationFilters}
+          filterOptions={filterOptions}
+          viewport={viewport}
+          mapCenter={mapView.center}
+          miniMapRoads={visibleMapRoads}
+          miniMapAmenities={mapAmenities}
+          miniMapBoundary={effectiveBoundary}
+          onMiniMapNavigate={handleMiniMapNavigate}
           selectedPlot={state.selectedPlot}
-          previewActive={Boolean(state.previewPlot || generatedPreviewPlots.length)}
         />
       </div>
-
-      <PlotStatusBar
-        layoutName={layout.name}
-        plotCount={state.layoutPlots.length}
-        mappedCount={mappedCount}
-        mapTypeLabel={getMapTypeLabel(mapType)}
-        mapCenter={mapView.center}
-        centerSource={mapView.source}
-        generatedPreviewCount={generatedPreviewPlots.length}
-        generatedRoadCount={generatedPreviewRoads.length}
-        generatedAmenityCount={generatedPreviewAmenities.length}
-      />
 
       <PlotFormDrawer
         open={state.formOpen}
@@ -623,8 +899,11 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
       />
 
       <PlotDetailDrawer
-        open={state.detailOpen}
-        onClose={state.closeDrawers}
+        open={forceDetailDrawer && state.detailOpen}
+        onClose={() => {
+          setForceDetailDrawer(false);
+          state.closeDrawers();
+        }}
         plot={state.selectedPlot}
         layout={layout}
         onReserve={() => {
@@ -667,14 +946,15 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
         onClose={() => setGenerateDrawerOpen(false)}
         form={generationForm}
         setForm={setGenerationForm}
+        venture={venture}
+        layout={layout}
         onGeneratePreview={handleGeneratePreview}
         onResetPreview={handleResetPreview}
+        onResetForm={handleResetGenerationForm}
         onRegenerate={handleRegenerate}
         onSaveLayout={handleSaveGeneratedLayout}
         onExportExcel={handleExportExcel}
         plotCount={generatedPreviewPlots.length}
-        roadCount={generatedPreviewRoads.length}
-        amenityCount={generatedPreviewAmenities.length}
         previewSummary={previewSummary}
         layoutHealth={layoutHealth}
         generationTimeMs={generationTimeMs}
@@ -684,6 +964,15 @@ export default function MapWorkspace({ layout, venture, className = '' }) {
         fieldErrors={generationFieldErrors}
         onViewHealthIssues={handleHealthViewIssues}
         onHighlightHealthIssue={handleHealthHighlightIssue}
+      />
+
+      <ImportLayoutWizard
+        open={importLayoutOpen}
+        onClose={() => setImportLayoutOpen(false)}
+        layout={layout}
+        venture={venture}
+        onImportComplete={handleImportComplete}
+        onOpenWorkspace={() => setImportLayoutOpen(false)}
       />
     </motion.div>
   );

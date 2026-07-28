@@ -1,0 +1,142 @@
+/* ===================================================================
+   DS Tokens — Color System
+   One unified ERP color language. Never hardcode colors in pages.
+   =================================================================== */
+
+:root {
+  /* —— Brand —— */
+  --erp-color-primary: #0a1628;
+  --erp-color-primary-light: #16233d;
+  --erp-color-primary-dark: #060e1a;
+  --erp-color-secondary: #475569;
+  --erp-color-accent: #2563eb;
+  --erp-color-accent-dark: #1d4ed8;
+  --erp-color-accent-light: #3b82f6;
+  --erp-color-accent-soft: rgba(37, 99, 235, 0.08);
+  --erp-color-accent-soft-hover: rgba(37, 99, 235, 0.14);
+
+  /* —— Semantic —— */
+  --erp-color-success: #059669;
+  --erp-color-success-dark: #047857;
+  --erp-color-success-soft: rgba(5, 150, 105, 0.12);
+  --erp-color-warning: #d97706;
+  --erp-color-warning-dark: #b45309;
+  --erp-color-warning-soft: rgba(217, 119, 6, 0.14);
+  --erp-color-danger: #dc2626;
+  --erp-color-danger-dark: #b91c1c;
+  --erp-color-danger-soft: rgba(220, 38, 38, 0.12);
+  --erp-color-info: #0891b2;
+  --erp-color-info-dark: #0e7490;
+  --erp-color-info-soft: rgba(8, 145, 178, 0.12);
+
+  /* —— Neutral —— */
+  --erp-color-neutral-50: #f8fafc;
+  --erp-color-neutral-100: #f1f5f9;
+  --erp-color-neutral-200: #e2e8f0;
+  --erp-color-neutral-300: #cbd5e1;
+  --erp-color-neutral-400: #94a3b8;
+  --erp-color-neutral-500: #64748b;
+  --erp-color-neutral-600: #475569;
+  --erp-color-neutral-700: #334155;
+  --erp-color-neutral-800: #1e293b;
+  --erp-color-neutral-900: #0f172a;
+
+  /* —— Inventory / Map status (align with mapStatus constants) —— */
+  --erp-color-available: #22c55e;
+  --erp-color-available-border: #16a34a;
+  --erp-color-reserved: #eab308;
+  --erp-color-reserved-border: #ca8a04;
+  --erp-color-booked: #2563eb;
+  --erp-color-booked-border: #1d4ed8;
+  --erp-color-sold: #ef4444;
+  --erp-color-sold-border: #dc2626;
+  --erp-color-blocked: #6b7280;
+  --erp-color-blocked-border: #4b5563;
+  --erp-color-registered: #ef4444;
+  --erp-color-registered-border: #dc2626;
+  --erp-color-mortgaged: #7c3aed;
+  --erp-color-mortgaged-border: #6d28d9;
+
+  /* —— Layout geometry (map / plan) —— */
+  --erp-color-road: #94a3b8;
+  --erp-color-road-border: #64748b;
+  --erp-color-open-space: #86efac;
+  --erp-color-open-space-border: #4ade80;
+  --erp-color-amenities: #38bdf8;
+  --erp-color-amenities-border: #0ea5e9;
+  --erp-color-utilities: #fbbf24;
+  --erp-color-utilities-border: #d97706;
+
+  /* —— Surfaces —— */
+  --erp-color-bg: #f7f9fc;
+  --erp-color-surface: #ffffff;
+  --erp-color-surface-muted: #f9fafc;
+  --erp-color-sidebar: #0a1628;
+  --erp-color-border: #e8ecf2;
+  --erp-color-border-strong: #d7dde7;
+  --erp-color-overlay: rgba(10, 22, 40, 0.45);
+  --erp-color-overlay-strong: rgba(10, 22, 40, 0.62);
+  --erp-color-muted: #f1f3f7;
+
+  /* —— Text —— */
+  --erp-color-text: #111827;
+  --erp-color-text-muted: #5a6474;
+  --erp-color-text-soft: #98a2b3;
+  --erp-color-text-inverse: #ffffff;
+  --erp-color-text-disabled: #b6bdc9;
+
+  /* —— Interaction —— */
+  --erp-color-hover: #f2f5fa;
+  --erp-color-active: var(--erp-color-accent-soft);
+  --erp-color-focus: rgba(37, 99, 235, 0.45);
+  --erp-color-disabled-bg: #f1f3f7;
+  --erp-color-disabled-text: #b6bdc9;
+  --erp-color-disabled-border: #e2e8f0;
+
+  /* —— Accent extras —— */
+  --erp-color-violet: #7c3aed;
+  --erp-color-violet-soft: rgba(124, 58, 237, 0.12);
+  --erp-color-gold: #c9a84c;
+  --erp-color-gold-light: #dfc06e;
+  --erp-color-gold-dark: #a88a3a;
+
+  /* —— Short aliases (canonical short names used across ERP) —— */
+  --erp-primary: var(--erp-color-primary);
+  --erp-primary-light: var(--erp-color-primary-light);
+  --erp-primary-dark: var(--erp-color-primary-dark);
+  --erp-secondary: var(--erp-color-secondary);
+  --erp-accent: var(--erp-color-accent);
+  --erp-accent-dark: var(--erp-color-accent-dark);
+  --erp-accent-light: var(--erp-color-accent-light);
+  --erp-accent-soft: var(--erp-color-accent-soft);
+  --erp-accent-soft-hover: var(--erp-color-accent-soft-hover);
+  --erp-success: var(--erp-color-success);
+  --erp-success-dark: var(--erp-color-success-dark);
+  --erp-success-soft: var(--erp-color-success-soft);
+  --erp-warning: var(--erp-color-warning);
+  --erp-warning-dark: var(--erp-color-warning-dark);
+  --erp-warning-soft: var(--erp-color-warning-soft);
+  --erp-danger: var(--erp-color-danger);
+  --erp-danger-dark: var(--erp-color-danger-dark);
+  --erp-danger-soft: var(--erp-color-danger-soft);
+  --erp-info: var(--erp-color-info);
+  --erp-info-dark: var(--erp-color-info-dark);
+  --erp-info-soft: var(--erp-color-info-soft);
+  --erp-violet: var(--erp-color-violet);
+  --erp-violet-soft: var(--erp-color-violet-soft);
+  --erp-bg: var(--erp-color-bg);
+  --erp-card: var(--erp-color-surface);
+  --erp-card-muted: var(--erp-color-surface-muted);
+  --erp-sidebar-bg: var(--erp-color-sidebar);
+  --erp-border: var(--erp-color-border);
+  --erp-border-strong: var(--erp-color-border-strong);
+  --erp-text: var(--erp-color-text);
+  --erp-text-muted: var(--erp-color-text-muted);
+  --erp-text-soft: var(--erp-color-text-soft);
+  --erp-text-inverse: var(--erp-color-text-inverse);
+  --erp-hover: var(--erp-color-hover);
+  --erp-active: var(--erp-color-active);
+  --erp-disabled-bg: var(--erp-color-disabled-bg);
+  --erp-disabled-text: var(--erp-color-disabled-text);
+  --erp-focus-ring: 0 0 0 3px var(--erp-color-accent-soft);
+}

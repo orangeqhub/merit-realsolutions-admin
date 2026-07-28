@@ -136,18 +136,7 @@ export const ventureService = {
       list.map((v) => (v.id === id ? record : v))
     );
 
-    if (record.name !== existing.name) {
-      dataStore.updateList("layouts", (layouts) =>
-        layouts.map((l) =>
-          l.ventureId === id ? { ...l, ventureName: record.name } : l
-        )
-      );
-      dataStore.updateList("plots", (plots) =>
-        plots.map((p) =>
-          p.ventureId === id ? { ...p, ventureName: record.name } : p
-        )
-      );
-    }
+    // Layout/Plot names are no longer denormalized — readers use resolveLayoutView / resolvePlotView.
 
     void syncVentureToBackend(record).then((result) => {
       if (!result?.ok || !result.media) return;

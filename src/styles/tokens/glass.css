@@ -1,0 +1,26 @@
+/* ===================================================================
+   DS Tokens — Glass System
+   Workspace / floating chrome must consume these — no --ws-* forks.
+   =================================================================== */
+
+:root {
+  --erp-glass-bg: rgba(255, 255, 255, 0.78);
+  --erp-glass-bg-strong: rgba(255, 255, 255, 0.9);
+  --erp-glass-bg-subtle: rgba(255, 255, 255, 0.55);
+  --erp-glass-border: rgba(255, 255, 255, 0.45);
+  --erp-glass-border-dark: rgba(15, 23, 42, 0.08);
+  --erp-glass-blur: 16px;
+  --erp-glass-blur-strong: 20px;
+  --erp-glass-saturate: 1.25;
+  --erp-glass-shadow: var(--erp-elevation-glass);
+  --erp-glass-shadow-sm: var(--erp-elevation-floating);
+  --erp-glass-overlay: rgba(10, 22, 40, 0.06);
+  --erp-glass-radius: var(--erp-radius-xl);
+  --erp-glass-radius-sm: var(--erp-radius-md);
+
+  --erp-opacity-0: 0;
+  --erp-opacity-disabled: 0.48;
+  --erp-opacity-muted: 0.72;
+  --erp-opacity-soft: 0.85;
+  --erp-opacity-full: 1;
+}

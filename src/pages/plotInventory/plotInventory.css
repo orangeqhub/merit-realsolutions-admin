@@ -376,11 +376,34 @@
 
 .plot-form__preview {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  align-items: center;
+  padding: var(--erp-space-16);
+  border-radius: var(--erp-radius-md);
+  background: var(--erp-success-soft);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.plot-inherit {
+  margin-top: var(--erp-space-12);
+  padding: var(--erp-space-12) var(--erp-space-16);
+  border-radius: var(--erp-radius-md);
   background: var(--erp-accent-soft);
-  border-radius: var(--erp-radius-sm);
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--erp-space-4);
+}
+
+.plot-inherit strong {
+  color: var(--erp-primary);
+  font-size: var(--erp-font-size-sm);
+}
+
+.plot-inherit span {
+  font-size: var(--erp-font-size-xs);
+  color: var(--erp-text-muted);
+  font-weight: var(--erp-weight-semibold);
 }
 
 .plot-form__preview span {

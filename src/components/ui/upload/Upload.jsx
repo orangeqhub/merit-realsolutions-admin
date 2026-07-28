@@ -4,8 +4,10 @@ import "./Upload.css";
 
 function toPreview(file) {
   if (!file) return null;
-  if (typeof file === "string")
-    return { name: file.split("/").pop(), url: file, isImage: true };
+  if (typeof file === "string") {
+    const url = file.trim().startsWith("blob:") ? "" : file;
+    return { name: file.split("/").pop(), url, isImage: Boolean(url) };
+  }
   const isImage = file.type?.startsWith("image/");
   return { name: file.name, url: isImage ? URL.createObjectURL(file) : null, isImage };
 }

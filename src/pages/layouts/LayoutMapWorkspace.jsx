@@ -7,13 +7,15 @@ import EmptyState from '../../components/layout/EmptyState';
 import MapWorkspace from '../../features/plot-map/MapWorkspace';
 import { useLayouts } from '../../context/LayoutsContext';
 import { useVentures } from '../../context/VenturesContext';
+import './layout.css';
 
 export default function LayoutMapWorkspace() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { getLayout } = useLayouts();
+  // Raw layout for MapWorkspace (do not pass Venture-merged view into map engines).
+  const { getLayoutRecord } = useLayouts();
   const { getVenture } = useVentures();
-  const layout = getLayout(id);
+  const layout = getLayoutRecord(id);
   const venture = useMemo(
     () => (layout ? getVenture(layout.ventureId) : null),
     [getVenture, layout]
@@ -34,22 +36,23 @@ export default function LayoutMapWorkspace() {
   }
 
   return (
-    <div className="layout-page">
-      <Breadcrumb
-        items={[
-          { label: 'Layouts', to: '/dashboard/layouts/list' },
-          { label: layout.name, to: `/dashboard/layouts/${layout.id}` },
-          { label: 'Map Workspace' },
-        ]}
-      />
-
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.85rem' }}>
-        <Button variant="ghost" size="md" onClick={() => navigate(`/dashboard/layouts/${layout.id}`)}>
-          <FiArrowLeft /> Layout Details
-        </Button>
-        <Button variant="ghost" size="md" onClick={() => navigate(`/dashboard/ventures/${layout.ventureId}?tab=layouts`)}>
-          Venture Layouts
-        </Button>
+    <div className="layout-page layout-map-workspace-page">
+      <div className="layout-map-workspace-page__nav">
+        <Breadcrumb
+          items={[
+            { label: 'Layouts', to: '/dashboard/layouts/list' },
+            { label: layout.name, to: `/dashboard/layouts/${layout.id}` },
+            { label: 'Map Workspace' },
+          ]}
+        />
+        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+          <Button variant="ghost" size="sm" onClick={() => navigate(`/dashboard/layouts/${layout.id}`)}>
+            <FiArrowLeft /> Layout Details
+          </Button>
+          <Button variant="ghost" size="sm" onClick={() => navigate(`/dashboard/ventures/${layout.ventureId}?tab=layouts`)}>
+            Venture Layouts
+          </Button>
+        </div>
       </div>
 
       <MapWorkspace layout={layout} venture={venture} />

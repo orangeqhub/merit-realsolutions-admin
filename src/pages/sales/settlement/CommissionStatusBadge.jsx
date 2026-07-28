@@ -1,0 +1,1 @@
+import Badge from '../../../components/ui/badge/Badge';export default function CommissionStatusBadge({status}){const tone={PENDING:'warning',MANAGER_APPROVED:'info',FINANCE_APPROVED:'violet',READY_FOR_PAYMENT:'success',PAID:'success',REJECTED:'danger',ON_HOLD:'neutral',CANCELLED:'danger'}[status];return <Badge tone={tone}>{String(status||'').replaceAll('_',' ')}</Badge>;}

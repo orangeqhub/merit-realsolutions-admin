@@ -144,6 +144,15 @@ export function formatRate(value) {
   return `₹${n.toLocaleString("en-IN")}/sq.yd`;
 }
 
+export function areaFromDimensions(dimensions) {
+  const match = String(dimensions || "").match(/(\d+(?:\.\d+)?)\s*[x×\*]\s*(\d+(?:\.\d+)?)/i);
+  if (!match) return "";
+  const widthFt = Number(match[1]);
+  const depthFt = Number(match[2]);
+  if (!widthFt || !depthFt) return "";
+  return String(Math.round((widthFt * depthFt) / 9));
+}
+
 /** Derive pricing breakdown from a plot record (immutable, render-safe). */
 export function derivePricing(plot) {
   const area = Number(plot.areaSqYards) || 0;

@@ -1,5 +1,6 @@
 import { plotService } from '../plotService.js';
 import { getPlotInventoryStatistics } from '../statisticsService.js';
+import { omitPlotParentFields } from '../plotView.js';
 import {
   PLOT_MODES,
   PLOT_SOURCES,
@@ -22,12 +23,13 @@ export const PlotCreationService = {
 
   /**
    * Persist plots locally through a single inventory path.
+   * Parent fields (ventureName, city, amenities, …) are stripped in plotService.
    */
   createPlotsLocally({ layoutId, plots = [], source = PLOT_SOURCES.EXCEL, mode = PLOT_MODES.APPEND }) {
     if (!layoutId) throw new Error('Layout is required');
     if (!plots.length) throw new Error('No plots to create');
 
-    const normalized = normalizePlotBatch(plots, source);
+    const normalized = normalizePlotBatch(plots, source).map((plot) => omitPlotParentFields(plot));
     const result = plotService.persistPlots({
       layoutId,
       plots: normalized,
@@ -63,12 +65,20 @@ export const PlotCreationService = {
    * Build API payload rows for generated layout save.
    */
   toGeneratorPayloadRows(plots = []) {
-    return normalizePlotBatch(plots, PLOT_SOURCES.GENERATOR);
+    return normalizePlotBatch(plots, PLOT_SOURCES.GENERATOR).map((plot) =>
+      omitPlotParentFields(plot)
+    );
   },
 
+  /**
+   * Sync API plot records into local inventory.
+   * Strips parent denormalized fields before persistence (SSOT).
+   */
   syncApiPlots(records = []) {
     if (!records.length) return [];
-    const normalized = records.map((record) => mapApiPlotToDto(record));
+    const normalized = records.map((record) =>
+      omitPlotParentFields(mapApiPlotToDto(record))
+    );
     plotService.syncImportedPlots(normalized);
     return normalized;
   },

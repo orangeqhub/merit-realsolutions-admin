@@ -1,10 +1,5 @@
-import { generatePlotNumbers } from './NumberGenerator.js';
-import { generatePlots, buildBlockLabel } from './PlotGenerator.js';
-import { generateBlockRoads, generateMainRoad } from './RoadGenerator.js';
-import { generateAmenityCorridor, estimateAmenityHeight } from './AmenityGenerator.js';
-import { computeSingleBlockDimensions, rectangleFromFeet } from './geoUtils.js';
-import { PlotGenerationService } from './services/PlotGenerationService.js';
-import { AmenityGenerationService } from './services/AmenityGenerationService.js';
+import { generatePremiumTownshipLayout, estimateTownshipStatistics } from './township/TownshipGenerator.js';
+import { TOWNSHIP_SIZES, DENSITY_MULTIPLIERS } from './township/presets.js';
 
 /**
  * Resolve block letter names from a starting prefix: A → A,B,C…
@@ -22,189 +17,53 @@ export function generateBlockNames(blockPrefix = 'A', numberOfBlocks = 1) {
   return names;
 }
 
-export { computeSingleBlockDimensions };
-
-/**
- * Compute total layout footprint in feet (mirrors vertical stacking in generateMultiBlockLayout).
- */
-export function computeTotalLayoutFootprint(params) {
-  const numberOfBlocks = Math.max(1, Math.floor(Number(params.numberOfBlocks) || 1));
-  const blockNames = generateBlockNames(params.blockPrefix, numberOfBlocks);
-  const blockDims = computeSingleBlockDimensions(params);
-  const blockSpacing = Number(params.blockSpacing) || 0;
-  const mainRoadWidth = Number(params.mainRoadWidth) || 40;
-  const amenities = params.amenities || {};
-
-  let northCursor = 0;
-
-  blockNames.forEach((_blockName, blockIndex) => {
-    if (blockIndex > 0) {
-      northCursor += blockSpacing + mainRoadWidth;
-      if (blockIndex === 1) {
-        northCursor += estimateAmenityHeight(amenities);
-      }
-    }
-    northCursor += blockDims.heightFeet;
-  });
-
-  const totalHeightFeet = northCursor;
-  const totalWidthFeet = blockDims.widthFeet;
+/** @deprecated — kept for statistics compat; dimensions derived from actual generation */
+export function computeSingleBlockDimensions(params) {
+  const estimate = estimateTownshipStatistics(params);
+  const plotCount = estimate.targetPlots;
+  const blocks = estimate.estimatedBlocks;
+  const rows = Math.max(1, Math.ceil(Math.sqrt(plotCount / blocks)));
+  const columns = Math.max(1, Math.ceil(plotCount / blocks / rows));
 
   return {
-    totalHeightFeet,
-    totalWidthFeet,
-    centerOffsetNorthFeet: -totalHeightFeet / 2,
-    centerOffsetEastFeet: -totalWidthFeet / 2,
+    rows,
+    columns,
+    plotWidthFeet: Number(params.plotWidthFeet) || 40,
+    plotHeightFeet: Number(params.plotHeightFeet) || 60,
+    internalRoadWidth: Number(params.internalRoadWidth) || 33,
+    serviceRoadWidth: Number(params.serviceRoadWidth) || 18,
+    roadEveryRows: 5,
+    roadEveryColumns: 8,
+    enableServiceRoads: true,
+    heightFeet: estimate.boundaryHeight * 0.4,
+    widthFeet: estimate.boundaryWidth * 0.4,
+    rowGroups: Math.ceil(rows / 5),
+    colGroups: Math.ceil(columns / 8),
   };
 }
 
 /**
- * Generate a full multi-block venture layout (plots, roads, amenities, labels).
- * The venture/layout center coordinate is treated as the geometric center of the layout.
+ * Compute total layout footprint from township size preset.
  */
-export function generateMultiBlockLayout(params, originLat, originLng) {
-  const numberOfBlocks = Math.max(1, Math.floor(Number(params.numberOfBlocks) || 1));
-  const blockNames = generateBlockNames(params.blockPrefix, numberOfBlocks);
-  const blockDims = computeSingleBlockDimensions(params);
-  const footprint = computeTotalLayoutFootprint(params);
-
-  const blockSpacing = Number(params.blockSpacing) || 0;
-  const mainRoadWidth = Number(params.mainRoadWidth) || 40;
-  const amenities = params.amenities || {};
-  const ratePerSqYard = Number(params.defaultRatePerSqYard) || 0;
-
-  const plotContext = {
-    plotWidthFeet: blockDims.plotWidthFeet,
-    plotHeightFeet: blockDims.plotHeightFeet,
-    internalRoadWidth: blockDims.internalRoadWidth,
-    serviceRoadWidth: blockDims.serviceRoadWidth,
-    enableServiceRoads: blockDims.enableServiceRoads,
-    ratePerSqYard,
-    totalRows: blockDims.rows,
-    totalCols: blockDims.columns,
-  };
-
-  const allPlots = [];
-  const allRoads = [];
-  const allAmenities = [];
-  const blockLabels = [];
-
-  let northCursor = footprint.centerOffsetNorthFeet;
-  const eastCursor = footprint.centerOffsetEastFeet;
-
-  blockNames.forEach((blockName, blockIndex) => {
-    if (blockIndex > 0) {
-      northCursor += blockSpacing;
-
-      allRoads.push(
-        generateMainRoad({
-          blockWidthFeet: blockDims.widthFeet,
-          mainRoadWidth,
-          originLat,
-          originLng,
-          northFeet: northCursor,
-          eastFeet: eastCursor,
-          corridorId: String(blockIndex - 1),
-        })
-      );
-      northCursor += mainRoadWidth;
-
-      if (blockIndex === 1) {
-        const corridor = generateAmenityCorridor({
-          amenities,
-          blockWidthFeet: blockDims.widthFeet,
-          originLat,
-          originLng,
-          northFeet: northCursor,
-          eastFeet: eastCursor,
-          corridorId: String(blockIndex - 1),
-        });
-        allAmenities.push(...corridor.amenities.map(AmenityGenerationService.enrichAmenityMetadata));
-        northCursor += corridor.totalHeightFeet;
-      }
-    }
-
-    const plotNumbers = generatePlotNumbers({
-      blockName,
-      rows: blockDims.rows,
-      columns: blockDims.columns,
-      startingPlotNumber: Number(params.startingPlotNumber) || 101,
-    });
-
-    allPlots.push(
-      ...generatePlots({
-        rows: blockDims.rows,
-        columns: blockDims.columns,
-        plotWidthFeet: blockDims.plotWidthFeet,
-        plotHeightFeet: blockDims.plotHeightFeet,
-        internalRoadWidth: blockDims.internalRoadWidth,
-        serviceRoadWidth: blockDims.serviceRoadWidth,
-        roadEveryRows: blockDims.roadEveryRows,
-        roadEveryColumns: blockDims.roadEveryColumns,
-        enableServiceRoads: blockDims.enableServiceRoads,
-        originLat,
-        originLng,
-        originNorthFeet: northCursor,
-        originEastFeet: eastCursor,
-        plotNumbers,
-        blockName,
-      }).map((plot) => PlotGenerationService.enrichPlotMetadata(plot, plotContext))
-    );
-
-    allRoads.push(
-      ...generateBlockRoads({
-        rows: blockDims.rows,
-        columns: blockDims.columns,
-        plotWidthFeet: blockDims.plotWidthFeet,
-        plotHeightFeet: blockDims.plotHeightFeet,
-        internalRoadWidth: blockDims.internalRoadWidth,
-        serviceRoadWidth: blockDims.serviceRoadWidth,
-        roadEveryRows: blockDims.roadEveryRows,
-        roadEveryColumns: blockDims.roadEveryColumns,
-        enableServiceRoads: blockDims.enableServiceRoads,
-        originLat,
-        originLng,
-        originNorthFeet: northCursor,
-        originEastFeet: eastCursor,
-        blockName,
-        blockWidthFeet: blockDims.widthFeet,
-        blockHeightFeet: blockDims.heightFeet,
-      })
-    );
-
-    blockLabels.push(
-      buildBlockLabel({
-        blockName,
-        blockWidthFeet: blockDims.widthFeet,
-        blockHeightFeet: blockDims.heightFeet,
-        originLat,
-        originLng,
-        originNorthFeet: northCursor,
-        originEastFeet: eastCursor,
-      })
-    );
-
-    northCursor += blockDims.heightFeet;
-  });
-
-  const boundary = rectangleFromFeet(
-    originLat,
-    originLng,
-    footprint.centerOffsetNorthFeet,
-    footprint.centerOffsetEastFeet,
-    footprint.totalWidthFeet,
-    footprint.totalHeightFeet
-  );
+export function computeTotalLayoutFootprint(params) {
+  const sizeKey = params.townshipSize || 'medium';
+  const densityKey = params.density || 'medium';
+  const size = TOWNSHIP_SIZES[sizeKey] || TOWNSHIP_SIZES.medium;
+  const densityMult = DENSITY_MULTIPLIERS[densityKey] || 1;
 
   return {
-    plots: allPlots,
-    roads: allRoads,
-    amenities: allAmenities,
-    blockLabels,
-    blockNames,
-    blockDimensions: blockDims,
-    footprint,
-    boundary,
-    boundaryPolygon: boundary.map(({ lat, lng }) => ({ lat, lng })),
+    totalHeightFeet: size.heightFeet,
+    totalWidthFeet: size.widthFeet,
+    centerOffsetNorthFeet: -size.heightFeet / 2,
+    centerOffsetEastFeet: -size.widthFeet / 2,
+    targetPlots: Math.round(size.targetPlots * densityMult),
   };
+}
+
+/**
+ * Generate a full premium township layout (plots, roads, amenities, labels).
+ * Replaces legacy grid stacking with DTCP/RERA-style hierarchical generation.
+ */
+export function generateMultiBlockLayout(params, originLat, originLng) {
+  return generatePremiumTownshipLayout(params, originLat, originLng);
 }

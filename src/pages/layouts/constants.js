@@ -32,11 +32,8 @@ export const LAYOUT_AMENITY_KEYS = [
 
 export const WIZARD_STEPS = [
   { label: "Basic Info", description: "Name & venture" },
-  { label: "Location", description: "Address & survey" },
-  { label: "Approval", description: "DTCP / RERA" },
-  { label: "Specifications", description: "Area & amenities" },
-  { label: "Pricing", description: "Rates & charges" },
-  { label: "Media", description: "Plans & gallery" },
+  { label: "Layout Specs", description: "Survey & area" },
+  { label: "Plans", description: "Layout documents" },
   { label: "Review", description: "Publish" },
 ];
 
@@ -45,18 +42,22 @@ export const EMPTY_LAYOUT = {
   code: "",
   ventureId: "",
   ventureName: "",
+  surveyNumber: "",
+  totalArea: "",
+  plotCount: "",
+  layoutPlan: null,
+  masterPlan: null,
+  status: "Draft",
+  // Kept empty for backward-compatible merges from old records; not edited in the form.
   description: "",
   state: "",
   district: "",
   city: "",
   village: "",
-  surveyNumber: "",
   mapUrl: "",
   approval: "Pending",
   approvalNumber: "",
   approvalDate: "",
-  totalArea: "",
-  plotCount: "",
   basePrice: "",
   currentPrice: "",
   registrationCharges: "",
@@ -75,11 +76,8 @@ export const EMPTY_LAYOUT = {
   },
   thumbnail: null,
   banner: null,
-  layoutPlan: null,
-  masterPlan: null,
   brochure: null,
   gallery: [],
-  status: "Draft",
 };
 
 export function formatPrice(value) {

@@ -73,6 +73,7 @@ export default function PlotDetails() {
     removePlot,
   } = usePlots();
 
+  // Read model: Layout + Venture fields inherited via resolvePlotView in usePlots.
   const plot = getPlot(id);
   const { booking, customer, partner } = getPlotRelationships(id);
 

@@ -2,8 +2,6 @@ import { PlotCreationService } from '../../shared/services/plotCreation/index.js
 
 import { getAuthToken } from '../auth/authStorage.js';
 
-import { checkBackendHealth } from '../../utils/backendHealth.js';
-
 import { MapRefreshService } from './MapRefreshService.js';
 
 
@@ -13,21 +11,15 @@ const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 
 async function canUseRemoteImport() {
-
-  const token = getAuthToken();
-
-  if (!token) return false;
-
-  const health = await checkBackendHealth();
-
-  return health.online && health.status === 'ready';
-
+  return Boolean(getAuthToken());
 }
 
 
 
 async function postBulkImport(layoutId, rows, layoutMeta, token) {
 
+  // layoutName / ventureName are TRANSPORT METADATA for the backend only.
+  // Local inventory persistence never stores these parent fields (SSOT Phase 2).
   const response = await fetch(`${API_BASE}/v1/admin/plot-inventory/bulk-import`, {
 
     method: 'POST',

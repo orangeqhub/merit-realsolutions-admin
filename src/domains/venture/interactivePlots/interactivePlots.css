@@ -1,24 +1,35 @@
 .v-plotws {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--erp-space-16);
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
+  padding: var(--erp-space-8);
+  border-radius: var(--erp-glass-radius);
+  background:
+    radial-gradient(900px 280px at 8% -20%, var(--erp-color-accent-soft), transparent 55%),
+    var(--erp-color-bg);
 }
 
-.v-plotws__kpis {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 1rem;
+.v-plotws.ws-premium .ws-kpi {
+  padding: 0;
+}
+
+.v-plotws__kpi-note {
+  margin: calc(var(--erp-space-8) * -1) 0 0;
+  font-size: var(--erp-font-size-xs);
+  font-weight: var(--erp-weight-semibold);
+  color: var(--erp-text-soft);
 }
 
 .v-plotws__panel {
-  background: var(--erp-card);
-  border: 1px solid var(--erp-border);
-  border-radius: var(--erp-radius);
-  box-shadow: var(--erp-shadow-xs);
-  padding: 1.25rem;
+  background: var(--erp-glass-bg);
+  backdrop-filter: blur(var(--erp-glass-blur));
+  border: 1px solid var(--erp-glass-border-dark);
+  border-radius: var(--erp-radius-lg);
+  box-shadow: var(--erp-elevation-card);
+  padding: var(--erp-space-20);
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
@@ -28,26 +39,27 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.85rem;
+  gap: var(--erp-space-16);
+  margin-bottom: var(--erp-space-12);
 }
 
 .v-plotws__panel-head h3 {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: var(--erp-font-size-lg);
+  font-weight: var(--erp-weight-bold);
+  color: var(--erp-primary);
 }
 
 .v-plotws__panel-head p {
-  margin: 0.25rem 0 0;
+  margin: var(--erp-space-4) 0 0;
   color: var(--erp-text-muted);
-  font-size: 0.875rem;
+  font-size: var(--erp-font-size-sm);
 }
 
 .v-plotws__filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: var(--erp-space-12);
   align-items: flex-end;
 }
 
@@ -58,91 +70,87 @@
 .v-plotws__layout-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
+  gap: var(--erp-space-16);
 }
 
 .v-plotws__layout-card {
   border: 1px solid var(--erp-border);
   background: var(--erp-card);
-  border-radius: var(--erp-radius);
-  padding: 1rem;
+  border-radius: var(--erp-radius-md);
+  padding: var(--erp-space-16);
   cursor: pointer;
-  transition: all var(--erp-transition);
+  transition: border-color var(--erp-transition), box-shadow var(--erp-transition), transform var(--erp-transition);
 }
 
 .v-plotws__layout-card:hover {
   border-color: var(--erp-accent);
-  box-shadow: var(--erp-shadow-sm);
+  box-shadow: var(--erp-elevation-floating);
   transform: translateY(-2px);
 }
 
 .v-plotws__layout-card.is-active {
   border-color: var(--erp-accent);
   background: var(--erp-accent-soft);
+  box-shadow: var(--erp-elevation-card);
 }
 
 .v-plotws__layout-card strong {
   display: block;
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
+  font-size: var(--erp-font-size-md);
+  margin-bottom: var(--erp-space-4);
 }
 
 .v-plotws__layout-card span {
   display: block;
-  font-size: 0.8125rem;
+  font-size: var(--erp-font-size-sm);
   color: var(--erp-text-muted);
 }
 
 .v-plotws__layout-metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.65rem;
-  margin-top: 0.85rem;
+  gap: var(--erp-space-8);
+  margin-top: var(--erp-space-12);
 }
 
 .v-plotws__metric {
   border: 1px solid var(--erp-border);
   border-radius: var(--erp-radius-sm);
-  padding: 0.65rem;
+  padding: var(--erp-space-8);
   background: var(--erp-bg);
 }
 
 .v-plotws__metric span {
   display: block;
-  font-size: 0.75rem;
+  font-size: var(--erp-font-size-xs);
   color: var(--erp-text-muted);
   margin-bottom: 0.15rem;
 }
 
 .v-plotws__metric strong {
-  font-size: 0.95rem;
+  font-size: var(--erp-font-size-md);
 }
 
 .v-plotws__main {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: var(--erp-space-20);
   min-width: 0;
   max-width: 100%;
 }
 
 .v-plotws__main--spaced {
-  margin-top: 1rem;
+  margin-top: var(--erp-space-16);
 }
 
-.v-plotws__map {
-  min-width: 0;
-  max-width: 100%;
-}
-
-.v-plotws__bulk {
+.v-plotws__map,
+.v-plotws__bulk,
+.v-plotws__table-wrap {
   min-width: 0;
   max-width: 100%;
 }
 
 .v-plotws__table-wrap {
-  min-width: 0;
-  max-width: 100%;
   overflow-x: auto;
 }
 
@@ -150,43 +158,42 @@
   min-width: 560px;
 }
 
-@media (max-width: 1100px) {
-  .v-plotws__main {
-    gap: 1rem;
-  }
-}
-
 .v-plotws__legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem 1rem;
-  font-size: 0.75rem;
+  gap: var(--erp-space-8) var(--erp-space-16);
+  font-size: var(--erp-font-size-xs);
   color: var(--erp-text-muted);
-  margin-top: 0.75rem;
+  margin-top: var(--erp-space-12);
 }
 
 .v-plotws__legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--erp-space-8);
 }
 
 .v-plotws__swatch {
   width: 10px;
   height: 10px;
-  border-radius: 2px;
+  border-radius: var(--erp-radius-xs);
 }
 
-.v-plotws__swatch--available { background: #22c55e; }
-.v-plotws__swatch--reserved { background: #f59e0b; }
-.v-plotws__swatch--confirmed { background: #3b82f6; }
-.v-plotws__swatch--registered { background: #7c3aed; }
-.v-plotws__swatch--sold { background: #ef4444; }
-.v-plotws__swatch--blocked { background: #64748b; }
+.v-plotws__swatch--available { background: var(--erp-color-available); }
+.v-plotws__swatch--reserved { background: var(--erp-color-reserved); }
+.v-plotws__swatch--confirmed { background: var(--erp-color-booked); }
+.v-plotws__swatch--registered { background: var(--erp-color-mortgaged); }
+.v-plotws__swatch--sold { background: var(--erp-color-sold); }
+.v-plotws__swatch--blocked { background: var(--erp-color-blocked); }
 
 .v-plotws__helper {
   color: var(--erp-text-muted);
-  font-size: 0.8125rem;
-  margin-top: 0.5rem;
+  font-size: var(--erp-font-size-sm);
+  margin-top: var(--erp-space-8);
 }
 
+@media (max-width: 1100px) {
+  .v-plotws__main {
+    gap: var(--erp-space-16);
+  }
+}

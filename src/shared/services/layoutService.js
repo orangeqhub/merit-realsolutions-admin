@@ -2,31 +2,160 @@ import { dataStore } from "../repositories/dataStore.js";
 import { getLayoutStatistics } from "./statisticsService.js";
 import { nextId } from "../utils/idGenerator.js";
 import { getVentureOrThrow, cascadeDeleteLayout } from "./relationshipService.js";
-import { applyMapUrlGeo } from "../utils/mapUrlParser.js";
+import { pickLayoutOwnedFields } from "./layoutView.js";
+import { sanitizeStoredMediaUrl } from "../../utils/media.js";
+import {
+  canPersistLayoutToBackend,
+  prepareLayoutMediaForBackend,
+  saveLayoutProfileToBackend,
+  slimLayoutForLocalCache,
+} from "./layoutBackendPersistence.js";
 
 const today = () => new Date().toISOString().split("T")[0];
-const FALLBACK_BANNER =
-  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80";
+
+function repairLayoutMedia(record) {
+  if (!record) return record;
+  const layoutPlan = sanitizeStoredMediaUrl(record.layoutPlan);
+  const masterPlan = sanitizeStoredMediaUrl(record.masterPlan);
+  if (layoutPlan === (record.layoutPlan || "") && masterPlan === (record.masterPlan || "")) {
+    return record;
+  }
+  return { ...record, layoutPlan, masterPlan };
+}
 
 function normalizeMedia(value, fallback) {
   if (!value) return fallback;
-  if (typeof value === "string") return value;
-  if (value instanceof File) return URL.createObjectURL(value);
+  if (typeof value === 'string') {
+    return sanitizeStoredMediaUrl(value) || fallback;
+  }
+  if (typeof File !== 'undefined' && value instanceof File) {
+    return fallback;
+  }
   return fallback;
 }
 
-function normalizeGallery(gallery) {
-  if (!Array.isArray(gallery)) return [];
-  return gallery.map((item) => (typeof item === "string" ? item : URL.createObjectURL(item)));
+function buildOwnedLayoutPayload(data, { venture, existing = null, id }) {
+  const owned = pickLayoutOwnedFields(data);
+
+  const record = {
+    ...(existing || {}),
+    ...owned,
+    id: id || existing?.id,
+    ventureId: venture.id,
+    name: (owned.name ?? existing?.name ?? "").trim(),
+    code: owned.code ?? existing?.code ?? "",
+    layoutType: owned.layoutType ?? existing?.layoutType ?? "",
+    status: owned.status || existing?.status || "Draft",
+    surveyNumber: owned.surveyNumber ?? existing?.surveyNumber ?? "",
+    totalArea: Number(owned.totalArea ?? existing?.totalArea) || 0,
+    plotCount: Number(owned.plotCount ?? existing?.plotCount) || 0,
+    layoutPlan: owned.layoutPlan
+      ? normalizeMedia(owned.layoutPlan, existing?.layoutPlan || "")
+      : existing?.layoutPlan || "",
+    masterPlan: owned.masterPlan
+      ? normalizeMedia(owned.masterPlan, existing?.masterPlan || "")
+      : existing?.masterPlan || "",
+    generationSnapshot: owned.generationSnapshot ?? existing?.generationSnapshot,
+    geometry: owned.geometry ?? existing?.geometry,
+    roadNetwork: owned.roadNetwork ?? existing?.roadNetwork,
+    layoutNotes: owned.layoutNotes ?? owned.notes ?? existing?.layoutNotes ?? existing?.notes ?? "",
+    documents: owned.documents ?? existing?.documents ?? [],
+    progress:
+      owned.progress ??
+      existing?.progress ??
+      (owned.status === "Draft" || (!owned.status && existing?.status === "Draft") ? 5 : 10),
+    hasGeneratedLayout: owned.hasGeneratedLayout ?? existing?.hasGeneratedLayout ?? false,
+    lastUpdated: today(),
+  };
+
+  if (!existing) {
+    record.createdDate = today();
+    record.activities = [
+      {
+        type: "created",
+        title: record.status === "Draft" ? "Draft created" : "Layout created",
+        description: `${record.name} added to ${venture.name}`,
+        date: today(),
+        tone: "accent",
+      },
+    ];
+  } else {
+    record.createdDate = existing.createdDate || today();
+    record.activities = [
+      {
+        type: "update",
+        title: "Layout updated",
+        description: "Layout information edited",
+        date: today(),
+        tone: "info",
+      },
+      ...(existing.activities || []),
+    ];
+  }
+
+  return record;
+}
+
+async function persistLayoutRecord(record, venture) {
+  let persistedToBackend = false;
+
+  if (await canPersistLayoutToBackend()) {
+    try {
+      const media = await prepareLayoutMediaForBackend(record);
+      const withMedia = {
+        ...record,
+        layoutPlan: media.layoutPlan || record.layoutPlan,
+        masterPlan: media.masterPlan || record.masterPlan,
+        banner: media.banner || record.banner || media.layoutPlan || record.layoutPlan,
+      };
+      await saveLayoutProfileToBackend(withMedia, venture);
+      persistedToBackend = true;
+      Object.assign(record, withMedia, { persistedToBackend: true });
+    } catch (error) {
+      console.warn('[layoutService] backend save failed, using local cache:', error.message);
+    }
+  }
+
+  const localRecord = slimLayoutForLocalCache({
+    ...record,
+    persistedToBackend,
+  });
+
+  return { record, localRecord, persistedToBackend };
+}
+
+function writeLayoutList(updater) {
+  try {
+    return dataStore.updateList("layouts", updater);
+  } catch (error) {
+    if (error?.name === 'QuotaExceededError' || String(error?.message || '').includes('quota')) {
+      throw new Error('Browser storage is full. Start the backend server and save again to persist layouts in the database.');
+    }
+    throw error;
+  }
 }
 
 export const layoutService = {
   getAll() {
-    return dataStore.getList("layouts");
+    return dataStore.getList("layouts").map(repairLayoutMedia);
+  },
+
+  repairStoredMediaUrls() {
+    const list = dataStore.getList("layouts");
+    let changed = false;
+    const next = list.map((layout) => {
+      const repaired = repairLayoutMedia(layout);
+      if (repaired !== layout) changed = true;
+      return repaired;
+    });
+    if (!changed) return false;
+    dataStore.updateList("layouts", () => next);
+    return true;
   },
 
   getById(id) {
-    return dataStore.getList("layouts").find((l) => l.id === id) || null;
+    const layout = dataStore.getList("layouts").find((l) => l.id === id) || null;
+    return repairLayoutMedia(layout);
   },
 
   getByVenture(ventureId) {
@@ -41,105 +170,67 @@ export const layoutService = {
     return getLayoutStatistics(layoutId);
   },
 
-  createLayout(data) {
+  async createLayout(data) {
     if (!data.ventureId) throw new Error("Venture is required");
     const venture = getVentureOrThrow(data.ventureId);
     const layouts = dataStore.getList("layouts");
     const id = nextId("LYT", layouts, 3001);
 
-    const record = applyMapUrlGeo({
-      ...data,
-      id,
-      ventureId: venture.id,
-      ventureName: venture.name,
-      state: data.state || venture.state,
-      district: data.district || venture.district,
-      city: data.city || venture.city,
-      totalArea: Number(data.totalArea) || 0,
-      plotCount: Number(data.plotCount) || 0,
-      thumbnail: normalizeMedia(data.thumbnail, data.banner ? normalizeMedia(data.banner) : FALLBACK_BANNER),
-      banner: normalizeMedia(data.banner, FALLBACK_BANNER),
-      layoutPlan: normalizeMedia(data.layoutPlan, ""),
-      masterPlan: normalizeMedia(data.masterPlan, ""),
-      gallery: normalizeGallery(data.gallery),
-      progress: data.status === "Draft" ? 5 : 10,
-      createdDate: today(),
-      lastUpdated: today(),
-      documents: [],
-      activities: [
-        {
-          type: "created",
-          title: data.status === "Draft" ? "Draft created" : "Layout created",
-          description: `${data.name} added to ${venture.name}`,
-          date: today(),
-          tone: "accent",
-        },
-      ],
-    });
+    const record = buildOwnedLayoutPayload(data, { venture, id });
+    const { localRecord, persistedToBackend } = await persistLayoutRecord(record, venture);
 
-    dataStore.updateList("layouts", (list) => [record, ...list]);
-    return record;
+    writeLayoutList((list) => [localRecord, ...list]);
+
+    if (typeof console !== 'undefined' && console.info) {
+      console.info('LAYOUT_PERSISTENCE_COMPLETE', {
+        layoutId: record.id,
+        source: persistedToBackend ? 'database' : 'local',
+      });
+    }
+
+    return { ...record, persistedToBackend };
   },
 
-  updateLayout(id, data) {
+  async updateLayout(id, data) {
     const existing = dataStore.getList("layouts").find((l) => l.id === id);
     if (!existing) return null;
 
-    let ventureId = existing.ventureId;
-    let ventureName = existing.ventureName;
-    if (data.ventureId) {
-      const venture = getVentureOrThrow(data.ventureId);
-      ventureId = venture.id;
-      ventureName = venture.name;
-    } else if (existing.ventureId) {
-      const venture = getVentureOrThrow(existing.ventureId);
-      ventureName = venture.name;
-    }
+    const ventureId = data.ventureId || existing.ventureId;
+    const venture = getVentureOrThrow(ventureId);
 
-    const record = applyMapUrlGeo({
-      ...existing,
-      ...data,
-      ventureId,
-      ventureName,
-      lastUpdated: today(),
-      thumbnail: data.thumbnail ? normalizeMedia(data.thumbnail, existing.thumbnail) : existing.thumbnail,
-      banner: data.banner ? normalizeMedia(data.banner, existing.banner) : existing.banner,
-      gallery: data.gallery ? normalizeGallery(data.gallery) : existing.gallery,
-      activities: [
-        {
-          type: "update",
-          title: "Layout updated",
-          description: "Layout information edited",
-          date: today(),
-          tone: "info",
-        },
-        ...(existing.activities || []),
-      ],
-    });
+    const record = buildOwnedLayoutPayload(data, { venture, existing, id });
+    const { localRecord, persistedToBackend } = await persistLayoutRecord(record, venture);
 
-    dataStore.updateList("layouts", (list) =>
-      list.map((l) => (l.id === id ? record : l))
+    writeLayoutList((list) =>
+      list.map((l) => (l.id === id ? localRecord : l))
     );
 
-    if (record.name !== existing.name) {
-      dataStore.updateList("plots", (plots) =>
-        plots.map((p) =>
-          p.layoutId === id ? { ...p, layoutName: record.name } : p
-        )
-      );
+    if (typeof console !== 'undefined' && console.info) {
+      console.info('LAYOUT_PERSISTENCE_COMPLETE', {
+        layoutId: id,
+        source: persistedToBackend ? 'database' : 'local',
+      });
     }
 
-    return record;
+    return { ...record, persistedToBackend };
   },
 
-  saveGenerationSnapshot(id, snapshot) {
+  saveGenerationSnapshot(id, snapshot, { source = 'local' } = {}) {
     const existing = dataStore.getList("layouts").find((l) => l.id === id);
     if (!existing) return null;
+
+    const slimSnapshot = source === 'api' || existing.persistedToBackend
+      ? {
+          source: source === 'api' ? 'api' : (snapshot.source || 'api'),
+          savedAt: snapshot.savedAt || new Date().toISOString(),
+          summary: snapshot.summary || null,
+        }
+      : snapshot;
 
     const record = {
       ...existing,
       hasGeneratedLayout: true,
-      generationSnapshot: snapshot,
+      generationSnapshot: slimSnapshot,
       plotCount: snapshot?.summary?.plots ?? existing.plotCount,
       lastUpdated: today(),
       activities: [
@@ -154,8 +245,10 @@ export const layoutService = {
       ],
     };
 
-    dataStore.updateList("layouts", (list) =>
-      list.map((l) => (l.id === id ? record : l))
+    const localRecord = slimLayoutForLocalCache(record);
+
+    writeLayoutList((list) =>
+      list.map((l) => (l.id === id ? localRecord : l))
     );
 
     return record;

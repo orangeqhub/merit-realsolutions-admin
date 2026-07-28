@@ -12,6 +12,7 @@ import {
   FiZoomOut,
 } from 'react-icons/fi';
 import Button from '../../components/ui/button/Button';
+import { LAYOUT_LABELS } from '../../pages/layouts/layoutTerminology';
 import PlotSearch from './PlotSearch';
 import PlotLegend from './PlotLegend';
 
@@ -84,7 +85,7 @@ export default function MapToolbar({
 
       <div className="plot-map-toolbar__right">
         <Button variant="ghost" size="sm" onClick={onGenerateLayout}>
-          <FiGrid /> Generate Layout
+          <FiGrid /> {LAYOUT_LABELS.generateTownship}
           {generatedPreviewCount > 0 ? (
             <span className="plot-map-toolbar__badge">{generatedPreviewCount}</span>
           ) : null}

@@ -1,0 +1,20 @@
+/* ===================================================================
+   DS Tokens — Z-Index Layers
+   Named stacking contexts only. Never invent arbitrary z values.
+   =================================================================== */
+
+:root {
+  --erp-z-base: 0;
+  --erp-z-raised: 1;
+  --erp-z-sticky: 100;
+  --erp-z-dropdown: 200;
+  --erp-z-sidebar: 300;
+  --erp-z-map-overlay: 500;
+  --erp-z-map-chrome: 920;
+  --erp-z-drawer: 1000;
+  --erp-z-popover: 1100;
+  --erp-z-modal: 1200;
+  --erp-z-toast: 1400;
+  --erp-z-tooltip: 1500;
+  --erp-z-fullscreen: 2000;
+}

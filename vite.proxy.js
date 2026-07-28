@@ -2,7 +2,7 @@
  * Shared Vite dev-server proxy for API requests.
  * Returns JSON 503 when backend is down instead of noisy ECONNREFUSED stack traces.
  */
-export function createApiProxy(apiTarget = 'http://localhost:3002') {
+export function createApiProxy(apiTarget = 'http://187.127.163.100:3400') {
   let lastProxyWarnAt = 0;
 
   return {

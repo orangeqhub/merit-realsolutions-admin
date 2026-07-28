@@ -1,0 +1,23 @@
+/* ===================================================================
+   DS Tokens — Breakpoints
+   Use these values in media queries (CSS cannot interpolate vars in
+   @media in all engines — document the px values as the contract).
+   =================================================================== */
+
+:root {
+  --erp-bp-mobile-max: 767px;
+  --erp-bp-tablet-min: 768px;
+  --erp-bp-tablet-max: 1023px;
+  --erp-bp-laptop-min: 1024px;
+  --erp-bp-laptop-max: 1439px;
+  --erp-bp-desktop-min: 1440px;
+  --erp-bp-ultrawide-min: 1920px;
+
+  /* Legacy bp aliases */
+  --bp-mobile-max: var(--erp-bp-mobile-max);
+  --bp-tablet-min: var(--erp-bp-tablet-min);
+  --bp-tablet-max: var(--erp-bp-tablet-max);
+  --bp-laptop-min: var(--erp-bp-laptop-min);
+  --bp-laptop-max: var(--erp-bp-laptop-max);
+  --bp-desktop-min: var(--erp-bp-desktop-min);
+}

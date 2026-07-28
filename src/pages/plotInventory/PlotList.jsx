@@ -59,17 +59,20 @@ export default function PlotList() {
   const navigate = useNavigate();
   const toast = useToast();
   const { plots, reservePlot, bookPlot, blockPlot, releasePlot, removePlot } = usePlots();
-  const { layouts } = useLayouts();
+  const { layouts, getLayoutRecord } = useLayouts();
   const { getVenture } = useVentures();
 
   const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [view, setView] = useState("table");
   const [deleteTarget, setDeleteTarget] = useState(null);
 
+  // Map engines need the persisted layout record (not Venture-merged view).
   const mapLayout = useMemo(() => {
     if (!filters.layout) return null;
-    return layouts.find((l) => l.name === filters.layout) || null;
-  }, [filters.layout, layouts]);
+    const match = layouts.find((l) => l.name === filters.layout);
+    if (!match) return null;
+    return getLayoutRecord(match.id) || match;
+  }, [filters.layout, layouts, getLayoutRecord]);
 
   const mapVenture = useMemo(
     () => (mapLayout ? getVenture(mapLayout.ventureId) : null),

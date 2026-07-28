@@ -1,0 +1,11 @@
+.commission-page { display: grid; gap: 1.25rem; }
+.sales-performance-dashboard__charts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; } @media (max-width: 900px) { .sales-performance-dashboard__charts { grid-template-columns: 1fr; } }
+.commission-filters { display: grid; grid-template-columns: minmax(220px, 2fr) repeat(3, minmax(150px, 1fr)); gap: 1rem; align-items: end; }
+.commission-actions { display: flex; gap: .25rem; white-space: nowrap; }
+.commission-empty { padding: 2.5rem 1rem; text-align: center; }.commission-empty h3 { margin: 0 0 .4rem; }.commission-empty p { margin: 0; color: var(--color-text-muted, #64748b); }
+.commission-pagination { display: flex; justify-content: flex-end; align-items: center; gap: .75rem; color: var(--color-text-muted, #64748b); font-size: .875rem; }
+.commission-modal { position: fixed; inset: 0; z-index: 1200; display: grid; place-items: center; padding: 1rem; background: rgba(15, 23, 42, .62); backdrop-filter: blur(3px); }
+.commission-modal__dialog { width: min(100%, 760px); max-height: calc(100vh - 2rem); overflow: auto; background: var(--color-surface, #fff); border-radius: 1rem; box-shadow: 0 28px 80px rgba(15, 23, 42, .28); }
+.commission-modal__header { display: flex; justify-content: space-between; gap: 1rem; padding: 1.35rem 1.5rem; border-bottom: 1px solid var(--color-border, #e2e8f0); }.commission-modal__header h2 { margin: 0 0 .35rem; }.commission-modal__header p { margin: 0; color: var(--color-text-muted, #64748b); font-size: .9rem; }.commission-modal__close { border: 0; background: transparent; color: inherit; font-size: 1.3rem; cursor: pointer; }
+.commission-modal__form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 1.5rem; }.commission-modal__notes, .commission-modal__actions { grid-column: 1 / -1; }.commission-modal__notes textarea { width: 100%; resize: vertical; padding: .65rem .75rem; font: inherit; }.commission-modal__actions { display: flex; justify-content: flex-end; gap: .75rem; padding-top: .5rem; }
+@media (max-width: 720px) { .commission-filters, .commission-modal__form { grid-template-columns: 1fr; }.commission-modal__notes, .commission-modal__actions { grid-column: auto; }.commission-pagination { justify-content: center; } }

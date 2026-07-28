@@ -3,6 +3,7 @@ import Sidebar from './sidebar/Sidebar';
 import { useSidebarState } from './sidebar/useSidebarState';
 import { NAV_TREE } from './sidebar/navConfig';
 import { useAuth } from '../context/AuthContext.jsx';
+import { useCatalogBootstrapSync } from '../shared/hooks/useCatalogBootstrapSync.js';
 import NotificationBell from './NotificationBell';
 import './DashboardLayout.css';
 
@@ -17,6 +18,7 @@ function getInitials(name = '') {
 
 export default function DashboardLayout() {
   const { user, logout } = useAuth();
+  useCatalogBootstrapSync();
   const {
     pathname,
     activeBranchIds,

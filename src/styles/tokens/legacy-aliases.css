@@ -1,0 +1,63 @@
+/* ===================================================================
+   DS Tokens — Legacy Aliases (backward compatibility)
+   Map marketing / pre-ERP / workspace tokens onto the ERP SSOT.
+   New code must NOT introduce new --color-* or --ws-* tokens.
+   =================================================================== */
+
+:root {
+  /* Marketing / website tokens → ERP */
+  --color-navy: var(--erp-color-primary);
+  --color-navy-light: var(--erp-color-primary-light);
+  --color-navy-dark: var(--erp-color-primary-dark);
+  --color-gold: var(--erp-color-gold);
+  --color-gold-light: var(--erp-color-gold-light);
+  --color-gold-dark: var(--erp-color-gold-dark);
+  --color-white: var(--erp-color-surface);
+  --color-gray-50: var(--erp-color-neutral-50);
+  --color-gray-100: var(--erp-color-neutral-100);
+  --color-gray-200: var(--erp-color-neutral-200);
+  --color-gray-300: var(--erp-color-neutral-300);
+  --color-gray-400: var(--erp-color-neutral-400);
+  --color-gray-500: var(--erp-color-neutral-500);
+  --color-charcoal: var(--erp-color-text);
+  --color-charcoal-light: var(--erp-color-neutral-700);
+
+  --font-heading: var(--erp-font-display);
+  --font-body: var(--erp-font-sans);
+
+  --shadow-sm: var(--erp-shadow-sm);
+  --shadow-md: var(--erp-shadow-md);
+  --shadow-lg: var(--erp-shadow-lg);
+  --shadow-gold: var(--erp-shadow-gold);
+
+  --radius-sm: var(--erp-radius-xs);
+  --radius-md: var(--erp-radius-md);
+  --radius-lg: var(--erp-radius-xl);
+  --radius-xl: var(--erp-radius-2xl);
+
+  --transition-fast: var(--erp-transition-fast);
+  --transition-base: var(--erp-transition);
+  --transition-slow: var(--erp-transition-slow);
+
+  /* Layout chrome (kept as named layout tokens) */
+  --navbar-height: 80px;
+  --section-padding: clamp(4rem, 8vw, 7rem);
+  --container-max: 1280px;
+  --container-padding: clamp(1rem, 4vw, 2rem);
+  --sidebar-expanded-width: 280px;
+  --sidebar-collapsed-width: 72px;
+  --content-padding: clamp(1rem, 2.5vw, 2rem);
+
+  /* Common mistaken token names seen in inline styles */
+  --text-muted: var(--erp-color-text-muted);
+  --surface-muted: var(--erp-color-surface-muted);
+
+  /* Workspace glass — alias only; prefer --erp-glass-* */
+  --ws-glass: var(--erp-glass-bg);
+  --ws-glass-strong: var(--erp-glass-bg-strong);
+  --ws-glass-border: var(--erp-glass-border);
+  --ws-shadow: var(--erp-glass-shadow);
+  --ws-shadow-sm: var(--erp-glass-shadow-sm);
+  --ws-radius: var(--erp-glass-radius);
+  --ws-radius-sm: var(--erp-glass-radius-sm);
+}

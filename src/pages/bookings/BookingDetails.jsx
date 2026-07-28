@@ -16,6 +16,7 @@ import {
   downloadPaymentReceipt,
 } from "../../services/booking/installmentPaymentApi.js";
 import { formatINR } from "../../utils/format";
+import { calculateBookingCommissions, getBookingCommissions } from "../../services/commission/commissionEngineApi.js";
 
 function formatDate(value) {
   return value ? new Date(value).toLocaleString("en-IN") : "—";
@@ -29,6 +30,7 @@ export default function BookingDetails() {
   const [detail, setDetail] = useState(null);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
+  const [commissions, setCommissions] = useState([]);
 
   const load = () => {
     setLoading(true);
@@ -36,6 +38,7 @@ export default function BookingDetails() {
       .then(setDetail)
       .catch((err) => toast.error(err.message || "Failed to load booking."))
       .finally(() => setLoading(false));
+    getBookingCommissions(id).then(setCommissions).catch(() => setCommissions([]));
   };
 
   useEffect(() => { load(); }, [id]);
@@ -57,6 +60,7 @@ export default function BookingDetails() {
   if (!detail) return <div className="erp-module-page"><p>Booking not found.</p></div>;
 
   const { booking, property, assignee, financialSummary, reservation, payments, receipts, lifecycle } = detail;
+  const commissionTotal = commissions.reduce((sum, item) => sum + Number(item.commissionAmount || 0), 0);
 
   return (
     <motion.div className="erp-module-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -83,6 +87,14 @@ export default function BookingDetails() {
       <section className="property-booking-settings">
         <h3>Financial Summary</h3>
         <FinancialSummary summary={financialSummary} reservation={reservation} booking={booking} />
+      </section>
+
+      <section className="property-booking-settings">
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', alignItems: 'center' }}>
+          <div><h3>Commission Summary</h3><p>{commissions.length ? `${commissions.length} ledger entr${commissions.length === 1 ? 'y' : 'ies'} · ${formatINR(commissionTotal)}` : 'No commission ledger entries generated.'}</p></div>
+          <Button variant="ghost" size="sm" disabled={actionLoading} onClick={() => runAction('Commission calculation', () => calculateBookingCommissions(booking.id))}>Calculate commission</Button>
+        </div>
+        {commissions.map((item) => <div key={item.id} className="bookings-payments__item"><span>{item.employee?.name || item.employeeId} · Rule #{item.commissionRuleId} · {item.commissionType === 'PERCENTAGE' ? `${item.commissionRate}%` : 'Fixed'}</span><span>{formatINR(item.commissionAmount)} · <Badge>{item.status}</Badge></span></div>)}
       </section>
 
       <section className="property-booking-settings">

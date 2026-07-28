@@ -1,6 +1,7 @@
 export const PLOT_SOURCES = {
   GENERATOR: 'generator',
   EXCEL: 'excel',
+  LAYOUT_IMPORT: 'layout-import',
 };
 
 export const PLOT_MODES = {

@@ -82,7 +82,13 @@ export default function VentureForm() {
       toast.error("Please complete the required fields");
       return;
     }
-    const payload = { ...form, status: status || form.status };
+    const sellingRate = form.currentPrice || form.pricePerSqYard || form.basePrice || "";
+    const payload = {
+      ...form,
+      currentPrice: sellingRate,
+      pricePerSqYard: sellingRate,
+      status: status || form.status,
+    };
     if (editing) {
       updateVenture(editing.id, payload);
       toast.success("Venture updated successfully");
@@ -135,12 +141,39 @@ export default function VentureForm() {
         );
       case 3:
         return (
-          <FormSection title="Pricing" columns={2}>
-            <Input label="Base Price (per sq.yd)" type="number" value={form.basePrice} onChange={(e) => setField("basePrice", e.target.value)} />
-            <Input label="Current Price (per sq.yd)" type="number" value={form.currentPrice} onChange={(e) => setField("currentPrice", e.target.value)} error={errors.currentPrice} />
-            <Input label="Price Per Sq.Yard" type="number" value={form.pricePerSqYard} onChange={(e) => setField("pricePerSqYard", e.target.value)} />
-            <Input label="Registration Charges" type="number" value={form.registrationCharges} onChange={(e) => setField("registrationCharges", e.target.value)} />
-            <Input label="Development Charges" type="number" value={form.developmentCharges} onChange={(e) => setField("developmentCharges", e.target.value)} className="form-section__full" />
+          <FormSection title="Pricing defaults" columns={2}>
+            <Input
+              label="Base / Launch Rate (per sq.yd)"
+              type="number"
+              value={form.basePrice}
+              onChange={(e) => setField("basePrice", e.target.value)}
+              hint="Optional historical / brochure rate"
+            />
+            <Input
+              label="Selling Rate (per sq.yd)"
+              type="number"
+              value={form.currentPrice}
+              onChange={(e) => {
+                const value = e.target.value;
+                setForm((p) => ({ ...p, currentPrice: value, pricePerSqYard: value }));
+                setErrors((p) => (p.currentPrice ? { ...p, currentPrice: undefined } : p));
+              }}
+              error={errors.currentPrice}
+              hint="Used as default for layouts, generation, and new plots"
+              required
+            />
+            <Input
+              label="Registration Charges (default)"
+              type="number"
+              value={form.registrationCharges}
+              onChange={(e) => setField("registrationCharges", e.target.value)}
+            />
+            <Input
+              label="Development Charges (default)"
+              type="number"
+              value={form.developmentCharges}
+              onChange={(e) => setField("developmentCharges", e.target.value)}
+            />
           </FormSection>
         );
       case 4:

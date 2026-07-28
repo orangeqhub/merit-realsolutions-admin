@@ -4,6 +4,7 @@ import { nextId } from "../utils/idGenerator.js";
 import { getLayoutOrThrow } from "./relationshipService.js";
 import { derivePricing } from "../../pages/plotInventory/constants.js";
 import { PLOT_MODES, PLOT_SOURCES } from "./plotCreation/plotDto.js";
+import { omitPlotParentFields, pickPlotOwnedFields } from "./plotView.js";
 
 const today = () => new Date().toISOString().split("T")[0];
 
@@ -24,65 +25,82 @@ function withHistory(plot, event) {
   };
 }
 
-function buildPlotRecordFromDto(normalized, ctx, plots, { source, historyTitle, historyDescription }) {
-  const id = normalized.id || nextId("PLT", plots, 100001);
-  const pricing = derivePricing({ ...normalized, ...ctx });
-
-  return withHistory(
-    {
-      ...normalized,
-      ...ctx,
-      id,
-      ...pricing,
-      areaSqYards: normalized.areaSqYards ?? pricing.area,
-      ratePerSqYard: normalized.ratePerSqYard ?? pricing.rate,
-      totalPrice: normalized.totalPrice ?? pricing.totalPrice,
-      finalPrice: normalized.finalPrice ?? normalized.totalPrice ?? pricing.totalPrice,
-      status: normalized.status || "Available",
-      latitude: normalized.latitude ?? null,
-      longitude: normalized.longitude ?? null,
-      mapWidth: normalized.mapWidth ?? 72,
-      mapHeight: normalized.mapHeight ?? 48,
-      rotation: normalized.rotation ?? 0,
-      shapeType: normalized.shapeType || "POLYGON",
-      polygonPoints: normalized.polygonPoints || [],
-      facing: normalized.facing || "East",
-      blockName: normalized.metadata?.blockName || normalized.blockName || "",
-      row: normalized.metadata?.row ?? normalized.row ?? null,
-      col: normalized.metadata?.col ?? normalized.col ?? null,
-      rowNumber: normalized.metadata?.rowNumber ?? normalized.rowNumber ?? null,
-      columnNumber: normalized.metadata?.columnNumber ?? normalized.columnNumber ?? null,
-      dimensions: normalized.metadata?.dimensions ?? normalized.dimensions ?? null,
-      roadWidthFeet: normalized.metadata?.roadWidthFeet ?? normalized.roadWidthFeet ?? null,
-      plcType: normalized.metadata?.plcType ?? normalized.plcType ?? "Open",
-      cornerPlot: Boolean(normalized.metadata?.cornerPlot ?? normalized.cornerPlot),
-      metadata: normalized.metadata || { source },
-      source: normalized.metadata?.source || source,
-      documents: normalized.documents || [],
-      createdDate: normalized.createdDate || today(),
-    },
-    {
-      type: "created",
-      title: historyTitle,
-      description: historyDescription,
-      tone: "accent",
-    }
-  );
-}
-
-function resolveLayoutContext(data) {
+/** Parent refs only — never denormalize Layout/Venture display fields onto Plot. */
+function resolveParentRefs(data) {
   if (!data.layoutId) throw new Error("Layout is required");
   const layout = getLayoutOrThrow(data.layoutId);
-  const venture = dataStore.getList("ventures").find((v) => v.id === layout.ventureId);
   return {
     layoutId: layout.id,
-    layoutName: layout.name,
     ventureId: layout.ventureId,
-    ventureName: venture?.name || layout.ventureName || data.ventureName,
-    state: data.state || layout.state || venture?.state,
-    district: data.district || layout.district || venture?.district,
-    city: data.city || layout.city || venture?.city,
+    layoutNameForHistory: layout.name || layout.id,
   };
+}
+
+function buildOwnedPlotRecord(data, { existing = null, id, source, historyEvent }) {
+  const refs = resolveParentRefs({ layoutId: data.layoutId || existing?.layoutId });
+  const owned = pickPlotOwnedFields(data);
+  const pricingSource = { ...existing, ...owned };
+  const pricing = derivePricing(pricingSource);
+
+  const base = {
+    ...(existing || {}),
+    ...owned,
+    id: id || existing?.id,
+    layoutId: refs.layoutId,
+    ventureId: refs.ventureId,
+    plotNumber: String(owned.plotNumber ?? existing?.plotNumber ?? "").trim(),
+    areaSqYards: owned.areaSqYards ?? pricing.area,
+    ratePerSqYard: owned.ratePerSqYard ?? owned.priceOverride ?? pricing.rate,
+    totalPrice: owned.totalPrice ?? pricing.totalPrice,
+    finalPrice: owned.finalPrice ?? owned.totalPrice ?? pricing.finalPrice ?? pricing.totalPrice,
+    offerPrice: owned.offerPrice ?? pricing.offerPrice,
+    discount: owned.discount ?? pricing.discount,
+    discountPct: owned.discountPct ?? pricing.discountPct,
+    developmentCharges: owned.developmentCharges ?? pricing.developmentCharges,
+    registrationCharges: owned.registrationCharges ?? pricing.registrationCharges,
+    status: owned.status || existing?.status || "Available",
+    facing: owned.facing || existing?.facing || "East",
+    latitude: owned.latitude ?? existing?.latitude ?? null,
+    longitude: owned.longitude ?? existing?.longitude ?? null,
+    mapWidth: owned.mapWidth ?? existing?.mapWidth ?? 72,
+    mapHeight: owned.mapHeight ?? existing?.mapHeight ?? 48,
+    rotation: owned.rotation ?? existing?.rotation ?? 0,
+    shapeType: owned.shapeType || existing?.shapeType || "RECTANGLE",
+    polygonPoints: owned.polygonPoints || owned.coordinates || existing?.polygonPoints || [],
+    blockName: owned.blockName || owned.block || existing?.blockName || existing?.block || "",
+    block: owned.block ?? existing?.block ?? "",
+    cornerPlot: Boolean(owned.cornerPlot ?? owned.corner ?? existing?.cornerPlot ?? existing?.corner),
+    documents: owned.documents ?? existing?.documents ?? [],
+    metadata: owned.metadata || existing?.metadata || (source ? { source } : {}),
+    source: owned.source || existing?.source || source || undefined,
+    createdDate: existing?.createdDate || owned.createdDate || today(),
+  };
+
+  // Ensure parent display fields are not introduced on create.
+  const cleaned = existing ? base : omitPlotParentFields(base);
+
+  return withHistory(cleaned, historyEvent);
+}
+
+function buildPlotRecordFromDto(normalized, refs, plots, { source, historyTitle, historyDescription }) {
+  const id = normalized.id || nextId("PLT", plots, 100001);
+  return buildOwnedPlotRecord(
+    {
+      ...normalized,
+      layoutId: refs.layoutId,
+      ventureId: refs.ventureId,
+    },
+    {
+      id,
+      source,
+      historyEvent: {
+        type: "created",
+        title: historyTitle,
+        description: historyDescription,
+        tone: "accent",
+      },
+    }
+  );
 }
 
 export const plotService = {
@@ -108,37 +126,19 @@ export const plotService = {
   },
 
   createPlot(data) {
-    const ctx = resolveLayoutContext(data);
     const plots = dataStore.getList("plots");
     const id = nextId("PLT", plots, 100001);
-    const pricing = derivePricing({ ...data, ...ctx });
+    const refs = resolveParentRefs(data);
 
-    const record = withHistory(
-      {
-        ...data,
-        ...ctx,
-        id,
-        ...pricing,
-        areaSqYards: pricing.area,
-        ratePerSqYard: pricing.rate,
-        status: data.status || "Available",
-        latitude: data.latitude ?? null,
-        longitude: data.longitude ?? null,
-        mapWidth: data.mapWidth ?? 72,
-        mapHeight: data.mapHeight ?? 48,
-        rotation: data.rotation ?? 0,
-        shapeType: data.shapeType || 'RECTANGLE',
-        polygonPoints: data.polygonPoints || [],
-        documents: [],
-        createdDate: today(),
-      },
-      {
+    const record = buildOwnedPlotRecord(data, {
+      id,
+      historyEvent: {
         type: "created",
         title: "Plot created",
-        description: `Plot ${data.plotNumber} added to ${ctx.layoutName}`,
+        description: `Plot ${data.plotNumber} added to ${refs.layoutNameForHistory}`,
         tone: "accent",
-      }
-    );
+      },
+    });
 
     dataStore.updateList("plots", (list) => [record, ...list]);
     return record;
@@ -150,7 +150,7 @@ export const plotService = {
       throw new Error("No plots to persist");
     }
 
-    const ctx = resolveLayoutContext({ layoutId });
+    const refs = resolveParentRefs({ layoutId });
     let plotsList =
       mode === PLOT_MODES.REPLACE
         ? dataStore.getList("plots").filter((plot) => plot.layoutId !== layoutId)
@@ -161,10 +161,10 @@ export const plotService = {
     const created = [];
 
     for (const normalized of plots) {
-      const record = buildPlotRecordFromDto(normalized, ctx, plotsList, {
+      const record = buildPlotRecordFromDto(normalized, refs, plotsList, {
         source,
         historyTitle,
-        historyDescription: `Plot ${normalized.plotNumber} ${isGenerator ? "saved to" : "imported into"} ${ctx.layoutName}`,
+        historyDescription: `Plot ${normalized.plotNumber} ${isGenerator ? "saved to" : "imported into"} ${refs.layoutNameForHistory}`,
       });
       plotsList.unshift(record);
       created.push(record);
@@ -214,29 +214,32 @@ export const plotService = {
   syncImportedPlots(records = []) {
     if (!records.length) return;
     const enriched = records.map((record) => {
-      const pricing = derivePricing(record);
-      return withHistory(
-        {
-          ...record,
-          ...pricing,
-          areaSqYards: record.areaSqYards ?? pricing.area,
-          ratePerSqYard: record.ratePerSqYard ?? pricing.rate,
-          totalPrice: record.totalPrice ?? pricing.totalPrice,
-          finalPrice: record.finalPrice ?? record.totalPrice ?? pricing.totalPrice,
-          polygonPoints: record.polygonPoints || [],
-          shapeType: record.shapeType || "POLYGON",
-          metadata: record.metadata || { source: record.source || PLOT_SOURCES.EXCEL },
-          source: record.metadata?.source || record.source || PLOT_SOURCES.EXCEL,
-          documents: record.documents || [],
-          createdDate: record.createdDate || today(),
-        },
-        {
-          type: "created",
-          title: "Plot imported",
-          description: `Plot ${record.plotNumber} imported`,
-          tone: "accent",
-        }
-      );
+      const owned = pickPlotOwnedFields(record);
+      const pricing = derivePricing({ ...record, ...owned });
+      const base = omitPlotParentFields({
+        ...owned,
+        id: record.id,
+        layoutId: record.layoutId,
+        ventureId: record.ventureId,
+        ...pricing,
+        areaSqYards: owned.areaSqYards ?? pricing.area,
+        ratePerSqYard: owned.ratePerSqYard ?? pricing.rate,
+        totalPrice: owned.totalPrice ?? pricing.totalPrice,
+        finalPrice: owned.finalPrice ?? owned.totalPrice ?? pricing.totalPrice,
+        polygonPoints: owned.polygonPoints || record.polygonPoints || [],
+        shapeType: owned.shapeType || record.shapeType || "POLYGON",
+        metadata: owned.metadata || record.metadata || { source: record.source || PLOT_SOURCES.EXCEL },
+        source: owned.source || record.metadata?.source || record.source || PLOT_SOURCES.EXCEL,
+        documents: owned.documents || record.documents || [],
+        createdDate: owned.createdDate || record.createdDate || today(),
+        status: owned.status || record.status || "Available",
+      });
+      return withHistory(base, {
+        type: "created",
+        title: "Plot imported",
+        description: `Plot ${record.plotNumber} imported`,
+        tone: "accent",
+      });
     });
 
     dataStore.updateList("plots", (list) => {
@@ -250,10 +253,19 @@ export const plotService = {
     const existing = dataStore.getList("plots").find((p) => p.id === id);
     if (!existing) return null;
 
-    const ctx = data.layoutId ? resolveLayoutContext({ ...existing, ...data }) : {};
-    const record = withHistory(
-      { ...existing, ...data, ...ctx, ...derivePricing({ ...existing, ...data, ...ctx }) },
-      { type: "update", title: "Plot updated", description: "Plot information edited", tone: "info" }
+    const layoutId = data.layoutId || existing.layoutId;
+    const record = buildOwnedPlotRecord(
+      { ...data, layoutId },
+      {
+        existing,
+        id,
+        historyEvent: {
+          type: "update",
+          title: "Plot updated",
+          description: "Plot information edited",
+          tone: "info",
+        },
+      }
     );
 
     dataStore.updateList("plots", (list) =>
@@ -271,7 +283,8 @@ export const plotService = {
     const existing = dataStore.getList("plots").find((p) => p.id === id);
     if (!existing) return null;
     const event = STATUS_EVENT[status] || { type: "update", title: `Status: ${status}`, tone: "info" };
-    const next = { ...existing, status, ...extra };
+    const ownedExtra = pickPlotOwnedFields(extra);
+    const next = { ...existing, status, ...ownedExtra };
     if (status === "Available") {
       next.customer = null;
       next.customerId = null;
@@ -279,7 +292,9 @@ export const plotService = {
     }
     const record = withHistory(next, {
       ...event,
-      description: extra.customer ? `${event.title} for ${extra.customer}` : event.title,
+      description: ownedExtra.customer || extra.customer
+        ? `${event.title} for ${ownedExtra.customer || extra.customer}`
+        : event.title,
     });
     dataStore.updateList("plots", (list) =>
       list.map((p) => (p.id === id ? record : p))
@@ -314,12 +329,15 @@ export const plotService = {
   assignPlot(id, assignment) {
     const existing = dataStore.getList("plots").find((p) => p.id === id);
     if (!existing) return null;
+    const ownedAssignment = pickPlotOwnedFields(assignment);
     const record = withHistory(
-      { ...existing, ...assignment },
+      { ...existing, ...ownedAssignment },
       {
         type: "assigned",
         title: "Plot assigned",
-        description: assignment.customer ? `Assigned to ${assignment.customer}` : "Assignment updated",
+        description: ownedAssignment.customer
+          ? `Assigned to ${ownedAssignment.customer}`
+          : "Assignment updated",
         tone: "violet",
       }
     );

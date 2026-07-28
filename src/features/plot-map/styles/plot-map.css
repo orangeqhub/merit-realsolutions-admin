@@ -9,6 +9,11 @@
   overflow: hidden;
 }
 
+.plot-map-workspace.ws-premium {
+  gap: 0;
+  min-height: min(86vh, 960px);
+}
+
 .plot-map-workspace__body {
   position: relative;
   flex: 1;
@@ -205,9 +210,9 @@
 }
 
 .plot-map-toolbar__pill.is-active {
-  background: var(--color-navy, #0a1628);
+  background: var(--erp-primary);
   color: #fff;
-  border-color: var(--color-navy, #0a1628);
+  border-color: var(--erp-primary);
 }
 
 .plot-map-search {
@@ -702,8 +707,8 @@
 }
 
 .venture-layouts-panel__chip.is-active {
-  background: var(--color-navy, #0a1628);
-  border-color: var(--color-navy, #0a1628);
+  background: var(--erp-primary);
+  border-color: var(--erp-primary);
   color: #fff;
 }
 
@@ -1206,4 +1211,914 @@
 
 .plot-map-workspace__map {
   position: relative;
+}
+
+/* ========== UI-3 Generate Layout Experience ========== */
+
+.ui3-generate-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--erp-space-12, 0.75rem);
+  padding-bottom: var(--erp-space-8, 0.5rem);
+}
+
+.ui3-gen-section {
+  padding: var(--erp-space-12, 0.75rem) var(--erp-space-12, 0.75rem);
+  border-radius: var(--erp-radius-md, 12px);
+  background: var(--erp-card, #fff);
+  border: 1px solid var(--erp-border, rgba(15, 23, 42, 0.08));
+  box-shadow: var(--erp-shadow-xs, 0 1px 2px rgba(15, 23, 42, 0.04));
+}
+
+.ui3-gen-section__header {
+  display: flex;
+  gap: var(--erp-space-12, 0.75rem);
+  align-items: flex-start;
+  margin-bottom: var(--erp-space-16, 1rem);
+}
+
+.ui3-gen-section__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--erp-radius-sm, 8px);
+  background: var(--erp-accent-soft, rgba(37, 99, 235, 0.1));
+  color: var(--erp-primary, #2563eb);
+  flex-shrink: 0;
+}
+
+.ui3-gen-section__icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ui3-gen-section__title {
+  margin: 0;
+  font-size: var(--erp-font-size-md, 0.9375rem);
+  font-weight: var(--erp-weight-bold, 700);
+  color: var(--erp-text);
+  line-height: 1.3;
+}
+
+.ui3-gen-section__desc {
+  margin: 0.25rem 0 0;
+  font-size: var(--erp-font-size-xs, 0.75rem);
+  color: var(--erp-text-muted);
+  line-height: 1.45;
+}
+
+.ui3-gen-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--erp-space-12, 0.75rem);
+}
+
+.ui3-gen-fields {
+  display: grid;
+  gap: var(--erp-space-12, 0.75rem);
+}
+
+.ui3-gen-fields--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.ui3-gen-fields__full {
+  grid-column: 1 / -1;
+}
+
+.ui3-gen-divider {
+  height: 1px;
+  background: var(--erp-border, rgba(15, 23, 42, 0.08));
+  margin: 0.15rem 0;
+}
+
+.ui3-gen-subheading {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-muted);
+}
+
+.ui3-gen-area-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  padding: var(--erp-space-12, 0.75rem) var(--erp-space-16, 1rem);
+  border-radius: var(--erp-radius-md, 12px);
+  background: var(--erp-success-soft, rgba(5, 150, 105, 0.08));
+  border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.ui3-gen-area-card__dim {
+  font-size: var(--erp-font-size-sm, 0.8125rem);
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.ui3-gen-area-card__arrow {
+  font-size: 1.1rem;
+  color: var(--erp-success, #059669);
+  line-height: 1;
+}
+
+.ui3-gen-area-card__value {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--erp-success-dark, #047857);
+}
+
+.ui3-gen-area-card__hint {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+  margin-left: auto;
+}
+
+.ui3-gen-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ui3-gen-amenity {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--erp-border, rgba(15, 23, 42, 0.12));
+  background: var(--erp-surface, #f8fafc);
+  color: var(--erp-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ui3-gen-amenity:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.ui3-gen-amenity.is-selected {
+  border-color: var(--erp-primary, #2563eb);
+  background: var(--erp-accent-soft, rgba(37, 99, 235, 0.12));
+  color: var(--erp-primary-dark, #1d4ed8);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.ui3-gen-inherit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--erp-space-12, 0.75rem);
+  padding: var(--erp-space-12, 0.75rem) var(--erp-space-16, 1rem);
+  border-radius: var(--erp-radius-md, 12px);
+  background: var(--erp-accent-soft, rgba(37, 99, 235, 0.08));
+  border: 1px solid rgba(37, 99, 235, 0.16);
+}
+
+.ui3-gen-inherit__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ui3-gen-inherit__label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--erp-text-muted);
+}
+
+.ui3-gen-inherit__copy strong {
+  font-size: 1.05rem;
+  color: var(--erp-primary, #2563eb);
+}
+
+.ui3-gen-inherit__source {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+}
+
+.ui3-gen-inherit__override-btn {
+  border: none;
+  background: transparent;
+  color: var(--erp-primary, #2563eb);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ui3-gen-inherit__override-field {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ui3-gen-summary {
+  padding: var(--erp-space-16, 1rem);
+  border-radius: var(--erp-radius-md, 12px);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.03), rgba(37, 99, 235, 0.06));
+  border: 1px solid rgba(37, 99, 235, 0.14);
+}
+
+.ui3-gen-summary__header {
+  margin-bottom: var(--erp-space-12, 0.75rem);
+}
+
+.ui3-gen-summary__eyebrow {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--erp-primary, #2563eb);
+}
+
+.ui3-gen-summary__hint {
+  margin: 0.2rem 0 0;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+}
+
+.ui3-gen-summary__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.ui3-gen-summary__metric {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.1rem 0.5rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--erp-radius-sm, 8px);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.ui3-gen-summary__metric-icon {
+  grid-row: 1 / span 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 6px;
+  background: var(--erp-accent-soft, rgba(37, 99, 235, 0.1));
+  color: var(--erp-primary, #2563eb);
+}
+
+.ui3-gen-summary__metric-icon svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.ui3-gen-summary__metric-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--erp-text-muted);
+}
+
+.ui3-gen-summary__metric-value {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--erp-text);
+  line-height: 1.2;
+}
+
+.ui3-gen-summary__metric--revenue {
+  grid-column: 1 / -1;
+  background: rgba(5, 150, 105, 0.08);
+  border-color: rgba(5, 150, 105, 0.18);
+}
+
+.ui3-gen-summary__metric--revenue .ui3-gen-summary__metric-icon {
+  background: rgba(5, 150, 105, 0.15);
+  color: #059669;
+}
+
+.ui3-gen-summary__metric--revenue .ui3-gen-summary__metric-value {
+  color: #047857;
+}
+
+.ui3-gen-preview-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--erp-radius-sm, 8px);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text);
+}
+
+.ui3-gen-advanced {
+  border-radius: var(--erp-radius-md, 12px);
+  border: 1px dashed var(--erp-border, rgba(15, 23, 42, 0.14));
+  overflow: hidden;
+}
+
+.ui3-gen-advanced__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: var(--erp-surface, #f8fafc);
+  color: var(--erp-text-muted);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ui3-gen-advanced__toggle svg:first-child {
+  margin-right: 0.35rem;
+}
+
+.ui3-gen-advanced__panel {
+  padding: 0 1rem 1rem;
+  background: var(--erp-surface, #f8fafc);
+}
+
+.ui3-gen-advanced__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  color: var(--erp-text-muted);
+  line-height: 1.45;
+}
+
+.ui3-gen-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.ui3-gen-actions__primary {
+  width: 100%;
+  justify-content: center;
+}
+
+.ui3-gen-actions__secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ui3-gen-actions__secondary .erp-btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: center;
+}
+
+/* Map preview emphasis (presentation only) */
+.plot-map-workspace--gen-preview .plot-road-preview-polygon--main {
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.95));
+  animation: ui3-road-glow 2.4s ease-in-out infinite;
+}
+
+.plot-map-workspace--gen-preview .plot-road-preview-polygon--internal,
+.plot-map-workspace--gen-preview .plot-road-preview-polygon--service {
+  filter: drop-shadow(0 0 6px rgba(148, 163, 184, 0.85));
+}
+
+.plot-map-workspace--gen-preview .plot-amenity-preview-polygon {
+  filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.75));
+  animation: ui3-amenity-glow 2.8s ease-in-out infinite;
+}
+
+.plot-map-workspace--gen-preview .plot-generated-preview-polygon {
+  animation: plot-preview-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes ui3-road-glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.82;
+  }
+}
+
+@keyframes ui3-amenity-glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.78;
+  }
+}
+
+@media (max-width: 480px) {
+  .ui3-gen-fields--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .ui3-gen-summary__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== UI-3.1 Generate Layout Production Polish ========== */
+
+.ui31-generate-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-height: 100%;
+}
+
+.ui31-gen-state {
+  margin: 0;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--erp-radius-sm, 8px);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ui31-gen-state--idle {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px dashed rgba(15, 23, 42, 0.12);
+  color: var(--erp-text-muted);
+}
+
+.ui31-gen-state--success {
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  color: #047857;
+}
+
+.ui31-gen-progress {
+  margin: 0;
+}
+
+.ui31-gen-sticky-summary {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--erp-radius-md, 12px);
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.18);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.ui31-gen-sticky-summary__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.ui31-gen-sticky-summary__title {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ui31-gen-sticky-summary__revenue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #6ee7b7;
+}
+
+.ui31-gen-sticky-summary__revenue svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.ui31-gen-sticky-summary__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.ui31-gen-sticky-summary__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.65);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.ui31-gen-sticky-summary__chip svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  opacity: 0.75;
+}
+
+.ui31-gen-sticky-summary__chip-label {
+  font-weight: 600;
+}
+
+.ui31-gen-sticky-summary__chip strong {
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.ui31-gen-inherit--compact {
+  padding: 0.5rem 0.65rem;
+}
+
+.ui31-gen-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.ui3-gen-section--compact {
+  padding: 0.65rem 0.75rem;
+}
+
+.ui3-gen-section--compact .ui3-gen-section__header {
+  margin-bottom: 0.55rem;
+}
+
+.ui3-gen-section--layout {
+  border-left: 3px solid rgba(37, 99, 235, 0.55);
+}
+
+.ui3-gen-section--layout .ui3-gen-section__icon {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+
+.ui3-gen-section--plot {
+  border-left: 3px solid rgba(5, 150, 105, 0.55);
+}
+
+.ui3-gen-section--plot .ui3-gen-section__icon {
+  background: rgba(5, 150, 105, 0.12);
+  color: #059669;
+}
+
+.ui3-gen-section--road {
+  border-left: 3px solid rgba(217, 119, 6, 0.55);
+}
+
+.ui3-gen-section--road .ui3-gen-section__icon {
+  background: rgba(217, 119, 6, 0.12);
+  color: #d97706;
+}
+
+.ui3-gen-section--amenities {
+  border-left: 3px solid rgba(124, 58, 237, 0.5);
+}
+
+.ui3-gen-section--amenities .ui3-gen-section__icon {
+  background: rgba(124, 58, 237, 0.12);
+  color: #7c3aed;
+}
+
+.ui3-gen-fields--dense {
+  gap: 0.5rem;
+}
+
+.ui3-gen-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ui3-gen-field__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--erp-text-secondary, #64748b);
+}
+
+.ui3-gen-select {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border-radius: var(--erp-radius-sm, 8px);
+  border: 1px solid var(--erp-border, #e2e8f0);
+  background: var(--erp-surface, #fff);
+  font-size: 0.8125rem;
+  color: var(--erp-text-primary, #1e293b);
+}
+
+.ui3-gen-select:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.35);
+  border-color: #3b82f6;
+}
+
+.ui31-gen-area-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--erp-radius-md, 12px);
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(5, 150, 105, 0.04));
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui31-gen-area-card__label {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #047857;
+}
+
+.ui31-gen-area-card__value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #065f46;
+  line-height: 1.15;
+}
+
+.ui31-gen-area-card__dim {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--erp-text-muted);
+}
+
+.ui31-gen-area-card__hint {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(5, 150, 105, 0.75);
+}
+
+.ui31-gen-amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 0.4rem;
+}
+
+.ui31-gen-amenity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 4.25rem;
+  padding: 0.45rem 0.35rem;
+  border-radius: var(--erp-radius-sm, 8px);
+  border: 1.5px solid var(--erp-border, rgba(15, 23, 42, 0.1));
+  background: var(--erp-surface, #f8fafc);
+  color: var(--erp-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.12s ease,
+    color 0.18s ease;
+}
+
+.ui31-gen-amenity:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+.ui31-gen-amenity:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.ui31-gen-amenity:focus-visible {
+  outline: 2px solid rgba(124, 58, 237, 0.45);
+  outline-offset: 2px;
+}
+
+.ui31-gen-amenity.is-selected {
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
+  color: #6d28d9;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.14);
+}
+
+.ui31-gen-amenity__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 8px;
+  background: rgba(124, 58, 237, 0.08);
+  color: #7c3aed;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.ui31-gen-amenity.is-selected .ui31-gen-amenity__icon {
+  background: rgba(124, 58, 237, 0.2);
+  color: #5b21b6;
+}
+
+.ui31-gen-amenity__icon svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.ui31-gen-amenity__label {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.ui31-gen-action-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  background: var(--erp-card);
+}
+
+.ui31-gen-action-bar__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem;
+  padding: 0.65rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--erp-border, rgba(15, 23, 42, 0.08));
+}
+
+.ui31-gen-action-bar__metrics:has(.ui31-gen-metric--highlight:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.ui31-gen-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.ui31-gen-metric--highlight .ui31-gen-metric__value {
+  font-size: 1.15rem;
+  color: var(--erp-primary, #2563eb);
+}
+
+.ui31-gen-metric__label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--erp-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui31-gen-metric__value {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: var(--erp-text);
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.ui31-gen-action-bar__divider {
+  display: none;
+}
+
+.ui31-gen-action-bar__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.65rem 1rem 0.85rem;
+}
+
+.ui31-gen-action-bar__controls--post {
+  gap: 0.5rem;
+}
+
+.ui31-gen-action-bar__primary {
+  width: 100%;
+  justify-content: center;
+  transition: transform 0.12s ease, box-shadow 0.18s ease;
+}
+
+.ui31-gen-action-bar__primary:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.ui31-gen-action-bar__secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.ui31-gen-action-bar__secondary .erp-btn {
+  flex: 1 1 calc(33.333% - 0.35rem);
+  min-width: 0;
+  justify-content: center;
+  font-size: 0.8125rem;
+}
+
+.ui3-gen-summary--analytics {
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.ui3-gen-summary--analytics .ui3-gen-summary__eyebrow {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ui3-gen-summary--analytics .ui3-gen-summary__hint {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ui3-gen-summary--analytics .ui3-gen-summary__metric {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.ui3-gen-summary--analytics .ui3-gen-summary__metric-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ui3-gen-summary--analytics .ui3-gen-summary__metric-value {
+  color: #f8fafc;
+}
+
+/* Map preview focal emphasis (presentation only) */
+.plot-map-workspace--gen-preview .plot-map-workspace__map .leaflet-container {
+  filter: brightness(0.78) saturate(0.88);
+  transition: filter 0.5s ease;
+}
+
+.plot-map-workspace--gen-preview .plot-generated-preview-polygon {
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.95));
+  animation: ui31-plot-focus 2.2s ease-in-out infinite;
+}
+
+.plot-map-workspace--gen-preview .plot-road-preview-polygon--main {
+  filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.95));
+  animation: ui3-road-glow 2.4s ease-in-out infinite;
+}
+
+.plot-map-workspace--gen-preview .plot-road-preview-polygon--internal,
+.plot-map-workspace--gen-preview .plot-road-preview-polygon--service {
+  filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.9));
+}
+
+.plot-map-workspace--gen-preview .plot-amenity-preview-polygon {
+  filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.8));
+  animation: ui3-amenity-glow 2.8s ease-in-out infinite;
+}
+
+@keyframes ui31-plot-focus {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.88;
+  }
+}
+
+@media (max-width: 640px) {
+  .ui31-gen-action-bar__metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ui31-gen-action-bar__metrics .ui31-gen-metric:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .ui31-gen-sticky-summary__chips {
+    gap: 0.25rem;
+  }
+
+  .ui31-gen-amenities {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

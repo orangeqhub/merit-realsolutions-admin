@@ -16,7 +16,7 @@ import {
   listBuilders,
   setBuilderStatus,
 } from '../../services/builder/builderApi.js';
-import { BUILDER_STATUS, formatDate } from './constants';
+import { BUILDER_STATUS, SALES_PARTNERSHIP_TYPES, formatDate } from './constants';
 import './builders.css';
 
 export default function BuilderList() {
@@ -26,7 +26,7 @@ export default function BuilderList() {
   const [meta, setMeta] = useState({ total: 0, page: 1, totalPages: 1 });
   const [loading, setLoading] = useState(true);
   const [deleteTarget, setDeleteTarget] = useState(null);
-  const [filters, setFilters] = useState({ search: '', status: '', page: 1 });
+  const [filters, setFilters] = useState({ search: '', status: '', salesPartnershipType: '', page: 1 });
 
   const load = async () => {
     setLoading(true);
@@ -36,6 +36,7 @@ export default function BuilderList() {
         pageSize: 12,
         search: filters.search || undefined,
         status: filters.status || undefined,
+        salesPartnershipType: filters.salesPartnershipType || undefined,
         sort: 'name-asc',
       });
       setItems(result.items || []);
@@ -50,7 +51,7 @@ export default function BuilderList() {
 
   useEffect(() => {
     load();
-  }, [filters.status, filters.page]);
+  }, [filters.status, filters.salesPartnershipType, filters.page]);
 
   const columns = useMemo(() => [
     {
@@ -71,6 +72,7 @@ export default function BuilderList() {
       header: 'Operating Cities',
       render: (row) => (row.operatingCities || []).slice(0, 3).join(', ') || '—',
     },
+    { key: 'salesPartnershipType', header: 'Sales Partnership', render: (row) => row.salesPartnershipType === 'FULL_TIME' ? 'Full Time' : row.salesPartnershipType === 'PART_TIME' ? 'Part Time' : '—' },
     {
       key: 'projects',
       header: 'Projects',
@@ -152,6 +154,7 @@ export default function BuilderList() {
             options={[{ value: '', label: 'All Status' }, ...BUILDER_STATUS]}
             placeholder="Status"
           />
+          <Select value={filters.salesPartnershipType} onChange={(v) => setFilters((p) => ({ ...p, salesPartnershipType: v, page: 1 }))} options={[{ value: '', label: 'All Sales Partnerships' }, ...SALES_PARTNERSHIP_TYPES]} placeholder="Sales Partnership" />
           <Button variant="ghost" size="md" onClick={load}>Search</Button>
         </div>
       </div>

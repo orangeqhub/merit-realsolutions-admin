@@ -1,0 +1,37 @@
+/* ===================================================================
+   DS Tokens — Spacing (single scale)
+   Base unit 4px. Consume --erp-space-* only.
+   =================================================================== */
+
+:root {
+  --erp-space-0: 0;
+  --erp-space-4: 0.25rem;   /* 4 */
+  --erp-space-8: 0.5rem;    /* 8 */
+  --erp-space-12: 0.75rem;  /* 12 */
+  --erp-space-16: 1rem;     /* 16 */
+  --erp-space-20: 1.25rem;  /* 20 */
+  --erp-space-24: 1.5rem;   /* 24 */
+  --erp-space-32: 2rem;     /* 32 */
+  --erp-space-40: 2.5rem;   /* 40 */
+  --erp-space-48: 3rem;     /* 48 */
+  --erp-space-64: 4rem;     /* 64 */
+  --erp-space-80: 5rem;     /* 80 */
+  --erp-space-96: 6rem;     /* 96 */
+
+  /* Semantic aliases (preferred in layout) */
+  --erp-space-xs: var(--erp-space-8);
+  --erp-space-sm: var(--erp-space-12);
+  --erp-space-md: var(--erp-space-16);
+  --erp-space-lg: var(--erp-space-24);
+  --erp-space-xl: var(--erp-space-32);
+  --erp-space-2xl: var(--erp-space-40);
+  --erp-space-3xl: var(--erp-space-64);
+
+  /* Gap aliases — map legacy --erp-gap-* onto the same scale */
+  --erp-gap-xs: var(--erp-space-8);
+  --erp-gap-sm: var(--erp-space-12);
+  --erp-gap: var(--erp-space-16);
+  --erp-gap-md: var(--erp-space-24);
+  --erp-gap-lg: var(--erp-space-32);
+  --erp-gap-xl: var(--erp-space-40);
+}

@@ -77,6 +77,14 @@ class DataStore {
     this.setList("ventures", []);
     this.setList("layouts", []);
     this.setList("plots", []);
+    this.setList("bookings", []);
+    const reservations = this.getObject("reservations");
+    if (reservations && typeof reservations === "object") {
+      this.setObject("reservations", {
+        ...reservations,
+        reservations: [],
+      });
+    }
   }
 
   get initialized() {

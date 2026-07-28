@@ -125,6 +125,7 @@ export default function BuilderDetails() {
           { label: 'Website', value: builder.website || '—' },
           { label: 'Office Address', value: builder.officeAddress || '—' },
           { label: 'RERA Number', value: builder.reraNumber || '—' },
+          { label: 'Sales Partnership', value: builder.salesPartnershipType === 'FULL_TIME' ? 'Full Time' : builder.salesPartnershipType === 'PART_TIME' ? 'Part Time' : '—' },
           { label: 'Established', value: builder.establishedYear || '—' },
           { label: 'Created', value: formatDate(builder.createdAt) },
         ]}

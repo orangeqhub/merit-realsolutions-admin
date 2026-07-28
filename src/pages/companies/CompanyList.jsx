@@ -27,7 +27,7 @@ import RightDrawer from "../../components/drawer/RightDrawer";
 import Button from "../../components/ui/button/Button";
 import { useCompanies } from "../../context/CompaniesContext";
 import { useCollection } from "../../shared/hooks/useDataStore.js";
-import { COMPANY_TYPES, STATUS_OPTIONS } from "./constants";
+import { COMPANY_TYPES, STATUS_OPTIONS, SALES_PARTNERSHIP_TYPES } from "./constants";
 import CompanyForm from "./CompanyForm";
 import "./company.css";
 
@@ -65,6 +65,7 @@ export default function CompanyList() {
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
+  const [salesPartnershipFilter, setSalesPartnershipFilter] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [editing, setEditing] = useState(null);
   const [deleteTarget, setDeleteTarget] = useState(null);
@@ -90,16 +91,18 @@ export default function CompanyList() {
           .includes(q);
       const matchesType = !typeFilter || c.type === typeFilter;
       const matchesStatus = !statusFilter || c.status === statusFilter;
-      return matchesSearch && matchesType && matchesStatus;
+      const matchesSalesPartnership = !salesPartnershipFilter || c.salesPartnershipType === salesPartnershipFilter;
+      return matchesSearch && matchesType && matchesStatus && matchesSalesPartnership;
     });
-  }, [companiesWithStats, search, typeFilter, statusFilter]);
+  }, [companiesWithStats, search, typeFilter, statusFilter, salesPartnershipFilter]);
 
-  const hasFilters = search || typeFilter || statusFilter;
+  const hasFilters = search || typeFilter || statusFilter || salesPartnershipFilter;
 
   const resetFilters = () => {
     setSearch("");
     setTypeFilter("");
     setStatusFilter("");
+    setSalesPartnershipFilter("");
   };
 
   const openAdd = () => {
@@ -129,6 +132,7 @@ export default function CompanyList() {
       "ID",
       "Name",
       "Type",
+      "Sales Partnership",
       "Contact Person",
       "Phone",
       "Email",
@@ -141,6 +145,7 @@ export default function CompanyList() {
       c.id,
       c.name,
       c.type,
+      c.salesPartnershipType === "FULL_TIME" ? "Full Time" : c.salesPartnershipType === "PART_TIME" ? "Part Time" : "",
       c.contactPerson,
       c.mobile,
       c.email,
@@ -185,6 +190,7 @@ export default function CompanyList() {
       header: "Type",
       render: (row) => <span className="company-cell__type">{row.type}</span>,
     },
+    { key: "salesPartnershipType", header: "Sales Partnership", render: (row) => row.salesPartnershipType === "FULL_TIME" ? "Full Time" : row.salesPartnershipType === "PART_TIME" ? "Part Time" : "—" },
     {
       key: "contactPerson",
       header: "Contact Person",
@@ -333,6 +339,11 @@ export default function CompanyList() {
                 {type}
               </option>
             ))}
+          </select>
+
+          <select className="company-select" value={salesPartnershipFilter} onChange={(e) => setSalesPartnershipFilter(e.target.value)} aria-label="Filter by sales partnership type">
+            <option value="">All Sales Partnerships</option>
+            {SALES_PARTNERSHIP_TYPES.map((type) => <option key={type.value} value={type.value}>{type.label.replace(" Sales", "")}</option>)}
           </select>
 
           <select

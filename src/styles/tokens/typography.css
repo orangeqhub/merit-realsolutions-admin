@@ -1,0 +1,72 @@
+/* ===================================================================
+   DS Tokens — Typography
+   Role-based type scale. Prefer role classes / tokens over raw sizes.
+   =================================================================== */
+
+:root {
+  --erp-font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --erp-font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --erp-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --erp-font: var(--erp-font-sans);
+
+  /* Size scale */
+  --erp-font-size-2xs: 0.625rem;   /* 10 */
+  --erp-font-size-xs: 0.75rem;     /* 12 */
+  --erp-font-size-sm: 0.8125rem;   /* 13 */
+  --erp-font-size-md: 0.875rem;    /* 14 */
+  --erp-font-size-lg: 0.9375rem;   /* 15 */
+  --erp-font-size-xl: 1.0625rem;   /* 17 */
+  --erp-font-size-2xl: 1.25rem;    /* 20 */
+  --erp-font-size-3xl: 1.5rem;     /* 24 */
+  --erp-font-size-4xl: 1.875rem;   /* 30 */
+  --erp-font-size-5xl: 2.25rem;    /* 36 */
+  --erp-font-size-6xl: 2.75rem;    /* 44 */
+
+  /* Legacy size aliases */
+  --erp-text-xs: var(--erp-font-size-xs);
+  --erp-text-sm: var(--erp-font-size-sm);
+  --erp-text-base: var(--erp-font-size-md);
+  --erp-text-md: var(--erp-font-size-lg);
+  --erp-text-lg: var(--erp-font-size-xl);
+  --erp-text-xl: var(--erp-font-size-2xl);
+  --erp-text-2xl: var(--erp-font-size-3xl);
+  --erp-text-3xl: var(--erp-font-size-4xl);
+  --erp-text-4xl: var(--erp-font-size-5xl);
+
+  /* Weight */
+  --erp-weight-regular: 400;
+  --erp-weight-medium: 500;
+  --erp-weight-semibold: 600;
+  --erp-weight-bold: 700;
+  --erp-weight-extrabold: 800;
+
+  /* Leading */
+  --erp-leading-none: 1;
+  --erp-leading-tight: 1.2;
+  --erp-leading-snug: 1.35;
+  --erp-leading-normal: 1.5;
+  --erp-leading-relaxed: 1.65;
+
+  /* Tracking */
+  --erp-tracking-tighter: -0.03em;
+  --erp-tracking-tight: -0.02em;
+  --erp-tracking-normal: 0;
+  --erp-tracking-wide: 0.04em;
+  --erp-tracking-wider: 0.08em;
+
+  /* Role composites (font-size / weight / leading / tracking) */
+  --erp-type-display-xl-size: var(--erp-font-size-6xl);
+  --erp-type-display-size: var(--erp-font-size-5xl);
+  --erp-type-page-title-size: var(--erp-font-size-4xl);
+  --erp-type-section-title-size: var(--erp-font-size-2xl);
+  --erp-type-card-title-size: var(--erp-font-size-xl);
+  --erp-type-heading-size: var(--erp-font-size-xl);
+  --erp-type-subheading-size: var(--erp-font-size-lg);
+  --erp-type-body-lg-size: var(--erp-font-size-lg);
+  --erp-type-body-size: var(--erp-font-size-md);
+  --erp-type-caption-size: var(--erp-font-size-xs);
+  --erp-type-overline-size: var(--erp-font-size-2xs);
+  --erp-type-badge-size: var(--erp-font-size-2xs);
+  --erp-type-stat-size: var(--erp-font-size-3xl);
+  --erp-type-code-size: var(--erp-font-size-sm);
+}

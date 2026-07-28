@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiUser, FiPhone, FiMapPin, FiBriefcase, FiImage } from "react-icons/fi";
 import Upload from "../../components/ui/upload/Upload";
-import { COMPANY_TYPES, STATES, STATUS_OPTIONS, EMPTY_COMPANY } from "./constants";
+import { COMPANY_TYPES, STATES, STATUS_OPTIONS, SALES_PARTNERSHIP_TYPES, EMPTY_COMPANY } from "./constants";
 
 const FORM_ID = "company-form";
 
@@ -20,6 +20,7 @@ export default function CompanyForm({ initialValues, onSubmit }) {
     const next = {};
     if (!form.name.trim()) next.name = "Company name is required";
     if (!form.type) next.type = "Select a company type";
+    if (!form.salesPartnershipType) next.salesPartnershipType = "Select a sales partnership type";
     if (!form.contactPerson.trim()) next.contactPerson = "Contact person is required";
     if (!form.mobile.trim()) next.mobile = "Mobile number is required";
     if (!form.email.trim()) next.email = "Email is required";
@@ -79,6 +80,19 @@ export default function CompanyForm({ initialValues, onSubmit }) {
               ))}
             </select>
             {errors.type && <span className="form-error">{errors.type}</span>}
+          </div>
+
+          <div className="form-group form-group--light company-form__full">
+            <span className="form-label">Sales Partnership Type *</span>
+            <div className="company-form__radio-group" role="radiogroup" aria-label="Sales Partnership Type">
+              {SALES_PARTNERSHIP_TYPES.map((option) => (
+                <label key={option.value} className="company-form__radio">
+                  <input type="radio" name="salesPartnershipType" value={option.value} checked={form.salesPartnershipType === option.value} onChange={handleChange} />
+                  {option.label}
+                </label>
+              ))}
+            </div>
+            {errors.salesPartnershipType && <span className="form-error">{errors.salesPartnershipType}</span>}
           </div>
 
           <div className="form-group form-group--light company-form__full">

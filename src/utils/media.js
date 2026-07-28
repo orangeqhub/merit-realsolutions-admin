@@ -13,11 +13,13 @@ export function resolveMediaUrl(filePath) {
   if (
     trimmed.startsWith('http://') ||
     trimmed.startsWith('https://') ||
-    trimmed.startsWith('blob:') ||
     trimmed.startsWith('data:')
   ) {
     return trimmed;
   }
+
+  // Ephemeral blob URLs break after navigation — never resolve them for display.
+  if (trimmed.startsWith('blob:')) return '';
 
   const path = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
   const mediaBase = getMediaBaseUrl();
@@ -31,6 +33,47 @@ export function isUsableMediaUrl(url) {
   if (UUID_PATTERN.test(trimmed)) return false;
   if (trimmed.startsWith('blob:')) return false;
   return true;
+}
+
+/** Strip ephemeral blob URLs that break after navigation or reload. */
+export function sanitizeStoredMediaUrl(url) {
+  if (!url || typeof url !== 'string') return '';
+  const trimmed = url.trim();
+  if (!trimmed || trimmed.startsWith('blob:')) return '';
+  return trimmed;
+}
+
+export function fileToDataUrl(file) {
+  if (!file || typeof File === 'undefined' || !(file instanceof File)) {
+    return Promise.resolve('');
+  }
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(typeof reader.result === 'string' ? reader.result : '');
+    reader.onerror = () => reject(new Error('Unable to read the selected file.'));
+    reader.readAsDataURL(file);
+  });
+}
+
+export function getLayoutHeroImageUrl(layout) {
+  if (!layout) return '';
+  const candidates = [
+    layout.layoutPlan,
+    layout.masterPlan,
+    layout.banner,
+    layout.thumbnail,
+  ];
+  for (const candidate of candidates) {
+    if (!isUsableMediaUrl(candidate)) continue;
+    return resolveMediaUrl(candidate);
+  }
+  return '';
+}
+
+export function getLayoutPlanSrc(layout) {
+  const src = layout?.layoutPlan || layout?.masterPlan || '';
+  if (!isUsableMediaUrl(src)) return '';
+  return resolveMediaUrl(src);
 }
 
 export function getGalleryImageSrc(image) {

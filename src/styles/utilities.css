@@ -17,14 +17,31 @@
 .erp-w-full { width: 100%; }
 .erp-h-full { height: 100%; }
 
+.erp-rounded-xs { border-radius: var(--erp-radius-xs); }
 .erp-rounded-sm { border-radius: var(--erp-radius-sm); }
+.erp-rounded-md { border-radius: var(--erp-radius-md); }
 .erp-rounded { border-radius: var(--erp-radius); }
 .erp-rounded-lg { border-radius: var(--erp-radius-lg); }
+.erp-rounded-xl { border-radius: var(--erp-radius-xl); }
 .erp-rounded-full { border-radius: var(--erp-radius-pill); }
 
 .erp-shadow-sm { box-shadow: var(--erp-shadow-sm); }
 .erp-shadow-md { box-shadow: var(--erp-shadow-md); }
 .erp-shadow-lg { box-shadow: var(--erp-shadow-lg); }
+.erp-elevation-card { box-shadow: var(--erp-elevation-card); }
+.erp-elevation-floating { box-shadow: var(--erp-elevation-floating); }
+.erp-elevation-glass { box-shadow: var(--erp-elevation-glass); }
+
+.erp-glass {
+  background: var(--erp-glass-bg);
+  backdrop-filter: blur(var(--erp-glass-blur)) saturate(var(--erp-glass-saturate));
+  border: 1px solid var(--erp-glass-border);
+  box-shadow: var(--erp-glass-shadow-sm);
+}
+
+.erp-icon-sm { width: var(--erp-icon-sm); height: var(--erp-icon-sm); }
+.erp-icon-md { width: var(--erp-icon-md); height: var(--erp-icon-md); }
+.erp-icon-lg { width: var(--erp-icon-lg); height: var(--erp-icon-lg); }
 
 .erp-surface {
   background: var(--erp-card);

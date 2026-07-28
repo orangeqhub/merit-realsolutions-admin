@@ -1,0 +1,33 @@
+/* ===================================================================
+   DS Tokens — Accessibility
+   =================================================================== */
+
+:root {
+  --erp-a11y-focus-ring: 0 0 0 3px var(--erp-color-accent-soft);
+  --erp-a11y-focus-ring-danger: 0 0 0 3px var(--erp-color-danger-soft);
+  --erp-a11y-focus-ring-success: 0 0 0 3px var(--erp-color-success-soft);
+  --erp-a11y-min-touch: 40px;
+  --erp-a11y-min-contrast-text: var(--erp-color-text);
+  --erp-a11y-min-contrast-muted: var(--erp-color-text-muted);
+  --erp-a11y-error: var(--erp-color-danger);
+  --erp-a11y-warning: var(--erp-color-warning);
+  --erp-a11y-success: var(--erp-color-success);
+  --erp-a11y-disabled-opacity: var(--erp-state-disabled-opacity);
+
+  /* Keep short focus alias in sync */
+  --erp-focus-ring: var(--erp-a11y-focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --erp-duration-100: 1ms;
+    --erp-duration-150: 1ms;
+    --erp-duration-250: 1ms;
+    --erp-duration-400: 1ms;
+    --erp-duration-600: 1ms;
+    --erp-transition: 1ms linear;
+    --erp-transition-fast: 1ms linear;
+    --erp-transition-slow: 1ms linear;
+    --erp-motion-ok: 0;
+  }
+}

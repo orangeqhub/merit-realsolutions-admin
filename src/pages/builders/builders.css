@@ -51,6 +51,9 @@
   margin-top: 0.35rem;
 }
 
+.builders-form__radio-group { display: flex; gap: 1rem; flex-wrap: wrap; padding-top: .35rem; }
+.builders-form__radio { display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; }
+
 .builders-details__hero {
   position: relative;
   border-radius: var(--erp-radius-lg);

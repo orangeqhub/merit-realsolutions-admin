@@ -1,5 +1,4 @@
-@import './variables.css';
-@import './colors.css';
+@import './tokens/index.css';
 @import './typography.css';
 @import './spacing.css';
 @import './animations.css';
@@ -24,11 +23,11 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--erp-font-sans);
   font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-charcoal);
-  background-color: var(--color-white);
+  line-height: var(--erp-leading-relaxed);
+  color: var(--erp-color-text);
+  background-color: var(--erp-color-bg);
   overflow-x: hidden;
 }
 
@@ -42,16 +41,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--color-navy);
+  font-family: var(--erp-font-sans);
+  font-weight: var(--erp-weight-semibold);
+  line-height: var(--erp-leading-tight);
+  color: var(--erp-color-primary);
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: color var(--transition-fast);
+  transition: color var(--erp-transition-fast);
 }
 
 img {
@@ -88,8 +87,8 @@ textarea {
 }
 
 ::selection {
-  background-color: var(--color-gold);
-  color: var(--color-navy);
+  background-color: var(--erp-color-gold);
+  color: var(--erp-color-primary);
 }
 
 ::-webkit-scrollbar {
@@ -97,14 +96,14 @@ textarea {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-gray-100);
+  background: var(--erp-color-neutral-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-navy-light);
-  border-radius: 4px;
+  background: var(--erp-color-primary-light);
+  border-radius: var(--erp-radius-xs);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+  background: var(--erp-color-gold);
 }

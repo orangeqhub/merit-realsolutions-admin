@@ -16,12 +16,14 @@ import {
 import Badge from "../ui/badge/Badge";
 import Dropdown from "../ui/dropdown/Dropdown";
 import { PLOT_STATUS_META, formatArea } from "../../pages/layouts/constants";
+import { getLayoutHeroImageUrl } from "../../utils/media.js";
 import "./LayoutCard.css";
 
 export default function LayoutCard({ layout, onEdit, onDelete }) {
   const navigate = useNavigate();
   const plots = layout.plots || {};
   const total = plots.total || 0;
+  const cardImage = getLayoutHeroImageUrl(layout);
 
   const open = () => navigate(`/dashboard/layouts/${layout.id}`);
 
@@ -32,7 +34,11 @@ export default function LayoutCard({ layout, onEdit, onDelete }) {
       transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
     >
       <button type="button" className="layout-card__media" onClick={open} aria-label={`Open ${layout.name}`}>
-        <img src={layout.thumbnail} alt={layout.name} loading="lazy" />
+        {cardImage ? (
+          <img src={cardImage} alt={layout.name} loading="lazy" />
+        ) : (
+          <div className="layout-card__media-placeholder" aria-hidden />
+        )}
         <span className="layout-card__status">
           <Badge status={layout.status} dot size="sm" />
         </span>

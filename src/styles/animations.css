@@ -1,7 +1,7 @@
 /* ===================================================================
-   Merit Real Solutions ERP — Animation Keyframes & Helpers
-   JS-driven motion lives in src/animations/presets.js (Framer Motion).
-   These keyframes power lightweight CSS-only effects (skeletons, spinners).
+   Merit ERP — Animation Keyframes & Helpers
+   Motion tokens: styles/tokens/motion.css + a11y.css
+   JS presets: src/animations/presets.js
    =================================================================== */
 
 @keyframes erp-shimmer {
@@ -15,7 +15,7 @@
 
 @keyframes erp-pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.45; }
+  50% { opacity: var(--erp-opacity-muted); }
 }
 
 @keyframes erp-fade-in {
@@ -28,7 +28,7 @@
 }
 
 .erp-animate-pulse {
-  animation: erp-pulse 1.6s ease-in-out infinite;
+  animation: erp-pulse 1.6s var(--erp-ease-standard) infinite;
 }
 
 .erp-skeleton {
@@ -39,7 +39,7 @@
     var(--erp-card-muted) 63%
   );
   background-size: 480px 100%;
-  animation: erp-shimmer 1.4s ease infinite;
+  animation: erp-shimmer 1.4s var(--erp-ease-standard) infinite;
   border-radius: var(--erp-radius-sm);
 }
 

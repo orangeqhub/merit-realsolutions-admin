@@ -173,6 +173,7 @@ export default function CompanyDetails() {
               </div>
               <div className="company-profile__meta">
                 <span className="company-cell__type">{company.type}</span>
+                <span className="company-cell__type">{company.salesPartnershipType === "FULL_TIME" ? "Full Time Sales" : company.salesPartnershipType === "PART_TIME" ? "Part Time Sales" : "—"}</span>
                 <span className="company-profile__id">{company.id}</span>
               </div>
             </div>

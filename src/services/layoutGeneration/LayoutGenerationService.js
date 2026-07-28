@@ -1,4 +1,5 @@
 import { resolveLatLngPair } from '../../shared/utils/geoValidation.js';
+import { resolveLayoutPricingDefaults } from '../../shared/services/layoutView.js';
 import { generateMultiBlockLayout } from './BlockGenerator.js';
 import { serializeConfiguration } from './ConfigurationSerializer.js';
 import {
@@ -16,7 +17,23 @@ export const DEFAULT_AMENITIES = {
 };
 
 export const DEFAULT_GENERATION_PARAMS = {
-  numberOfBlocks: 2,
+  // Premium township generator (Phase 1)
+  townshipSize: 'medium',
+  density: 'medium',
+  roadStyle: 'premium',
+  amenitiesLevel: 'standard',
+  commercialPercent: 8,
+  cornerPlotPercent: 12,
+  parkPercent: 10,
+  openSpacePercent: 15,
+  roadWidthPreset: 'DTCP',
+  randomSeed: '',
+  boundaryShape: 'auto',
+  plotNumbering: 'block-wise',
+  secondaryRoadWidth: 24,
+
+  // Legacy fields — retained for save compat / advanced overrides
+  numberOfBlocks: 5,
   blockPrefix: 'A',
   rows: 10,
   columns: 12,
@@ -25,10 +42,10 @@ export const DEFAULT_GENERATION_PARAMS = {
   plotHeightFeet: 60,
   roadEveryRows: 5,
   roadEveryColumns: 8,
-  mainRoadWidth: 40,
-  internalRoadWidth: 30,
-  serviceRoadWidth: 20,
-  enableServiceRoads: false,
+  mainRoadWidth: 50,
+  internalRoadWidth: 33,
+  serviceRoadWidth: 18,
+  enableServiceRoads: true,
   blockSpacing: 50,
   amenities: { ...DEFAULT_AMENITIES },
   startingLatitude: '',
@@ -37,93 +54,104 @@ export const DEFAULT_GENERATION_PARAMS = {
 };
 
 const LIMITS = {
-  numberOfBlocks: { min: 1, max: 10 },
-  rows: { min: 1, max: 100 },
-  columns: { min: 1, max: 100 },
-  roadEveryRows: { min: 1, max: 50 },
-  roadEveryColumns: { min: 1, max: 50 },
+  commercialPercent: { min: 0, max: 25 },
+  cornerPlotPercent: { min: 0, max: 30 },
+  parkPercent: { min: 5, max: 25 },
+  openSpacePercent: { min: 5, max: 30 },
 };
 
 /** In-memory store — not persisted to database (Sprint 3). */
 let lastConfiguration = null;
 
 function validateField(name, params) {
-  const numberOfBlocks = Number(params.numberOfBlocks);
-  const rows = Number(params.rows);
-  const columns = Number(params.columns);
-  const plotWidthFeet = Number(params.plotWidthFeet);
-  const plotHeightFeet = Number(params.plotHeightFeet);
-  const mainRoadWidth = Number(params.mainRoadWidth);
-  const internalRoadWidth = Number(params.internalRoadWidth);
-  const serviceRoadWidth = Number(params.serviceRoadWidth);
-  const blockSpacing = Number(params.blockSpacing);
-  const roadEveryRows = Number(params.roadEveryRows);
-  const roadEveryColumns = Number(params.roadEveryColumns);
   const startingLatitude = Number(params.startingLatitude);
   const startingLongitude = Number(params.startingLongitude);
   const startingPlotNumber = Number(params.startingPlotNumber);
+  const commercialPercent = Number(params.commercialPercent);
+  const cornerPlotPercent = Number(params.cornerPlotPercent);
+  const parkPercent = Number(params.parkPercent);
+  const openSpacePercent = Number(params.openSpacePercent);
 
   switch (name) {
-    case 'numberOfBlocks':
-      if (!Number.isFinite(numberOfBlocks) || numberOfBlocks < LIMITS.numberOfBlocks.min) {
-        return 'Number of blocks must be at least 1.';
-      }
-      if (numberOfBlocks > LIMITS.numberOfBlocks.max) {
-        return `Number of blocks cannot exceed ${LIMITS.numberOfBlocks.max}.`;
-      }
-      return '';
     case 'blockPrefix':
       if (!String(params.blockPrefix || '').trim()) return 'Block prefix is required.';
-      return '';
-    case 'rows':
-      if (!Number.isFinite(rows) || rows < LIMITS.rows.min) return 'Rows must be at least 1.';
-      if (rows > LIMITS.rows.max) return `Rows cannot exceed ${LIMITS.rows.max}.`;
-      return '';
-    case 'columns':
-      if (!Number.isFinite(columns) || columns < LIMITS.columns.min) return 'Columns must be at least 1.';
-      if (columns > LIMITS.columns.max) return `Columns cannot exceed ${LIMITS.columns.max}.`;
       return '';
     case 'startingPlotNumber':
       if (!Number.isFinite(startingPlotNumber) || startingPlotNumber < 0) {
         return 'Starting plot number must be zero or greater.';
       }
       return '';
-    case 'plotWidthFeet':
-      if (!Number.isFinite(plotWidthFeet) || plotWidthFeet <= 0) return 'Plot width must be greater than zero.';
+    case 'townshipSize':
+      if (!['small', 'medium', 'large'].includes(params.townshipSize)) {
+        return 'Township size must be small, medium, or large.';
+      }
       return '';
-    case 'plotHeightFeet':
-      if (!Number.isFinite(plotHeightFeet) || plotHeightFeet <= 0) return 'Plot height must be greater than zero.';
+    case 'density':
+      if (!['low', 'medium', 'high'].includes(params.density)) {
+        return 'Density must be low, medium, or high.';
+      }
+      return '';
+    case 'roadStyle':
+      if (!['grid', 'organic', 'premium'].includes(params.roadStyle)) {
+        return 'Road style must be grid, organic, or premium.';
+      }
+      return '';
+    case 'amenitiesLevel':
+      if (!['basic', 'standard', 'luxury'].includes(params.amenitiesLevel)) {
+        return 'Amenities level must be basic, standard, or luxury.';
+      }
+      return '';
+    case 'roadWidthPreset':
+      if (!['DTCP', 'HMDA', 'RERA', 'custom'].includes(params.roadWidthPreset)) {
+        return 'Road width preset must be DTCP, HMDA, RERA, or custom.';
+      }
+      return '';
+    case 'commercialPercent':
+      if (!Number.isFinite(commercialPercent) || commercialPercent < LIMITS.commercialPercent.min) {
+        return 'Commercial percent cannot be negative.';
+      }
+      if (commercialPercent > LIMITS.commercialPercent.max) {
+        return `Commercial percent cannot exceed ${LIMITS.commercialPercent.max}.`;
+      }
+      return '';
+    case 'cornerPlotPercent':
+      if (!Number.isFinite(cornerPlotPercent) || cornerPlotPercent < LIMITS.cornerPlotPercent.min) {
+        return 'Corner plot percent cannot be negative.';
+      }
+      if (cornerPlotPercent > LIMITS.cornerPlotPercent.max) {
+        return `Corner plot percent cannot exceed ${LIMITS.cornerPlotPercent.max}.`;
+      }
+      return '';
+    case 'parkPercent':
+      if (!Number.isFinite(parkPercent) || parkPercent < LIMITS.parkPercent.min) {
+        return `Park percent must be at least ${LIMITS.parkPercent.min}.`;
+      }
+      if (parkPercent > LIMITS.parkPercent.max) {
+        return `Park percent cannot exceed ${LIMITS.parkPercent.max}.`;
+      }
+      return '';
+    case 'openSpacePercent':
+      if (!Number.isFinite(openSpacePercent) || openSpacePercent < LIMITS.openSpacePercent.min) {
+        return `Open space percent must be at least ${LIMITS.openSpacePercent.min}.`;
+      }
+      if (openSpacePercent > LIMITS.openSpacePercent.max) {
+        return `Open space percent cannot exceed ${LIMITS.openSpacePercent.max}.`;
+      }
       return '';
     case 'mainRoadWidth':
-      if (!Number.isFinite(mainRoadWidth) || mainRoadWidth <= 0) return 'Main road width must be greater than zero.';
+      if (params.roadWidthPreset === 'custom') {
+        const mainRoadWidth = Number(params.mainRoadWidth);
+        if (!Number.isFinite(mainRoadWidth) || mainRoadWidth <= 0) {
+          return 'Main road width must be greater than zero.';
+        }
+      }
       return '';
     case 'internalRoadWidth':
-      if (!Number.isFinite(internalRoadWidth) || internalRoadWidth <= 0) {
-        return 'Internal road width must be greater than zero.';
-      }
-      return '';
-    case 'serviceRoadWidth':
-      if (params.enableServiceRoads && (!Number.isFinite(serviceRoadWidth) || serviceRoadWidth <= 0)) {
-        return 'Service road width must be greater than zero.';
-      }
-      return '';
-    case 'blockSpacing':
-      if (!Number.isFinite(blockSpacing) || blockSpacing < 0) return 'Block spacing cannot be negative.';
-      return '';
-    case 'roadEveryRows':
-      if (!Number.isFinite(roadEveryRows) || roadEveryRows < LIMITS.roadEveryRows.min) {
-        return 'Road after every rows must be at least 1.';
-      }
-      if (roadEveryRows > LIMITS.roadEveryRows.max) {
-        return `Road interval cannot exceed ${LIMITS.roadEveryRows.max} rows.`;
-      }
-      return '';
-    case 'roadEveryColumns':
-      if (!Number.isFinite(roadEveryColumns) || roadEveryColumns < LIMITS.roadEveryColumns.min) {
-        return 'Road after every columns must be at least 1.';
-      }
-      if (roadEveryColumns > LIMITS.roadEveryColumns.max) {
-        return `Road interval cannot exceed ${LIMITS.roadEveryColumns.max} columns.`;
+      if (params.roadWidthPreset === 'custom') {
+        const internalRoadWidth = Number(params.internalRoadWidth);
+        if (!Number.isFinite(internalRoadWidth) || internalRoadWidth <= 0) {
+          return 'Internal road width must be greater than zero.';
+        }
       }
       return '';
     case 'startingLatitude':
@@ -142,19 +170,19 @@ function validateField(name, params) {
 }
 
 const VALIDATED_FIELDS = [
-  'numberOfBlocks',
   'blockPrefix',
-  'rows',
-  'columns',
   'startingPlotNumber',
-  'plotWidthFeet',
-  'plotHeightFeet',
+  'townshipSize',
+  'density',
+  'roadStyle',
+  'amenitiesLevel',
+  'roadWidthPreset',
+  'commercialPercent',
+  'cornerPlotPercent',
+  'parkPercent',
+  'openSpacePercent',
   'mainRoadWidth',
   'internalRoadWidth',
-  'serviceRoadWidth',
-  'blockSpacing',
-  'roadEveryRows',
-  'roadEveryColumns',
   'startingLatitude',
   'startingLongitude',
 ];
@@ -242,10 +270,14 @@ export const LayoutGenerationService = {
     const configuration = serializeConfiguration(enrichedParams);
     lastConfiguration = configuration;
 
+    const actualPlotCount = layout.plots.length;
     const summary = LayoutStatisticsService.computeDetailedStatistics(enrichedParams, {
       roads: layout.roads.length,
+      plots: actualPlotCount,
+      blocks: layout.blockNames?.length ?? 0,
+      amenities: layout.amenities.length,
       previewObjects:
-        layout.plots.length
+        actualPlotCount
         + layout.roads.length
         + layout.amenities.length
         + layout.blockLabels.length,
@@ -270,6 +302,7 @@ export const LayoutGenerationService = {
       blockLabels: layout.blockLabels,
       boundary: layout.boundaryPolygon || [],
       footprint: layout.footprint,
+      townshipMetadata: layout.townshipMetadata || null,
       swappedCoordinates: swapped,
       resolvedOrigin: { lat: originLat, lng: originLng },
       configuration,
@@ -300,13 +333,14 @@ export const LayoutGenerationService = {
     );
   },
 
-  buildPlotRecordsForSave(previewPlots, params, layout) {
+  buildPlotRecordsForSave(previewPlots, params, layout, venture) {
     const width = Number(params.plotWidthFeet);
     const height = Number(params.plotHeightFeet);
+    // SSOT: params rate → Venture pricing → legacy layout → 0
+    const pricing = resolveLayoutPricingDefaults(layout, venture);
     const ratePerSqYard =
       Number(params.defaultRatePerSqYard)
-      || Number(layout?.currentPrice)
-      || Number(layout?.basePrice)
+      || pricing.defaultRatePerSqYard
       || 0;
 
     return previewPlots.map((plot) => ({

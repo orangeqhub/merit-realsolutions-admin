@@ -63,6 +63,8 @@ export {
   DEFAULT_AMENITIES,
 } from './LayoutGenerationService.js';
 
+export { generateGisTownshipLayout, estimateGisTownshipStatistics } from './gis/GisTownshipEngine.js';
+
 export {
   PlotGenerationService,
   RoadGenerationService,

@@ -1,20 +1,15 @@
-/** Map plot status colors — do not change */
-export const MAP_STATUS_COLORS = {
-  Available: { fill: '#22c55e', border: '#16a34a', label: 'Available' },
-  Reserved: { fill: '#eab308', border: '#ca8a04', label: 'Reserved' },
-  Booked: { fill: '#2563eb', border: '#1d4ed8', label: 'Booked' },
-  Sold: { fill: '#ef4444', border: '#dc2626', label: 'Sold' },
-  Blocked: { fill: '#6b7280', border: '#4b5563', label: 'Blocked' },
-};
+/** Map plot status colors — sourced from shared PremiumMapTheme */
+import {
+  MAP_STATUS_COLORS,
+  MAP_LEGEND_ITEMS,
+  PLOT_STATUS_THEME,
+} from '@map-rendering/PremiumMapTheme.js';
+
+export { MAP_STATUS_COLORS, PLOT_STATUS_THEME, MAP_LEGEND_ITEMS };
 
 export const MAP_STATUS_OPTIONS = Object.keys(MAP_STATUS_COLORS).map((value) => ({
   value,
   label: MAP_STATUS_COLORS[value].label,
-}));
-
-export const MAP_LEGEND_ITEMS = Object.entries(MAP_STATUS_COLORS).map(([status, meta]) => ({
-  status,
-  ...meta,
 }));
 
 export const SHAPE_TYPES = {
